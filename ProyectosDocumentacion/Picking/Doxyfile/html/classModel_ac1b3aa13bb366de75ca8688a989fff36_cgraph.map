@@ -1,0 +1,10 @@
+<map id="Model::Initialize" name="Model::Initialize">
+<area shape="rect" id="node2" href="$classLightingTechnique.html#a16e623c328aa8aee3e524b080dbf0ec2" title="LightingTechnique::Init" alt="" coords="173,5,326,32"/>
+<area shape="rect" id="node4" href="$classShader.html#a05e7cdbaa95b0f0d1712f0485d70ea6e" title="Shader::Initialize" alt="" coords="190,56,309,83"/>
+<area shape="rect" id="node7" href="$classTexture_1_1Texture.html#a01fc0da06ed469130506d1f3ef78f6c4" title="Texture::Texture::Load" alt="" coords="172,107,327,133"/>
+<area shape="rect" id="node8" href="$classMesh_1_1Mesh.html#aa4e214342001383ccb63f0d2bc8da66f" title="Mesh::Mesh::LoadMesh" alt="" coords="168,157,331,184"/>
+<area shape="rect" id="node9" href="$classLightingTechnique.html#a97c91e408505f172f9a8f216b7ce4579" title="LightingTechnique::\lSetShader" alt="" coords="182,209,317,250"/>
+<area shape="rect" id="node3" href="$classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b" title="Shader::GetVariable" alt="" coords="391,5,529,32"/>
+<area shape="rect" id="node5" href="$classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="401,56,519,83"/>
+<area shape="rect" id="node6" href="$classShader.html#aca250566950341233b96112aca7acde5" title="Shader::LoadShaderFile" alt="" coords="379,107,541,133"/>
+</map>

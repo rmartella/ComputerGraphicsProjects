@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Origami: Fichero Fuente src/Headers/LightingTechnique.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Origami
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('LightingTechnique_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">LightingTechnique.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="LightingTechnique_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Light_8h.html">Light.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define snprintf _snprintf</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef LIGHTING_TECHNIQUE_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="LightingTechnique_8h.html#a710c6de11cc5ba6701e2c7f5a60cbf20">   10</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define    LIGHTING_TECHNIQUE_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="classLight_1_1Light.html">Light</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classLightingTechnique.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLightingTechnique.html">LightingTechnique</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classLightingTechnique.html">LightingTechnique</a>(<span class="keywordtype">int</span> numLights);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Init();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> SetTextureUnit(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TextureUnit);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> SetAttrLight(<a class="code" href="structLight_1_1LightAtrr.html">LightAtrr</a> * <a class="code" href="structLightingTechnique_1_1m__light.html">Light</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> SetEyeWorldPos(<span class="keyword">const</span> glm::vec3&amp; EyeWorldPos);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> SetShader(<a class="code" href="classShader.html">Shader</a> * shader);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">   54</a></span>&#160;  <a class="code" href="classShader.html">Shader</a> * <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a5fce44f90b317daeacef2c05bf778363">   56</a></span>&#160;  GLuint <a class="code" href="classLightingTechnique.html#a5fce44f90b317daeacef2c05bf778363">m_gSampler</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a003fcd5e9eca3c302be3a88308601243">   57</a></span>&#160;  GLuint <a class="code" href="classLightingTechnique.html#a003fcd5e9eca3c302be3a88308601243">eyePosW</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a720ecf4a09d57b044aa802c06f89cead">   58</a></span>&#160;  GLuint <a class="code" href="classLightingTechnique.html#a720ecf4a09d57b044aa802c06f89cead">gNumLights</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structLightingTechnique_1_1m__light.html">   63</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structLightingTechnique_1_1m__light.html">m_light</a> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structLightingTechnique_1_1m__light.html#acdab94b021b03983ae19982f695b6ae0">   64</a></span>&#160;    GLuint <a class="code" href="structLightingTechnique_1_1m__light.html#acdab94b021b03983ae19982f695b6ae0">LightPosW</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structLightingTechnique_1_1m__light.html#a6e7d3e31ba000e4c8ab7f3c940408a99">   65</a></span>&#160;    GLuint <a class="code" href="structLightingTechnique_1_1m__light.html#a6e7d3e31ba000e4c8ab7f3c940408a99">LightColor</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structLightingTechnique_1_1m__light.html#aa5f1fb5cb22aeb63fed303c068577aeb">   66</a></span>&#160;    GLuint <a class="code" href="structLightingTechnique_1_1m__light.html#aa5f1fb5cb22aeb63fed303c068577aeb">MaterialEmissive</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structLightingTechnique_1_1m__light.html#a9cb37be8b8823e2ce19c6443cff28860">   67</a></span>&#160;    GLuint <a class="code" href="structLightingTechnique_1_1m__light.html#a9cb37be8b8823e2ce19c6443cff28860">MaterialDiffuse</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structLightingTechnique_1_1m__light.html#a6abcfb1fd95fd6dc19fcd48009675199">   68</a></span>&#160;    GLuint <a class="code" href="structLightingTechnique_1_1m__light.html#a6abcfb1fd95fd6dc19fcd48009675199">MaterialSpecular</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structLightingTechnique_1_1m__light.html#ab2cd16468d6ba7e983ba3d5ba2ef8083">   69</a></span>&#160;    GLuint <a class="code" href="structLightingTechnique_1_1m__light.html#ab2cd16468d6ba7e983ba3d5ba2ef8083">MaterialShininess</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structLightingTechnique_1_1m__light.html#af4d9d96a9a8e74b07398663b532f9865">   70</a></span>&#160;    GLuint <a class="code" href="structLightingTechnique_1_1m__light.html#af4d9d96a9a8e74b07398663b532f9865">Ambient</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  } Light;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">   76</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">numLights</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">   80</a></span>&#160;  Light * <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif    </span><span class="comment">/* LIGHTING_TECHNIQUE_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="structLight_1_1LightAtrr_html"><div class="ttname"><a href="structLight_1_1LightAtrr.html">Light::LightAtrr</a></div><div class="ttdef"><b>Definition:</b> <a href="Light_8h_source.html#l00018">Light.h:18</a></div></div>
+<div class="ttc" id="classLight_1_1Light_html"><div class="ttname"><a href="classLight_1_1Light.html">Light::Light</a></div><div class="ttdef"><b>Definition:</b> <a href="Light_8h_source.html#l00027">Light.h:27</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a2421a2958d00474ac6745ad488bd97bb"><div class="ttname"><a href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">LightingTechnique::lightsPtr</a></div><div class="ttdeci">Light * lightsPtr</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00080">LightingTechnique.h:80</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a5fce44f90b317daeacef2c05bf778363"><div class="ttname"><a href="classLightingTechnique.html#a5fce44f90b317daeacef2c05bf778363">LightingTechnique::m_gSampler</a></div><div class="ttdeci">GLuint m_gSampler</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00056">LightingTechnique.h:56</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_aae8bd44b24b37c6fbd6e111622784e13"><div class="ttname"><a href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">LightingTechnique::shader</a></div><div class="ttdeci">Shader * shader</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00054">LightingTechnique.h:54</a></div></div>
+<div class="ttc" id="classShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdef"><b>Definition:</b> <a href="Shader_8h_source.html#l00012">Shader.h:12</a></div></div>
+<div class="ttc" id="classLightingTechnique_html"><div class="ttname"><a href="classLightingTechnique.html">LightingTechnique</a></div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00017">LightingTechnique.h:17</a></div></div>
+<div class="ttc" id="Light_8h_html"><div class="ttname"><a href="Light_8h.html">Light.h</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_acdab94b021b03983ae19982f695b6ae0"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#acdab94b021b03983ae19982f695b6ae0">LightingTechnique::m_light::LightPosW</a></div><div class="ttdeci">GLuint LightPosW</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00064">LightingTechnique.h:64</a></div></div>
+<div class="ttc" id="Shader_8h_html"><div class="ttname"><a href="Shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_a6abcfb1fd95fd6dc19fcd48009675199"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#a6abcfb1fd95fd6dc19fcd48009675199">LightingTechnique::m_light::MaterialSpecular</a></div><div class="ttdeci">GLuint MaterialSpecular</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00068">LightingTechnique.h:68</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_ab2cd16468d6ba7e983ba3d5ba2ef8083"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#ab2cd16468d6ba7e983ba3d5ba2ef8083">LightingTechnique::m_light::MaterialShininess</a></div><div class="ttdeci">GLuint MaterialShininess</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00069">LightingTechnique.h:69</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a003fcd5e9eca3c302be3a88308601243"><div class="ttname"><a href="classLightingTechnique.html#a003fcd5e9eca3c302be3a88308601243">LightingTechnique::eyePosW</a></div><div class="ttdeci">GLuint eyePosW</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00057">LightingTechnique.h:57</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7"><div class="ttname"><a href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">LightingTechnique::numLights</a></div><div class="ttdeci">int numLights</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00076">LightingTechnique.h:76</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_a9cb37be8b8823e2ce19c6443cff28860"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#a9cb37be8b8823e2ce19c6443cff28860">LightingTechnique::m_light::MaterialDiffuse</a></div><div class="ttdeci">GLuint MaterialDiffuse</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00067">LightingTechnique.h:67</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_aa5f1fb5cb22aeb63fed303c068577aeb"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#aa5f1fb5cb22aeb63fed303c068577aeb">LightingTechnique::m_light::MaterialEmissive</a></div><div class="ttdeci">GLuint MaterialEmissive</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00066">LightingTechnique.h:66</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_a6e7d3e31ba000e4c8ab7f3c940408a99"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#a6e7d3e31ba000e4c8ab7f3c940408a99">LightingTechnique::m_light::LightColor</a></div><div class="ttdeci">GLuint LightColor</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00065">LightingTechnique.h:65</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_af4d9d96a9a8e74b07398663b532f9865"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#af4d9d96a9a8e74b07398663b532f9865">LightingTechnique::m_light::Ambient</a></div><div class="ttdeci">GLuint Ambient</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00070">LightingTechnique.h:70</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a720ecf4a09d57b044aa802c06f89cead"><div class="ttname"><a href="classLightingTechnique.html#a720ecf4a09d57b044aa802c06f89cead">LightingTechnique::gNumLights</a></div><div class="ttdeci">GLuint gNumLights</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00058">LightingTechnique.h:58</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html">LightingTechnique::m_light</a></div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00063">LightingTechnique.h:63</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cab694c3d106f0550c8829c9bcd0a4b9.html">Headers</a></li><li class="navelem"><a class="el" href="LightingTechnique_8h.html">LightingTechnique.h</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:16 para Origami por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

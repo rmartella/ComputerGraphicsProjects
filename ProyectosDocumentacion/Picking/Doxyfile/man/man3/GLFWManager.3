@@ -1,0 +1,187 @@
+.TH "GLFWManager" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GLFWManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GLFWManager\&.h>\fP
+.PP
+Herencias \fBWindowManager\fP\&.
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBGLFWManager\fP ()"
+.br
+.ti -1c
+.RI "\fB~GLFWManager\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBInitialize\fP (int width, int height, std::string strTitle, bool bFullScreen=false)"
+.br
+.ti -1c
+.RI "virtual void \fBSwapTheBuffers\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBProcessInput\fP (bool continueGame)"
+.br
+.ti -1c
+.RI "virtual void \fBDestroy\fP ()"
+.br
+.in -1c
+.SS "Métodos públicos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static void \fBReshapeGL\fP (GLFWwindow *\fBWindow\fP, int widthRes, int heightRes)"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "GLFWwindow * \fBWindow\fP"
+.br
+.ti -1c
+.RI "bool \fBclicked\fP = false"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Implementaci�n de la clase abstracta \fBWindowManager\fP, utliza la liberia GLFW para crear ventanas, manejar eventos de entrada y crear contextos de OpenGL\&. 
+.PP
+Definición en la línea 14 del archivo GLFWManager\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "GLFWManager::GLFWManager ()\fC [inline]\fP"
+Constructor por default\&. 
+.PP
+Definición en la línea 20 del archivo GLFWManager\&.h\&.
+.SS "GLFWManager::~GLFWManager ()\fC [inline]\fP"
+Destruye la ventana y el contexto de OpenGL\&. 
+.PP
+Definición en la línea 25 del archivo GLFWManager\&.h\&.
+.PP
+Hace referencia a Destroy()\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void GLFWManager::Destroy ()\fC [virtual]\fP"
+Destruye la ventana y el contexto de OpenGL\&. 
+.PP
+Implementa \fBWindowManager\fP\&.
+.PP
+Definición en la línea 257 del archivo GLFWManager\&.cpp\&.
+.PP
+Referenciado por Initialize() y ~GLFWManager()\&.
+.SS "int GLFWManager::Initialize (intwidth, intheight, std::stringstrTitle, boolbFullScreen = \fCfalse\fP)\fC [virtual]\fP"
+Inicializa la ventana y crea el contexto de OpenGL\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIwidth\fP Ancho de ventana\&. 
+.br
+\fIheight\fP Altura de ventana\&. 
+.br
+\fIstrTitle\fP T�tulo de ventana\&. 
+.br
+\fIbFullScreen\fP Indica si se requiere ventana completa o no\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica la inicializaci�n correcta de la ventana y el contexto de OpenGL\&.
+.RE
+.PP
+Inicializa la ventana y crea el contexto de OpenGL\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIwidth\fP Ancho de ventana\&. 
+.br
+\fIheight\fP Altura de ventana\&. 
+.br
+\fIstrTitle\fP Titulo de ventana\&. 
+.br
+\fIbFullScreen\fP Indica si se requiere ventana completa o no\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica la inicializaci�n correcta de la ventana y el contexto de OpenGL\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBWindowManager\fP\&.
+.PP
+Definición en la línea 42 del archivo GLFWManager\&.cpp\&.
+.PP
+Hace referencia a Destroy(), ReshapeGL() y Window\&.
+.SS "bool GLFWManager::ProcessInput (boolcontinueApplication = \fCtrue\fP)\fC [virtual]\fP"
+M�todo que maneja los eventos de entrada de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIcontinueApplication\fP Bandera que indica la ejecuci�n de la aplicacai�n\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+True siempre que no se apriete la tecal Esc, falso en caso contrario\&. 
+.RE
+.PP
+
+.PP
+Implementa \fBWindowManager\fP\&.
+.PP
+Definición en la línea 112 del archivo GLFWManager\&.cpp\&.
+.PP
+Hace referencia a clicked, Down, E, Picking::Picking::GetClicks(), InputManager::getGMousePos(), GLApplication::GetGRotation(), GLApplication::getMarksToDistance(), GLApplication::getSizeLandMark(), WindowManager::inputManager, InputManager::KeyPressed(), Left, InputManager::MouseMoved(), Q, Right, GLApplication::ScreenHeight, GLApplication::ScreenWidth, GLApplication::setDeleteEnable(), GLApplication::setDistanceEnable(), GLApplication::setEnableRayCastingGL(), InputManager::SetGMousePos(), GLApplication::SetGRotation(), GLApplication::SetMousePos(), GLApplication::setNumMarks(), GLApplication::setSizeLandMark(), Up, Window, Picking::Click::x y Picking::Click::y\&.
+.SS "void GLFWManager::ReshapeGL (GLFWwindow *Window, intwidthRes, intheightRes)\fC [static]\fP"
+M�todo que maneja el redimensionamiento de la ventana\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIWindow\fP Ventana que se va a redimencionar\&. 
+.br
+\fIwidthRes\fP Ancho objetivo\&. 
+.br
+\fIheightRes\fP Altura objetivo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 243 del archivo GLFWManager\&.cpp\&.
+.PP
+Hace referencia a f, GLApplication::ScreenHeight, GLApplication::ScreenWidth y Camera::SetPerspective()\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "void GLFWManager::SwapTheBuffers ()\fC [virtual]\fP"
+Intercambia el backbuffer al frente, se debe estar llamando este funci�n por cada frame\&. 
+.PP
+Implementa \fBWindowManager\fP\&.
+.PP
+Definición en la línea 103 del archivo GLFWManager\&.cpp\&.
+.PP
+Hace referencia a Window\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "bool GLFWManager::clicked = false\fC [protected]\fP"
+
+.PP
+Definición en la línea 69 del archivo GLFWManager\&.h\&.
+.PP
+Referenciado por ProcessInput()\&.
+.SS "GLFWwindow* GLFWManager::Window\fC [protected]\fP"
+
+.PP
+Definición en la línea 68 del archivo GLFWManager\&.h\&.
+.PP
+Referenciado por Initialize(), ProcessInput() y SwapTheBuffers()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Picking del código fuente\&.

@@ -1,0 +1,137 @@
+.TH "Picking::Mark" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Picking::Mark \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Picking\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBMark\fP (vec3 *\fBpickPoints3D\fP, std::string mark)"
+.br
+.ti -1c
+.RI "const std::string & \fBgetMarkStr\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetMarkStr\fP (const std::string &\fBmarkStr\fP)"
+.br
+.ti -1c
+.RI "vec3 * \fBgetPickPoints3D\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPickPoints3D\fP (vec3 *\fBpickPoints3D\fP)"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "vec3 * \fBpickPoints3D\fP"
+.br
+.ti -1c
+.RI "std::string \fBmarkStr\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que representa los landmarks\&. 
+.PP
+Definición en la línea 23 del archivo Picking\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "Picking::Mark::Mark (vec3 *pickPoints3D, std::stringmark)\fC [inline]\fP"
+Constructor de un landmark\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpickPoints3D\fP Punto 3D del modelo\&. 
+.br
+\fImark\fP Nombre del landmark\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 30 del archivo Picking\&.h\&.
+.PP
+Hace referencia a markStr y pickPoints3D\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "const std::string& Picking::Mark::getMarkStr () const\fC [inline]\fP"
+Getter para la cadena del landmark\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Nombre del landmark\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 38 del archivo Picking\&.h\&.
+.PP
+Hace referencia a markStr\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "vec3* Picking::Mark::getPickPoints3D ()\fC [inline]\fP"
+Getter para el punto asociado al landmark\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 54 del archivo Picking\&.h\&.
+.PP
+Hace referencia a pickPoints3D\&.
+.PP
+Referenciado por Picking::Picking::ValidateMark()\&.
+.SS "void Picking::Mark::setMarkStr (const std::string &markStr)\fC [inline]\fP"
+Setter para la cadena del landmark\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImarkStr\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 46 del archivo Picking\&.h\&.
+.PP
+Hace referencia a markStr\&.
+.SS "void Picking::Mark::setPickPoints3D (vec3 *pickPoints3D)\fC [inline]\fP"
+Setter para el punto del landmark\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpickPoints3D\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 62 del archivo Picking\&.h\&.
+.PP
+Hace referencia a pickPoints3D\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "std::string Picking::Mark::markStr\fC [private]\fP"
+
+.PP
+Definición en la línea 67 del archivo Picking\&.h\&.
+.PP
+Referenciado por getMarkStr(), Mark() y setMarkStr()\&.
+.SS "vec3* Picking::Mark::pickPoints3D\fC [private]\fP"
+
+.PP
+Definición en la línea 66 del archivo Picking\&.h\&.
+.PP
+Referenciado por getPickPoints3D(), Mark() y setPickPoints3D()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Picking del código fuente\&.

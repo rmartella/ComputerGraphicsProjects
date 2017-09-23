@@ -1,0 +1,8 @@
+<map id="RubiksCube::rotateFaceAuto" name="RubiksCube::rotateFaceAuto">
+<area shape="rect" id="node2" href="$classRubiksCubeFace.html#ae867890f33017a63d80223e160f979ee" title="RubiksCubeFace::flipFaces\lMatrix" alt="" coords="464,5,648,46"/>
+<area shape="rect" id="node5" href="$classRotationCubeManager_1_1RotationCubeManager.html#af3e65204404e17d5c77ee6e74158323b" title="RotationCubeManager\l::RotationCubeManager\l::GetMovimientosSave" alt="" coords="248,119,408,175"/>
+<area shape="rect" id="node6" href="$classRubiksCubeFace.html#ab9117173447c562e3c510eaf48ee4329" title="RubiksCubeFace::rotate" alt="" coords="246,68,410,95"/>
+<area shape="rect" id="node3" href="$classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239" title="Node::getTransformMatrix" alt="" coords="702,15,877,41"/>
+<area shape="rect" id="node4" href="$classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="702,67,877,93"/>
+<area shape="rect" id="node7" href="$classRubiksCubeFace.html#a3809a70fe2ba6c11b2dda81161edd7bc" title="RubiksCubeFace::rotateFace" alt="" coords="459,71,653,97"/>
+</map>

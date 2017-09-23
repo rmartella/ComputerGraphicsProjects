@@ -1,0 +1,931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CubeRubick: Referencia de la Clase GLApplication</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CubeRubick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classGLApplication.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pub-attribs">Atributos públicos</a> &#124;
+<a href="#pro-attribs">Atributos protegidos</a> &#124;
+<a href="classGLApplication-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase GLApplication</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Main_8h_source.html">Main.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración para GLApplication:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication__coll__graph.png" border="0" usemap="#GLApplication_coll__map" alt="Collaboration graph"/></div>
+<map name="GLApplication_coll__map" id="GLApplication_coll__map">
+<area shape="rect" id="node2" href="classRotationCubeManager_1_1RotationCubeManager.html" title="RotationCubeManager\l::RotationCubeManager" alt="" coords="5,97,164,138"/><area shape="rect" id="node3" href="classVertex3.html" title="Vertex3" alt="" coords="39,5,105,32"/><area shape="rect" id="node4" href="classCamera.html" title="Camera" alt="" coords="218,5,285,32"/><area shape="rect" id="node6" href="classInputManager.html" title="InputManager" alt="" coords="292,104,393,131"/><area shape="rect" id="node5" href="classWindowManager.html" title="WindowManager" alt="" coords="290,203,408,229"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:ac340de2f27471d196c1c5a4ff59e8430"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ac340de2f27471d196c1c5a4ff59e8430">GLApplication</a> ()</td></tr>
+<tr class="separator:ac340de2f27471d196c1c5a4ff59e8430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a540f0f31b5eaa346e0f7d319d8ff6136"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a540f0f31b5eaa346e0f7d319d8ff6136">~GLApplication</a> ()</td></tr>
+<tr class="separator:a540f0f31b5eaa346e0f7d319d8ff6136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94cd13d2291ad4aa7875181cbc6b8349"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a94cd13d2291ad4aa7875181cbc6b8349">GLMain</a> ()</td></tr>
+<tr class="separator:a94cd13d2291ad4aa7875181cbc6b8349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ec9e85d94f5b10aeb22bdb1649b7a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindowManager.html">WindowManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ad5ec9e85d94f5b10aeb22bdb1649b7a7">GetWindowManager</a> ()</td></tr>
+<tr class="separator:ad5ec9e85d94f5b10aeb22bdb1649b7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d091a51f25bb9e01a74e8990461120"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a80d091a51f25bb9e01a74e8990461120">SetWindowManager</a> (<a class="el" href="classWindowManager.html">WindowManager</a> *pWindowManager)</td></tr>
+<tr class="separator:a80d091a51f25bb9e01a74e8990461120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60cb42e8b3380ede991e70f00af57386"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a60cb42e8b3380ede991e70f00af57386">GetCamera</a> ()</td></tr>
+<tr class="separator:a60cb42e8b3380ede991e70f00af57386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17d4449dda1cb4a54e37c5470f1ad9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ad17d4449dda1cb4a54e37c5470f1ad9a">SetCamera</a> (<a class="el" href="classCamera.html">Camera</a> *<a class="el" href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">pCamera</a>)</td></tr>
+<tr class="separator:ad17d4449dda1cb4a54e37c5470f1ad9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a74a4980c998c08ce70fb7c2e1874b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a9a74a4980c998c08ce70fb7c2e1874b3">SetGRotation</a> (glm::quat <a class="el" href="classGLApplication.html#af926410218d16f1f3aefda8379488007">gRotation</a>)</td></tr>
+<tr class="separator:a9a74a4980c998c08ce70fb7c2e1874b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ded7b5e8b093b15660869f5e9631b06"><td class="memItemLeft" align="right" valign="top">glm::quat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a9ded7b5e8b093b15660869f5e9631b06">GetGRotation</a> ()</td></tr>
+<tr class="separator:a9ded7b5e8b093b15660869f5e9631b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67b03ed1330abefa5d8122f2b88f311"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ae67b03ed1330abefa5d8122f2b88f311">SetArmar</a> (bool <a class="el" href="classGLApplication.html#ad643768af6633d79c0b5110dbdd071d3">armar</a>)</td></tr>
+<tr class="separator:ae67b03ed1330abefa5d8122f2b88f311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59d4921aae63eb59333e3c21cc26fda5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a59d4921aae63eb59333e3c21cc26fda5">SetRotationCubeManager</a> (<a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager::RotationCubeManager</a> *<a class="el" href="classGLApplication.html#aeb9b6c58c05ab353a00fca9838b1a5af">rotationCubeManager</a>)</td></tr>
+<tr class="separator:a59d4921aae63eb59333e3c21cc26fda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf59b499c40603d57cdf2a828dd77b0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager::RotationCubeManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a> ()</td></tr>
+<tr class="separator:aaf59b499c40603d57cdf2a828dd77b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6deb5d1e7af1732fe82edbea75daddd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a6deb5d1e7af1732fe82edbea75daddd8">SetSpeedRotattionFaces</a> (float <a class="el" href="classGLApplication.html#a0643b8ded4b4ced36851b2bd03a49d91">speedRotattionFaces</a>)</td></tr>
+<tr class="separator:a6deb5d1e7af1732fe82edbea75daddd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca11206b15ed9783944f6f4b3faf498b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#aca11206b15ed9783944f6f4b3faf498b">Initialize</a> ()</td></tr>
+<tr class="separator:aca11206b15ed9783944f6f4b3faf498b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7e3670f7cdbd3009510f072ddca792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a4a7e3670f7cdbd3009510f072ddca792">ApplicationLoop</a> ()</td></tr>
+<tr class="separator:a4a7e3670f7cdbd3009510f072ddca792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add441d14147f5a9a86abf7d1cbd636ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#add441d14147f5a9a86abf7d1cbd636ac">Destroy</a> ()</td></tr>
+<tr class="separator:add441d14147f5a9a86abf7d1cbd636ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a32c183a4197a4b2e997cc0b0916c1841"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a32c183a4197a4b2e997cc0b0916c1841">ScreenWidth</a> = 1024</td></tr>
+<tr class="separator:a32c183a4197a4b2e997cc0b0916c1841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c09bf7ce52eadd70f3bd8f36c95c79c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a7c09bf7ce52eadd70f3bd8f36c95c79c">ScreenHeight</a> = 700</td></tr>
+<tr class="separator:a7c09bf7ce52eadd70f3bd8f36c95c79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893b1001886bd2d35b99e68fa05d17e5"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a893b1001886bd2d35b99e68fa05d17e5">eRotation</a></td></tr>
+<tr class="separator:a893b1001886bd2d35b99e68fa05d17e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atributos protegidos</h2></td></tr>
+<tr class="memitem:ad19926dd66b908fb1975093b824c78ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindowManager.html">WindowManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ad19926dd66b908fb1975093b824c78ed">windowManager</a></td></tr>
+<tr class="separator:ad19926dd66b908fb1975093b824c78ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abceeb7b1e04466c92608a4c9f42bb71d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#abceeb7b1e04466c92608a4c9f42bb71d">camera</a></td></tr>
+<tr class="separator:abceeb7b1e04466c92608a4c9f42bb71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af926410218d16f1f3aefda8379488007"><td class="memItemLeft" align="right" valign="top">glm::quat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#af926410218d16f1f3aefda8379488007">gRotation</a></td></tr>
+<tr class="separator:af926410218d16f1f3aefda8379488007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9b6c58c05ab353a00fca9838b1a5af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager::RotationCubeManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#aeb9b6c58c05ab353a00fca9838b1a5af">rotationCubeManager</a></td></tr>
+<tr class="separator:aeb9b6c58c05ab353a00fca9838b1a5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0643b8ded4b4ced36851b2bd03a49d91"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a0643b8ded4b4ced36851b2bd03a49d91">speedRotattionFaces</a></td></tr>
+<tr class="separator:a0643b8ded4b4ced36851b2bd03a49d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad643768af6633d79c0b5110dbdd071d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ad643768af6633d79c0b5110dbdd071d3">armar</a></td></tr>
+<tr class="separator:ad643768af6633d79c0b5110dbdd071d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase principal de la aplicacion, maneja la inicializaci�n de la aplicaci�n, loop de la aplicaci�n y limpia los recursos utilizados. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00016">16</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="ac340de2f27471d196c1c5a4ff59e8430"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLApplication::GLApplication </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor default. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00028">28</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="InputManager_8h_source.html#l00029">f</a>, <a class="el" href="Main_8h_source.html#l00158">gRotation</a> y <a class="el" href="Main_8h_source.html#l00160">rotationCubeManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a540f0f31b5eaa346e0f7d319d8ff6136"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLApplication::~GLApplication </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructor. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00042">42</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8cpp_source.html#l00212">Destroy()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_a540f0f31b5eaa346e0f7d319d8ff6136_cgraph.png" border="0" usemap="#classGLApplication_a540f0f31b5eaa346e0f7d319d8ff6136_cgraph" alt=""/></div>
+<map name="classGLApplication_a540f0f31b5eaa346e0f7d319d8ff6136_cgraph" id="classGLApplication_a540f0f31b5eaa346e0f7d319d8ff6136_cgraph">
+<area shape="rect" id="node2" href="classGLApplication.html#add441d14147f5a9a86abf7d1cbd636ac" title="GLApplication::Destroy" alt="" coords="253,31,411,57"/><area shape="rect" id="node3" href="classModel.html#ad60ed0ed7eaa7dcdd58398e6efacc7c4" title="Model::Destroy" alt="" coords="490,5,601,32"/><area shape="rect" id="node5" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79" title="WindowManager::Destroy" alt="" coords="459,56,632,83"/><area shape="rect" id="node4" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="680,5,797,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="a4a7e3670f7cdbd3009510f072ddca792"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::ApplicationLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loop de la aplicaci�n, solo se sale de esta funci�n si el usuario pulsa Esc o cierra la ventana.</p>
+<p>Loop de la aplicación, solo se sale de esta función si el usuario pulsa Esc o cierra la ventana. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8cpp_source.html#l00136">136</a> del archivo <a class="el" href="Main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00164">armar</a>, <a class="el" href="TimeManager_8cpp_source.html#l00010">TimeManager::CalculateFrameRate()</a>, <a class="el" href="TimeManager_8h_source.html#l00047">TimeManager::DeltaTime</a>, <a class="el" href="InputManager_8h_source.html#l00029">f</a>, <a class="el" href="RotationCubeManager_8cpp_source.html#l00047">RotationCubeManager::RotationCubeManager::getCurrentRotation()</a>, <a class="el" href="RotationCubeManager_8h_source.html#l00125">RotationCubeManager::RotationCubeManager::GetMovimientosSave()</a>, <a class="el" href="Main_8h_source.html#l00158">gRotation</a>, <a class="el" href="TimeManager_8h_source.html#l00019">TimeManager::Instance()</a>, <a class="el" href="classWindowManager.html#a9213369f25fab9b9938a2171c12be3f5">WindowManager::ProcessInput()</a>, <a class="el" href="Node_8cpp_source.html#l00068">Node::renderNode()</a>, <a class="el" href="RubiksCube_8cpp_source.html#l00180">RubiksCube::rotateFace()</a>, <a class="el" href="RubiksCube_8cpp_source.html#l00133">RubiksCube::rotateFaceAuto()</a>, <a class="el" href="Main_8h_source.html#l00160">rotationCubeManager</a>, <a class="el" href="RubiksCube_8h_source.html#l00049">RubiksCube::SetRotationCubeManager()</a>, <a class="el" href="Node_8cpp_source.html#l00038">Node::setTransformMatrix()</a>, <a class="el" href="RotationCubeManager_8h_source.html#l00118">RotationCubeManager::RotationCubeManager::SetWorldMatrix()</a>, <a class="el" href="Main_8h_source.html#l00162">speedRotattionFaces</a>, <a class="el" href="classWindowManager.html#abc3dfc535171f18eda134734e6d546ef">WindowManager::SwapTheBuffers()</a> y <a class="el" href="Main_8h_source.html#l00155">windowManager</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00080">GLMain()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_a4a7e3670f7cdbd3009510f072ddca792_cgraph.png" border="0" usemap="#classGLApplication_a4a7e3670f7cdbd3009510f072ddca792_cgraph" alt=""/></div>
+<map name="classGLApplication_a4a7e3670f7cdbd3009510f072ddca792_cgraph" id="classGLApplication_a4a7e3670f7cdbd3009510f072ddca792_cgraph">
+<area shape="rect" id="node2" href="classTimeManager.html#a95782501e884a42904e2e726246701d5" title="TimeManager::CalculateFrameRate" alt="" coords="256,115,485,141"/><area shape="rect" id="node3" href="classRotationCubeManager_1_1RotationCubeManager.html#a4187a2175fb6bd24913c8302aeb15f31" title="RotationCubeManager\l::RotationCubeManager\l::getCurrentRotation" alt="" coords="560,5,720,61"/><area shape="rect" id="node4" href="classRotationCubeManager_1_1RotationCubeManager.html#af3e65204404e17d5c77ee6e74158323b" title="RotationCubeManager\l::RotationCubeManager\l::GetMovimientosSave" alt="" coords="560,267,720,323"/><area shape="rect" id="node5" href="classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="291,433,450,460"/><area shape="rect" id="node6" href="classWindowManager.html#a9213369f25fab9b9938a2171c12be3f5" title="WindowManager::ProcessInput" alt="" coords="269,484,473,511"/><area shape="rect" id="node7" href="classNode.html#acd8a6a51fc9dafb2b4159f1e1e18f651" title="Node::renderNode" alt="" coords="307,535,435,561"/><area shape="rect" id="node8" href="classRubiksCube.html#a985c0bc13cb73cee6a64c5f57200ad5e" title="RubiksCube::rotateFace" alt="" coords="289,216,453,243"/><area shape="rect" id="node12" href="classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="1038,285,1213,312"/><area shape="rect" id="node15" href="classRubiksCube.html#af69e1d5504cf465b63ab35e583335ff9" title="RubiksCube::rotateFaceAuto" alt="" coords="275,332,466,359"/><area shape="rect" id="node16" href="classRubiksCube.html#ad7fe02e006b345ec0ee86438324975cb" title="RubiksCube::SetRotationCube\lManager" alt="" coords="269,586,472,627"/><area shape="rect" id="node17" href="classRotationCubeManager_1_1RotationCubeManager.html#af8ce33c1e34659b72a388ab242da4ffd" title="RotationCubeManager\l::RotationCubeManager\l::SetWorldMatrix" alt="" coords="291,651,451,707"/><area shape="rect" id="node18" href="classWindowManager.html#abc3dfc535171f18eda134734e6d546ef" title="WindowManager::SwapTheBuffers" alt="" coords="259,731,483,757"/><area shape="rect" id="node9" href="classRubiksCubeFace.html#ab9117173447c562e3c510eaf48ee4329" title="RubiksCubeFace::rotate" alt="" coords="558,216,722,243"/><area shape="rect" id="node13" href="classRubiksCubeFace.html#ae867890f33017a63d80223e160f979ee" title="RubiksCubeFace::flipFaces\lMatrix" alt="" coords="800,219,984,261"/><area shape="rect" id="node14" href="classRotationCubeManager_1_1RotationCubeManager.html#a9306f7705b5d75436325f3e3b1077137" title="RotationCubeManager\l::RotationCubeManager\l::deleteCurrentCompleteRotation" alt="" coords="533,85,747,141"/><area shape="rect" id="node10" href="classRubiksCubeFace.html#a3809a70fe2ba6c11b2dda81161edd7bc" title="RubiksCubeFace::rotateFace" alt="" coords="795,285,989,312"/><area shape="rect" id="node11" href="classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239" title="Node::getTransformMatrix" alt="" coords="1038,231,1213,257"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="add441d14147f5a9a86abf7d1cbd636ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::Destroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que hace limpieza de los recursos utilizados por la aplicaci�n.</p>
+<p>Método que hace limpieza de los recursos utilizados por la aplicación. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8cpp_source.html#l00212">212</a> del archivo <a class="el" href="Main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00156">camera</a>, <a class="el" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79">WindowManager::Destroy()</a>, <a class="el" href="Model_8cpp_source.html#l00114">Model::Destroy()</a> y <a class="el" href="Main_8h_source.html#l00155">windowManager</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00080">GLMain()</a> y <a class="el" href="Main_8h_source.html#l00042">~GLApplication()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_add441d14147f5a9a86abf7d1cbd636ac_cgraph.png" border="0" usemap="#classGLApplication_add441d14147f5a9a86abf7d1cbd636ac_cgraph" alt=""/></div>
+<map name="classGLApplication_add441d14147f5a9a86abf7d1cbd636ac_cgraph" id="classGLApplication_add441d14147f5a9a86abf7d1cbd636ac_cgraph">
+<area shape="rect" id="node2" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79" title="WindowManager::Destroy" alt="" coords="211,5,384,32"/><area shape="rect" id="node3" href="classModel.html#ad60ed0ed7eaa7dcdd58398e6efacc7c4" title="Model::Destroy" alt="" coords="242,56,353,83"/><area shape="rect" id="node4" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="432,56,549,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a60cb42e8b3380ede991e70f00af57386"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html">Camera</a>* GLApplication::GetCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Obtiene la c�mara de la aplicaci�n. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Camar. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00073">73</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00156">camera</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ded7b5e8b093b15660869f5e9631b06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::quat GLApplication::GetGRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Obtiene el Cuaternion actual de la escena. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Cuaternion de la aplicaci�n. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00096">96</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00158">gRotation</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00111">GLFWManager::ProcessInput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf59b499c40603d57cdf2a828dd77b0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager::RotationCubeManager</a>* GLApplication::GetRotationCubeManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Obtiene el manejador de rotaciones. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Manejador de rotaciones de las caras del cubo. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00120">120</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00160">rotationCubeManager</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00258">GLFWManager::Destroy()</a> y <a class="el" href="GLFWManager_8cpp_source.html#l00111">GLFWManager::ProcessInput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5ec9e85d94f5b10aeb22bdb1649b7a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWindowManager.html">WindowManager</a>* GLApplication::GetWindowManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>M�todo que obtiene el manejador de ventanas de la aplicaci�n. Este debe ser creada antes de crear la aplicaci�n. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Manejador de ventanas. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00057">57</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00155">windowManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94cd13d2291ad4aa7875181cbc6b8349"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GLApplication::GLMain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funcion principal de la aplicaci�n, debe de ser llamada en la funci�n <a class="el" href="classWindowManager.html">WindowManager</a>. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Termino del programa.</dd></dl>
+<p>Funcion principal de la aplicación, debe de ser llamada en la función <a class="el" href="classWindowManager.html">WindowManager</a>. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Terimno del programa. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8cpp_source.html#l00080">80</a> del archivo <a class="el" href="Main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8cpp_source.html#l00136">ApplicationLoop()</a>, <a class="el" href="Main_8cpp_source.html#l00212">Destroy()</a> y <a class="el" href="Main_8cpp_source.html#l00097">Initialize()</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00014">main()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_a94cd13d2291ad4aa7875181cbc6b8349_cgraph.png" border="0" usemap="#classGLApplication_a94cd13d2291ad4aa7875181cbc6b8349_cgraph" alt=""/></div>
+<map name="classGLApplication_a94cd13d2291ad4aa7875181cbc6b8349_cgraph" id="classGLApplication_a94cd13d2291ad4aa7875181cbc6b8349_cgraph">
+<area shape="rect" id="node2" href="classGLApplication.html#a4a7e3670f7cdbd3009510f072ddca792" title="GLApplication::ApplicationLoop" alt="" coords="211,326,413,352"/><area shape="rect" id="node20" href="classGLApplication.html#add441d14147f5a9a86abf7d1cbd636ac" title="GLApplication::Destroy" alt="" coords="233,691,391,718"/><area shape="rect" id="node24" href="classGLApplication.html#aca11206b15ed9783944f6f4b3faf498b" title="GLApplication::Initialize" alt="" coords="233,1003,391,1030"/><area shape="rect" id="node3" href="classTimeManager.html#a95782501e884a42904e2e726246701d5" title="TimeManager::CalculateFrameRate" alt="" coords="461,514,691,540"/><area shape="rect" id="node4" href="classRotationCubeManager_1_1RotationCubeManager.html#a4187a2175fb6bd24913c8302aeb15f31" title="RotationCubeManager\l::RotationCubeManager\l::getCurrentRotation" alt="" coords="765,415,925,471"/><area shape="rect" id="node5" href="classRotationCubeManager_1_1RotationCubeManager.html#af3e65204404e17d5c77ee6e74158323b" title="RotationCubeManager\l::RotationCubeManager\l::GetMovimientosSave" alt="" coords="765,35,925,91"/><area shape="rect" id="node6" href="classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="497,166,655,192"/><area shape="rect" id="node7" href="classWindowManager.html#a9213369f25fab9b9938a2171c12be3f5" title="WindowManager::ProcessInput" alt="" coords="474,216,678,243"/><area shape="rect" id="node8" href="classNode.html#acd8a6a51fc9dafb2b4159f1e1e18f651" title="Node::renderNode" alt="" coords="512,267,640,294"/><area shape="rect" id="node9" href="classRubiksCube.html#a985c0bc13cb73cee6a64c5f57200ad5e" title="RubiksCube::rotateFace" alt="" coords="494,115,658,142"/><area shape="rect" id="node13" href="classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="1243,210,1418,236"/><area shape="rect" id="node16" href="classRubiksCube.html#af69e1d5504cf465b63ab35e583335ff9" title="RubiksCube::rotateFaceAuto" alt="" coords="481,64,671,91"/><area shape="rect" id="node17" href="classRubiksCube.html#ad7fe02e006b345ec0ee86438324975cb" title="RubiksCube::SetRotationCube\lManager" alt="" coords="475,318,677,360"/><area shape="rect" id="node18" href="classRotationCubeManager_1_1RotationCubeManager.html#af8ce33c1e34659b72a388ab242da4ffd" title="RotationCubeManager\l::RotationCubeManager\l::SetWorldMatrix" alt="" coords="496,383,656,439"/><area shape="rect" id="node19" href="classWindowManager.html#abc3dfc535171f18eda134734e6d546ef" title="WindowManager::SwapTheBuffers" alt="" coords="464,463,688,490"/><area shape="rect" id="node10" href="classRubiksCubeFace.html#ab9117173447c562e3c510eaf48ee4329" title="RubiksCubeFace::rotate" alt="" coords="763,115,927,142"/><area shape="rect" id="node14" href="classRubiksCubeFace.html#ae867890f33017a63d80223e160f979ee" title="RubiksCubeFace::flipFaces\lMatrix" alt="" coords="1005,144,1189,185"/><area shape="rect" id="node15" href="classRotationCubeManager_1_1RotationCubeManager.html#a9306f7705b5d75436325f3e3b1077137" title="RotationCubeManager\l::RotationCubeManager\l::deleteCurrentCompleteRotation" alt="" coords="739,166,952,222"/><area shape="rect" id="node11" href="classRubiksCubeFace.html#a3809a70fe2ba6c11b2dda81161edd7bc" title="RubiksCubeFace::rotateFace" alt="" coords="1001,210,1194,236"/><area shape="rect" id="node12" href="classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239" title="Node::getTransformMatrix" alt="" coords="1243,155,1418,182"/><area shape="rect" id="node21" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79" title="WindowManager::Destroy" alt="" coords="489,716,663,743"/><area shape="rect" id="node22" href="classModel.html#ad60ed0ed7eaa7dcdd58398e6efacc7c4" title="Model::Destroy" alt="" coords="790,783,901,810"/><area shape="rect" id="node23" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="1039,902,1156,928"/><area shape="rect" id="node25" href="classWindowManager.html#ab389ab7ab5fab8add272fb6e6d139a2a" title="WindowManager::Initialize" alt="" coords="489,1239,663,1266"/><area shape="rect" id="node26" href="classModel.html#aca35c8db4e7bbb0ba558c1133bd4c593" title="Model::Initialize" alt="" coords="519,1188,633,1215"/><area shape="rect" id="node29" href="classCamera.html#a621b0ca0ddcab43fb95ee754c443dfa4" title="Camera::SetPerspective" alt="" coords="493,1290,659,1316"/><area shape="rect" id="node30" href="classCamera.html#ae32a72f519739a0b4dce07433cfbe9ef" title="Camera::PositionCamera" alt="" coords="491,767,661,794"/><area shape="rect" id="node31" href="classModel.html#a25e8d7772730703ade5494b22c07b5f4" title="Model::SetCamera" alt="" coords="511,818,641,844"/><area shape="rect" id="node32" href="classRotationCubeManager_1_1RotationCubeManager.html#a02931e61b7f52324ccead50d6d9c2850" title="RotationCubeManager\l::RotationCubeManager\l::SetCamera" alt="" coords="496,868,656,924"/><area shape="rect" id="node33" href="classRotationCubeManager_1_1RotationCubeManager.html#aee4415243d85c57f05271ee5b03d8734" title="RotationCubeManager\l::RotationCubeManager\l::SetVerticesCube" alt="" coords="496,948,656,1004"/><area shape="rect" id="node34" href="classRotationCubeManager_1_1RotationCubeManager.html#a4ba757bfee3755c5c1979ba44dde4794" title="RotationCubeManager\l::RotationCubeManager\l::SetIndexCube" alt="" coords="496,1028,656,1084"/><area shape="rect" id="node35" href="classRotationCubeManager_1_1RotationCubeManager.html#a62abc8ff71ba1aa65e5e18e5dc41475c" title="RotationCubeManager\l::RotationCubeManager\l::loadRotations" alt="" coords="496,1108,656,1164"/><area shape="rect" id="node27" href="classShader.html#a05e7cdbaa95b0f0d1712f0485d70ea6e" title="Shader::Initialize" alt="" coords="786,1070,905,1096"/><area shape="rect" id="node28" href="classShader.html#aca250566950341233b96112aca7acde5" title="Shader::LoadShaderFile" alt="" coords="1017,1070,1178,1096"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aca11206b15ed9783944f6f4b3faf498b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inicializaci�n de la aplicaci�n.</p>
+<p>Inicialización de la aplicación. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8cpp_source.html#l00097">97</a> del archivo <a class="el" href="Main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00156">camera</a>, <a class="el" href="InputManager_8h_source.html#l00029">f</a>, <a class="el" href="Main_8cpp_source.html#l00071">index</a>, <a class="el" href="classWindowManager.html#ab389ab7ab5fab8add272fb6e6d139a2a">WindowManager::Initialize()</a>, <a class="el" href="Model_8cpp_source.html#l00012">Model::Initialize()</a>, <a class="el" href="RotationCubeManager_8cpp_source.html#l00385">RotationCubeManager::RotationCubeManager::loadRotations()</a>, <a class="el" href="Camera_8cpp_source.html#l00031">Camera::PositionCamera()</a>, <a class="el" href="Main_8h_source.html#l00160">rotationCubeManager</a>, <a class="el" href="Main_8h_source.html#l00023">ScreenHeight</a>, <a class="el" href="Main_8h_source.html#l00022">ScreenWidth</a>, <a class="el" href="RotationCubeManager_8h_source.html#l00111">RotationCubeManager::RotationCubeManager::SetCamera()</a>, <a class="el" href="Model_8h_source.html#l00146">Model::SetCamera()</a>, <a class="el" href="RotationCubeManager_8h_source.html#l00104">RotationCubeManager::RotationCubeManager::SetIndexCube()</a>, <a class="el" href="Camera_8cpp_source.html#l00016">Camera::SetPerspective()</a>, <a class="el" href="RotationCubeManager_8h_source.html#l00097">RotationCubeManager::RotationCubeManager::SetVerticesCube()</a>, <a class="el" href="Main_8h_source.html#l00162">speedRotattionFaces</a> y <a class="el" href="Main_8h_source.html#l00155">windowManager</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00080">GLMain()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_aca11206b15ed9783944f6f4b3faf498b_cgraph.png" border="0" usemap="#classGLApplication_aca11206b15ed9783944f6f4b3faf498b_cgraph" alt=""/></div>
+<map name="classGLApplication_aca11206b15ed9783944f6f4b3faf498b_cgraph" id="classGLApplication_aca11206b15ed9783944f6f4b3faf498b_cgraph">
+<area shape="rect" id="node2" href="classWindowManager.html#ab389ab7ab5fab8add272fb6e6d139a2a" title="WindowManager::Initialize" alt="" coords="214,5,389,32"/><area shape="rect" id="node3" href="classModel.html#aca35c8db4e7bbb0ba558c1133bd4c593" title="Model::Initialize" alt="" coords="245,56,358,83"/><area shape="rect" id="node7" href="classRotationCubeManager_1_1RotationCubeManager.html#a62abc8ff71ba1aa65e5e18e5dc41475c" title="RotationCubeManager\l::RotationCubeManager\l::loadRotations" alt="" coords="221,107,381,163"/><area shape="rect" id="node8" href="classCamera.html#ae32a72f519739a0b4dce07433cfbe9ef" title="Camera::PositionCamera" alt="" coords="217,187,386,213"/><area shape="rect" id="node9" href="classRotationCubeManager_1_1RotationCubeManager.html#a02931e61b7f52324ccead50d6d9c2850" title="RotationCubeManager\l::RotationCubeManager\l::SetCamera" alt="" coords="221,237,381,293"/><area shape="rect" id="node10" href="classModel.html#a25e8d7772730703ade5494b22c07b5f4" title="Model::SetCamera" alt="" coords="236,317,367,344"/><area shape="rect" id="node11" href="classRotationCubeManager_1_1RotationCubeManager.html#a4ba757bfee3755c5c1979ba44dde4794" title="RotationCubeManager\l::RotationCubeManager\l::SetIndexCube" alt="" coords="221,368,381,424"/><area shape="rect" id="node12" href="classCamera.html#a621b0ca0ddcab43fb95ee754c443dfa4" title="Camera::SetPerspective" alt="" coords="219,448,384,475"/><area shape="rect" id="node13" href="classRotationCubeManager_1_1RotationCubeManager.html#aee4415243d85c57f05271ee5b03d8734" title="RotationCubeManager\l::RotationCubeManager\l::SetVerticesCube" alt="" coords="221,499,381,555"/><area shape="rect" id="node4" href="classShader.html#a05e7cdbaa95b0f0d1712f0485d70ea6e" title="Shader::Initialize" alt="" coords="438,56,557,83"/><area shape="rect" id="node5" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="628,31,745,57"/><area shape="rect" id="node6" href="classShader.html#aca250566950341233b96112aca7acde5" title="Shader::LoadShaderFile" alt="" coords="606,81,767,108"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae67b03ed1330abefa5d8122f2b88f311"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetArmar </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>armar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter para armar el cubo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">armar</td><td>Bander para armar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00104">104</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00164">armar</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00111">GLFWManager::ProcessInput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad17d4449dda1cb4a54e37c5470f1ad9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCamera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>pCamera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter para la c�mara de la aplicaci�n. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCamera</td><td>c�mara que usar� aplicaci�n. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00080">80</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00156">camera</a> y <a class="el" href="GLFWManager_8cpp_source.html#l00007">pCamera</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00014">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a74a4980c998c08ce70fb7c2e1874b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetGRotation </td>
+          <td>(</td>
+          <td class="paramtype">glm::quat&#160;</td>
+          <td class="paramname"><em>gRotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter para la rotaci�n de la escena. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gRotation</td><td>Cuaternion de rotaci�n de la escena </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00088">88</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00158">gRotation</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00111">GLFWManager::ProcessInput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a59d4921aae63eb59333e3c21cc26fda5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetRotationCubeManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager::RotationCubeManager</a> *&#160;</td>
+          <td class="paramname"><em>rotationCubeManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter para el manejador de rotaciones. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotationCubeManager</td><td>Manejador de rotaciones de las caras del cubo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00112">112</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00160">rotationCubeManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6deb5d1e7af1732fe82edbea75daddd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetSpeedRotattionFaces </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>speedRotattionFaces</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter para la velocidad del rotaci�n de la cara. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speedRotattionFaces</td><td>Velocidad del rotaci�n de la cara. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00128">128</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00162">speedRotattionFaces</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80d091a51f25bb9e01a74e8990461120"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetWindowManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWindowManager.html">WindowManager</a> *&#160;</td>
+          <td class="paramname"><em>pWindowManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>M�todo que setter del manejador de ventanas de la aplicaci�n. Este debe ser setteada antes de inicializar el loop. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pWindowManager</td><td>Manejador de ventanas que usar� la aplicaci�n. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00065">65</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00155">windowManager</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00014">main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="ad643768af6633d79c0b5110dbdd071d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GLApplication::armar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00164">164</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00136">ApplicationLoop()</a> y <a class="el" href="Main_8h_source.html#l00104">SetArmar()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abceeb7b1e04466c92608a4c9f42bb71d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html">Camera</a>* GLApplication::camera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00156">156</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00212">Destroy()</a>, <a class="el" href="Main_8h_source.html#l00073">GetCamera()</a>, <a class="el" href="Main_8cpp_source.html#l00097">Initialize()</a> y <a class="el" href="Main_8h_source.html#l00080">SetCamera()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a893b1001886bd2d35b99e68fa05d17e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::mat4 GLApplication::eRotation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00148">148</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af926410218d16f1f3aefda8379488007"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::quat GLApplication::gRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00158">158</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00136">ApplicationLoop()</a>, <a class="el" href="Main_8h_source.html#l00096">GetGRotation()</a>, <a class="el" href="Main_8h_source.html#l00028">GLApplication()</a> y <a class="el" href="Main_8h_source.html#l00088">SetGRotation()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb9b6c58c05ab353a00fca9838b1a5af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager::RotationCubeManager</a>* GLApplication::rotationCubeManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00160">160</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00136">ApplicationLoop()</a>, <a class="el" href="Main_8h_source.html#l00120">GetRotationCubeManager()</a>, <a class="el" href="Main_8h_source.html#l00028">GLApplication()</a>, <a class="el" href="Main_8cpp_source.html#l00097">Initialize()</a> y <a class="el" href="Main_8h_source.html#l00112">SetRotationCubeManager()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c09bf7ce52eadd70f3bd8f36c95c79c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GLApplication::ScreenHeight = 700</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00023">23</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00097">Initialize()</a> y <a class="el" href="GLFWManager_8cpp_source.html#l00244">GLFWManager::ReshapeGL()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a32c183a4197a4b2e997cc0b0916c1841"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GLApplication::ScreenWidth = 1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>El ancho y alto de la ventana. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00022">22</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00097">Initialize()</a> y <a class="el" href="GLFWManager_8cpp_source.html#l00244">GLFWManager::ReshapeGL()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0643b8ded4b4ced36851b2bd03a49d91"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GLApplication::speedRotattionFaces</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00162">162</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00136">ApplicationLoop()</a>, <a class="el" href="Main_8cpp_source.html#l00097">Initialize()</a> y <a class="el" href="Main_8h_source.html#l00128">SetSpeedRotattionFaces()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad19926dd66b908fb1975093b824c78ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWindowManager.html">WindowManager</a>* GLApplication::windowManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00155">155</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00136">ApplicationLoop()</a>, <a class="el" href="Main_8cpp_source.html#l00212">Destroy()</a>, <a class="el" href="Main_8h_source.html#l00057">GetWindowManager()</a>, <a class="el" href="Main_8cpp_source.html#l00097">Initialize()</a> y <a class="el" href="Main_8h_source.html#l00065">SetWindowManager()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>src/Headers/<a class="el" href="Main_8h_source.html">Main.h</a></li>
+<li>src/<a class="el" href="Main_8cpp_source.html">Main.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGLApplication.html">GLApplication</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:22 para CubeRubick por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

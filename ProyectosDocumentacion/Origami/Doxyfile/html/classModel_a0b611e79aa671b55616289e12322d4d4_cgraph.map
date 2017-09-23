@@ -1,0 +1,14 @@
+<map id="Model::Render" name="Model::Render">
+<area shape="rect" id="node2" href="$classTexture_1_1Texture.html#a540ba0664bc3f57858e4f5da468c1fe9" title="Texture::Texture::Bind" alt="" coords="180,5,332,32"/>
+<area shape="rect" id="node3" href="$classCamera.html#a7166b8466c94d0b5c127fc74c7881beb" title="Camera::GetPosition" alt="" coords="184,56,328,83"/>
+<area shape="rect" id="node4" href="$classCamera.html#ab0a4bf5a65d45f25529e3cffda1c361b" title="Camera::GetProjectionMatrix" alt="" coords="161,107,351,133"/>
+<area shape="rect" id="node5" href="$classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b" title="Shader::GetVariable" alt="" coords="187,157,325,184"/>
+<area shape="rect" id="node6" href="$classCamera.html#affa333055635aed96518c4c66be9a70c" title="Camera::GetViewMatrix" alt="" coords="175,208,337,235"/>
+<area shape="rect" id="node8" href="$classLightingTechnique.html#af0c8dadfb5b41d56f3f117a42fadd2b6" title="LightingTechnique::\lSetAttrLight" alt="" coords="189,259,323,301"/>
+<area shape="rect" id="node10" href="$classLightingTechnique.html#a15d5725cdb38c3263446342910eb56e6" title="LightingTechnique::\lSetEyeWorldPos" alt="" coords="189,325,323,366"/>
+<area shape="rect" id="node11" href="$classShader.html#a61b49dc75fb1842ec58845e9912f824d" title="Shader::SetMatrix4" alt="" coords="189,391,323,417"/>
+<area shape="rect" id="node12" href="$classShader.html#ad94b005141a4ed31a3f4f801455e5590" title="Shader::TurnOff" alt="" coords="199,441,313,468"/>
+<area shape="rect" id="node13" href="$classShader.html#a01e9b0696a56a5c567ea4b369872c982" title="Shader::TurnOn" alt="" coords="199,492,313,519"/>
+<area shape="rect" id="node7" href="$classCamera.html#a3518233b244af839db6eefe59e7002de" title="Camera::GetRotationMatrix" alt="" coords="401,208,583,235"/>
+<area shape="rect" id="node9" href="$Main_8cpp.html#adb9f41772f416fee48669435829e58f6" title="ambient" alt="" coords="458,267,526,293"/>
+</map>

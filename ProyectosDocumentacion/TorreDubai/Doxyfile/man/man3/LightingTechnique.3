@@ -1,0 +1,211 @@
+.TH "LightingTechnique" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LightingTechnique \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LightingTechnique\&.h>\fP
+.SS "Clases"
+
+.in +1c
+.ti -1c
+.RI "struct \fBm_light\fP"
+.br
+.in -1c
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBLightingTechnique\fP (int \fBnumLights\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBInit\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetTextureUnit\fP (unsigned int TextureUnit)"
+.br
+.ti -1c
+.RI "void \fBSetAttrLight\fP (\fBLightAtrr\fP *\fBLight\fP)"
+.br
+.ti -1c
+.RI "void \fBSetEyeWorldPos\fP (const glm::vec3 &EyeWorldPos)"
+.br
+.ti -1c
+.RI "void \fBSetShader\fP (\fBShader\fP *\fBshader\fP)"
+.br
+.in -1c
+.SS "Tipos privados"
+
+.in +1c
+.ti -1c
+.RI "typedef struct 
+.br
+\fBLightingTechnique::m_light\fP \fBLight\fP"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "\fBShader\fP * \fBshader\fP"
+.br
+.ti -1c
+.RI "GLuint \fBm_gSampler\fP"
+.br
+.ti -1c
+.RI "GLuint \fBeyePosW\fP"
+.br
+.ti -1c
+.RI "GLuint \fBgNumLights\fP"
+.br
+.ti -1c
+.RI "int \fBnumLights\fP"
+.br
+.ti -1c
+.RI "\fBLight\fP * \fBlightsPtr\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que maneja la t�cnica de iluminaci�n\&. 
+.PP
+Definición en la línea 17 del archivo LightingTechnique\&.h\&.
+.SH "Documentación de los 'Typedef' miembros de la clase"
+.PP 
+.SS "typedef struct \fBLightingTechnique::m_light\fP  \fBLightingTechnique::Light\fP\fC [private]\fP"
+Estructura de identificadores para iluminaci�n de las variables del shader\&. 
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "LightingTechnique::LightingTechnique (intnumLights)"
+Constructor\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fInumLights\fP N�mero de luces\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 7 del archivo LightingTechnique\&.cpp\&.
+.PP
+Hace referencia a lightsPtr y numLights\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void LightingTechnique::Init ()\fC [virtual]\fP"
+M�todo que inicializa la iluminaci�n\&. 
+.PP
+Definición en la línea 15 del archivo LightingTechnique\&.cpp\&.
+.PP
+Hace referencia a LightingTechnique::m_light::Ambient, eyePosW, Shader::GetVariable(), gNumLights, i, LightingTechnique::m_light::LightColor, LightingTechnique::m_light::LightPosW, lightsPtr, m_gSampler, LightingTechnique::m_light::MaterialDiffuse, LightingTechnique::m_light::MaterialEmissive, LightingTechnique::m_light::MaterialShininess, LightingTechnique::m_light::MaterialSpecular, numLights y shader\&.
+.PP
+Referenciado por ModelEnvironment::Initialize() y Model::Initialize()\&.
+.SS "void LightingTechnique::SetAttrLight (\fBLightAtrr\fP *Light)"
+M�todo que envia los atributos de la iluminaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fI\fBLight\fP\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 67 del archivo LightingTechnique\&.cpp\&.
+.PP
+Hace referencia a ambient(), gNumLights, i, lightsPtr y numLights\&.
+.PP
+Referenciado por ModelEnvironment::Render() y Model::Render()\&.
+.SS "void LightingTechnique::SetEyeWorldPos (const glm::vec3 &EyeWorldPos)"
+M�todo que envia la posicion del punto de vista (Posici�n de la c�mara)\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIEyeWorldPos\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 96 del archivo LightingTechnique\&.cpp\&.
+.PP
+Hace referencia a eyePosW\&.
+.PP
+Referenciado por ModelEnvironment::Render() y Model::Render()\&.
+.SS "void LightingTechnique::SetShader (\fBShader\fP *shader)"
+Setter para colocar el shader a utilizar y as� poder enviarle la informaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIshader\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 88 del archivo LightingTechnique\&.cpp\&.
+.PP
+Hace referencia a shader\&.
+.PP
+Referenciado por ModelEnvironment::Initialize() y Model::Initialize()\&.
+.SS "void LightingTechnique::SetTextureUnit (unsigned intTextureUnit)"
+Envia la unidad de textura a utilizar\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fITextureUnit\fP Unidad de textura\&.
+.RE
+.PP
+Envia la unidad de textura\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fITextureUnit\fP Unidad de textura\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 59 del archivo LightingTechnique\&.cpp\&.
+.PP
+Hace referencia a m_gSampler\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "GLuint LightingTechnique::eyePosW\fC [private]\fP"
+
+.PP
+Definición en la línea 57 del archivo LightingTechnique\&.h\&.
+.PP
+Referenciado por Init() y SetEyeWorldPos()\&.
+.SS "GLuint LightingTechnique::gNumLights\fC [private]\fP"
+
+.PP
+Definición en la línea 58 del archivo LightingTechnique\&.h\&.
+.PP
+Referenciado por Init() y SetAttrLight()\&.
+.SS "\fBLight\fP* LightingTechnique::lightsPtr\fC [private]\fP"
+Apuntador a os atributos de la iluminaci�n\&. 
+.PP
+Definición en la línea 80 del archivo LightingTechnique\&.h\&.
+.PP
+Referenciado por Init(), LightingTechnique() y SetAttrLight()\&.
+.SS "GLuint LightingTechnique::m_gSampler\fC [private]\fP"
+
+.PP
+Definición en la línea 56 del archivo LightingTechnique\&.h\&.
+.PP
+Referenciado por Init() y SetTextureUnit()\&.
+.SS "int LightingTechnique::numLights\fC [private]\fP"
+N�mero de luces\&. 
+.PP
+Definición en la línea 76 del archivo LightingTechnique\&.h\&.
+.PP
+Referenciado por Init(), LightingTechnique() y SetAttrLight()\&.
+.SS "\fBShader\fP* LightingTechnique::shader\fC [private]\fP"
+
+.PP
+Definición en la línea 54 del archivo LightingTechnique\&.h\&.
+.PP
+Referenciado por Init() y SetShader()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

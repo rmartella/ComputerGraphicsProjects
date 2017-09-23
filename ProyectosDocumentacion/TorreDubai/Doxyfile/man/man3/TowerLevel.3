@@ -1,0 +1,270 @@
+.TH "TowerLevel" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TowerLevel \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TowerLevel\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBTowerLevel\fP (\fBModel\fP *\fBmodelStruct\fP, \fBModelEnvironment\fP *\fBmodelEnvironment\fP)"
+.br
+.ti -1c
+.RI "void \fBsetLevelTransform\fP (glm::mat4 *\fBlevelTransform\fP)"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBgetLevelTransform\fP ()"
+.br
+.ti -1c
+.RI "float \fBgetGiroAct\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGiroAct\fP (float \fBgiroAct\fP)"
+.br
+.ti -1c
+.RI "void \fBrender\fP (glm::mat4 rootTransform)"
+.br
+.ti -1c
+.RI "float \fBgetAngleRotMax\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetAngleRotMax\fP (float \fBangleRotMax\fP)"
+.br
+.ti -1c
+.RI "float \fBgetDirection\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetDirection\fP (int \fBdirection\fP=0)"
+.br
+.ti -1c
+.RI "virtual \fB~TowerLevel\fP ()"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "\fBModel\fP * \fBmodelStruct\fP"
+.br
+.ti -1c
+.RI "\fBModelEnvironment\fP * \fBmodelEnvironment\fP"
+.br
+.ti -1c
+.RI "float \fBgiroAct\fP = 0"
+.br
+.ti -1c
+.RI "float \fBangleRotMax\fP"
+.br
+.ti -1c
+.RI "int \fBdirection\fP = 0"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBlevelTransform\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Representaci�n de un nivel de la torre\&. 
+.PP
+Definición en la línea 17 del archivo TowerLevel\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "TowerLevel::TowerLevel (\fBModel\fP *modelStruct, \fBModelEnvironment\fP *modelEnvironment)"
+Contructor de torre tomando dos modelos, un modelo con iluminaci�n y el otro con el mapeo del ambiente\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImodelStruct\fP 
+.br
+\fImodelEnvironment\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 16 del archivo TowerLevel\&.cpp\&.
+.PP
+Hace referencia a modelEnvironment y modelStruct\&.
+.SS "TowerLevel::~TowerLevel ()\fC [virtual]\fP"
+Destructor de clase\&. 
+.PP
+Definición en la línea 32 del archivo TowerLevel\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "float TowerLevel::getAngleRotMax () const\fC [inline]\fP"
+Obtiene el angulo m�ximo que puede girrar la torre\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Angulo m�ximo que puede girrar la torre\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 65 del archivo TowerLevel\&.h\&.
+.PP
+Hace referencia a angleRotMax\&.
+.PP
+Referenciado por TowerDubai::cordinateRotation()\&.
+.SS "float TowerLevel::getDirection () const\fC [inline]\fP"
+Obtiene la direcci�n de giro\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Direcci�n de giro\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 81 del archivo TowerLevel\&.h\&.
+.PP
+Hace referencia a direction\&.
+.PP
+Referenciado por TowerDubai::cordinateRotation()\&.
+.SS "float TowerLevel::getGiroAct ()\fC [inline]\fP"
+Obtiene el giro que ha dado la torre en ese instante\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Giro que ha dado la torre en ese instante\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 44 del archivo TowerLevel\&.h\&.
+.PP
+Hace referencia a giroAct\&.
+.PP
+Referenciado por TowerDubai::cordinateRotation()\&.
+.SS "glm::mat4* TowerLevel::getLevelTransform ()\fC [inline]\fP"
+Obtiene la matriz de transformaci�n de un nivel\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Matriz de transformaci�n de un nivel\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 37 del archivo TowerLevel\&.h\&.
+.PP
+Hace referencia a levelTransform\&.
+.SS "void TowerLevel::render (glm::mat4rootTransform)"
+M�todo que renderiza el nivel de la torre\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrootTransform\fP Transformaci�n de su nodo padre\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 25 del archivo TowerLevel\&.cpp\&.
+.PP
+Hace referencia a modelEnvironment, modelStruct, ModelEnvironment::Render() y Model::Render()\&.
+.SS "void TowerLevel::setAngleRotMax (floatangleRotMax)\fC [inline]\fP"
+Setter para el angulo maximo que puede girar\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIangleRotMax\fP Angulo m�ximo que puede girrar la torre\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 73 del archivo TowerLevel\&.h\&.
+.PP
+Hace referencia a angleRotMax\&.
+.PP
+Referenciado por TowerDubai::createLevelsTower()\&.
+.SS "void TowerLevel::setDirection (intdirection = \fC0\fP)\fC [inline]\fP"
+Setter para la direcci�n de giro\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIdirection\fP Direccion de giro\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 88 del archivo TowerLevel\&.h\&.
+.PP
+Hace referencia a direction\&.
+.PP
+Referenciado por TowerDubai::cordinateRotation()\&.
+.SS "void TowerLevel::setGiroAct (floatgiroAct)\fC [inline]\fP"
+Setter de giro que ha dado la torre en ese instante\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIgiroAct\fP Giro que ha dado la torre en ese instante\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 51 del archivo TowerLevel\&.h\&.
+.PP
+Hace referencia a giroAct\&.
+.PP
+Referenciado por TowerDubai::cordinateRotation() y TowerDubai::createLevelsTower()\&.
+.SS "void TowerLevel::setLevelTransform (glm::mat4 *levelTransform)\fC [inline]\fP"
+Setter de la matriz de transformaci�n de un nivel\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIlevelTransform\fP Matriz de transformaci�n de un nivel\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 30 del archivo TowerLevel\&.h\&.
+.PP
+Hace referencia a levelTransform\&.
+.PP
+Referenciado por TowerDubai::createLevelsTower()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "float TowerLevel::angleRotMax\fC [private]\fP"
+
+.PP
+Definición en la línea 100 del archivo TowerLevel\&.h\&.
+.PP
+Referenciado por getAngleRotMax() y setAngleRotMax()\&.
+.SS "int TowerLevel::direction = 0\fC [private]\fP"
+
+.PP
+Definición en la línea 101 del archivo TowerLevel\&.h\&.
+.PP
+Referenciado por getDirection() y setDirection()\&.
+.SS "float TowerLevel::giroAct = 0\fC [private]\fP"
+
+.PP
+Definición en la línea 99 del archivo TowerLevel\&.h\&.
+.PP
+Referenciado por getGiroAct() y setGiroAct()\&.
+.SS "glm::mat4* TowerLevel::levelTransform\fC [private]\fP"
+
+.PP
+Definición en la línea 102 del archivo TowerLevel\&.h\&.
+.PP
+Referenciado por getLevelTransform() y setLevelTransform()\&.
+.SS "\fBModelEnvironment\fP* TowerLevel::modelEnvironment\fC [private]\fP"
+
+.PP
+Definición en la línea 98 del archivo TowerLevel\&.h\&.
+.PP
+Referenciado por render() y TowerLevel()\&.
+.SS "\fBModel\fP* TowerLevel::modelStruct\fC [private]\fP"
+
+.PP
+Definición en la línea 97 del archivo TowerLevel\&.h\&.
+.PP
+Referenciado por render() y TowerLevel()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

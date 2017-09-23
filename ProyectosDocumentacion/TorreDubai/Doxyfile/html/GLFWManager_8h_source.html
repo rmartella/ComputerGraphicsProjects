@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Pistasdeprofunidad: Fichero Fuente src/Headers/GLFWManager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Pistasdeprofunidad
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('GLFWManager_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GLFWManager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="GLFWManager_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _GLFWManager_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _GLFWManager_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="WindowManager_8h.html">WindowManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classGLFWManager.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGLFWManager.html">GLFWManager</a> : <span class="keyword">public</span> <a class="code" href="classWindowManager.html">WindowManager</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classGLFWManager.html#ac147537f9b7fcab10e45eaf3b56abf6b">   20</a></span>&#160;  <a class="code" href="classGLFWManager.html#ac147537f9b7fcab10e45eaf3b56abf6b">GLFWManager</a>() {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classGLFWManager.html#a8fc801412987adbb5dc51676904611ec">   25</a></span>&#160;  <a class="code" href="classGLFWManager.html#a8fc801412987adbb5dc51676904611ec">~GLFWManager</a>() {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classGLFWManager.html#a9c655ddd50d28a62028aa6a387fbdef1">Destroy</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classGLFWManager.html#ab25fb3360faae786eada907fdcb12357">Initialize</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, std::string strTitle,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                         <span class="keywordtype">bool</span> bFullScreen = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classGLFWManager.html#ae9746badca674cac1116bbbc0e2e9e8e">SwapTheBuffers</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classGLFWManager.html#a94ed402e22066eb4ee073ef911f1c19a">ProcessInput</a>(<span class="keywordtype">bool</span> continueGame);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> <span class="keyword">static</span> <a class="code" href="classGLFWManager.html#a0bd7d7dde9582b4623cf4a1ac7399159">ReshapeGL</a>(GLFWwindow* <a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, <span class="keywordtype">int</span> widthRes, <span class="keywordtype">int</span> heightRes);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classGLFWManager.html#a9c655ddd50d28a62028aa6a387fbdef1">Destroy</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">// Objeto GLFW window que maneja las ventanas y entradas.</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">   68</a></span>&#160;  GLFWwindow* <a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classGLFWManager.html#a07802a808a65cb181e6d676807c5e3c6">   69</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classGLFWManager.html#a07802a808a65cb181e6d676807c5e3c6">clicked</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classGLFWManager_html_a8fc801412987adbb5dc51676904611ec"><div class="ttname"><a href="classGLFWManager.html#a8fc801412987adbb5dc51676904611ec">GLFWManager::~GLFWManager</a></div><div class="ttdeci">~GLFWManager()</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8h_source.html#l00025">GLFWManager.h:25</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a0bd7d7dde9582b4623cf4a1ac7399159"><div class="ttname"><a href="classGLFWManager.html#a0bd7d7dde9582b4623cf4a1ac7399159">GLFWManager::ReshapeGL</a></div><div class="ttdeci">static void ReshapeGL(GLFWwindow *Window, int widthRes, int heightRes)</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00179">GLFWManager.cpp:179</a></div></div>
+<div class="ttc" id="classWindowManager_html"><div class="ttname"><a href="classWindowManager.html">WindowManager</a></div><div class="ttdef"><b>Definition:</b> <a href="WindowManager_8h_source.html#l00013">WindowManager.h:13</a></div></div>
+<div class="ttc" id="classGLFWManager_html_ae9746badca674cac1116bbbc0e2e9e8e"><div class="ttname"><a href="classGLFWManager.html#ae9746badca674cac1116bbbc0e2e9e8e">GLFWManager::SwapTheBuffers</a></div><div class="ttdeci">virtual void SwapTheBuffers()</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00097">GLFWManager.cpp:97</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a9c655ddd50d28a62028aa6a387fbdef1"><div class="ttname"><a href="classGLFWManager.html#a9c655ddd50d28a62028aa6a387fbdef1">GLFWManager::Destroy</a></div><div class="ttdeci">virtual void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00193">GLFWManager.cpp:193</a></div></div>
+<div class="ttc" id="classGLFWManager_html_ab25fb3360faae786eada907fdcb12357"><div class="ttname"><a href="classGLFWManager.html#ab25fb3360faae786eada907fdcb12357">GLFWManager::Initialize</a></div><div class="ttdeci">virtual int Initialize(int width, int height, std::string strTitle, bool bFullScreen=false)</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00038">GLFWManager.cpp:38</a></div></div>
+<div class="ttc" id="classGLFWManager_html"><div class="ttname"><a href="classGLFWManager.html">GLFWManager</a></div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8h_source.html#l00014">GLFWManager.h:14</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a07802a808a65cb181e6d676807c5e3c6"><div class="ttname"><a href="classGLFWManager.html#a07802a808a65cb181e6d676807c5e3c6">GLFWManager::clicked</a></div><div class="ttdeci">bool clicked</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8h_source.html#l00069">GLFWManager.h:69</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a3486900a73271e0dd7b530528c3c6f8c"><div class="ttname"><a href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">GLFWManager::Window</a></div><div class="ttdeci">GLFWwindow * Window</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8h_source.html#l00068">GLFWManager.h:68</a></div></div>
+<div class="ttc" id="WindowManager_8h_html"><div class="ttname"><a href="WindowManager_8h.html">WindowManager.h</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a94ed402e22066eb4ee073ef911f1c19a"><div class="ttname"><a href="classGLFWManager.html#a94ed402e22066eb4ee073ef911f1c19a">GLFWManager::ProcessInput</a></div><div class="ttdeci">virtual bool ProcessInput(bool continueGame)</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00106">GLFWManager.cpp:106</a></div></div>
+<div class="ttc" id="classGLFWManager_html_ac147537f9b7fcab10e45eaf3b56abf6b"><div class="ttname"><a href="classGLFWManager.html#ac147537f9b7fcab10e45eaf3b56abf6b">GLFWManager::GLFWManager</a></div><div class="ttdeci">GLFWManager()</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8h_source.html#l00020">GLFWManager.h:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cab694c3d106f0550c8829c9bcd0a4b9.html">Headers</a></li><li class="navelem"><a class="el" href="GLFWManager_8h.html">GLFWManager.h</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:23:14 para Pistasdeprofunidad por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

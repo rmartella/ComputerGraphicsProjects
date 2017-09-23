@@ -1,0 +1,12 @@
+<map id="src/Headers/Main.h" name="src/Headers/Main.h">
+<area shape="rect" id="node2" href="$WindowManager_8h.html" title="WindowManager.h" alt="" coords="438,229,567,256"/>
+<area shape="rect" id="node5" href="$InputManager_8h.html" title="InputManager.h" alt="" coords="139,304,250,331"/>
+<area shape="rect" id="node10" href="$Camera_8h.html" title="Camera.h" alt="" coords="348,379,426,405"/>
+<area shape="rect" id="node11" href="$Model_8h.html" title="Model.h" alt="" coords="655,304,722,331"/>
+<area shape="rect" id="node17" href="$TimeManager_8h.html" title="TimeManager.h" alt="" coords="906,80,1017,107"/>
+<area shape="rect" id="node20" href="$RubiksCube_8h.html" title="RubiksCube.h" alt="" coords="681,80,786,107"/>
+<area shape="rect" id="node15" href="$Shader_8h.html" title="Shader.h" alt="" coords="705,379,778,405"/>
+<area shape="rect" id="node21" href="$RubiksCubeFace_8h.html" title="RubiksCubeFace.h" alt="" coords="772,155,906,181"/>
+<area shape="rect" id="node23" href="$RotationCubeManager_8h.html" title="RotationCubeManager.h" alt="" coords="679,229,842,256"/>
+<area shape="rect" id="node22" href="$Node_8h.html" title="../Headers/Node.h" alt="" coords="867,229,995,256"/>
+</map>

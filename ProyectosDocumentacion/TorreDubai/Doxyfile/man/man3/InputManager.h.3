@@ -1,0 +1,174 @@
+.TH "src/Headers/InputManager.h" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Headers/InputManager.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <glm/glm\&.hpp>\fP
+.br
+\fC#include <glm/gtc/matrix_transform\&.hpp>\fP
+.br
+\fC#include <glm/gtx/transform2\&.hpp>\fP
+.br
+\fC#include <glm/gtx/quaternion\&.hpp>\fP
+.br
+\fC#include 'Camera\&.h'\fP
+.br
+
+.SS "Clases"
+
+.in +1c
+.ti -1c
+.RI "class \fBInputManager\fP"
+.br
+.in -1c
+.SS "'defines'"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLM_FORCE_RADIANS\fP"
+.br
+.in -1c
+.SS "Enumeraciones"
+
+.in +1c
+.ti -1c
+.RI "enum \fBInputCodes\fP { \fBkEscape\fP = 27, \fBSpace\fP = 32, \fBLeft\fP = 37, \fBUp\fP = 38, \fBRight\fP = 39, \fBDown\fP = 40, \fBa\fP = 97, \fBA\fP = 65, \fBb\fP = 98, \fBB\fP = 66, \fBc\fP = 99, \fBC\fP = 67, \fBd\fP = 100, \fBD\fP = 68, \fBe\fP = 101, \fBE\fP = 69, \fBf\fP = 102, \fBF\fP = 70, \fBg\fP = 103, \fBG\fP = 71, \fBh\fP = 104, \fBH\fP = 72, \fBi\fP = 105, \fBI\fP = 73, \fBj\fP = 106, \fBJ\fP = 74, \fBk\fP = 107, \fBK\fP = 75, \fBl\fP = 108, \fBL\fP = 76, \fBm\fP = 109, \fBM\fP = 77, \fBn\fP = 110, \fBN\fP = 78, \fBo\fP = 111, \fBO\fP = 79, \fBp\fP = 112, \fBP\fP = 80, \fBq\fP = 113, \fBQ\fP = 81, \fBr\fP = 114, \fBR\fP = 82, \fBs\fP = 115, \fBS\fP = 83, \fBt\fP = 116, \fBT\fP = 84, \fBu\fP = 117, \fBU\fP = 85, \fBv\fP = 118, \fBV\fP = 86, \fBw\fP = 119, \fBW\fP = 87, \fBx\fP = 120, \fBX\fP = 88, \fBy\fP = 121, \fBY\fP = 89, \fBz\fP = 122, \fBZ\fP = 90 }"
+.br
+.in -1c
+.SH "Documentación de los 'defines'"
+.PP 
+.SS "#define GLM_FORCE_RADIANS"
+
+.PP
+Definición en la línea 4 del archivo InputManager\&.h\&.
+.SH "Documentación de las enumeraciones"
+.PP 
+.SS "enum \fBInputCodes\fP"
+
+.PP
+\fBValores de enumeraciones\fP
+.in +1c
+.TP
+\fB\fIkEscape \fP\fP
+.TP
+\fB\fISpace \fP\fP
+.TP
+\fB\fILeft \fP\fP
+.TP
+\fB\fIUp \fP\fP
+.TP
+\fB\fIRight \fP\fP
+.TP
+\fB\fIDown \fP\fP
+.TP
+\fB\fIa \fP\fP
+.TP
+\fB\fIA \fP\fP
+.TP
+\fB\fIb \fP\fP
+.TP
+\fB\fIB \fP\fP
+.TP
+\fB\fIc \fP\fP
+.TP
+\fB\fIC \fP\fP
+.TP
+\fB\fId \fP\fP
+.TP
+\fB\fID \fP\fP
+.TP
+\fB\fIe \fP\fP
+.TP
+\fB\fIE \fP\fP
+.TP
+\fB\fIf \fP\fP
+.TP
+\fB\fIF \fP\fP
+.TP
+\fB\fIg \fP\fP
+.TP
+\fB\fIG \fP\fP
+.TP
+\fB\fIh \fP\fP
+.TP
+\fB\fIH \fP\fP
+.TP
+\fB\fIi \fP\fP
+.TP
+\fB\fII \fP\fP
+.TP
+\fB\fIj \fP\fP
+.TP
+\fB\fIJ \fP\fP
+.TP
+\fB\fIk \fP\fP
+.TP
+\fB\fIK \fP\fP
+.TP
+\fB\fIl \fP\fP
+.TP
+\fB\fIL \fP\fP
+.TP
+\fB\fIm \fP\fP
+.TP
+\fB\fIM \fP\fP
+.TP
+\fB\fIn \fP\fP
+.TP
+\fB\fIN \fP\fP
+.TP
+\fB\fIo \fP\fP
+.TP
+\fB\fIO \fP\fP
+.TP
+\fB\fIp \fP\fP
+.TP
+\fB\fIP \fP\fP
+.TP
+\fB\fIq \fP\fP
+.TP
+\fB\fIQ \fP\fP
+.TP
+\fB\fIr \fP\fP
+.TP
+\fB\fIR \fP\fP
+.TP
+\fB\fIs \fP\fP
+.TP
+\fB\fIS \fP\fP
+.TP
+\fB\fIt \fP\fP
+.TP
+\fB\fIT \fP\fP
+.TP
+\fB\fIu \fP\fP
+.TP
+\fB\fIU \fP\fP
+.TP
+\fB\fIv \fP\fP
+.TP
+\fB\fIV \fP\fP
+.TP
+\fB\fIw \fP\fP
+.TP
+\fB\fIW \fP\fP
+.TP
+\fB\fIx \fP\fP
+.TP
+\fB\fIX \fP\fP
+.TP
+\fB\fIy \fP\fP
+.TP
+\fB\fIY \fP\fP
+.TP
+\fB\fIz \fP\fP
+.TP
+\fB\fIZ \fP\fP
+.PP
+Definición en la línea 12 del archivo InputManager\&.h\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

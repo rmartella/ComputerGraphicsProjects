@@ -1,0 +1,219 @@
+.TH "ObjectCreation" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ObjectCreation \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ObjectCreation\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBObjectCreation\fP ()"
+.br
+.ti -1c
+.RI "void \fBgetSizeMesh\fP (std::vector< \fBMesh::Mesh::MeshEntry\fP > *meshEntryesPtr, int *sizeVertexMesh, int *sizeIndexMesh)"
+.br
+.ti -1c
+.RI "void \fBformatMesh\fP (std::vector< \fBMesh::Mesh::MeshEntry\fP > *meshEntryesPtr, int sizeVertexMesh, int sizeIndexMesh, \fBVertex3\fP *verticesZ, GLuint *index)"
+.br
+.ti -1c
+.RI "\fBVertex3\fP * \fBcreateModelTransform\fP (glm::mat4 transformMatrix, \fBVertex3\fP *vertices, \fBVertex3\fP *verticesBoundingBox, int sizeVertex)"
+.br
+.ti -1c
+.RI "void \fBSolidSphere\fP (float radius, int slices, int stacks, \fBVertex3\fP *vertices, GLuint *indices)"
+.br
+.ti -1c
+.RI "void \fBCubeEnviornment\fP (\fBVertex3\fP *verticesEnvironmentCube, GLuint *indexEnvironment, int sizeVertex, int sizeIndex)"
+.br
+.ti -1c
+.RI "void \fBCube\fP (\fBVertex3\fP *verticesCube, GLuint *indexCube, int sizeVertex, int sizeIndex)"
+.br
+.ti -1c
+.RI "bool * \fBcreateCullFacesPointer\fP (\fBVertex3\fP *vertices, GLuint *index, int sizeIndex, glm::vec3 camaraPosition)"
+.br
+.ti -1c
+.RI "virtual \fB~ObjectCreation\fP ()"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que maneja la creaci�n de los objetos que contendra la escena\&. 
+.PP
+Definición en la línea 23 del archivo ObjectCreation\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "ObjectCreation::ObjectCreation ()"
+Constructor\&. 
+.PP
+Definición en la línea 13 del archivo ObjectCreation\&.cpp\&.
+.SS "ObjectCreation::~ObjectCreation ()\fC [virtual]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 20 del archivo ObjectCreation\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "bool * ObjectCreation::createCullFacesPointer (\fBVertex3\fP *vertices, GLuint *index, intsizeIndex, glm::vec3camaraPosition)"
+M�todo que obtiene las caras que son visibles u ocultas al observador\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIvertices\fP Vertices de objeto\&. 
+.br
+\fIindex\fP Indices de objeto\&. 
+.br
+\fIsizeIndex\fP Tama�o de arreglo de indices\&. 
+.br
+\fIcamaraPosition\fP Posici�n de la camara\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definición en la línea 173 del archivo ObjectCreation\&.cpp\&.
+.PP
+Hace referencia a i y Vertex3::xyz\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "\fBVertex3\fP * ObjectCreation::createModelTransform (glm::mat4transformMatrix, \fBVertex3\fP *vertices, \fBVertex3\fP *verticesBoundingBox, intsizeVertex)"
+Transforma los vertices de una malla para manejar los objetos en su propio espacio, tambien crea su forma envolvente\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fItransformMatrix\fP Matrix de transformaci�n\&. 
+.br
+\fIvertices\fP Vertices de la malla\&. 
+.br
+\fIverticesBoundingBox\fP Vertices del mallado de la forma envolvente, si se le pasa un apuntador nullo no crea la caja envolvente (Esferas)\&. 
+.br
+\fIsizeVertex\fP Tama�o del arreglo de vertices\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definición en la línea 79 del archivo ObjectCreation\&.cpp\&.
+.PP
+Hace referencia a aisgl_max, aisgl_min, f, i, Vertex3::rgba y Vertex3::xyz\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void ObjectCreation::Cube (\fBVertex3\fP *verticesCube, GLuint *indexCube, intsizeVertex, intsizeIndex)"
+M�todo que crea el modelo del cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIverticesCube\fP Vertices del cubo\&. 
+.br
+\fIindexCube\fP Indicies del cubo\&. 
+.br
+\fIsizeVertex\fP Tama�o de arreglo de vertices\&. 
+.br
+\fIsizeIndex\fP Tama�o de arreglo de indices\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 313 del archivo ObjectCreation\&.cpp\&.
+.PP
+Hace referencia a f\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void ObjectCreation::CubeEnviornment (\fBVertex3\fP *verticesEnvironmentCube, GLuint *indexEnvironment, intsizeVertex, intsizeIndex)"
+M�todo que crea el modelo del cubo con vector normales apuntando al interior de la caja (Environment)\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIverticesEnvironmentCube\fP Vertices del cubo de ambiente\&. 
+.br
+\fIindexEnvironment\fP Indicies del cubo de ambiente\&. 
+.br
+\fIsizeVertex\fP Tama�o de arreglo de vertices\&. 
+.br
+\fIsizeIndex\fP Tama�o de arreglo de indices\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 248 del archivo ObjectCreation\&.cpp\&.
+.PP
+Hace referencia a f\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void ObjectCreation::formatMesh (std::vector< \fBMesh::Mesh::MeshEntry\fP > *meshEntryesPtr, intsizeVertexMesh, intsizeIndexMesh, \fBVertex3\fP *verticesZ, GLuint *index)"
+Convierte la malla en un formato para poder iterar sobre este\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImeshEntryesPtr\fP Apuntador al vector que contiene la malla\&. 
+.br
+\fIsizeVertexMesh\fP Tama�o de vertices de la malla\&. 
+.br
+\fIsizeIndexMesh\fP Tama�o de indices de la malla\&. 
+.br
+\fIverticesZ\fP Vector que almacena los nuevos vertices formato comun de los mallados\&. 
+.br
+\fIindex\fP Indices de la malla\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 46 del archivo ObjectCreation\&.cpp\&.
+.PP
+Hace referencia a k, l y Vertex3::xyz\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void ObjectCreation::getSizeMesh (std::vector< \fBMesh::Mesh::MeshEntry\fP > *meshEntryesPtr, int *sizeVertexMesh, int *sizeIndexMesh)"
+Obtiene el tama�o de una malla\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImeshEntryesPtr\fP Apuntador al vector que contiene la malla\&. 
+.br
+\fIsizeVertexMesh\fP Tama�o de vertices de la malla\&. 
+.br
+\fIsizeIndexMesh\fP Tama�o de indices de la malla\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 29 del archivo ObjectCreation\&.cpp\&.
+.PP
+Hace referencia a k\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void ObjectCreation::SolidSphere (floatradius, intslices, intstacks, \fBVertex3\fP *vertices, GLuint *indices)"
+Genera los vetices de una esfera\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIradius\fP Radio de la esfera\&. 
+.br
+\fIslices\fP Revanadas horizontales\&. 
+.br
+\fIstacks\fP Revanadas Verticales\&. 
+.br
+\fIvertices\fP Apuntador donde se almacenan por referencia los vertices\&. 
+.br
+\fIindices\fP Apuntador donde se almacenan por referencia los indices\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 200 del archivo ObjectCreation\&.cpp\&.
+.PP
+Hace referencia a i, j, U, V, X, Y y Z\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

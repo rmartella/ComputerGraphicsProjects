@@ -1,0 +1,255 @@
+.TH "GLApplication" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GLApplication \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Main\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBGLApplication\fP ()"
+.br
+.ti -1c
+.RI "\fB~GLApplication\fP ()"
+.br
+.ti -1c
+.RI "int \fBGLMain\fP ()"
+.br
+.ti -1c
+.RI "\fBWindowManager\fP * \fBGetWindowManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWindowManager\fP (\fBWindowManager\fP *pWindowManager)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBApplicationLoop\fP ()"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "int \fBScreenWidth\fP = 1024"
+.br
+.ti -1c
+.RI "int \fBScreenHeight\fP = 700"
+.br
+.ti -1c
+.RI "const float \fBratioSphere\fP = 1\&.0"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBWindowManager\fP * \fBwindowManager\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "\fBSkyBoxModel\fP * \fBskyBoxModel\fP"
+.br
+.ti -1c
+.RI "\fBModel\fP * \fBmodelSolid\fP"
+.br
+.ti -1c
+.RI "\fBModelEnvironment\fP * \fBmodelEnvironment\fP"
+.br
+.ti -1c
+.RI "\fBModel\fP * \fBplaneModel\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase principal de la aplicacion, maneja la inicializaci�n de la aplicaci�n, loop de la aplicaci�n y limpia los recursos utilizados\&. 
+.PP
+Definición en la línea 20 del archivo Main\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "GLApplication::GLApplication ()\fC [inline]\fP"
+Constructor default\&. 
+.PP
+Definición en la línea 37 del archivo Main\&.h\&.
+.SS "GLApplication::~GLApplication ()\fC [inline]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 42 del archivo Main\&.h\&.
+.PP
+Hace referencia a Destroy()\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void GLApplication::ApplicationLoop ()"
+Loop de la aplicaci�n, solo se sale de esta funci�n si el usuario pulsa Esc o cierra la ventana\&.
+.PP
+Loop de la aplicación, solo se sale de esta función si el usuario pulsa Esc o cierra la ventana\&. 
+.PP
+Definición en la línea 118 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a TimeManager::CalculateFrameRate(), TowerDubai::cordinateRotation(), TowerDubai::createLevelsTower(), f, SkyBoxModel::GetCubeTextureMap(), TowerDubai::getDistanceForTranslate(), Model::GetMesh(), Mesh::Mesh::GetMeshEntry(), TimeManager::Instance(), modelEnvironment, modelSolid, planeModel, WindowManager::ProcessInput(), TowerDubai::render(), SkyBoxModel::Render(), Model::Render(), ModelEnvironment::SetCubemapTexture(), TowerDubai::setHeightLevel(), SkyBoxModel::SetScale(), Model::SetScale(), TowerDubai::setTowerTransform(), skyBoxModel, WindowManager::SwapTheBuffers() y windowManager\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::Destroy ()"
+M�todo que hace limpieza de los recursos utilizados por la aplicaci�n\&.
+.PP
+Método que hace limpieza de los recursos utilizados por la aplicación\&. 
+.PP
+Definición en la línea 177 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a camera, WindowManager::Destroy(), SkyBoxModel::Destroy(), ModelEnvironment::Destroy(), Model::Destroy(), modelEnvironment, modelSolid, planeModel, skyBoxModel y windowManager\&.
+.PP
+Referenciado por GLMain() y ~GLApplication()\&.
+.SS "\fBCamera\fP* GLApplication::GetCamera ()\fC [inline]\fP"
+Obtiene la c�mara de la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Camar\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 73 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera\&.
+.SS "\fBWindowManager\fP* GLApplication::GetWindowManager ()\fC [inline]\fP"
+M�todo que obtiene el manejador de ventanas de la aplicaci�n\&. Este debe ser creada antes de crear la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Manejador de ventanas\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 57 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.SS "int GLApplication::GLMain ()"
+Funcion principal de la aplicaci�n, debe de ser llamada en la funci�n \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Termino del programa\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 10 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ApplicationLoop(), Destroy() y Initialize()\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::Initialize ()"
+Inicializaci�n de la aplicaci�n\&. 
+.PP
+Definición en la línea 24 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ambient(), Light::LightAtrr::ambient, black(), camera, f, WindowManager::Initialize(), SkyBoxModel::Initialize(), ModelEnvironment::Initialize(), Model::Initialize(), Light::LightAtrr::lightColor, Light::LightAtrr::lightPosW, Light::LightAtrr::materialDiffuse, Light::LightAtrr::materialEmissive, Light::LightAtrr::materialShininess, Light::LightAtrr::materialSpecular, modelEnvironment, modelSolid, planeModel, Camera::PositionCamera(), ScreenHeight, ScreenWidth, SkyBoxModel::SetCamera(), ModelEnvironment::SetCamera(), Model::SetCamera(), Model::SetLightAtrr(), ModelEnvironment::SetMesh(), Model::SetMesh(), Model::setNumLights(), Camera::SetPerspective(), skyBoxModel, white() y windowManager\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Setter para la c�mara de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpCamera\fP c�mara que usar� aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 80 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera y pCamera\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::SetWindowManager (\fBWindowManager\fP *pWindowManager)\fC [inline]\fP"
+M�todo que setter del manejador de ventanas de la aplicaci�n\&. Este debe ser setteada antes de inicializar el loop\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpWindowManager\fP Manejador de ventanas que usar� la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 65 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.PP
+Referenciado por main()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* GLApplication::camera\fC [protected]\fP"
+
+.PP
+Definición en la línea 106 del archivo Main\&.h\&.
+.PP
+Referenciado por Destroy(), GetCamera(), Initialize() y SetCamera()\&.
+.SS "\fBModelEnvironment\fP* GLApplication::modelEnvironment\fC [protected]\fP"
+
+.PP
+Definición en la línea 109 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy() y Initialize()\&.
+.SS "\fBModel\fP* GLApplication::modelSolid\fC [protected]\fP"
+
+.PP
+Definición en la línea 108 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy() y Initialize()\&.
+.SS "\fBModel\fP* GLApplication::planeModel\fC [protected]\fP"
+
+.PP
+Definición en la línea 110 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy() y Initialize()\&.
+.SS "const float GLApplication::ratioSphere = 1\&.0"
+Radio de precisi�n para los Landmarks\&. 
+.PP
+Definición en la línea 32 del archivo Main\&.h\&.
+.SS "int GLApplication::ScreenHeight = 700"
+
+.PP
+Definición en la línea 27 del archivo Main\&.h\&.
+.PP
+Referenciado por Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "int GLApplication::ScreenWidth = 1024"
+El ancho y alto de la ventana\&. 
+.PP
+Definición en la línea 26 del archivo Main\&.h\&.
+.PP
+Referenciado por Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "\fBSkyBoxModel\fP* GLApplication::skyBoxModel\fC [protected]\fP"
+
+.PP
+Definición en la línea 107 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy() y Initialize()\&.
+.SS "\fBWindowManager\fP* GLApplication::windowManager\fC [protected]\fP"
+
+.PP
+Definición en la línea 105 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy(), GetWindowManager(), Initialize() y SetWindowManager()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

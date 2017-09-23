@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CubeRubick: Referencia de la Clase RotationCubeManager::RotationCubeManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CubeRubick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classRotationCubeManager_1_1RotationCubeManager.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="classRotationCubeManager_1_1RotationCubeManager-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase RotationCubeManager::RotationCubeManager</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración para RotationCubeManager::RotationCubeManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRotationCubeManager_1_1RotationCubeManager__coll__graph.png" border="0" usemap="#RotationCubeManager_1_1RotationCubeManager_coll__map" alt="Collaboration graph"/></div>
+<map name="RotationCubeManager_1_1RotationCubeManager_coll__map" id="RotationCubeManager_1_1RotationCubeManager_coll__map">
+<area shape="rect" id="node2" href="classVertex3.html" title="Vertex3" alt="" coords="5,5,72,32"/><area shape="rect" id="node3" href="classCamera.html" title="Camera" alt="" coords="117,5,184,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:af988c3a8335a71f901c8c39ac057c61e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#af988c3a8335a71f901c8c39ac057c61e">RotationCubeManager</a> ()</td></tr>
+<tr class="separator:af988c3a8335a71f901c8c39ac057c61e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5f169120988225b5f2e8aaeab8bb01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a> (int face, int direction)</td></tr>
+<tr class="separator:a8b5f169120988225b5f2e8aaeab8bb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9306f7705b5d75436325f3e3b1077137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a9306f7705b5d75436325f3e3b1077137">deleteCurrentCompleteRotation</a> ()</td></tr>
+<tr class="separator:a9306f7705b5d75436325f3e3b1077137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4187a2175fb6bd24913c8302aeb15f31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMovimiento.html">Movimiento</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a4187a2175fb6bd24913c8302aeb15f31">getCurrentRotation</a> ()</td></tr>
+<tr class="separator:a4187a2175fb6bd24913c8302aeb15f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd0aa0464ca153b2423957ec5ae761d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a7bd0aa0464ca153b2423957ec5ae761d">updateOrientation</a> ()</td></tr>
+<tr class="separator:a7bd0aa0464ca153b2423957ec5ae761d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d27270742da451386215ea1b34217b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a0d27270742da451386215ea1b34217b3">updateFaceMap</a> (int faceAxisX, float faceAxisY)</td></tr>
+<tr class="separator:a0d27270742da451386215ea1b34217b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4ef0d2ff14a1dd5309f00cbdff3518"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a1c4ef0d2ff14a1dd5309f00cbdff3518">RayTriangleIntersect</a> (glm::vec3 orig, glm::vec3 dir, glm::vec3 vert0, glm::vec3 vert1, glm::vec3 vert2, double *<a class="el" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a0247320c476fffeaa81ffa7836e08dee">t</a>, double *<a class="el" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a63f235d4a03b00a5e43f0bfa785c853d">u</a>, double *<a class="el" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7571419a9cfbfae012aedf01dc8883de">v</a>)</td></tr>
+<tr class="separator:a1c4ef0d2ff14a1dd5309f00cbdff3518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31863985fa4f39c7fcad8e407c3d96e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a31863985fa4f39c7fcad8e407c3d96e3">saveRotations</a> ()</td></tr>
+<tr class="separator:a31863985fa4f39c7fcad8e407c3d96e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62abc8ff71ba1aa65e5e18e5dc41475c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a62abc8ff71ba1aa65e5e18e5dc41475c">loadRotations</a> ()</td></tr>
+<tr class="separator:a62abc8ff71ba1aa65e5e18e5dc41475c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4415243d85c57f05271ee5b03d8734"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#aee4415243d85c57f05271ee5b03d8734">SetVerticesCube</a> (<a class="el" href="classVertex3.html">Vertex3</a> *<a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#aac2312e3a295b78f236c4d5c356da064">verticesCube</a>)</td></tr>
+<tr class="separator:aee4415243d85c57f05271ee5b03d8734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ba757bfee3755c5c1979ba44dde4794"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a4ba757bfee3755c5c1979ba44dde4794">SetIndexCube</a> (GLubyte *<a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#aa1a74360de82dd6a156a11ab0a471d3f">indexCube</a>)</td></tr>
+<tr class="separator:a4ba757bfee3755c5c1979ba44dde4794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02931e61b7f52324ccead50d6d9c2850"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a02931e61b7f52324ccead50d6d9c2850">SetCamera</a> (<a class="el" href="classCamera.html">Camera</a> *<a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a38ce652659c85ee1def6d51dee16ac55">camera</a>)</td></tr>
+<tr class="separator:a02931e61b7f52324ccead50d6d9c2850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ce33c1e34659b72a388ab242da4ffd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#af8ce33c1e34659b72a388ab242da4ffd">SetWorldMatrix</a> (glm::mat4 <a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#ac3ac1d49075ce10079e5259372780b30">WorldMatrix</a>)</td></tr>
+<tr class="separator:af8ce33c1e34659b72a388ab242da4ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e65204404e17d5c77ee6e74158323b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structMovimiento.html">Movimiento</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#af3e65204404e17d5c77ee6e74158323b">GetMovimientosSave</a> ()</td></tr>
+<tr class="separator:af3e65204404e17d5c77ee6e74158323b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cac96b5d909d82f8c0722823795c10b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a1cac96b5d909d82f8c0722823795c10b">~RotationCubeManager</a> ()</td></tr>
+<tr class="separator:a1cac96b5d909d82f8c0722823795c10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a3ebcd0f5289e105f08e4c6754fa9c8ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a3ebcd0f5289e105f08e4c6754fa9c8ca">faceMap</a> [6]</td></tr>
+<tr class="separator:a3ebcd0f5289e105f08e4c6754fa9c8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae891d4f131d97e685d10ad282faee636"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#ae891d4f131d97e685d10ad282faee636">axisXAngleAct</a> = 0.7852</td></tr>
+<tr class="separator:ae891d4f131d97e685d10ad282faee636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae037d463f6fcd856f9308647bb4ef014"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structMovimiento.html">Movimiento</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#ae037d463f6fcd856f9308647bb4ef014">movimientos</a> = new std::vector&lt;<a class="el" href="structMovimiento.html">Movimiento</a>*&gt;()</td></tr>
+<tr class="separator:ae037d463f6fcd856f9308647bb4ef014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece234e3670f96265b8896ad06f7577e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structMovimiento.html">Movimiento</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#aece234e3670f96265b8896ad06f7577e">movimientosSave</a> = new std::vector&lt;<a class="el" href="structMovimiento.html">Movimiento</a>*&gt;()</td></tr>
+<tr class="separator:aece234e3670f96265b8896ad06f7577e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2312e3a295b78f236c4d5c356da064"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex3.html">Vertex3</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#aac2312e3a295b78f236c4d5c356da064">verticesCube</a></td></tr>
+<tr class="separator:aac2312e3a295b78f236c4d5c356da064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a74360de82dd6a156a11ab0a471d3f"><td class="memItemLeft" align="right" valign="top">GLubyte *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#aa1a74360de82dd6a156a11ab0a471d3f">indexCube</a></td></tr>
+<tr class="separator:aa1a74360de82dd6a156a11ab0a471d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ce652659c85ee1def6d51dee16ac55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#a38ce652659c85ee1def6d51dee16ac55">camera</a></td></tr>
+<tr class="separator:a38ce652659c85ee1def6d51dee16ac55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ac1d49075ce10079e5259372780b30"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html#ac3ac1d49075ce10079e5259372780b30">WorldMatrix</a></td></tr>
+<tr class="separator:ac3ac1d49075ce10079e5259372780b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase que maneja y registra las rotaciones que realiza el cubo. </p>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00032">32</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="af988c3a8335a71f901c8c39ac057c61e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationCubeManager::RotationCubeManager::RotationCubeManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor. </p>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00015">15</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="InputManager_8h_source.html#l00035">i</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1cac96b5d909d82f8c0722823795c10b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationCubeManager::RotationCubeManager::~RotationCubeManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructor. </p>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00024">24</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="a8b5f169120988225b5f2e8aaeab8bb01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::addRotation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>face</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que agrega una rotaci�n </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">face</td><td>Cara que se agrega. </td></tr>
+    <tr><td class="paramname">direction</td><td>Direcci�n de la cara. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00032">32</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RotationCubeManager_8h_source.html#l00024">Movimiento::direction</a> y <a class="el" href="RotationCubeManager_8h_source.html#l00024">Movimiento::face</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00111">GLFWManager::ProcessInput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9306f7705b5d75436325f3e3b1077137"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::deleteCurrentCompleteRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que elimina la rotaci�n de una cara al completar su giro. </p>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00041">41</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCube_8cpp_source.html#l00180">RubiksCube::rotateFace()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4187a2175fb6bd24913c8302aeb15f31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMovimiento.html">Movimiento</a> * RotationCubeManager::RotationCubeManager::getCurrentRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Metodo que obtiene el ultimo movimiento que esta realizando el rubick. </p>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00047">47</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00136">GLApplication::ApplicationLoop()</a> y <a class="el" href="RubiksCube_8cpp_source.html#l00180">RubiksCube::rotateFace()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af3e65204404e17d5c77ee6e74158323b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structMovimiento.html">Movimiento</a>*&gt;* RotationCubeManager::RotationCubeManager::GetMovimientosSave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>M�todo que obtiene los movimientos que se han realizado sobre el Cubo de Rubick. </p>
+<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00125">125</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00136">GLApplication::ApplicationLoop()</a>, <a class="el" href="RubiksCube_8cpp_source.html#l00180">RubiksCube::rotateFace()</a> y <a class="el" href="RubiksCube_8cpp_source.html#l00133">RubiksCube::rotateFaceAuto()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a62abc8ff71ba1aa65e5e18e5dc41475c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::loadRotations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�tdo que carga las rotaciones al iniciar sesi�n. </p>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00385">385</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RotationCubeManager_8h_source.html#l00024">Movimiento::direction</a> y <a class="el" href="RotationCubeManager_8h_source.html#l00024">Movimiento::face</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00097">GLApplication::Initialize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c4ef0d2ff14a1dd5309f00cbdff3518"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RotationCubeManager::RotationCubeManager::RayTriangleIntersect </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>orig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>vert0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>vert1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>vert2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que obtiene la intersecci�n del rayo con un tri�ngulo, Se utiliza el algortimo de Tomas Moller. Representaci�n del rayo en coordenadas parametricas. R ( t ) = O + tD ----&mdash; (1) Un punto de un tri�ngulo esta dado por las coordenadas varicentricas, del triangulo, u &gt;= 0, v &gt;= 0 y u + v &lt;= 1. T ( u v ) = (1 ; u ; v ) V 0 + uV 1 + vV 2 ----&mdash; (2) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orig</td><td>Origen del rayo. </td></tr>
+    <tr><td class="paramname">dir</td><td>Direcci�n del rayo. </td></tr>
+    <tr><td class="paramname">vert0</td><td>Vertice 1 del triangulo a probar. </td></tr>
+    <tr><td class="paramname">vert1</td><td>Vertice 2 del triangulo a probar. </td></tr>
+    <tr><td class="paramname">vert2</td><td>Vertice 3 del triangulo a probar. </td></tr>
+    <tr><td class="paramname">t</td><td>Valor de ecuaci�n de (1) </td></tr>
+    <tr><td class="paramname">u</td><td>Coordenada u varicentrica del tri�ngulo (2). </td></tr>
+    <tr><td class="paramname">v</td><td>Coordenada v varicentrica del tri�ngulo (2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Bandera que indica si hay intersecci�n o no, true existe la intersecci�n false no existe la intersecci�n. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00156">156</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RotationCubeManager_8h_source.html#l00020">EPSILON</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a31863985fa4f39c7fcad8e407c3d96e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::saveRotations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que guarda el estado del rubick al cerrar la ventana. </p>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00369">369</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="InputManager_8h_source.html#l00035">i</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00258">GLFWManager::Destroy()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02931e61b7f52324ccead50d6d9c2850"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::SetCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCamera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter de la camara. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>Camara. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00111">111</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00097">GLApplication::Initialize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4ba757bfee3755c5c1979ba44dde4794"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::SetIndexCube </td>
+          <td>(</td>
+          <td class="paramtype">GLubyte *&#160;</td>
+          <td class="paramname"><em>indexCube</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter de indicies del cubo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indexCube</td><td>Indices del cubo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00104">104</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00097">GLApplication::Initialize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee4415243d85c57f05271ee5b03d8734"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::SetVerticesCube </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVertex3.html">Vertex3</a> *&#160;</td>
+          <td class="paramname"><em>verticesCube</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter de los vertices del cubo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">verticesCube</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00097">97</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00097">GLApplication::Initialize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af8ce33c1e34659b72a388ab242da4ffd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::SetWorldMatrix </td>
+          <td>(</td>
+          <td class="paramtype">glm::mat4&#160;</td>
+          <td class="paramname"><em>WorldMatrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter de la matriz del rubick. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">WorldMatrix</td><td>Matriz rubick. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00118">118</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00136">GLApplication::ApplicationLoop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d27270742da451386215ea1b34217b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::updateFaceMap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>faceAxisX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>faceAxisY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que mapea las caras reales con las que fue contruido el rubick y con las caras que estan De frente al observador. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">faceAxisX</td><td>Cara que esta viendo el observador. </td></tr>
+    <tr><td class="paramname">faceAxisY</td><td>Cara que esta viendo una camara invisible sobre el eje y. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00195">195</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bd0aa0464ca153b2423957ec5ae761d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RotationCubeManager::RotationCubeManager::updateOrientation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que actualiza las orientaci�n de las caras del rubick. </p>
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8cpp_source.html#l00055">55</a> del archivo <a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="InputManager_8h_source.html#l00035">i</a>, <a class="el" href="InputManager_8h_source.html#l00057">t</a>, <a class="el" href="InputManager_8h_source.html#l00059">u</a> y <a class="el" href="InputManager_8h_source.html#l00061">v</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00111">GLFWManager::ProcessInput()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="ae891d4f131d97e685d10ad282faee636"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RotationCubeManager::RotationCubeManager::axisXAngleAct = 0.7852</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00135">135</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38ce652659c85ee1def6d51dee16ac55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html">Camera</a>* RotationCubeManager::RotationCubeManager::camera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00140">140</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ebcd0f5289e105f08e4c6754fa9c8ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RotationCubeManager::RotationCubeManager::faceMap[6]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00134">134</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1a74360de82dd6a156a11ab0a471d3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLubyte* RotationCubeManager::RotationCubeManager::indexCube</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00139">139</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae037d463f6fcd856f9308647bb4ef014"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structMovimiento.html">Movimiento</a>*&gt;* RotationCubeManager::RotationCubeManager::movimientos = new std::vector&lt;<a class="el" href="structMovimiento.html">Movimiento</a>*&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00136">136</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aece234e3670f96265b8896ad06f7577e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structMovimiento.html">Movimiento</a>*&gt;* RotationCubeManager::RotationCubeManager::movimientosSave = new std::vector&lt;<a class="el" href="structMovimiento.html">Movimiento</a>*&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00137">137</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aac2312e3a295b78f236c4d5c356da064"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVertex3.html">Vertex3</a>* RotationCubeManager::RotationCubeManager::verticesCube</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00138">138</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3ac1d49075ce10079e5259372780b30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::mat4 RotationCubeManager::RotationCubeManager::WorldMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RotationCubeManager_8h_source.html#l00141">141</a> del archivo <a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>src/Headers/<a class="el" href="RotationCubeManager_8h_source.html">RotationCubeManager.h</a></li>
+<li>src/<a class="el" href="RotationCubeManager_8cpp_source.html">RotationCubeManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceRotationCubeManager.html">RotationCubeManager</a></li><li class="navelem"><a class="el" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:22 para CubeRubick por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

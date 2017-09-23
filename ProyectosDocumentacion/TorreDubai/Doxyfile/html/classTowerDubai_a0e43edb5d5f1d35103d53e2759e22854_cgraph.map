@@ -1,0 +1,8 @@
+<map id="TowerDubai::cordinateRotation" name="TowerDubai::cordinateRotation">
+<area shape="rect" id="node2" href="$classTowerLevel.html#a0188f8a56bc8155dca21d38ae8df2fc5" title="TowerLevel::getAngleRotMax" alt="" coords="256,5,451,32"/>
+<area shape="rect" id="node3" href="$classTowerLevel.html#a767a8f732222b9c8622bcc592df6cca0" title="TowerLevel::getDirection" alt="" coords="270,56,437,83"/>
+<area shape="rect" id="node4" href="$classTowerLevel.html#aba82878f2488df470c9da78481ff93f4" title="TowerLevel::getGiroAct" alt="" coords="274,107,433,133"/>
+<area shape="rect" id="node5" href="$classTowerDubai.html#ae088b445ea963e6bcfaeceeb9d81a719" title="TowerDubai::rotateLevel" alt="" coords="271,157,435,184"/>
+<area shape="rect" id="node6" href="$classTowerLevel.html#a87808afd8664757c42476fae5107f727" title="TowerLevel::setDirection" alt="" coords="270,208,437,235"/>
+<area shape="rect" id="node7" href="$classTowerLevel.html#a00e201e3458ba9b1cd83d6ac8188869b" title="TowerLevel::setGiroAct" alt="" coords="274,259,433,285"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="InputManager::KeyPressed" name="InputManager::KeyPressed">
+<area shape="rect" id="node2" href="$classCamera.html#a6d305ab5442a489253a321b2a45b11b6" title="Camera::GetSpeed" alt="" coords="247,5,382,32"/>
+<area shape="rect" id="node3" href="$classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="235,56,394,83"/>
+<area shape="rect" id="node4" href="$classCamera.html#a3794bc585d91837f1eb657ed5536a685" title="Camera::MoveCamera" alt="" coords="237,107,392,133"/>
+</map>

@@ -1,0 +1,135 @@
+.TH "WindowManager" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WindowManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WindowManager\&.h>\fP
+.PP
+Heredado por \fBGLFWManager\fP\&.
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~WindowManager\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBInitialize\fP (int width, int height, std::string strTitle, bool bFullScreen=false)=0"
+.br
+.ti -1c
+.RI "virtual void \fBSwapTheBuffers\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBProcessInput\fP (bool continueApplication)=0"
+.br
+.ti -1c
+.RI "virtual void \fBDestroy\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBInputManager\fP * \fBGetInputManager\fP ()"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBInputManager\fP \fBinputManager\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Esta clase es una abstracci�n de herencia, especifica los metodos que Se deben implementar para el la creaci�n del contexto de OpenGL\&. Se puede tener una clase que implement� el manejo de ventanas, entradas por otra libreria, solo se debe de incluir y apegar a esta clase\&. 
+.PP
+Definición en la línea 13 del archivo WindowManager\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "virtual WindowManager::~WindowManager ()\fC [inline]\fP, \fC [virtual]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 19 del archivo WindowManager\&.h\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "virtual void WindowManager::Destroy ()\fC [pure virtual]\fP"
+Destruye la ventana y el contexto de OpenGL\&. 
+.PP
+Implementado en \fBGLFWManager\fP\&.
+.PP
+Referenciado por GLApplication::Destroy()\&.
+.SS "virtual \fBInputManager\fP* WindowManager::GetInputManager ()\fC [inline]\fP, \fC [virtual]\fP"
+Obtiene el manejador de eventos de entrada, esto con fines de que accedan a los evetos de entrada y se le indique la funcionalidad a realizar\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 55 del archivo WindowManager\&.h\&.
+.PP
+Hace referencia a inputManager\&.
+.PP
+Referenciado por main()\&.
+.SS "virtual int WindowManager::Initialize (intwidth, intheight, std::stringstrTitle, boolbFullScreen = \fCfalse\fP)\fC [pure virtual]\fP"
+Inicializa la ventana y crea el contexto de OpenGL\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIwidth\fP Ancho de ventana\&. 
+.br
+\fIheight\fP Altura de ventana\&. 
+.br
+\fIstrTitle\fP Titulo de ventana\&. 
+.br
+\fIbFullScreen\fP Indica si se requiere ventana completa o no\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica la inicializaci�n correcta de la ventana y el contexto de OpenGL\&. 
+.RE
+.PP
+
+.PP
+Implementado en \fBGLFWManager\fP\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "virtual bool WindowManager::ProcessInput (boolcontinueApplication)\fC [pure virtual]\fP"
+M�todo que maneja los eventos de entrada de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIcontinueApplication\fP Bandera que indica la ejecuci�n de la aplicacai�n\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+True siempre que no se apriete la tecal Esc, falso en caso contrario\&. 
+.RE
+.PP
+
+.PP
+Implementado en \fBGLFWManager\fP\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "virtual void WindowManager::SwapTheBuffers ()\fC [pure virtual]\fP"
+Intercambia el backbuffer al frente, se debe estar llamando este funci�n por cada frame\&. 
+.PP
+Implementado en \fBGLFWManager\fP\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBInputManager\fP WindowManager::inputManager\fC [protected]\fP"
+
+.PP
+Definición en la línea 62 del archivo WindowManager\&.h\&.
+.PP
+Referenciado por GetInputManager() y GLFWManager::ProcessInput()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

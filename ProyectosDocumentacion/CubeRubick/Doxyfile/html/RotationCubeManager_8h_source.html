@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CubeRubick: Fichero Fuente src/Headers/RotationCubeManager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CubeRubick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('RotationCubeManager_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">RotationCubeManager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="RotationCubeManager_8h.html">Ir a la documentaciÃ³n de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * RotationCubeManager.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 05/05/2015</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: rey</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Model_8h.html">Model.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;glm/gtx/quaternion.hpp&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef ROTATIONCUBEMANAGER_H_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ROTATIONCUBEMANAGER_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="RotationCubeManager_8h.html#a002b2f4894492820fe708b1b7e7c5e70">   20</a></span>&#160;<span class="preprocessor">#define EPSILON 0.000001</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Representación de movimeitnos cara y dirección. struct Movimiento {
+  int face, direction;
+};
+
+namespace RotationCubeManager {
+
+/**
+ * Clase que maneja y registra las rotaciones que realiza el cubo.
+ */
+class RotationCubeManager {
+ public:
+  /**
+   * Constructor.
+   */
+  RotationCubeManager();
+  /**
+   * Metodo que agrega una rotación
+   * @param face Cara que se agrega.
+   * @param direction Dirección de la cara.
+   */
+  void addRotation(int face, int direction);
+  /**
+   * Método que elimina la rotación de una cara al completar su giro.
+   */
+  void deleteCurrentCompleteRotation();
+  /**
+   * Metodo que obtiene el ultimo movimiento que esta realizando el rubick.
+   */
+  Movimiento * getCurrentRotation();
+  /**
+   * Método que actualiza las orientación de las caras del rubick.
+   */
+  void updateOrientation();
+  /**
+   * Método que mapea las caras reales con las que fue contruido el rubick y con las caras que estan
+   * De frente al observador.
+   * @param faceAxisX Cara que esta viendo el observador.
+   * @param faceAxisY Cara que esta viendo una camara invisible sobre el eje y.
+   */
+  void updateFaceMap(int faceAxisX, float faceAxisY);
+  /**
+   *Método que obtiene la intersección del rayo con un triángulo,
+   *Se utiliza el algortimo de Tomas Moller.
+   *  Representación del rayo en coordenadas parametricas.
+   *    R ( t ) = O + tD  ------- (1)
+   *  Un punto de un triángulo esta dado por las coordenadas varicentricas,
+   *  del triangulo, u &gt;= 0, v &gt;= 0 y u + v &lt;= 1.
+   *    T ( u v ) = (1 ; u ; v ) V 0 + uV 1 + vV 2  ------- (2)
+   * @param orig Origen del rayo.
+   * @param dir Dirección del rayo.
+   * @param vert0 Vertice 1 del triangulo a probar.
+   * @param vert1 Vertice 2 del triangulo a probar.
+   * @param vert2 Vertice 3 del triangulo a probar.
+   * @param t Valor de ecuación de (1)
+   * @param u Coordenada u varicentrica del triángulo (2).
+   * @param v Coordenada v varicentrica del triángulo (2).
+   * @return Bandera que indica si hay intersección o no, true existe la intersección
+   * false no existe la intersección.
+   */
+  bool RayTriangleIntersect(glm::vec3 orig, glm::vec3 dir, glm::vec3 vert0,
+                            glm::vec3 vert1, glm::vec3 vert2, double *t,
+                            double *u, double *v);
+  /**
+   * Método que guarda el estado del rubick al cerrar la ventana.
+   */
+  void saveRotations();
+  /**
+   * Métdo que carga las rotaciones al iniciar sesión.
+   */
+  void loadRotations();
+  /**
+   * Setter de los vertices del cubo.
+   * @param verticesCube
+   */
+  void SetVerticesCube(Vertex3 * verticesCube) {
+    this-&gt;verticesCube = verticesCube;
+  }
+  /**
+   * Setter de indicies del cubo.
+   * @param indexCube Indices del cubo.
+   */
+  void SetIndexCube(GLubyte * indexCube) {
+    this-&gt;indexCube = indexCube;
+  }
+  /**
+   * Setter de la camara.
+   * @param camera Camara.
+   */
+  void SetCamera(Camera * camera) {
+    this-&gt;camera = camera;
+  }
+  /**
+   * Setter de la matriz del rubick.
+   * @param WorldMatrix Matriz rubick.
+   */
+  void SetWorldMatrix(glm::mat4 WorldMatrix) {
+    this-&gt;WorldMatrix = WorldMatrix;
+  }
+  /**
+   * Método que obtiene los movimientos que se han realizado sobre el Cubo de Rubick.
+   * @return
+   */
+  std::vector&lt;Movimiento*&gt; * GetMovimientosSave() {
+    return this-&gt;movimientosSave;
+  }
+  /**
+   * Destructor.
+   */
+  virtual ~RotationCubeManager();
+
+ private:
+  int faceMap[6];
+  float axisXAngleAct = 0.7852;
+  std::vector&lt;Movimiento*&gt; * movimientos = new std::vector&lt;Movimiento*&gt;();
+  std::vector&lt;Movimiento*&gt; * movimientosSave = new std::vector&lt;Movimiento*&gt;();
+  Vertex3 * verticesCube;
+  GLubyte * indexCube;
+  Camera * camera;
+  glm::mat4 WorldMatrix;
+};
+
+} /* namespace RotationCubeManager */
+#endif /* ROTATIONCUBEMANAGER_H_ */
+</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structMovimiento.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structMovimiento.html">Movimiento</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structMovimiento.html#a6e9d30e98996d19428e6075b0bc95da3">   24</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structMovimiento.html#a6e9d30e98996d19428e6075b0bc95da3">face</a>, <a class="code" href="structMovimiento.html#a6b90e613f76d978242b31c8068e99a67">direction</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespaceRotationCubeManager.html">   27</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> addRotation(<span class="keywordtype">int</span> face, <span class="keywordtype">int</span> direction);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> deleteCurrentCompleteRotation();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="structMovimiento.html">Movimiento</a> * getCurrentRotation();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> updateOrientation();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> updateFaceMap(<span class="keywordtype">int</span> faceAxisX, <span class="keywordtype">float</span> faceAxisY);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">bool</span> RayTriangleIntersect(glm::vec3 orig, glm::vec3 dir, glm::vec3 vert0,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                            glm::vec3 vert1, glm::vec3 vert2, <span class="keywordtype">double</span> *<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a0247320c476fffeaa81ffa7836e08dee">t</a>,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                            <span class="keywordtype">double</span> *<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a63f235d4a03b00a5e43f0bfa785c853d">u</a>, <span class="keywordtype">double</span> *<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7571419a9cfbfae012aedf01dc8883de">v</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> saveRotations();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> loadRotations();</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#aee4415243d85c57f05271ee5b03d8734">   97</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#aee4415243d85c57f05271ee5b03d8734">SetVerticesCube</a>(<a class="code" href="classVertex3.html">Vertex3</a> * verticesCube) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    this-&gt;verticesCube = verticesCube;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#a4ba757bfee3755c5c1979ba44dde4794">  104</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a4ba757bfee3755c5c1979ba44dde4794">SetIndexCube</a>(GLubyte * indexCube) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    this-&gt;indexCube = indexCube;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#a02931e61b7f52324ccead50d6d9c2850">  111</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a02931e61b7f52324ccead50d6d9c2850">SetCamera</a>(<a class="code" href="classCamera.html">Camera</a> * camera) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    this-&gt;camera = camera;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#af8ce33c1e34659b72a388ab242da4ffd">  118</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#af8ce33c1e34659b72a388ab242da4ffd">SetWorldMatrix</a>(glm::mat4 WorldMatrix) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    this-&gt;WorldMatrix = WorldMatrix;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#af3e65204404e17d5c77ee6e74158323b">  125</a></span>&#160;  std::vector&lt;Movimiento*&gt; * <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#af3e65204404e17d5c77ee6e74158323b">GetMovimientosSave</a>() {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> this-&gt;movimientosSave;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#a3ebcd0f5289e105f08e4c6754fa9c8ca">  134</a></span>&#160;  <span class="keywordtype">int</span> faceMap[6];</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#ae891d4f131d97e685d10ad282faee636">  135</a></span>&#160;  <span class="keywordtype">float</span> axisXAngleAct = 0.7852;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#ae037d463f6fcd856f9308647bb4ef014">  136</a></span>&#160;  std::vector&lt;Movimiento*&gt; * movimientos = <span class="keyword">new</span> std::vector&lt;Movimiento*&gt;();</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#aece234e3670f96265b8896ad06f7577e">  137</a></span>&#160;  std::vector&lt;Movimiento*&gt; * movimientosSave = <span class="keyword">new</span> std::vector&lt;Movimiento*&gt;();</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#aac2312e3a295b78f236c4d5c356da064">  138</a></span>&#160;  <a class="code" href="classVertex3.html">Vertex3</a> * <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#aac2312e3a295b78f236c4d5c356da064">verticesCube</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#aa1a74360de82dd6a156a11ab0a471d3f">  139</a></span>&#160;  GLubyte * <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#aa1a74360de82dd6a156a11ab0a471d3f">indexCube</a>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#a38ce652659c85ee1def6d51dee16ac55">  140</a></span>&#160;  <a class="code" href="classCamera.html">Camera</a> * <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a38ce652659c85ee1def6d51dee16ac55">camera</a>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classRotationCubeManager_1_1RotationCubeManager.html#ac3ac1d49075ce10079e5259372780b30">  141</a></span>&#160;  glm::mat4 <a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#ac3ac1d49075ce10079e5259372780b30">WorldMatrix</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;};</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;} <span class="comment">/* namespace RotationCubeManager */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ROTATIONCUBEMANAGER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_a02931e61b7f52324ccead50d6d9c2850"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#a02931e61b7f52324ccead50d6d9c2850">RotationCubeManager::RotationCubeManager::SetCamera</a></div><div class="ttdeci">void SetCamera(Camera *camera)</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00111">RotationCubeManager.h:111</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_a38ce652659c85ee1def6d51dee16ac55"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#a38ce652659c85ee1def6d51dee16ac55">RotationCubeManager::RotationCubeManager::camera</a></div><div class="ttdeci">Camera * camera</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00140">RotationCubeManager.h:140</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a63f235d4a03b00a5e43f0bfa785c853d"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a63f235d4a03b00a5e43f0bfa785c853d">u</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00059">InputManager.h:59</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a0247320c476fffeaa81ffa7836e08dee"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a0247320c476fffeaa81ffa7836e08dee">t</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00057">InputManager.h:57</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a7571419a9cfbfae012aedf01dc8883de"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7571419a9cfbfae012aedf01dc8883de">v</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00061">InputManager.h:61</a></div></div>
+<div class="ttc" id="Model_8h_html"><div class="ttname"><a href="Model_8h.html">Model.h</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_a4ba757bfee3755c5c1979ba44dde4794"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#a4ba757bfee3755c5c1979ba44dde4794">RotationCubeManager::RotationCubeManager::SetIndexCube</a></div><div class="ttdeci">void SetIndexCube(GLubyte *indexCube)</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00104">RotationCubeManager.h:104</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_af8ce33c1e34659b72a388ab242da4ffd"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#af8ce33c1e34659b72a388ab242da4ffd">RotationCubeManager::RotationCubeManager::SetWorldMatrix</a></div><div class="ttdeci">void SetWorldMatrix(glm::mat4 WorldMatrix)</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00118">RotationCubeManager.h:118</a></div></div>
+<div class="ttc" id="structMovimiento_html_a6b90e613f76d978242b31c8068e99a67"><div class="ttname"><a href="structMovimiento.html#a6b90e613f76d978242b31c8068e99a67">Movimiento::direction</a></div><div class="ttdeci">int direction</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00024">RotationCubeManager.h:24</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_af3e65204404e17d5c77ee6e74158323b"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#af3e65204404e17d5c77ee6e74158323b">RotationCubeManager::RotationCubeManager::GetMovimientosSave</a></div><div class="ttdeci">std::vector&lt; Movimiento * &gt; * GetMovimientosSave()</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00125">RotationCubeManager.h:125</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_aa1a74360de82dd6a156a11ab0a471d3f"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#aa1a74360de82dd6a156a11ab0a471d3f">RotationCubeManager::RotationCubeManager::indexCube</a></div><div class="ttdeci">GLubyte * indexCube</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00139">RotationCubeManager.h:139</a></div></div>
+<div class="ttc" id="classVertex3_html"><div class="ttname"><a href="classVertex3.html">Vertex3</a></div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00018">Model.h:18</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_aac2312e3a295b78f236c4d5c356da064"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#aac2312e3a295b78f236c4d5c356da064">RotationCubeManager::RotationCubeManager::verticesCube</a></div><div class="ttdeci">Vertex3 * verticesCube</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00138">RotationCubeManager.h:138</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html">RotationCubeManager::RotationCubeManager</a></div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00032">RotationCubeManager.h:32</a></div></div>
+<div class="ttc" id="structMovimiento_html_a6e9d30e98996d19428e6075b0bc95da3"><div class="ttname"><a href="structMovimiento.html#a6e9d30e98996d19428e6075b0bc95da3">Movimiento::face</a></div><div class="ttdeci">int face</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00024">RotationCubeManager.h:24</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_ac3ac1d49075ce10079e5259372780b30"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#ac3ac1d49075ce10079e5259372780b30">RotationCubeManager::RotationCubeManager::WorldMatrix</a></div><div class="ttdeci">glm::mat4 WorldMatrix</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00141">RotationCubeManager.h:141</a></div></div>
+<div class="ttc" id="classCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="Camera_8h_source.html#l00014">Camera.h:14</a></div></div>
+<div class="ttc" id="structMovimiento_html"><div class="ttname"><a href="structMovimiento.html">Movimiento</a></div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00023">RotationCubeManager.h:23</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_aee4415243d85c57f05271ee5b03d8734"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#aee4415243d85c57f05271ee5b03d8734">RotationCubeManager::RotationCubeManager::SetVerticesCube</a></div><div class="ttdeci">void SetVerticesCube(Vertex3 *verticesCube)</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8h_source.html#l00097">RotationCubeManager.h:97</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cab694c3d106f0550c8829c9bcd0a4b9.html">Headers</a></li><li class="navelem"><a class="el" href="RotationCubeManager_8h.html">RotationCubeManager.h</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:22 para CubeRubick por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

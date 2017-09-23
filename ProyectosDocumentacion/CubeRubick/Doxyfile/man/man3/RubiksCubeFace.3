@@ -1,0 +1,216 @@
+.TH "RubiksCubeFace" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RubiksCubeFace \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RubiksCubeFace\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBRubiksCubeFace\fP (\fBNode\fP *centerCubie, glm::vec3 axis)"
+.br
+.ti -1c
+.RI "\fBRubiksCubeFace\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~RubiksCubeFace\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddAdjacentToFace\fP (\fBNode\fP *edge, int id)"
+.br
+.ti -1c
+.RI "void \fBaddCornerToFace\fP (\fBNode\fP *corner, int id)"
+.br
+.ti -1c
+.RI "void \fBrotate\fP (float angleFlip, bool direction, float portionTurn)"
+.br
+.ti -1c
+.RI "void \fBflipFacesMatrix\fP (bool lastTurnDirection)"
+.br
+.in -1c
+.SS "Métodos privados"
+
+.in +1c
+.ti -1c
+.RI "void \fBrotateFace\fP (\fBNode\fP *cubie, float incAngle)"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "\fBNode\fP * \fBcubosCentricos\fP"
+.br
+.ti -1c
+.RI "\fBNode\fP * \fBcubosAdjacentes\fP [4]"
+.br
+.ti -1c
+.RI "\fBNode\fP * \fBcubosEsquinas\fP [4]"
+.br
+.ti -1c
+.RI "glm::vec3 \fBejeGiro\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que representa una cara del cubo de rubick\&. 
+.PP
+Definición en la línea 15 del archivo RubiksCubeFace\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "RubiksCubeFace::RubiksCubeFace (\fBNode\fP *centerCubie, glm::vec3axis)"
+Constructor de una cara del cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIcenterCubie\fP Cubo centrico\&. 
+.br
+\fIaxis\fP Eje de giro\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 17 del archivo RubiksCubeFace\&.cpp\&.
+.PP
+Hace referencia a cubosCentricos y ejeGiro\&.
+.SS "RubiksCubeFace::RubiksCubeFace ()"
+Constructor defualt\&. 
+.PP
+Definición en la línea 25 del archivo RubiksCubeFace\&.cpp\&.
+.SS "RubiksCubeFace::~RubiksCubeFace ()\fC [virtual]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 30 del archivo RubiksCubeFace\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void RubiksCubeFace::addAdjacentToFace (\fBNode\fP *edge, intid)"
+M�todo que agrega un cubo adjacente a la cara (Forma de cruz del cara\&.) 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIedge\fP Nuevo nodo\&. 
+.br
+\fIid\fP Indice en el arreglo de nodos\&.
+.RE
+.PP
+M�todo que agrega una arista al nodo central, para formar una cruz con el cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIedge\fP Nuevo nodo\&. 
+.br
+\fIid\fP Indice en el arreglo de nodos\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 38 del archivo RubiksCubeFace\&.cpp\&.
+.PP
+Hace referencia a cubosAdjacentes\&.
+.PP
+Referenciado por RubiksCube::addEdgesAndCorners()\&.
+.SS "void RubiksCubeFace::addCornerToFace (\fBNode\fP *corner, intid)"
+Agrega los extremos de una cara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIcorner\fP Nodo esquina\&. 
+.br
+\fIid\fP Indice en el arreglo de nodos\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 46 del archivo RubiksCubeFace\&.cpp\&.
+.PP
+Hace referencia a cubosEsquinas\&.
+.PP
+Referenciado por RubiksCube::addEdgesAndCorners()\&.
+.SS "void RubiksCubeFace::flipFacesMatrix (boollastTurnDirection)"
+M�todo que realiza el re-acomodo en las aristas al completar un giro\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIlastTurnDirection\fP Direcci�n de giro que se completo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 92 del archivo RubiksCubeFace\&.cpp\&.
+.PP
+Hace referencia a cubosAdjacentes, cubosEsquinas, Node::getTransformMatrix(), i y Node::setTransformMatrix()\&.
+.PP
+Referenciado por RubiksCube::rotateFace() y RubiksCube::rotateFaceAuto()\&.
+.SS "void RubiksCubeFace::rotate (floatangleFlip, booldirection, floatturnPortion)"
+Se incrementa el giro de la cara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIangleFlip\fP Incremento en la rotaci�n de giro de cara\&. 
+.br
+\fIdirection\fP Direcci�n de giro\&. 
+.br
+\fIportionTurn\fP Porci�n de giro\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 56 del archivo RubiksCubeFace\&.cpp\&.
+.PP
+Hace referencia a cubosAdjacentes, cubosCentricos, cubosEsquinas, currAngle, f, i y rotateFace()\&.
+.PP
+Referenciado por RubiksCube::rotateFace() y RubiksCube::rotateFaceAuto()\&.
+.SS "void RubiksCubeFace::rotateFace (\fBNode\fP *cubie, floatincAngle)\fC [private]\fP"
+Se incrementa el giro de la cara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIratio\fP Incremento en la rotaci�n de giro de cara\&. 
+.br
+\fIdirection\fP Direcci�n de giro\&. 
+.br
+\fIportionTurn\fP Porci�n de giro\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 80 del archivo RubiksCubeFace\&.cpp\&.
+.PP
+Hace referencia a ejeGiro, f, Node::getTransformMatrix() y Node::setTransformMatrix()\&.
+.PP
+Referenciado por rotate()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBNode\fP* RubiksCubeFace::cubosAdjacentes[4]\fC [private]\fP"
+
+.PP
+Definición en la línea 58 del archivo RubiksCubeFace\&.h\&.
+.PP
+Referenciado por addAdjacentToFace(), flipFacesMatrix() y rotate()\&.
+.SS "\fBNode\fP* RubiksCubeFace::cubosCentricos\fC [private]\fP"
+
+.PP
+Definición en la línea 57 del archivo RubiksCubeFace\&.h\&.
+.PP
+Referenciado por rotate() y RubiksCubeFace()\&.
+.SS "\fBNode\fP* RubiksCubeFace::cubosEsquinas[4]\fC [private]\fP"
+
+.PP
+Definición en la línea 59 del archivo RubiksCubeFace\&.h\&.
+.PP
+Referenciado por addCornerToFace(), flipFacesMatrix() y rotate()\&.
+.SS "glm::vec3 RubiksCubeFace::ejeGiro\fC [private]\fP"
+
+.PP
+Definición en la línea 60 del archivo RubiksCubeFace\&.h\&.
+.PP
+Referenciado por rotateFace() y RubiksCubeFace()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para CubeRubick del código fuente\&.

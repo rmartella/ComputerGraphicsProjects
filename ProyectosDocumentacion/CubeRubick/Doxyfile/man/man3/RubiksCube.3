@@ -1,0 +1,251 @@
+.TH "RubiksCube" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RubiksCube \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RubiksCube\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBRubiksCube\fP ()"
+.br
+.ti -1c
+.RI "\fBRubiksCube\fP (\fBNode\fP *rootNode)"
+.br
+.ti -1c
+.RI "virtual \fB~RubiksCube\fP ()"
+.br
+.ti -1c
+.RI "void \fBrotateFaceAuto\fP (float turnRatio, bool armar, bool *complete)"
+.br
+.ti -1c
+.RI "void \fBrotateFace\fP (float turnRatio, bool armar, bool *ready)"
+.br
+.ti -1c
+.RI "void \fBSetRotationCubeManager\fP (\fBRotationCubeManager::RotationCubeManager\fP *\fBrotationCubeManager\fP)"
+.br
+.ti -1c
+.RI "\fBRotationCubeManager::RotationCubeManager\fP * \fBGetRotationCubeManager\fP ()"
+.br
+.in -1c
+.SS "Métodos privados"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddCenters\fP (\fBNode\fP *rootNode)"
+.br
+.ti -1c
+.RI "void \fBaddEdgesAndCorners\fP (\fBNode\fP *rootNode)"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "\fBRubiksCubeFace\fP \fBfaces\fP [6]"
+.br
+.ti -1c
+.RI "float \fBcurrTurnRatio\fP = 0"
+.br
+.ti -1c
+.RI "int \fBcurrFace\fP = 0"
+.br
+.ti -1c
+.RI "int \fBindexArray\fP = 0"
+.br
+.ti -1c
+.RI "bool \fBcurrDirection\fP = false"
+.br
+.ti -1c
+.RI "float \fBcurrTurnPortion\fP = 1 / 4\&.0f"
+.br
+.ti -1c
+.RI "\fBRotationCubeManager::RotationCubeManager\fP * \fBrotationCubeManager\fP = NULL"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Definición en la línea 14 del archivo RubiksCube\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "RubiksCube::RubiksCube ()"
+Constructor\&. 
+.PP
+Definición en la línea 36 del archivo RubiksCube\&.cpp\&.
+.SS "RubiksCube::RubiksCube (\fBNode\fP *rootNode)"
+Destructor\&.
+.PP
+Constructor del cubo de rubick\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrootNode\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 26 del archivo RubiksCube\&.cpp\&.
+.PP
+Hace referencia a addCenters(), Node::addChild(), addEdgesAndCorners() y i\&.
+.SS "RubiksCube::~RubiksCube ()\fC [virtual]\fP"
+M�todo que crea los centros de las caras del cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrootNode\fP Nodo padre\&.
+.RE
+.PP
+Destructor\&. 
+.PP
+Definición en la línea 42 del archivo RubiksCube\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void RubiksCube::addCenters (\fBNode\fP *rootNode)\fC [private]\fP"
+M�todo que crea los centros de las caras del cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrootNode\fP Nodo padre\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 49 del archivo RubiksCube\&.cpp\&.
+.PP
+Hace referencia a f, faceOffsets, faces, Node::getModel(), i y Node::setTransformMatrix()\&.
+.PP
+Referenciado por RubiksCube()\&.
+.SS "void RubiksCube::addEdgesAndCorners (\fBNode\fP *rootNode)\fC [private]\fP"
+Se agregan los nodos para formar la cruz y las esquinas\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrootNode\fP Nodo padre\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 64 del archivo RubiksCube\&.cpp\&.
+.PP
+Hace referencia a RubiksCubeFace::addAdjacentToFace(), RubiksCubeFace::addCornerToFace(), f, faceOffsets, faces, Node::getModel(), i y Node::setTransformMatrix()\&.
+.PP
+Referenciado por RubiksCube()\&.
+.SS "\fBRotationCubeManager::RotationCubeManager\fP* RubiksCube::GetRotationCubeManager ()\fC [inline]\fP"
+Obtiene para el manejadro de rotaciones de caras del cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrotationCubeManager\fP Manejadro de rotaciones de caras del cubo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 57 del archivo RubiksCube\&.h\&.
+.PP
+Hace referencia a rotationCubeManager\&.
+.SS "void RubiksCube::rotateFace (floatturnRatio, boolarmar, bool *ready)"
+Rota una cara y se detiene cuando ha acumulado un giro de 90� 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIturnRatio\fP 
+.br
+\fIarmar\fP Bandera que indica que al ultimo giro de la cara del rubick debe de armarse\&. 
+.br
+\fIready\fP Bandera que indica que ya puede armarse completo el ultimo giro\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 180 del archivo RubiksCube\&.cpp\&.
+.PP
+Hace referencia a currDirection, currFace, currTurnPortion, currTurnRatio, RotationCubeManager::RotationCubeManager::deleteCurrentCompleteRotation(), Movimiento::direction, Movimiento::face, faces, RubiksCubeFace::flipFacesMatrix(), RotationCubeManager::RotationCubeManager::getCurrentRotation(), RotationCubeManager::RotationCubeManager::GetMovimientosSave(), RubiksCubeFace::rotate() y rotationCubeManager\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void RubiksCube::rotateFaceAuto (floatturnRatio, boolarmar, bool *complete)"
+M�todo que rota automaticamente las caras, es decir para restarurar las sesiones y restatura el estado del rubick 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIturnRatio\fP Porci�n que debe girar\&. 
+.br
+\fIarmar\fP Indica que es un armado de cara, realiza la obtenci�n de arriba hacia abajo de la cola de giros y en direcci�n contrar�a\&. 
+.br
+\fIcomplete\fP Se completaron los giros, se puede volver a girar las caras manualmente\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 133 del archivo RubiksCube\&.cpp\&.
+.PP
+Hace referencia a currDirection, currFace, currTurnPortion, currTurnRatio, faces, RubiksCubeFace::flipFacesMatrix(), RotationCubeManager::RotationCubeManager::GetMovimientosSave(), indexArray, RubiksCubeFace::rotate() y rotationCubeManager\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void RubiksCube::SetRotationCubeManager (\fBRotationCubeManager::RotationCubeManager\fP *rotationCubeManager)\fC [inline]\fP"
+Setter para el manejadro de rotaciones de caras del cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrotationCubeManager\fP Manejadro de rotaciones de caras del cubo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 49 del archivo RubiksCube\&.h\&.
+.PP
+Hace referencia a rotationCubeManager\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "bool RubiksCube::currDirection = false\fC [private]\fP"
+
+.PP
+Definición en la línea 68 del archivo RubiksCube\&.h\&.
+.PP
+Referenciado por rotateFace() y rotateFaceAuto()\&.
+.SS "int RubiksCube::currFace = 0\fC [private]\fP"
+
+.PP
+Definición en la línea 66 del archivo RubiksCube\&.h\&.
+.PP
+Referenciado por rotateFace() y rotateFaceAuto()\&.
+.SS "float RubiksCube::currTurnPortion = 1 / 4\&.0f\fC [private]\fP"
+
+.PP
+Definición en la línea 69 del archivo RubiksCube\&.h\&.
+.PP
+Referenciado por rotateFace() y rotateFaceAuto()\&.
+.SS "float RubiksCube::currTurnRatio = 0\fC [private]\fP"
+
+.PP
+Definición en la línea 65 del archivo RubiksCube\&.h\&.
+.PP
+Referenciado por rotateFace() y rotateFaceAuto()\&.
+.SS "\fBRubiksCubeFace\fP RubiksCube::faces[6]\fC [private]\fP"
+
+.PP
+Definición en la línea 61 del archivo RubiksCube\&.h\&.
+.PP
+Referenciado por addCenters(), addEdgesAndCorners(), rotateFace() y rotateFaceAuto()\&.
+.SS "int RubiksCube::indexArray = 0\fC [private]\fP"
+
+.PP
+Definición en la línea 67 del archivo RubiksCube\&.h\&.
+.PP
+Referenciado por rotateFaceAuto()\&.
+.SS "\fBRotationCubeManager::RotationCubeManager\fP* RubiksCube::rotationCubeManager = NULL\fC [private]\fP"
+
+.PP
+Definición en la línea 70 del archivo RubiksCube\&.h\&.
+.PP
+Referenciado por GetRotationCubeManager(), rotateFace(), rotateFaceAuto() y SetRotationCubeManager()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para CubeRubick del código fuente\&.

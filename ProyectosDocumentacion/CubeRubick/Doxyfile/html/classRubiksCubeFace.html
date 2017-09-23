@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CubeRubick: Referencia de la Clase RubiksCubeFace</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CubeRubick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classRubiksCubeFace.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="classRubiksCubeFace-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase RubiksCubeFace</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="RubiksCubeFace_8h_source.html">RubiksCubeFace.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración para RubiksCubeFace:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRubiksCubeFace__coll__graph.png" border="0" usemap="#RubiksCubeFace_coll__map" alt="Collaboration graph"/></div>
+<map name="RubiksCubeFace_coll__map" id="RubiksCubeFace_coll__map">
+<area shape="rect" id="node2" href="classNode.html" title="Node" alt="" coords="101,187,155,213"/><area shape="rect" id="node3" href="classModel.html" title="Model" alt="" coords="99,96,156,123"/><area shape="rect" id="node4" href="classVertex3.html" title="Vertex3" alt="" coords="5,5,72,32"/><area shape="rect" id="node5" href="classShader.html" title="Shader" alt="" coords="97,5,159,32"/><area shape="rect" id="node6" href="classCamera.html" title="Camera" alt="" coords="183,5,251,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a1b6f3926e32c745871ba983dc031a916"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#a1b6f3926e32c745871ba983dc031a916">RubiksCubeFace</a> (<a class="el" href="classNode.html">Node</a> *centerCubie, glm::vec3 axis)</td></tr>
+<tr class="separator:a1b6f3926e32c745871ba983dc031a916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc87eac84b4e3ecf2535f5c023fd26a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#a0cc87eac84b4e3ecf2535f5c023fd26a">RubiksCubeFace</a> ()</td></tr>
+<tr class="separator:a0cc87eac84b4e3ecf2535f5c023fd26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af56a5c1885bb1e3bd4bddcd663404955"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#af56a5c1885bb1e3bd4bddcd663404955">~RubiksCubeFace</a> ()</td></tr>
+<tr class="separator:af56a5c1885bb1e3bd4bddcd663404955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9894049a07ce4c75e4e7730b1f15e028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#a9894049a07ce4c75e4e7730b1f15e028">addAdjacentToFace</a> (<a class="el" href="classNode.html">Node</a> *edge, int id)</td></tr>
+<tr class="separator:a9894049a07ce4c75e4e7730b1f15e028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae07f8e9ed8bd48463e2ac0efbae068aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#ae07f8e9ed8bd48463e2ac0efbae068aa">addCornerToFace</a> (<a class="el" href="classNode.html">Node</a> *corner, int id)</td></tr>
+<tr class="separator:ae07f8e9ed8bd48463e2ac0efbae068aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9117173447c562e3c510eaf48ee4329"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#ab9117173447c562e3c510eaf48ee4329">rotate</a> (float angleFlip, bool direction, float portionTurn)</td></tr>
+<tr class="separator:ab9117173447c562e3c510eaf48ee4329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae867890f33017a63d80223e160f979ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#ae867890f33017a63d80223e160f979ee">flipFacesMatrix</a> (bool lastTurnDirection)</td></tr>
+<tr class="separator:ae867890f33017a63d80223e160f979ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a3809a70fe2ba6c11b2dda81161edd7bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#a3809a70fe2ba6c11b2dda81161edd7bc">rotateFace</a> (<a class="el" href="classNode.html">Node</a> *cubie, float incAngle)</td></tr>
+<tr class="separator:a3809a70fe2ba6c11b2dda81161edd7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a9877316ea81de3629f553412d6ef0733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#a9877316ea81de3629f553412d6ef0733">cubosCentricos</a></td></tr>
+<tr class="separator:a9877316ea81de3629f553412d6ef0733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa5572d4853155656709db2434a4ec1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#aefa5572d4853155656709db2434a4ec1">cubosAdjacentes</a> [4]</td></tr>
+<tr class="separator:aefa5572d4853155656709db2434a4ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583e6de1f1b92c698604f0a986f7fe74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#a583e6de1f1b92c698604f0a986f7fe74">cubosEsquinas</a> [4]</td></tr>
+<tr class="separator:a583e6de1f1b92c698604f0a986f7fe74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e967637c2d0d90e60bec282f36a714"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRubiksCubeFace.html#ac8e967637c2d0d90e60bec282f36a714">ejeGiro</a></td></tr>
+<tr class="separator:ac8e967637c2d0d90e60bec282f36a714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase que representa una cara del cubo de rubick. </p>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8h_source.html#l00015">15</a> del archivo <a class="el" href="RubiksCubeFace_8h_source.html">RubiksCubeFace.h</a>.</p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="a1b6f3926e32c745871ba983dc031a916"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RubiksCubeFace::RubiksCubeFace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>centerCubie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>axis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor de una cara del cubo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">centerCubie</td><td>Cubo centrico. </td></tr>
+    <tr><td class="paramname">axis</td><td>Eje de giro. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8cpp_source.html#l00017">17</a> del archivo <a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RubiksCubeFace_8h_source.html#l00057">cubosCentricos</a> y <a class="el" href="RubiksCubeFace_8h_source.html#l00060">ejeGiro</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0cc87eac84b4e3ecf2535f5c023fd26a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RubiksCubeFace::RubiksCubeFace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor defualt. </p>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8cpp_source.html#l00025">25</a> del archivo <a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af56a5c1885bb1e3bd4bddcd663404955"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RubiksCubeFace::~RubiksCubeFace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructor. </p>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8cpp_source.html#l00030">30</a> del archivo <a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="a9894049a07ce4c75e4e7730b1f15e028"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RubiksCubeFace::addAdjacentToFace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>edge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que agrega un cubo adjacente a la cara (Forma de cruz del cara.) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge</td><td>Nuevo nodo. </td></tr>
+    <tr><td class="paramname">id</td><td>Indice en el arreglo de nodos.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>M�todo que agrega una arista al nodo central, para formar una cruz con el cubo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge</td><td>Nuevo nodo. </td></tr>
+    <tr><td class="paramname">id</td><td>Indice en el arreglo de nodos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8cpp_source.html#l00038">38</a> del archivo <a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RubiksCubeFace_8h_source.html#l00058">cubosAdjacentes</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCube_8cpp_source.html#l00064">RubiksCube::addEdgesAndCorners()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae07f8e9ed8bd48463e2ac0efbae068aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RubiksCubeFace::addCornerToFace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>corner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Agrega los extremos de una cara. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">corner</td><td>Nodo esquina. </td></tr>
+    <tr><td class="paramname">id</td><td>Indice en el arreglo de nodos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8cpp_source.html#l00046">46</a> del archivo <a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RubiksCubeFace_8h_source.html#l00059">cubosEsquinas</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCube_8cpp_source.html#l00064">RubiksCube::addEdgesAndCorners()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae867890f33017a63d80223e160f979ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RubiksCubeFace::flipFacesMatrix </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>lastTurnDirection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que realiza el re-acomodo en las aristas al completar un giro. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lastTurnDirection</td><td>Direcci�n de giro que se completo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8cpp_source.html#l00092">92</a> del archivo <a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RubiksCubeFace_8h_source.html#l00058">cubosAdjacentes</a>, <a class="el" href="RubiksCubeFace_8h_source.html#l00059">cubosEsquinas</a>, <a class="el" href="Node_8cpp_source.html#l00046">Node::getTransformMatrix()</a>, <a class="el" href="InputManager_8h_source.html#l00035">i</a> y <a class="el" href="Node_8cpp_source.html#l00038">Node::setTransformMatrix()</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCube_8cpp_source.html#l00180">RubiksCube::rotateFace()</a> y <a class="el" href="RubiksCube_8cpp_source.html#l00133">RubiksCube::rotateFaceAuto()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRubiksCubeFace_ae867890f33017a63d80223e160f979ee_cgraph.png" border="0" usemap="#classRubiksCubeFace_ae867890f33017a63d80223e160f979ee_cgraph" alt=""/></div>
+<map name="classRubiksCubeFace_ae867890f33017a63d80223e160f979ee_cgraph" id="classRubiksCubeFace_ae867890f33017a63d80223e160f979ee_cgraph">
+<area shape="rect" id="node2" href="classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239" title="Node::getTransformMatrix" alt="" coords="238,5,413,32"/><area shape="rect" id="node3" href="classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="238,56,413,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9117173447c562e3c510eaf48ee4329"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RubiksCubeFace::rotate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angleFlip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>turnPortion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Se incrementa el giro de la cara. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angleFlip</td><td>Incremento en la rotaci�n de giro de cara. </td></tr>
+    <tr><td class="paramname">direction</td><td>Direcci�n de giro. </td></tr>
+    <tr><td class="paramname">portionTurn</td><td>Porci�n de giro. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8cpp_source.html#l00056">56</a> del archivo <a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RubiksCubeFace_8h_source.html#l00058">cubosAdjacentes</a>, <a class="el" href="RubiksCubeFace_8h_source.html#l00057">cubosCentricos</a>, <a class="el" href="RubiksCubeFace_8h_source.html#l00059">cubosEsquinas</a>, <a class="el" href="RubiksCubeFace_8cpp_source.html#l00010">currAngle</a>, <a class="el" href="InputManager_8h_source.html#l00029">f</a>, <a class="el" href="InputManager_8h_source.html#l00035">i</a> y <a class="el" href="RubiksCubeFace_8cpp_source.html#l00080">rotateFace()</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCube_8cpp_source.html#l00180">RubiksCube::rotateFace()</a> y <a class="el" href="RubiksCube_8cpp_source.html#l00133">RubiksCube::rotateFaceAuto()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRubiksCubeFace_ab9117173447c562e3c510eaf48ee4329_cgraph.png" border="0" usemap="#classRubiksCubeFace_ab9117173447c562e3c510eaf48ee4329_cgraph" alt=""/></div>
+<map name="classRubiksCubeFace_ab9117173447c562e3c510eaf48ee4329_cgraph" id="classRubiksCubeFace_ab9117173447c562e3c510eaf48ee4329_cgraph">
+<area shape="rect" id="node2" href="classRubiksCubeFace.html#a3809a70fe2ba6c11b2dda81161edd7bc" title="RubiksCubeFace::rotateFace" alt="" coords="219,31,413,57"/><area shape="rect" id="node3" href="classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239" title="Node::getTransformMatrix" alt="" coords="462,5,637,32"/><area shape="rect" id="node4" href="classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="462,56,637,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3809a70fe2ba6c11b2dda81161edd7bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RubiksCubeFace::rotateFace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>cubie</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>incAngle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Se incrementa el giro de la cara. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ratio</td><td>Incremento en la rotaci�n de giro de cara. </td></tr>
+    <tr><td class="paramname">direction</td><td>Direcci�n de giro. </td></tr>
+    <tr><td class="paramname">portionTurn</td><td>Porci�n de giro. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8cpp_source.html#l00080">80</a> del archivo <a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="RubiksCubeFace_8h_source.html#l00060">ejeGiro</a>, <a class="el" href="InputManager_8h_source.html#l00029">f</a>, <a class="el" href="Node_8cpp_source.html#l00046">Node::getTransformMatrix()</a> y <a class="el" href="Node_8cpp_source.html#l00038">Node::setTransformMatrix()</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCubeFace_8cpp_source.html#l00056">rotate()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classRubiksCubeFace_a3809a70fe2ba6c11b2dda81161edd7bc_cgraph.png" border="0" usemap="#classRubiksCubeFace_a3809a70fe2ba6c11b2dda81161edd7bc_cgraph" alt=""/></div>
+<map name="classRubiksCubeFace_a3809a70fe2ba6c11b2dda81161edd7bc_cgraph" id="classRubiksCubeFace_a3809a70fe2ba6c11b2dda81161edd7bc_cgraph">
+<area shape="rect" id="node2" href="classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239" title="Node::getTransformMatrix" alt="" coords="249,5,423,32"/><area shape="rect" id="node3" href="classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="249,56,423,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="aefa5572d4853155656709db2434a4ec1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNode.html">Node</a>* RubiksCubeFace::cubosAdjacentes[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8h_source.html#l00058">58</a> del archivo <a class="el" href="RubiksCubeFace_8h_source.html">RubiksCubeFace.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCubeFace_8cpp_source.html#l00038">addAdjacentToFace()</a>, <a class="el" href="RubiksCubeFace_8cpp_source.html#l00092">flipFacesMatrix()</a> y <a class="el" href="RubiksCubeFace_8cpp_source.html#l00056">rotate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9877316ea81de3629f553412d6ef0733"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNode.html">Node</a>* RubiksCubeFace::cubosCentricos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8h_source.html#l00057">57</a> del archivo <a class="el" href="RubiksCubeFace_8h_source.html">RubiksCubeFace.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCubeFace_8cpp_source.html#l00056">rotate()</a> y <a class="el" href="RubiksCubeFace_8cpp_source.html#l00017">RubiksCubeFace()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a583e6de1f1b92c698604f0a986f7fe74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNode.html">Node</a>* RubiksCubeFace::cubosEsquinas[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8h_source.html#l00059">59</a> del archivo <a class="el" href="RubiksCubeFace_8h_source.html">RubiksCubeFace.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCubeFace_8cpp_source.html#l00046">addCornerToFace()</a>, <a class="el" href="RubiksCubeFace_8cpp_source.html#l00092">flipFacesMatrix()</a> y <a class="el" href="RubiksCubeFace_8cpp_source.html#l00056">rotate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8e967637c2d0d90e60bec282f36a714"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec3 RubiksCubeFace::ejeGiro</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="RubiksCubeFace_8h_source.html#l00060">60</a> del archivo <a class="el" href="RubiksCubeFace_8h_source.html">RubiksCubeFace.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="RubiksCubeFace_8cpp_source.html#l00080">rotateFace()</a> y <a class="el" href="RubiksCubeFace_8cpp_source.html#l00017">RubiksCubeFace()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>src/Headers/<a class="el" href="RubiksCubeFace_8h_source.html">RubiksCubeFace.h</a></li>
+<li>src/<a class="el" href="RubiksCubeFace_8cpp_source.html">RubiksCubeFace.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classRubiksCubeFace.html">RubiksCubeFace</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:22 para CubeRubick por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

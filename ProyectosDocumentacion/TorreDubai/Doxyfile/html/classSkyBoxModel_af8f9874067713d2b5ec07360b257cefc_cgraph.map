@@ -1,0 +1,11 @@
+<map id="SkyBoxModel::Render" name="SkyBoxModel::Render">
+<area shape="rect" id="node2" href="$classCubemapTexture.html#ad5bec9f756a974854a87fcf0f9316a00" title="CubemapTexture::Bind" alt="" coords="226,5,382,32"/>
+<area shape="rect" id="node3" href="$classCamera.html#ab0a4bf5a65d45f25529e3cffda1c361b" title="Camera::GetProjectionMatrix" alt="" coords="209,56,399,83"/>
+<area shape="rect" id="node4" href="$classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b" title="Shader::GetVariable" alt="" coords="235,107,373,133"/>
+<area shape="rect" id="node5" href="$classCamera.html#affa333055635aed96518c4c66be9a70c" title="Camera::GetViewMatrix" alt="" coords="223,157,385,184"/>
+<area shape="rect" id="node7" href="$classMesh_1_1Mesh.html#a5afde0cef2b3b314c1b63216058c12b4" title="Mesh::Mesh::Render" alt="" coords="232,208,376,235"/>
+<area shape="rect" id="node8" href="$classShader.html#a61b49dc75fb1842ec58845e9912f824d" title="Shader::SetMatrix4" alt="" coords="237,259,371,285"/>
+<area shape="rect" id="node9" href="$classShader.html#ad94b005141a4ed31a3f4f801455e5590" title="Shader::TurnOff" alt="" coords="247,309,361,336"/>
+<area shape="rect" id="node10" href="$classShader.html#a01e9b0696a56a5c567ea4b369872c982" title="Shader::TurnOn" alt="" coords="247,360,361,387"/>
+<area shape="rect" id="node6" href="$classCamera.html#a3518233b244af839db6eefe59e7002de" title="Camera::GetRotationMatrix" alt="" coords="449,157,631,184"/>
+</map>

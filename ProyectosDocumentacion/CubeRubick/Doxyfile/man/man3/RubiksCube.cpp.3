@@ -1,0 +1,50 @@
+.TH "src/RubiksCube.cpp" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/RubiksCube.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Headers/RubiksCube\&.h'\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const float \fBseparation\fP = 2\&.005f"
+.br
+.ti -1c
+.RI "glm::vec3 \fBfaceOffsets\fP []"
+.br
+.ti -1c
+.RI "\fBNode\fP * \fBcubies\fP [26]"
+.br
+.in -1c
+.SH "Documentación de las variables"
+.PP 
+.SS "\fBNode\fP* cubies[26]"
+
+.PP
+Definición en la línea 20 del archivo RubiksCube\&.cpp\&.
+.SS "glm::vec3 faceOffsets[]"
+\fBValor inicial:\fP
+.PP
+.nf
+= { glm::vec3(0, -separation, 0), glm::vec3(0, 0,
+                                                                    separation),
+    glm::vec3(separation, 0, 0), glm::vec3(0, 0, -separation), glm::vec3(
+        -separation, 0, 0), glm::vec3(0, separation, 0) }
+.fi
+.PP
+Definición en la línea 14 del archivo RubiksCube\&.cpp\&.
+.PP
+Referenciado por RubiksCube::addCenters() y RubiksCube::addEdgesAndCorners()\&.
+.SS "const float separation = 2\&.005f"
+
+.PP
+Definición en la línea 11 del archivo RubiksCube\&.cpp\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para CubeRubick del código fuente\&.

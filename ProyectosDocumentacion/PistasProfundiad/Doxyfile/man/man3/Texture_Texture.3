@@ -1,0 +1,121 @@
+.TH "Texture::Texture" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Texture::Texture \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Texture\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBTexture\fP (GLenum TextureTarget, const std::string &FileName)"
+.br
+.ti -1c
+.RI "bool \fBLoad\fP ()"
+.br
+.ti -1c
+.RI "void \fBBind\fP (GLenum TextureUnit)"
+.br
+.ti -1c
+.RI "virtual \fB~Texture\fP ()"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_fileName\fP"
+.br
+.ti -1c
+.RI "GLenum \fBm_textureTarget\fP"
+.br
+.ti -1c
+.RI "GLuint \fBm_textureObj\fP"
+.br
+.ti -1c
+.RI "FIBITMAP * \fBm_image\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que se utiliza para crear texturas, crear los binds de las texturas e inicializar los buffers de textura\&. La clase hace uso de la libreria de FreeImage para cargar los formatos de textura\&. 
+.PP
+Definición en la línea 22 del archivo Texture\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "Texture::Texture::Texture (GLenumTextureTarget, const std::string &FileName)"
+Constructor de parametros de la textura\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fITextureTarget\fP Tipo de textura que ser� objetivo para este objeto 
+.br
+\fIFileName\fP Ruta del archivo donde se encuentran las texturas 
+.RE
+.PP
+
+.PP
+Definición en la línea 13 del archivo Texture\&.cpp\&.
+.SS "Texture::Texture::~Texture ()\fC [virtual]\fP"
+Destructor de la clase textura 
+.PP
+Definición en la línea 18 del archivo Texture\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void Texture::Texture::Bind (GLenumTextureUnit)"
+Este m�todo hace el enalce del objeto de textura con su unidad de textura\&. De acuerdo al dise�o de la arquitectura puede haber diferentes objetos de textura para un m�delo, si se desea enlazar una unidad de textura a un objeto de textura digamos A lo pirmero que se hace es activar la unidad de textura 0\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fITextureUnit\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 120 del archivo Texture\&.cpp\&.
+.SS "bool Texture::Texture::Load ()"
+M�todo que carga la textura 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica que la texura fue cargada correctamente
+.RE
+.PP
+Constructor de parametros de la textura\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fITextureTarget\fP Tipo de textura que ser� objetivo para este objeto 
+.br
+\fIFileName\fP Ruta del archivo donde se encuentran las texturas 
+.RE
+.PP
+
+.PP
+Definición en la línea 26 del archivo Texture\&.cpp\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "std::string Texture::Texture::m_fileName\fC [private]\fP"
+
+.PP
+Definición en la línea 48 del archivo Texture\&.h\&.
+.SS "FIBITMAP* Texture::Texture::m_image\fC [private]\fP"
+
+.PP
+Definición en la línea 51 del archivo Texture\&.h\&.
+.SS "GLuint Texture::Texture::m_textureObj\fC [private]\fP"
+
+.PP
+Definición en la línea 50 del archivo Texture\&.h\&.
+.SS "GLenum Texture::Texture::m_textureTarget\fC [private]\fP"
+
+.PP
+Definición en la línea 49 del archivo Texture\&.h\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

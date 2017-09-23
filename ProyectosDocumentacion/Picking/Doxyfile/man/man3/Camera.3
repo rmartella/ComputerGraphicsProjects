@@ -1,0 +1,415 @@
+.TH "Camera" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Camera \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Camera\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBCamera\fP ()"
+.br
+.ti -1c
+.RI "glm::mat4 \fBSetPerspective\fP (float fov, float aspectRatio, float nearPlane, float farPlane)"
+.br
+.ti -1c
+.RI "glm::mat4 \fBGetProjectionMatrix\fP ()"
+.br
+.ti -1c
+.RI "glm::mat4 \fBGetViewMatrix\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetPosition\fP (glm::vec3 position)"
+.br
+.ti -1c
+.RI "glm::vec3 \fBGetPosition\fP ()"
+.br
+.ti -1c
+.RI "glm::vec3 \fBGetView\fP ()"
+.br
+.ti -1c
+.RI "float \fBGetYaw\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetYaw\fP (float yaw)"
+.br
+.ti -1c
+.RI "float \fBGetPitch\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetPitch\fP (float pitch)"
+.br
+.ti -1c
+.RI "void \fBSetSpeed\fP (double speed)"
+.br
+.ti -1c
+.RI "double \fBGetSpeed\fP ()"
+.br
+.ti -1c
+.RI "void \fBPositionCamera\fP (float positionX, float positionY, float positionZ, float yaw, float pitch)"
+.br
+.ti -1c
+.RI "glm::mat4 \fBGetRotationMatrix\fP ()"
+.br
+.ti -1c
+.RI "void \fBMoveCamera\fP (float speed, glm::vec3 viewVector)"
+.br
+.ti -1c
+.RI "void \fBSetViewByMouse\fP (float mouseX, float mouseY)"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "glm::mat4 \fBProjectionMatrix\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBPosition\fP"
+.br
+.ti -1c
+.RI "float \fBSpeed\fP = 1\&.0"
+.br
+.ti -1c
+.RI "double \fBMouseSpeed\fP = 0\&.001"
+.br
+.ti -1c
+.RI "float \fBYaw\fP = 0"
+.br
+.ti -1c
+.RI "float \fBPitch\fP = 0"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que maneja los eventos del usuario, en nuestra escena 3D\&. 
+.PP
+Definición en la línea 14 del archivo Camera\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "Camera::Camera ()"
+Constructor defualt\&. 
+.PP
+Definición en la línea 4 del archivo Camera\&.cpp\&.
+.PP
+Hace referencia a Position\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "float Camera::GetPitch ()\fC [inline]\fP"
+Obtiene el angulo de rotaci�n vertical de la c�mara\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Angulo de rotaci�n vertical de la c�mara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 86 del archivo Camera\&.h\&.
+.PP
+Hace referencia a Pitch\&.
+.SS "glm::vec3 Camera::GetPosition ()\fC [inline]\fP"
+Obtiene la posici�n de la c�mara\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 58 del archivo Camera\&.h\&.
+.PP
+Hace referencia a Position\&.
+.PP
+Referenciado por Model::Render()\&.
+.SS "glm::mat4 Camera::GetProjectionMatrix ()\fC [inline]\fP"
+Obtiene la matriz de proyecci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Matriz de proyecci�n 
+.RE
+.PP
+
+.PP
+Definición en la línea 37 del archivo Camera\&.h\&.
+.PP
+Hace referencia a ProjectionMatrix\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop() y Model::Render()\&.
+.SS "glm::mat4 Camera::GetRotationMatrix ()"
+Obtiene la matriz de rotaci�n de la c�mara, de las rotaciones yaw y pitch\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Matriz de rotaci�n de la c�mara\&.
+.RE
+.PP
+Obtiene la matriz de rotaci�n de la c�mara, a travez de las rotaciones yaw y pitch\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Matriz de rotaci�n de la c�mara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 42 del archivo Camera\&.cpp\&.
+.PP
+Hace referencia a f, Pitch y Yaw\&.
+.PP
+Referenciado por GetViewMatrix()\&.
+.SS "double Camera::GetSpeed ()\fC [inline]\fP"
+Obtiene la velocidad de la c�mara\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Velocidad de la c�mara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 108 del archivo Camera\&.h\&.
+.PP
+Hace referencia a Speed\&.
+.PP
+Referenciado por InputManager::KeyPressed()\&.
+.SS "glm::vec3 Camera::GetView ()"
+Metodo que obtiene el vector de vista de la matriz de rotaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 62 del archivo Camera\&.cpp\&.
+.SS "glm::mat4 Camera::GetViewMatrix ()"
+Obtiene la actual matriz de vista de acuerdo a la posici�n de la c�mara y rotaci�n de esta\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Matriz de vista\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 53 del archivo Camera\&.cpp\&.
+.PP
+Hace referencia a GetRotationMatrix() y Position\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop() y Model::Render()\&.
+.SS "float Camera::GetYaw ()\fC [inline]\fP"
+Obtiene el angulo de rotaci�n horizontal de la c�mara\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Angulo de rotaci�n horizontal de la c�mara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 72 del archivo Camera\&.h\&.
+.PP
+Hace referencia a Yaw\&.
+.SS "void Camera::MoveCamera (floatspeed, glm::vec3viewVector)"
+M�todo que mueve la c�mara hacia atras o adelanate dependiendo de la velocidad de la c�mara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIspeed\fP Velocidad de la c�mara\&. 
+.br
+\fIviewVector\fP Direci�n de vista de la c�mara\&.
+.RE
+.PP
+M�todo que mueve la c�mara hacia atras, adelanate, izquierda, derecha, arriba y abajo dependiendo de la velocidad de la c�mara y el vector de movimiento\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIspeed\fP Velocidad de la c�mara\&. 
+.br
+\fIviewVector\fP Direcci�n de vista de la c�mara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 72 del archivo Camera\&.cpp\&.
+.PP
+Hace referencia a Position\&.
+.PP
+Referenciado por InputManager::KeyPressed()\&.
+.SS "void Camera::PositionCamera (floatpositionX, floatpositionY, floatpositionZ, floatyaw, floatpitch)"
+Coloca la posici�n, rotaciones (yaw y pitch en radianes) de la c�mara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpositionX\fP Posici�n en X\&. 
+.br
+\fIpositionY\fP Posici�n en Y\&. 
+.br
+\fIpositionZ\fP Posici�n en Z 
+.br
+\fIyaw\fP Angulo de rotaci�n horizontal de la c�mara 
+.br
+\fIpitch\fP Angulo de rotaci�n vertical de la c�mara 
+.RE
+.PP
+
+.PP
+Definición en la línea 31 del archivo Camera\&.cpp\&.
+.PP
+Hace referencia a Pitch, Position y Yaw\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "glm::mat4 Camera::SetPerspective (floatfov, floataspectRatio, floatnearPlane, floatfarPlane)"
+Setter de la matriz de perspectiva esta es construida del fiel of fiew, aspect ratio y planos near/far\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIfov\fP Fiel of fiew\&. 
+.br
+\fIaspectRatio\fP Aspect ratio\&. 
+.br
+\fInearPlane\fP Near plane\&. 
+.br
+\fIfarPlane\fP Far plnae\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definición en la línea 16 del archivo Camera\&.cpp\&.
+.PP
+Hace referencia a ProjectionMatrix\&.
+.PP
+Referenciado por GLApplication::Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "void Camera::SetPitch (floatpitch)\fC [inline]\fP"
+Setter del angulo de rotaci�n vertical de la c�mara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpitch\fP Angulo de rotaci�n vertical de la c�mara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 93 del archivo Camera\&.h\&.
+.PP
+Hace referencia a Pitch\&.
+.SS "void Camera::SetPosition (glm::vec3position)\fC [inline]\fP"
+Setter de la posici�n de la c�mara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIposition\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 51 del archivo Camera\&.h\&.
+.PP
+Hace referencia a Position\&.
+.SS "void Camera::SetSpeed (doublespeed)\fC [inline]\fP"
+Setter de la velocidad de los movimientos de la c�mara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIspeed\fP Velocidad de la c�mara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 101 del archivo Camera\&.h\&.
+.PP
+Hace referencia a Speed\&.
+.SS "void Camera::SetViewByMouse (floatxOffset, floatyOffset)"
+Settea los valor de pitch an yaw a la c�mara y los deltas para el siguiente frame\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImouseX\fP Movimiento en X\&. 
+.br
+\fImouseY\fP Movimiento en Y
+.RE
+.PP
+Setter de los valor pitch an yaw de la c�mara y los deltas para el siguiente frame\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImouseX\fP Movimiento en X\&. 
+.br
+\fImouseY\fP Movimiento en Y 
+.RE
+.PP
+
+.PP
+Definición en la línea 84 del archivo Camera\&.cpp\&.
+.PP
+Hace referencia a f, MouseSpeed, PI, Pitch y Yaw\&.
+.PP
+Referenciado por InputManager::MouseMoved()\&.
+.SS "void Camera::SetYaw (floatyaw)\fC [inline]\fP"
+Obtiene el angulo de rotaci�n horizontal de la c�mara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIyaw\fP Angulo de rotaci�n horizontal de la c�mara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 79 del archivo Camera\&.h\&.
+.PP
+Hace referencia a Yaw\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "double Camera::MouseSpeed = 0\&.001\fC [protected]\fP"
+
+.PP
+Definición en la línea 154 del archivo Camera\&.h\&.
+.PP
+Referenciado por SetViewByMouse()\&.
+.SS "float Camera::Pitch = 0\fC [protected]\fP"
+
+.PP
+Definición en la línea 158 del archivo Camera\&.h\&.
+.PP
+Referenciado por GetPitch(), GetRotationMatrix(), PositionCamera(), SetPitch() y SetViewByMouse()\&.
+.SS "glm::vec3 Camera::Position\fC [protected]\fP"
+
+.PP
+Definición en la línea 149 del archivo Camera\&.h\&.
+.PP
+Referenciado por Camera(), GetPosition(), GetViewMatrix(), MoveCamera(), PositionCamera() y SetPosition()\&.
+.SS "glm::mat4 Camera::ProjectionMatrix\fC [protected]\fP"
+
+.PP
+Definición en la línea 147 del archivo Camera\&.h\&.
+.PP
+Referenciado por GetProjectionMatrix() y SetPerspective()\&.
+.SS "float Camera::Speed = 1\&.0\fC [protected]\fP"
+
+.PP
+Definición en la línea 152 del archivo Camera\&.h\&.
+.PP
+Referenciado por GetSpeed() y SetSpeed()\&.
+.SS "float Camera::Yaw = 0\fC [protected]\fP"
+
+.PP
+Definición en la línea 156 del archivo Camera\&.h\&.
+.PP
+Referenciado por GetRotationMatrix(), GetYaw(), PositionCamera(), SetViewByMouse() y SetYaw()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Picking del código fuente\&.

@@ -1,0 +1,189 @@
+.TH "Mesh::Mesh" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Mesh::Mesh \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Mesh\&.h>\fP
+.SS "Clases"
+
+.in +1c
+.ti -1c
+.RI "struct \fBMeshEntry\fP"
+.br
+.in -1c
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBMesh\fP (std::string \fBFilename\fP)"
+.br
+.ti -1c
+.RI "std::vector< \fBMeshEntry\fP > * \fBGetMeshEntry\fP ()"
+.br
+.ti -1c
+.RI "\fB~Mesh\fP ()"
+.br
+.ti -1c
+.RI "bool \fBLoadMesh\fP ()"
+.br
+.ti -1c
+.RI "void \fBRender\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBMeshEntry\fP > \fBm_Entries\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBTexture::Texture\fP * > \fBm_Textures\fP"
+.br
+.ti -1c
+.RI "std::string \fBFilename\fP"
+.br
+.in -1c
+.SS "Métodos privados"
+
+.in +1c
+.ti -1c
+.RI "bool \fBInitFromScene\fP (const aiScene *pScene)"
+.br
+.ti -1c
+.RI "void \fBInitMesh\fP (unsigned int Index, const aiMesh *paiMesh)"
+.br
+.ti -1c
+.RI "bool \fBInitMaterials\fP (const aiScene *pScene)"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que representa el parseo de los objetos que obtiene la librer�a Assimpl a una objeto conocido para la aplicaci�n\&. Un objeto \fBMesh\fP puede estar compuestos de entidades, es decir una malla puede tener varias entidades de malla, esto sirve para poder separar materiales o tener entidades de mallas y poder renderizar por separado\&.\&. 
+.PP
+Definición en la línea 56 del archivo Mesh\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "Mesh::Mesh::Mesh (std::stringFilename)"
+Constructor carga una archivo para poder cargarl la malla\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIFilename\fP Nombre del archivo que se va utilizar para la carga\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 64 del archivo Mesh\&.cpp\&.
+.SS "Mesh::Mesh::~Mesh ()"
+Destructor de la malla\&. 
+.PP
+Definición en la línea 71 del archivo Mesh\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void Mesh::Mesh::Clear ()\fC [private]\fP"
+M�todo que elimina los objetos de textura\&. 
+.PP
+Definición en la línea 77 del archivo Mesh\&.cpp\&.
+.PP
+Hace referencia a i y SAFE_DELETE\&.
+.SS "std::vector<\fBMeshEntry\fP>* Mesh::Mesh::GetMeshEntry ()\fC [inline]\fP"
+
+.PP
+Definición en la línea 109 del archivo Mesh\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "bool Mesh::Mesh::InitFromScene (const aiScene *pScene)\fC [private]\fP"
+Inicializaci�n de una escena de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpScene\fP Escena de Assimpl\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Si fue valida la inicializaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 121 del archivo Mesh\&.cpp\&.
+.PP
+Hace referencia a i\&.
+.SS "bool Mesh::Mesh::InitMaterials (const aiScene *pScene)\fC [private]\fP"
+Inicializaci�n de los materiales\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpScene\fP Escena de Assimp 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera la correcta carga de materiales\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 204 del archivo Mesh\&.cpp\&.
+.PP
+Hace referencia a i\&.
+.SS "void Mesh::Mesh::InitMesh (unsigned intIndex, const aiMesh *paiMesh)\fC [private]\fP"
+Inicializaci�n de la malla\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIIndex\fP Id de la \fBMeshEntry\fP\&. 
+.br
+\fIpaiMesh\fP Malla de Assimp\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 140 del archivo Mesh\&.cpp\&.
+.PP
+Hace referencia a f, i y v\&.
+.SS "bool Mesh::Mesh::LoadMesh ()"
+M�todo que carga una malla\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 87 del archivo Mesh\&.cpp\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void Mesh::Mesh::Render ()"
+M�todo que se encarga de renderizar un malla\&. 
+.PP
+Definición en la línea 263 del archivo Mesh\&.cpp\&.
+.PP
+Hace referencia a i\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "std::string Mesh::Mesh::Filename"
+Nombre del archivo que se va a cargar\&. 
+.PP
+Definición en la línea 136 del archivo Mesh\&.h\&.
+.SS "std::vector<\fBMeshEntry\fP> Mesh::Mesh::m_Entries"
+Vector que contiene las \fBMeshEntry\fP (Partes de la malla)\&. 
+.PP
+Definición en la línea 128 del archivo Mesh\&.h\&.
+.SS "std::vector<\fBTexture::Texture\fP*> Mesh::Mesh::m_Textures"
+Vector que contiene las Tetxruas para cada \fBMeshEntry\fP (Partes de la malla)\&. 
+.PP
+Definición en la línea 132 del archivo Mesh\&.h\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

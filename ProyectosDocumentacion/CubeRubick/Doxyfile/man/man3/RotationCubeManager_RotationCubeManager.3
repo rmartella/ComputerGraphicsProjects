@@ -1,0 +1,307 @@
+.TH "RotationCubeManager::RotationCubeManager" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RotationCubeManager::RotationCubeManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RotationCubeManager\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBRotationCubeManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRotation\fP (int face, int direction)"
+.br
+.ti -1c
+.RI "void \fBdeleteCurrentCompleteRotation\fP ()"
+.br
+.ti -1c
+.RI "\fBMovimiento\fP * \fBgetCurrentRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateOrientation\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateFaceMap\fP (int faceAxisX, float faceAxisY)"
+.br
+.ti -1c
+.RI "bool \fBRayTriangleIntersect\fP (glm::vec3 orig, glm::vec3 dir, glm::vec3 vert0, glm::vec3 vert1, glm::vec3 vert2, double *\fBt\fP, double *\fBu\fP, double *\fBv\fP)"
+.br
+.ti -1c
+.RI "void \fBsaveRotations\fP ()"
+.br
+.ti -1c
+.RI "void \fBloadRotations\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetVerticesCube\fP (\fBVertex3\fP *\fBverticesCube\fP)"
+.br
+.ti -1c
+.RI "void \fBSetIndexCube\fP (GLubyte *\fBindexCube\fP)"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBcamera\fP)"
+.br
+.ti -1c
+.RI "void \fBSetWorldMatrix\fP (glm::mat4 \fBWorldMatrix\fP)"
+.br
+.ti -1c
+.RI "std::vector< \fBMovimiento\fP * > * \fBGetMovimientosSave\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~RotationCubeManager\fP ()"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "int \fBfaceMap\fP [6]"
+.br
+.ti -1c
+.RI "float \fBaxisXAngleAct\fP = 0\&.7852"
+.br
+.ti -1c
+.RI "std::vector< \fBMovimiento\fP * > * \fBmovimientos\fP = new std::vector<\fBMovimiento\fP*>()"
+.br
+.ti -1c
+.RI "std::vector< \fBMovimiento\fP * > * \fBmovimientosSave\fP = new std::vector<\fBMovimiento\fP*>()"
+.br
+.ti -1c
+.RI "\fBVertex3\fP * \fBverticesCube\fP"
+.br
+.ti -1c
+.RI "GLubyte * \fBindexCube\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "glm::mat4 \fBWorldMatrix\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que maneja y registra las rotaciones que realiza el cubo\&. 
+.PP
+Definición en la línea 32 del archivo RotationCubeManager\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "RotationCubeManager::RotationCubeManager::RotationCubeManager ()"
+Constructor\&. 
+.PP
+Definición en la línea 15 del archivo RotationCubeManager\&.cpp\&.
+.PP
+Hace referencia a i\&.
+.SS "RotationCubeManager::RotationCubeManager::~RotationCubeManager ()\fC [virtual]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 24 del archivo RotationCubeManager\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void RotationCubeManager::RotationCubeManager::addRotation (intface, intdirection)"
+Metodo que agrega una rotaci�n 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIface\fP Cara que se agrega\&. 
+.br
+\fIdirection\fP Direcci�n de la cara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 32 del archivo RotationCubeManager\&.cpp\&.
+.PP
+Hace referencia a Movimiento::direction y Movimiento::face\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void RotationCubeManager::RotationCubeManager::deleteCurrentCompleteRotation ()"
+M�todo que elimina la rotaci�n de una cara al completar su giro\&. 
+.PP
+Definición en la línea 41 del archivo RotationCubeManager\&.cpp\&.
+.PP
+Referenciado por RubiksCube::rotateFace()\&.
+.SS "\fBMovimiento\fP * RotationCubeManager::RotationCubeManager::getCurrentRotation ()"
+Metodo que obtiene el ultimo movimiento que esta realizando el rubick\&. 
+.PP
+Definición en la línea 47 del archivo RotationCubeManager\&.cpp\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop() y RubiksCube::rotateFace()\&.
+.SS "std::vector<\fBMovimiento\fP*>* RotationCubeManager::RotationCubeManager::GetMovimientosSave ()\fC [inline]\fP"
+M�todo que obtiene los movimientos que se han realizado sobre el Cubo de Rubick\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 125 del archivo RotationCubeManager\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop(), RubiksCube::rotateFace() y RubiksCube::rotateFaceAuto()\&.
+.SS "void RotationCubeManager::RotationCubeManager::loadRotations ()"
+M�tdo que carga las rotaciones al iniciar sesi�n\&. 
+.PP
+Definición en la línea 385 del archivo RotationCubeManager\&.cpp\&.
+.PP
+Hace referencia a Movimiento::direction y Movimiento::face\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "bool RotationCubeManager::RotationCubeManager::RayTriangleIntersect (glm::vec3orig, glm::vec3dir, glm::vec3vert0, glm::vec3vert1, glm::vec3vert2, double *t, double *u, double *v)"
+M�todo que obtiene la intersecci�n del rayo con un tri�ngulo, Se utiliza el algortimo de Tomas Moller\&. Representaci�n del rayo en coordenadas parametricas\&. R ( t ) = O + tD ------- (1) Un punto de un tri�ngulo esta dado por las coordenadas varicentricas, del triangulo, u >= 0, v >= 0 y u + v <= 1\&. T ( u v ) = (1 ; u ; v ) V 0 + uV 1 + vV 2 ------- (2) 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIorig\fP Origen del rayo\&. 
+.br
+\fIdir\fP Direcci�n del rayo\&. 
+.br
+\fIvert0\fP Vertice 1 del triangulo a probar\&. 
+.br
+\fIvert1\fP Vertice 2 del triangulo a probar\&. 
+.br
+\fIvert2\fP Vertice 3 del triangulo a probar\&. 
+.br
+\fIt\fP Valor de ecuaci�n de (1) 
+.br
+\fIu\fP Coordenada u varicentrica del tri�ngulo (2)\&. 
+.br
+\fIv\fP Coordenada v varicentrica del tri�ngulo (2)\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si hay intersecci�n o no, true existe la intersecci�n false no existe la intersecci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 156 del archivo RotationCubeManager\&.cpp\&.
+.PP
+Hace referencia a EPSILON\&.
+.SS "void RotationCubeManager::RotationCubeManager::saveRotations ()"
+M�todo que guarda el estado del rubick al cerrar la ventana\&. 
+.PP
+Definición en la línea 369 del archivo RotationCubeManager\&.cpp\&.
+.PP
+Hace referencia a i\&.
+.PP
+Referenciado por GLFWManager::Destroy()\&.
+.SS "void RotationCubeManager::RotationCubeManager::SetCamera (\fBCamera\fP *camera)\fC [inline]\fP"
+Setter de la camara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIcamera\fP Camara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 111 del archivo RotationCubeManager\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void RotationCubeManager::RotationCubeManager::SetIndexCube (GLubyte *indexCube)\fC [inline]\fP"
+Setter de indicies del cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIindexCube\fP Indices del cubo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 104 del archivo RotationCubeManager\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void RotationCubeManager::RotationCubeManager::SetVerticesCube (\fBVertex3\fP *verticesCube)\fC [inline]\fP"
+Setter de los vertices del cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIverticesCube\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 97 del archivo RotationCubeManager\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void RotationCubeManager::RotationCubeManager::SetWorldMatrix (glm::mat4WorldMatrix)\fC [inline]\fP"
+Setter de la matriz del rubick\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIWorldMatrix\fP Matriz rubick\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 118 del archivo RotationCubeManager\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void RotationCubeManager::RotationCubeManager::updateFaceMap (intfaceAxisX, floatfaceAxisY)"
+M�todo que mapea las caras reales con las que fue contruido el rubick y con las caras que estan De frente al observador\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIfaceAxisX\fP Cara que esta viendo el observador\&. 
+.br
+\fIfaceAxisY\fP Cara que esta viendo una camara invisible sobre el eje y\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 195 del archivo RotationCubeManager\&.cpp\&.
+.SS "void RotationCubeManager::RotationCubeManager::updateOrientation ()"
+M�todo que actualiza las orientaci�n de las caras del rubick\&. 
+.PP
+Definición en la línea 55 del archivo RotationCubeManager\&.cpp\&.
+.PP
+Hace referencia a i, t, u y v\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "float RotationCubeManager::RotationCubeManager::axisXAngleAct = 0\&.7852\fC [private]\fP"
+
+.PP
+Definición en la línea 135 del archivo RotationCubeManager\&.h\&.
+.SS "\fBCamera\fP* RotationCubeManager::RotationCubeManager::camera\fC [private]\fP"
+
+.PP
+Definición en la línea 140 del archivo RotationCubeManager\&.h\&.
+.SS "int RotationCubeManager::RotationCubeManager::faceMap[6]\fC [private]\fP"
+
+.PP
+Definición en la línea 134 del archivo RotationCubeManager\&.h\&.
+.SS "GLubyte* RotationCubeManager::RotationCubeManager::indexCube\fC [private]\fP"
+
+.PP
+Definición en la línea 139 del archivo RotationCubeManager\&.h\&.
+.SS "std::vector<\fBMovimiento\fP*>* RotationCubeManager::RotationCubeManager::movimientos = new std::vector<\fBMovimiento\fP*>()\fC [private]\fP"
+
+.PP
+Definición en la línea 136 del archivo RotationCubeManager\&.h\&.
+.SS "std::vector<\fBMovimiento\fP*>* RotationCubeManager::RotationCubeManager::movimientosSave = new std::vector<\fBMovimiento\fP*>()\fC [private]\fP"
+
+.PP
+Definición en la línea 137 del archivo RotationCubeManager\&.h\&.
+.SS "\fBVertex3\fP* RotationCubeManager::RotationCubeManager::verticesCube\fC [private]\fP"
+
+.PP
+Definición en la línea 138 del archivo RotationCubeManager\&.h\&.
+.SS "glm::mat4 RotationCubeManager::RotationCubeManager::WorldMatrix\fC [private]\fP"
+
+.PP
+Definición en la línea 141 del archivo RotationCubeManager\&.h\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para CubeRubick del código fuente\&.

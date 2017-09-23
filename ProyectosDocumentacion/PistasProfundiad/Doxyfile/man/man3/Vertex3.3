@@ -1,0 +1,50 @@
+.TH "Vertex3" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Vertex3 \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Model\&.h>\fP
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "vec3 \fBxyz\fP"
+.br
+.ti -1c
+.RI "vec4 \fBrgba\fP"
+.br
+.ti -1c
+.RI "vec3 \fBnormal\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que almacena los atributos de los vertices 
+.PP
+Definición en la línea 20 del archivo Model\&.h\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "vec3 Vertex3::normal"
+Vector normal\&. 
+.PP
+Definición en la línea 33 del archivo Model\&.h\&.
+.SS "vec4 Vertex3::rgba"
+Color\&. 
+.PP
+Definición en la línea 29 del archivo Model\&.h\&.
+.PP
+Referenciado por ObjectCreation::createModelTransform() y RayCasting::RayCasting::iterateObjectTriangle()\&.
+.SS "vec3 Vertex3::xyz"
+Posici�n\&.\&. 
+.PP
+Definición en la línea 25 del archivo Model\&.h\&.
+.PP
+Referenciado por RayCasting::RayCasting::assignGrayScaleValue(), ObjectCreation::createCullFacesPointer(), ObjectCreation::createModelTransform(), ObjectCreation::formatMesh(), RayCasting::RayCasting::getDistanceScaleValue(), RayCasting::RayCasting::hitObjectTest() y RayCasting::RayCasting::iterateObjectTriangle()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

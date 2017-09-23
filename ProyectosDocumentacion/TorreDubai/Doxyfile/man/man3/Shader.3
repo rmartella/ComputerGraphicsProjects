@@ -1,0 +1,205 @@
+.TH "Shader" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Shader \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Shader\&.h>\fP
+.SS "M茅todos p煤blicos"
+
+.in +1c
+.ti -1c
+.RI "\fBShader\fP ()"
+.br
+.ti -1c
+.RI "\fB~Shader\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBLoadShaderFile\fP (std::string strFile)"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (std::string strVertexFile, std::string strFragmentFile)"
+.br
+.ti -1c
+.RI "GLint \fBGetVariable\fP (std::string strVariable)"
+.br
+.ti -1c
+.RI "void \fBSetMatrix4\fP (GLint id, GLsizei count, GLboolean transpose, const GLfloat *value)"
+.br
+.ti -1c
+.RI "void \fBTurnOn\fP ()"
+.br
+.ti -1c
+.RI "void \fBTurnOff\fP ()"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "GLuint \fBVertexShaderId\fP"
+.br
+.ti -1c
+.RI "GLuint \fBFragmentShaderId\fP"
+.br
+.ti -1c
+.RI "GLuint \fBShaderProgramId\fP"
+.br
+.in -1c
+.SH "Descripci贸n detallada"
+.PP 
+Clase dedicada a la creaci髇, inicializaci髇, obtenci髇 de variables uniform, enviar informaci髇, prender y apagar shaders\&. 
+.PP
+Definici贸n en la l铆nea 12 del archivo Shader\&.h\&.
+.SH "Documentaci贸n del constructor y destructor"
+.PP 
+.SS "Shader::Shader ()\fC [inline]\fP"
+
+.PP
+Definici贸n en la l铆nea 15 del archivo Shader\&.h\&.
+.SS "Shader::~Shader ()\fC [inline]\fP"
+
+.PP
+Definici贸n en la l铆nea 17 del archivo Shader\&.h\&.
+.PP
+Hace referencia a Destroy()\&.
+.SH "Documentaci贸n de las funciones miembro"
+.PP 
+.SS "void Shader::Destroy ()"
+Libera los datos de memoria que ocupan los shaders\&. 
+.PP
+Definici贸n en la l铆nea 136 del archivo Shader\&.cpp\&.
+.PP
+Hace referencia a FragmentShaderId, ShaderProgramId y VertexShaderId\&.
+.PP
+Referenciado por SkyBoxModel::Destroy(), ModelEnvironment::Destroy(), Model::Destroy(), Initialize() y ~Shader()\&.
+.SS "GLint Shader::GetVariable (std::stringstrVariable)"
+Obtiene ID de una variable uniform del shader\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIstrVariable\fP Nombre de la variable del shader\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Identificador de la variable del shader\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 124 del archivo Shader\&.cpp\&.
+.PP
+Hace referencia a ShaderProgramId\&.
+.PP
+Referenciado por ModelEnvironment::GetVariable(), Model::GetVariable(), LightingTechnique::Init(), SkyBoxModel::Initialize(), ModelEnvironment::Render(), SkyBoxModel::Render() y Model::Render()\&.
+.SS "void Shader::Initialize (std::stringstrVertexFile, std::stringstrFragmentFile)"
+Cargan los shaders de vertices y fragmento de un archivo de texto, se manejan rutas relativas\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIstrVertexFile\fP Nombre del archivo del shader de vertices\&. 
+.br
+\fIstrFragmentFile\fP Nombre del archivo del shader de fragmento\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 35 del archivo Shader\&.cpp\&.
+.PP
+Hace referencia a Destroy(), FragmentShaderId, LoadShaderFile(), ShaderProgramId y VertexShaderId\&.
+.PP
+Referenciado por SkyBoxModel::Initialize(), ModelEnvironment::Initialize() y Model::Initialize()\&.
+.SS "std::string Shader::LoadShaderFile (std::stringstrFile)"
+Este m閠odo carga los archivos de texto para cada shader\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIstrFile\fP Nombre del arhchivo que se va a cargar\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Cadena que contiene el cdigo del shader\&.
+.RE
+.PP
+Este m閠odo carga los archivos de texto para cada shaders\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIstrFile\fP Nombre del arhchivo que se va a cargar\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Cadena que contiene el cdigo del shader\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 7 del archivo Shader\&.cpp\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "void Shader::SetMatrix4 (GLintid, GLsizeicount, GLbooleantranspose, const GLfloat *value)\fC [inline]\fP"
+Permite pasar un una matriz de 4x4 de flotantes al shader\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIid\fP Identificador de la variable uniform\&. 
+.br
+\fIcount\fP Especifica el n鷐ero de matrices que se van a actualizar\&. 
+.br
+\fItranspose\fP Especifica si se desea enviar la matriz transpuesta 
+.br
+\fIvalue\fP Apuntador al arreglo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 49 del archivo Shader\&.h\&.
+.PP
+Referenciado por ModelEnvironment::Render(), SkyBoxModel::Render() y Model::Render()\&.
+.SS "void Shader::TurnOff ()\fC [inline]\fP"
+Apaga el \fBShader\fP 
+.PP
+Definici贸n en la l铆nea 63 del archivo Shader\&.h\&.
+.PP
+Referenciado por SkyBoxModel::Initialize(), ModelEnvironment::Render(), SkyBoxModel::Render() y Model::Render()\&.
+.SS "void Shader::TurnOn ()\fC [inline]\fP"
+Enciende el \fBShader\fP 
+.PP
+Definici贸n en la l铆nea 57 del archivo Shader\&.h\&.
+.PP
+Hace referencia a ShaderProgramId\&.
+.PP
+Referenciado por SkyBoxModel::Initialize(), ModelEnvironment::Render(), SkyBoxModel::Render() y Model::Render()\&.
+.SH "Documentaci贸n de los datos miembro"
+.PP 
+.SS "GLuint Shader::FragmentShaderId\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 75 del archivo Shader\&.h\&.
+.PP
+Referenciado por Destroy() y Initialize()\&.
+.SS "GLuint Shader::ShaderProgramId\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 76 del archivo Shader\&.h\&.
+.PP
+Referenciado por Destroy(), GetVariable(), Initialize() y TurnOn()\&.
+.SS "GLuint Shader::VertexShaderId\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 74 del archivo Shader\&.h\&.
+.PP
+Referenciado por Destroy() y Initialize()\&.
+
+.SH "Autor"
+.PP 
+Generado autom谩ticamente por Doxygen para Pistasdeprofunidad del c贸digo fuente\&.

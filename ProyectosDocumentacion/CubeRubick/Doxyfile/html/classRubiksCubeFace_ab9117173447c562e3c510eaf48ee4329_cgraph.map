@@ -1,0 +1,5 @@
+<map id="RubiksCubeFace::rotate" name="RubiksCubeFace::rotate">
+<area shape="rect" id="node2" href="$classRubiksCubeFace.html#a3809a70fe2ba6c11b2dda81161edd7bc" title="RubiksCubeFace::rotateFace" alt="" coords="219,31,413,57"/>
+<area shape="rect" id="node3" href="$classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239" title="Node::getTransformMatrix" alt="" coords="462,5,637,32"/>
+<area shape="rect" id="node4" href="$classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="462,56,637,83"/>
+</map>

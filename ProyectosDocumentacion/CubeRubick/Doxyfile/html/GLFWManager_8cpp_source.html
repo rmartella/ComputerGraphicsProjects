@@ -1,0 +1,1383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CubeRubick: Fichero Fuente src/GLFWManager.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CubeRubick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('GLFWManager_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GLFWManager.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="GLFWManager_8cpp.html">Ir a la documentaciÃ³n de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="GLFWManager_8h.html">Headers/GLFWManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Main_8h.html">Headers/Main.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">    5</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[6] = { <span class="keyword">false</span> };</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="GLFWManager_8cpp.html#a9e5f1e5e8a3ddb987ba24d9693999d2a">    6</a></span>&#160;<a class="code" href="classGLApplication.html">GLApplication</a> * <a class="code" href="GLFWManager_8cpp.html#a9e5f1e5e8a3ddb987ba24d9693999d2a">application</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">    7</a></span>&#160;<a class="code" href="classCamera.html">Camera</a> *<a class="code" href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">pCamera</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="GLFWManager_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   14</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="GLFWManager_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// Se crea el manejador de ventanas y eventos de OpenGL.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classGLFWManager.html">GLFWManager</a> *pWindowManager = <span class="keyword">new</span> <a class="code" href="classGLFWManager.html">GLFWManager</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">// Se crea la cámara que usaremos para la aplicación.   pCamera = new Camera();
+
+  // Se crea el objeto de la aplicación.
+  application = new GLApplication();
+
+  // Asocia el manejador de ventanas a la aplicación.
+  application-&gt;SetWindowManager(pWindowManager);
+
+  application-&gt;SetCamera(pCamera);
+  pWindowManager-&gt;GetInputManager()-&gt;SetCamera(pCamera);
+
+  // Se llama el método principal de la aplicación.
+  return application-&gt;GLMain();
+}
+
+/**
+ * Inicializa la ventana y crea el contexto de OpenGL.
+ * @param width Ancho de ventana.
+ * @param height Altura de ventana.
+ * @param strTitle Titulo de ventana.
+ * @param bFullScreen Indica si se requiere ventana completa o no.
+ * @return Bandera que indica la inicialización correcta de la ventana y el contexto de OpenGL.
+ */
+int GLFWManager::Initialize(int width, int height, std::string strTitle,
+                            bool bFullScreen) {
+
+  if (!glfwInit()) {
+    fprintf(stderr, &quot;Failed to initialize GLFW\n&quot;);
+    return -1;
+  }
+
+  // Se le dice a openGL que se quiere utilizar un multi-muestro de 4 para el anti-aliasing.
+  glfwWindowHint(GLFW_SAMPLES, 4);
+
+  // Contexto de OpenGL versión 4.2 usando el core profile.
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+  // Se crean las ventanas.
+  if (bFullScreen)
+    Window = glfwCreateWindow(width, height, strTitle.c_str(),
+                              glfwGetPrimaryMonitor(), nullptr);
+  else
+    Window = glfwCreateWindow(width, height, strTitle.c_str(), nullptr,
+                              nullptr);
+
+  // Se aegura que sea una ventana valida, que no exista error.
+  if (Window == nullptr) {
+    fprintf(
+        stderr,
+        &quot;Failed to create a GLFW window, you might need to download the latest drivers or change the OpenGL version to 3\n&quot;);
+    Destroy();
+
+    return -1;
+  }
+
+  // Se crea el contexto de OpenGL.
+  glfwMakeContextCurrent(Window);
+
+  glfwSetInputMode(Window, GLFW_STICKY_KEYS, GL_TRUE);
+
+  // Apaga vertical sync para que el monitor no espere a renderizar.
+  glfwSwapInterval(0);
+
+  glewExperimental = GL_TRUE;
+
+  glfwSetWindowSizeCallback(Window, GLFWwindowsizefun(GLFWManager::ReshapeGL));
+
+  // Incialización de la libreria GLEW para agrega funciones y extensiones de OpenGL.
+  GLenum err = glewInit();
+
+  if (GLEW_OK != err) {
+    fprintf(stderr, &quot;Failed to initialize glew\n&quot;);
+    return -1;
+  }
+
+  return 0;
+}
+
+/**
+ * Intercambia el backbuffer al frente, se debe estar llamando este función por cada frame.
+ */
+void GLFWManager::SwapTheBuffers() {
+  glfwSwapBuffers(Window);
+}
+
+/**
+ * Método que maneja los eventos de entrada de la aplicación.
+ * @param continueApplication Bandera que indica la ejecución de la aplicacaión.
+ * @return True siempre que no se apriete la tecal Esc, falso en caso contrario.
+ */
+bool GLFWManager::ProcessInput(bool continueApplication = true) {
+  // Revisa si fue presionado el botton Esc.
+  if (glfwGetKey(Window, GLFW_KEY_ESCAPE) == GLFW_PRESS
+      || glfwWindowShouldClose(Window) != 0)
+    return false;
+
+  // Posición en coordenadas de la ventan del cursor
+  double xpos;
+  double ypos;
+  glfwGetCursorPos(Window, &amp;xpos, &amp;ypos);
+
+  if (glfwGetKey(Window, GLFW_KEY_UP) || glfwGetKey(Window, GLFW_KEY_W))
+    inputManager.KeyPressed(InputCodes::Up);
+  if (glfwGetKey(Window, GLFW_KEY_DOWN) || glfwGetKey(Window, GLFW_KEY_S))
+    inputManager.KeyPressed(InputCodes::Down);
+  if (glfwGetKey(Window, GLFW_KEY_W))
+    inputManager.KeyPressed(InputCodes::Up);
+  if (glfwGetKey(Window, GLFW_KEY_S))
+    inputManager.KeyPressed(InputCodes::Down);
+
+  if (glfwGetKey(Window, GLFW_KEY_T))
+    application-&gt;SetArmar(true);
+  int state1 = glfwGetKey(Window, GLFW_KEY_D);
+  int state2 = glfwGetKey(Window, GLFW_KEY_F);
+  int state3 = glfwGetKey(Window, GLFW_KEY_R);
+  int state4 = glfwGetKey(Window, GLFW_KEY_B);
+  int state5 = glfwGetKey(Window, GLFW_KEY_L);
+  int state6 = glfwGetKey(Window, GLFW_KEY_U);
+  int stateShift = glfwGetKey(Window, GLFW_KEY_LEFT_SHIFT);
+
+  if (!press[0] &amp;&amp; state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[0] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(0, 0);
+  } else if (press[0] &amp;&amp; state1 == GLFW_RELEASE)
+    press[0] = false;
+  else if (!press[0] &amp;&amp; (state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[0] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(0, 1);
+  } else if (press &amp;&amp; state1 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[0] = false;
+
+  if (!press[1] &amp;&amp; state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[1] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(1, 0);
+  } else if (press[1] &amp;&amp; state2 == GLFW_RELEASE)
+    press[1] = false;
+  else if (!press[1] &amp;&amp; (state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[1] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(1, 1);
+  } else if (press[1] &amp;&amp; state2 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[1] = false;
+
+  if (!press[2] &amp;&amp; state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[2] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(2, 1);
+  } else if (press[2] &amp;&amp; state3 == GLFW_RELEASE)
+    press[2] = false;
+  else if (!press[2] &amp;&amp; (state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[2] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(2, 0);
+  } else if (press[2] &amp;&amp; state3 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[2] = false;
+
+  if (!press[3] &amp;&amp; state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[3] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(3, 0);
+  } else if (press[3] &amp;&amp; state4 == GLFW_RELEASE)
+    press[3] = false;
+  else if (!press[3] &amp;&amp; (state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[3] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(3, 1);
+  } else if (press[3] &amp;&amp; state4 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[3] = false;
+
+  if (!press[4] &amp;&amp; state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[4] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(4, 0);
+  } else if (press[4] &amp;&amp; state5 == GLFW_RELEASE)
+    press[4] = false;
+  else if (!press[4] &amp;&amp; (state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[4] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(4, 1);
+  } else if (press[4] &amp;&amp; state5 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[4] = false;
+
+  if (!press[5] &amp;&amp; state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[5] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(5, 1);
+  } else if (press[5] &amp;&amp; state6 == GLFW_RELEASE)
+    press[5] = false;
+  else if (!press[5] &amp;&amp; (state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[5] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(5, 0);
+  } else if (press[5] &amp;&amp; state6 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[5] = false;
+
+  int left, right, top, bottom;
+  glm::ivec2 * mousePos = new glm::ivec2();
+  mousePos-&gt;x = xpos;
+  mousePos-&gt;y = ypos;
+  int stateLeft = glfwGetMouseButton(Window, GLFW_MOUSE_BUTTON_LEFT);
+  // Boton izquierdo liberado.
+  if (stateLeft == GLFW_RELEASE) {
+    // Coloca coordenadas del cursos del mouse en coordenadas de ventana.
+    inputManager.SetGMousePos(mousePos);
+  } else {
+    // Click izquierdo se obtiene la matriz de rotación.
+    glm::ivec2 * gMousePos = inputManager.getGMousePos();
+    glm::vec2 delta = glm::vec2(
+        glm::ivec2(mousePos-&gt;x, mousePos-&gt;y)
+            - glm::ivec2(gMousePos-&gt;x, gMousePos-&gt;y));
+    inputManager.SetGMousePos(mousePos);
+
+    glm::quat rotX = glm::angleAxis&lt;float&gt;(glm::radians(delta.y) * 0.1f,
+                                           glm::vec3(1, 0, 0));
+    glm::quat rotY = glm::angleAxis&lt;float&gt;(glm::radians(delta.x) * 0.1f,
+                                           glm::vec3(0, 1, 0));
+
+    application-&gt;SetGRotation((rotX * rotY) * application-&gt;GetGRotation());
+    application-&gt;GetRotationCubeManager()-&gt;updateOrientation();
+  }
+
+  glfwPollEvents();
+
+  return continueApplication;
+}
+
+/**
+ * Método que maneja el redimensionamiento de la ventana.
+ * @param Window Ventana que se va a redimencionar.
+ * @param widthRes Ancho objetivo.
+ * @param heightRes Altura objetivo.
+ */
+void GLFWManager::ReshapeGL(GLFWwindow* Window, int widthRes, int heightRes) {
+  application-&gt;ScreenWidth = widthRes;
+  application-&gt;ScreenHeight = heightRes;
+  glViewport(0, 0, application-&gt;ScreenWidth, application-&gt;ScreenHeight);
+
+  pCamera-&gt;SetPerspective(
+      glm::radians(60.0f),
+      application-&gt;ScreenWidth / (float) application-&gt;ScreenHeight, 0.5f,
+      150.0f);
+}
+
+/**
+ * Destruye la ventana y el contexto de OpenGL.
+ */
+void GLFWManager::Destroy() {
+  application-&gt;GetRotationCubeManager()-&gt;saveRotations();
+  glfwTerminate();
+}
+</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  pCamera = <span class="keyword">new</span> <a class="code" href="classCamera.html">Camera</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// Se crea el objeto de la aplicación.   application = new GLApplication();
+
+  // Asocia el manejador de ventanas a la aplicación.
+  application-&gt;SetWindowManager(pWindowManager);
+
+  application-&gt;SetCamera(pCamera);
+  pWindowManager-&gt;GetInputManager()-&gt;SetCamera(pCamera);
+
+  // Se llama el método principal de la aplicación.
+  return application-&gt;GLMain();
+}
+
+/**
+ * Inicializa la ventana y crea el contexto de OpenGL.
+ * @param width Ancho de ventana.
+ * @param height Altura de ventana.
+ * @param strTitle Titulo de ventana.
+ * @param bFullScreen Indica si se requiere ventana completa o no.
+ * @return Bandera que indica la inicialización correcta de la ventana y el contexto de OpenGL.
+ */
+int GLFWManager::Initialize(int width, int height, std::string strTitle,
+                            bool bFullScreen) {
+
+  if (!glfwInit()) {
+    fprintf(stderr, &quot;Failed to initialize GLFW\n&quot;);
+    return -1;
+  }
+
+  // Se le dice a openGL que se quiere utilizar un multi-muestro de 4 para el anti-aliasing.
+  glfwWindowHint(GLFW_SAMPLES, 4);
+
+  // Contexto de OpenGL versión 4.2 usando el core profile.
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+  // Se crean las ventanas.
+  if (bFullScreen)
+    Window = glfwCreateWindow(width, height, strTitle.c_str(),
+                              glfwGetPrimaryMonitor(), nullptr);
+  else
+    Window = glfwCreateWindow(width, height, strTitle.c_str(), nullptr,
+                              nullptr);
+
+  // Se aegura que sea una ventana valida, que no exista error.
+  if (Window == nullptr) {
+    fprintf(
+        stderr,
+        &quot;Failed to create a GLFW window, you might need to download the latest drivers or change the OpenGL version to 3\n&quot;);
+    Destroy();
+
+    return -1;
+  }
+
+  // Se crea el contexto de OpenGL.
+  glfwMakeContextCurrent(Window);
+
+  glfwSetInputMode(Window, GLFW_STICKY_KEYS, GL_TRUE);
+
+  // Apaga vertical sync para que el monitor no espere a renderizar.
+  glfwSwapInterval(0);
+
+  glewExperimental = GL_TRUE;
+
+  glfwSetWindowSizeCallback(Window, GLFWwindowsizefun(GLFWManager::ReshapeGL));
+
+  // Incialización de la libreria GLEW para agrega funciones y extensiones de OpenGL.
+  GLenum err = glewInit();
+
+  if (GLEW_OK != err) {
+    fprintf(stderr, &quot;Failed to initialize glew\n&quot;);
+    return -1;
+  }
+
+  return 0;
+}
+
+/**
+ * Intercambia el backbuffer al frente, se debe estar llamando este función por cada frame.
+ */
+void GLFWManager::SwapTheBuffers() {
+  glfwSwapBuffers(Window);
+}
+
+/**
+ * Método que maneja los eventos de entrada de la aplicación.
+ * @param continueApplication Bandera que indica la ejecución de la aplicacaión.
+ * @return True siempre que no se apriete la tecal Esc, falso en caso contrario.
+ */
+bool GLFWManager::ProcessInput(bool continueApplication = true) {
+  // Revisa si fue presionado el botton Esc.
+  if (glfwGetKey(Window, GLFW_KEY_ESCAPE) == GLFW_PRESS
+      || glfwWindowShouldClose(Window) != 0)
+    return false;
+
+  // Posición en coordenadas de la ventan del cursor
+  double xpos;
+  double ypos;
+  glfwGetCursorPos(Window, &amp;xpos, &amp;ypos);
+
+  if (glfwGetKey(Window, GLFW_KEY_UP) || glfwGetKey(Window, GLFW_KEY_W))
+    inputManager.KeyPressed(InputCodes::Up);
+  if (glfwGetKey(Window, GLFW_KEY_DOWN) || glfwGetKey(Window, GLFW_KEY_S))
+    inputManager.KeyPressed(InputCodes::Down);
+  if (glfwGetKey(Window, GLFW_KEY_W))
+    inputManager.KeyPressed(InputCodes::Up);
+  if (glfwGetKey(Window, GLFW_KEY_S))
+    inputManager.KeyPressed(InputCodes::Down);
+
+  if (glfwGetKey(Window, GLFW_KEY_T))
+    application-&gt;SetArmar(true);
+  int state1 = glfwGetKey(Window, GLFW_KEY_D);
+  int state2 = glfwGetKey(Window, GLFW_KEY_F);
+  int state3 = glfwGetKey(Window, GLFW_KEY_R);
+  int state4 = glfwGetKey(Window, GLFW_KEY_B);
+  int state5 = glfwGetKey(Window, GLFW_KEY_L);
+  int state6 = glfwGetKey(Window, GLFW_KEY_U);
+  int stateShift = glfwGetKey(Window, GLFW_KEY_LEFT_SHIFT);
+
+  if (!press[0] &amp;&amp; state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[0] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(0, 0);
+  } else if (press[0] &amp;&amp; state1 == GLFW_RELEASE)
+    press[0] = false;
+  else if (!press[0] &amp;&amp; (state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[0] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(0, 1);
+  } else if (press &amp;&amp; state1 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[0] = false;
+
+  if (!press[1] &amp;&amp; state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[1] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(1, 0);
+  } else if (press[1] &amp;&amp; state2 == GLFW_RELEASE)
+    press[1] = false;
+  else if (!press[1] &amp;&amp; (state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[1] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(1, 1);
+  } else if (press[1] &amp;&amp; state2 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[1] = false;
+
+  if (!press[2] &amp;&amp; state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[2] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(2, 1);
+  } else if (press[2] &amp;&amp; state3 == GLFW_RELEASE)
+    press[2] = false;
+  else if (!press[2] &amp;&amp; (state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[2] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(2, 0);
+  } else if (press[2] &amp;&amp; state3 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[2] = false;
+
+  if (!press[3] &amp;&amp; state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[3] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(3, 0);
+  } else if (press[3] &amp;&amp; state4 == GLFW_RELEASE)
+    press[3] = false;
+  else if (!press[3] &amp;&amp; (state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[3] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(3, 1);
+  } else if (press[3] &amp;&amp; state4 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[3] = false;
+
+  if (!press[4] &amp;&amp; state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[4] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(4, 0);
+  } else if (press[4] &amp;&amp; state5 == GLFW_RELEASE)
+    press[4] = false;
+  else if (!press[4] &amp;&amp; (state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[4] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(4, 1);
+  } else if (press[4] &amp;&amp; state5 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[4] = false;
+
+  if (!press[5] &amp;&amp; state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[5] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(5, 1);
+  } else if (press[5] &amp;&amp; state6 == GLFW_RELEASE)
+    press[5] = false;
+  else if (!press[5] &amp;&amp; (state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[5] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(5, 0);
+  } else if (press[5] &amp;&amp; state6 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[5] = false;
+
+  int left, right, top, bottom;
+  glm::ivec2 * mousePos = new glm::ivec2();
+  mousePos-&gt;x = xpos;
+  mousePos-&gt;y = ypos;
+  int stateLeft = glfwGetMouseButton(Window, GLFW_MOUSE_BUTTON_LEFT);
+  // Boton izquierdo liberado.
+  if (stateLeft == GLFW_RELEASE) {
+    // Coloca coordenadas del cursos del mouse en coordenadas de ventana.
+    inputManager.SetGMousePos(mousePos);
+  } else {
+    // Click izquierdo se obtiene la matriz de rotación.
+    glm::ivec2 * gMousePos = inputManager.getGMousePos();
+    glm::vec2 delta = glm::vec2(
+        glm::ivec2(mousePos-&gt;x, mousePos-&gt;y)
+            - glm::ivec2(gMousePos-&gt;x, gMousePos-&gt;y));
+    inputManager.SetGMousePos(mousePos);
+
+    glm::quat rotX = glm::angleAxis&lt;float&gt;(glm::radians(delta.y) * 0.1f,
+                                           glm::vec3(1, 0, 0));
+    glm::quat rotY = glm::angleAxis&lt;float&gt;(glm::radians(delta.x) * 0.1f,
+                                           glm::vec3(0, 1, 0));
+
+    application-&gt;SetGRotation((rotX * rotY) * application-&gt;GetGRotation());
+    application-&gt;GetRotationCubeManager()-&gt;updateOrientation();
+  }
+
+  glfwPollEvents();
+
+  return continueApplication;
+}
+
+/**
+ * Método que maneja el redimensionamiento de la ventana.
+ * @param Window Ventana que se va a redimencionar.
+ * @param widthRes Ancho objetivo.
+ * @param heightRes Altura objetivo.
+ */
+void GLFWManager::ReshapeGL(GLFWwindow* Window, int widthRes, int heightRes) {
+  application-&gt;ScreenWidth = widthRes;
+  application-&gt;ScreenHeight = heightRes;
+  glViewport(0, 0, application-&gt;ScreenWidth, application-&gt;ScreenHeight);
+
+  pCamera-&gt;SetPerspective(
+      glm::radians(60.0f),
+      application-&gt;ScreenWidth / (float) application-&gt;ScreenHeight, 0.5f,
+      150.0f);
+}
+
+/**
+ * Destruye la ventana y el contexto de OpenGL.
+ */
+void GLFWManager::Destroy() {
+  application-&gt;GetRotationCubeManager()-&gt;saveRotations();
+  glfwTerminate();
+}
+</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  application = <span class="keyword">new</span> <a class="code" href="classGLApplication.html">GLApplication</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">// Asocia el manejador de ventanas a la aplicación.   application-&gt;SetWindowManager(pWindowManager);
+
+  application-&gt;SetCamera(pCamera);
+  pWindowManager-&gt;GetInputManager()-&gt;SetCamera(pCamera);
+
+  // Se llama el método principal de la aplicación.
+  return application-&gt;GLMain();
+}
+
+/**
+ * Inicializa la ventana y crea el contexto de OpenGL.
+ * @param width Ancho de ventana.
+ * @param height Altura de ventana.
+ * @param strTitle Titulo de ventana.
+ * @param bFullScreen Indica si se requiere ventana completa o no.
+ * @return Bandera que indica la inicialización correcta de la ventana y el contexto de OpenGL.
+ */
+int GLFWManager::Initialize(int width, int height, std::string strTitle,
+                            bool bFullScreen) {
+
+  if (!glfwInit()) {
+    fprintf(stderr, &quot;Failed to initialize GLFW\n&quot;);
+    return -1;
+  }
+
+  // Se le dice a openGL que se quiere utilizar un multi-muestro de 4 para el anti-aliasing.
+  glfwWindowHint(GLFW_SAMPLES, 4);
+
+  // Contexto de OpenGL versión 4.2 usando el core profile.
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+  // Se crean las ventanas.
+  if (bFullScreen)
+    Window = glfwCreateWindow(width, height, strTitle.c_str(),
+                              glfwGetPrimaryMonitor(), nullptr);
+  else
+    Window = glfwCreateWindow(width, height, strTitle.c_str(), nullptr,
+                              nullptr);
+
+  // Se aegura que sea una ventana valida, que no exista error.
+  if (Window == nullptr) {
+    fprintf(
+        stderr,
+        &quot;Failed to create a GLFW window, you might need to download the latest drivers or change the OpenGL version to 3\n&quot;);
+    Destroy();
+
+    return -1;
+  }
+
+  // Se crea el contexto de OpenGL.
+  glfwMakeContextCurrent(Window);
+
+  glfwSetInputMode(Window, GLFW_STICKY_KEYS, GL_TRUE);
+
+  // Apaga vertical sync para que el monitor no espere a renderizar.
+  glfwSwapInterval(0);
+
+  glewExperimental = GL_TRUE;
+
+  glfwSetWindowSizeCallback(Window, GLFWwindowsizefun(GLFWManager::ReshapeGL));
+
+  // Incialización de la libreria GLEW para agrega funciones y extensiones de OpenGL.
+  GLenum err = glewInit();
+
+  if (GLEW_OK != err) {
+    fprintf(stderr, &quot;Failed to initialize glew\n&quot;);
+    return -1;
+  }
+
+  return 0;
+}
+
+/**
+ * Intercambia el backbuffer al frente, se debe estar llamando este función por cada frame.
+ */
+void GLFWManager::SwapTheBuffers() {
+  glfwSwapBuffers(Window);
+}
+
+/**
+ * Método que maneja los eventos de entrada de la aplicación.
+ * @param continueApplication Bandera que indica la ejecución de la aplicacaión.
+ * @return True siempre que no se apriete la tecal Esc, falso en caso contrario.
+ */
+bool GLFWManager::ProcessInput(bool continueApplication = true) {
+  // Revisa si fue presionado el botton Esc.
+  if (glfwGetKey(Window, GLFW_KEY_ESCAPE) == GLFW_PRESS
+      || glfwWindowShouldClose(Window) != 0)
+    return false;
+
+  // Posición en coordenadas de la ventan del cursor
+  double xpos;
+  double ypos;
+  glfwGetCursorPos(Window, &amp;xpos, &amp;ypos);
+
+  if (glfwGetKey(Window, GLFW_KEY_UP) || glfwGetKey(Window, GLFW_KEY_W))
+    inputManager.KeyPressed(InputCodes::Up);
+  if (glfwGetKey(Window, GLFW_KEY_DOWN) || glfwGetKey(Window, GLFW_KEY_S))
+    inputManager.KeyPressed(InputCodes::Down);
+  if (glfwGetKey(Window, GLFW_KEY_W))
+    inputManager.KeyPressed(InputCodes::Up);
+  if (glfwGetKey(Window, GLFW_KEY_S))
+    inputManager.KeyPressed(InputCodes::Down);
+
+  if (glfwGetKey(Window, GLFW_KEY_T))
+    application-&gt;SetArmar(true);
+  int state1 = glfwGetKey(Window, GLFW_KEY_D);
+  int state2 = glfwGetKey(Window, GLFW_KEY_F);
+  int state3 = glfwGetKey(Window, GLFW_KEY_R);
+  int state4 = glfwGetKey(Window, GLFW_KEY_B);
+  int state5 = glfwGetKey(Window, GLFW_KEY_L);
+  int state6 = glfwGetKey(Window, GLFW_KEY_U);
+  int stateShift = glfwGetKey(Window, GLFW_KEY_LEFT_SHIFT);
+
+  if (!press[0] &amp;&amp; state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[0] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(0, 0);
+  } else if (press[0] &amp;&amp; state1 == GLFW_RELEASE)
+    press[0] = false;
+  else if (!press[0] &amp;&amp; (state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[0] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(0, 1);
+  } else if (press &amp;&amp; state1 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[0] = false;
+
+  if (!press[1] &amp;&amp; state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[1] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(1, 0);
+  } else if (press[1] &amp;&amp; state2 == GLFW_RELEASE)
+    press[1] = false;
+  else if (!press[1] &amp;&amp; (state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[1] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(1, 1);
+  } else if (press[1] &amp;&amp; state2 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[1] = false;
+
+  if (!press[2] &amp;&amp; state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[2] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(2, 1);
+  } else if (press[2] &amp;&amp; state3 == GLFW_RELEASE)
+    press[2] = false;
+  else if (!press[2] &amp;&amp; (state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[2] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(2, 0);
+  } else if (press[2] &amp;&amp; state3 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[2] = false;
+
+  if (!press[3] &amp;&amp; state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[3] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(3, 0);
+  } else if (press[3] &amp;&amp; state4 == GLFW_RELEASE)
+    press[3] = false;
+  else if (!press[3] &amp;&amp; (state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[3] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(3, 1);
+  } else if (press[3] &amp;&amp; state4 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[3] = false;
+
+  if (!press[4] &amp;&amp; state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[4] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(4, 0);
+  } else if (press[4] &amp;&amp; state5 == GLFW_RELEASE)
+    press[4] = false;
+  else if (!press[4] &amp;&amp; (state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[4] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(4, 1);
+  } else if (press[4] &amp;&amp; state5 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[4] = false;
+
+  if (!press[5] &amp;&amp; state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[5] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(5, 1);
+  } else if (press[5] &amp;&amp; state6 == GLFW_RELEASE)
+    press[5] = false;
+  else if (!press[5] &amp;&amp; (state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[5] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(5, 0);
+  } else if (press[5] &amp;&amp; state6 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[5] = false;
+
+  int left, right, top, bottom;
+  glm::ivec2 * mousePos = new glm::ivec2();
+  mousePos-&gt;x = xpos;
+  mousePos-&gt;y = ypos;
+  int stateLeft = glfwGetMouseButton(Window, GLFW_MOUSE_BUTTON_LEFT);
+  // Boton izquierdo liberado.
+  if (stateLeft == GLFW_RELEASE) {
+    // Coloca coordenadas del cursos del mouse en coordenadas de ventana.
+    inputManager.SetGMousePos(mousePos);
+  } else {
+    // Click izquierdo se obtiene la matriz de rotación.
+    glm::ivec2 * gMousePos = inputManager.getGMousePos();
+    glm::vec2 delta = glm::vec2(
+        glm::ivec2(mousePos-&gt;x, mousePos-&gt;y)
+            - glm::ivec2(gMousePos-&gt;x, gMousePos-&gt;y));
+    inputManager.SetGMousePos(mousePos);
+
+    glm::quat rotX = glm::angleAxis&lt;float&gt;(glm::radians(delta.y) * 0.1f,
+                                           glm::vec3(1, 0, 0));
+    glm::quat rotY = glm::angleAxis&lt;float&gt;(glm::radians(delta.x) * 0.1f,
+                                           glm::vec3(0, 1, 0));
+
+    application-&gt;SetGRotation((rotX * rotY) * application-&gt;GetGRotation());
+    application-&gt;GetRotationCubeManager()-&gt;updateOrientation();
+  }
+
+  glfwPollEvents();
+
+  return continueApplication;
+}
+
+/**
+ * Método que maneja el redimensionamiento de la ventana.
+ * @param Window Ventana que se va a redimencionar.
+ * @param widthRes Ancho objetivo.
+ * @param heightRes Altura objetivo.
+ */
+void GLFWManager::ReshapeGL(GLFWwindow* Window, int widthRes, int heightRes) {
+  application-&gt;ScreenWidth = widthRes;
+  application-&gt;ScreenHeight = heightRes;
+  glViewport(0, 0, application-&gt;ScreenWidth, application-&gt;ScreenHeight);
+
+  pCamera-&gt;SetPerspective(
+      glm::radians(60.0f),
+      application-&gt;ScreenWidth / (float) application-&gt;ScreenHeight, 0.5f,
+      150.0f);
+}
+
+/**
+ * Destruye la ventana y el contexto de OpenGL.
+ */
+void GLFWManager::Destroy() {
+  application-&gt;GetRotationCubeManager()-&gt;saveRotations();
+  glfwTerminate();
+}
+</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  application-&gt;<a class="code" href="classGLApplication.html#a80d091a51f25bb9e01a74e8990461120">SetWindowManager</a>(pWindowManager);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  application-&gt;<a class="code" href="classGLApplication.html#ad17d4449dda1cb4a54e37c5470f1ad9a">SetCamera</a>(pCamera);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  pWindowManager-&gt;<a class="code" href="classWindowManager.html#aa76f8df60f629cc88d98ab60e69278ed">GetInputManager</a>()-&gt;<a class="code" href="classInputManager.html#a9e1c1e56bf27ca6a6abb4f6ed03d09e2">SetCamera</a>(pCamera);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">// Se llama el método principal de la aplicación.   return application-&gt;GLMain();
+}
+
+/**
+ * Inicializa la ventana y crea el contexto de OpenGL.
+ * @param width Ancho de ventana.
+ * @param height Altura de ventana.
+ * @param strTitle Titulo de ventana.
+ * @param bFullScreen Indica si se requiere ventana completa o no.
+ * @return Bandera que indica la inicialización correcta de la ventana y el contexto de OpenGL.
+ */
+int GLFWManager::Initialize(int width, int height, std::string strTitle,
+                            bool bFullScreen) {
+
+  if (!glfwInit()) {
+    fprintf(stderr, &quot;Failed to initialize GLFW\n&quot;);
+    return -1;
+  }
+
+  // Se le dice a openGL que se quiere utilizar un multi-muestro de 4 para el anti-aliasing.
+  glfwWindowHint(GLFW_SAMPLES, 4);
+
+  // Contexto de OpenGL versión 4.2 usando el core profile.
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+  // Se crean las ventanas.
+  if (bFullScreen)
+    Window = glfwCreateWindow(width, height, strTitle.c_str(),
+                              glfwGetPrimaryMonitor(), nullptr);
+  else
+    Window = glfwCreateWindow(width, height, strTitle.c_str(), nullptr,
+                              nullptr);
+
+  // Se aegura que sea una ventana valida, que no exista error.
+  if (Window == nullptr) {
+    fprintf(
+        stderr,
+        &quot;Failed to create a GLFW window, you might need to download the latest drivers or change the OpenGL version to 3\n&quot;);
+    Destroy();
+
+    return -1;
+  }
+
+  // Se crea el contexto de OpenGL.
+  glfwMakeContextCurrent(Window);
+
+  glfwSetInputMode(Window, GLFW_STICKY_KEYS, GL_TRUE);
+
+  // Apaga vertical sync para que el monitor no espere a renderizar.
+  glfwSwapInterval(0);
+
+  glewExperimental = GL_TRUE;
+
+  glfwSetWindowSizeCallback(Window, GLFWwindowsizefun(GLFWManager::ReshapeGL));
+
+  // Incialización de la libreria GLEW para agrega funciones y extensiones de OpenGL.
+  GLenum err = glewInit();
+
+  if (GLEW_OK != err) {
+    fprintf(stderr, &quot;Failed to initialize glew\n&quot;);
+    return -1;
+  }
+
+  return 0;
+}
+
+/**
+ * Intercambia el backbuffer al frente, se debe estar llamando este función por cada frame.
+ */
+void GLFWManager::SwapTheBuffers() {
+  glfwSwapBuffers(Window);
+}
+
+/**
+ * Método que maneja los eventos de entrada de la aplicación.
+ * @param continueApplication Bandera que indica la ejecución de la aplicacaión.
+ * @return True siempre que no se apriete la tecal Esc, falso en caso contrario.
+ */
+bool GLFWManager::ProcessInput(bool continueApplication = true) {
+  // Revisa si fue presionado el botton Esc.
+  if (glfwGetKey(Window, GLFW_KEY_ESCAPE) == GLFW_PRESS
+      || glfwWindowShouldClose(Window) != 0)
+    return false;
+
+  // Posición en coordenadas de la ventan del cursor
+  double xpos;
+  double ypos;
+  glfwGetCursorPos(Window, &amp;xpos, &amp;ypos);
+
+  if (glfwGetKey(Window, GLFW_KEY_UP) || glfwGetKey(Window, GLFW_KEY_W))
+    inputManager.KeyPressed(InputCodes::Up);
+  if (glfwGetKey(Window, GLFW_KEY_DOWN) || glfwGetKey(Window, GLFW_KEY_S))
+    inputManager.KeyPressed(InputCodes::Down);
+  if (glfwGetKey(Window, GLFW_KEY_W))
+    inputManager.KeyPressed(InputCodes::Up);
+  if (glfwGetKey(Window, GLFW_KEY_S))
+    inputManager.KeyPressed(InputCodes::Down);
+
+  if (glfwGetKey(Window, GLFW_KEY_T))
+    application-&gt;SetArmar(true);
+  int state1 = glfwGetKey(Window, GLFW_KEY_D);
+  int state2 = glfwGetKey(Window, GLFW_KEY_F);
+  int state3 = glfwGetKey(Window, GLFW_KEY_R);
+  int state4 = glfwGetKey(Window, GLFW_KEY_B);
+  int state5 = glfwGetKey(Window, GLFW_KEY_L);
+  int state6 = glfwGetKey(Window, GLFW_KEY_U);
+  int stateShift = glfwGetKey(Window, GLFW_KEY_LEFT_SHIFT);
+
+  if (!press[0] &amp;&amp; state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[0] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(0, 0);
+  } else if (press[0] &amp;&amp; state1 == GLFW_RELEASE)
+    press[0] = false;
+  else if (!press[0] &amp;&amp; (state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[0] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(0, 1);
+  } else if (press &amp;&amp; state1 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[0] = false;
+
+  if (!press[1] &amp;&amp; state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[1] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(1, 0);
+  } else if (press[1] &amp;&amp; state2 == GLFW_RELEASE)
+    press[1] = false;
+  else if (!press[1] &amp;&amp; (state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[1] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(1, 1);
+  } else if (press[1] &amp;&amp; state2 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[1] = false;
+
+  if (!press[2] &amp;&amp; state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[2] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(2, 1);
+  } else if (press[2] &amp;&amp; state3 == GLFW_RELEASE)
+    press[2] = false;
+  else if (!press[2] &amp;&amp; (state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[2] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(2, 0);
+  } else if (press[2] &amp;&amp; state3 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[2] = false;
+
+  if (!press[3] &amp;&amp; state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[3] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(3, 0);
+  } else if (press[3] &amp;&amp; state4 == GLFW_RELEASE)
+    press[3] = false;
+  else if (!press[3] &amp;&amp; (state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[3] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(3, 1);
+  } else if (press[3] &amp;&amp; state4 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[3] = false;
+
+  if (!press[4] &amp;&amp; state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[4] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(4, 0);
+  } else if (press[4] &amp;&amp; state5 == GLFW_RELEASE)
+    press[4] = false;
+  else if (!press[4] &amp;&amp; (state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[4] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(4, 1);
+  } else if (press[4] &amp;&amp; state5 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[4] = false;
+
+  if (!press[5] &amp;&amp; state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {
+    press[5] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(5, 1);
+  } else if (press[5] &amp;&amp; state6 == GLFW_RELEASE)
+    press[5] = false;
+  else if (!press[5] &amp;&amp; (state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {
+    press[5] = true;
+    application-&gt;GetRotationCubeManager()-&gt;addRotation(5, 0);
+  } else if (press[5] &amp;&amp; state6 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)
+    press[5] = false;
+
+  int left, right, top, bottom;
+  glm::ivec2 * mousePos = new glm::ivec2();
+  mousePos-&gt;x = xpos;
+  mousePos-&gt;y = ypos;
+  int stateLeft = glfwGetMouseButton(Window, GLFW_MOUSE_BUTTON_LEFT);
+  // Boton izquierdo liberado.
+  if (stateLeft == GLFW_RELEASE) {
+    // Coloca coordenadas del cursos del mouse en coordenadas de ventana.
+    inputManager.SetGMousePos(mousePos);
+  } else {
+    // Click izquierdo se obtiene la matriz de rotación.
+    glm::ivec2 * gMousePos = inputManager.getGMousePos();
+    glm::vec2 delta = glm::vec2(
+        glm::ivec2(mousePos-&gt;x, mousePos-&gt;y)
+            - glm::ivec2(gMousePos-&gt;x, gMousePos-&gt;y));
+    inputManager.SetGMousePos(mousePos);
+
+    glm::quat rotX = glm::angleAxis&lt;float&gt;(glm::radians(delta.y) * 0.1f,
+                                           glm::vec3(1, 0, 0));
+    glm::quat rotY = glm::angleAxis&lt;float&gt;(glm::radians(delta.x) * 0.1f,
+                                           glm::vec3(0, 1, 0));
+
+    application-&gt;SetGRotation((rotX * rotY) * application-&gt;GetGRotation());
+    application-&gt;GetRotationCubeManager()-&gt;updateOrientation();
+  }
+
+  glfwPollEvents();
+
+  return continueApplication;
+}
+
+/**
+ * Método que maneja el redimensionamiento de la ventana.
+ * @param Window Ventana que se va a redimencionar.
+ * @param widthRes Ancho objetivo.
+ * @param heightRes Altura objetivo.
+ */
+void GLFWManager::ReshapeGL(GLFWwindow* Window, int widthRes, int heightRes) {
+  application-&gt;ScreenWidth = widthRes;
+  application-&gt;ScreenHeight = heightRes;
+  glViewport(0, 0, application-&gt;ScreenWidth, application-&gt;ScreenHeight);
+
+  pCamera-&gt;SetPerspective(
+      glm::radians(60.0f),
+      application-&gt;ScreenWidth / (float) application-&gt;ScreenHeight, 0.5f,
+      150.0f);
+}
+
+/**
+ * Destruye la ventana y el contexto de OpenGL.
+ */
+void GLFWManager::Destroy() {
+  application-&gt;GetRotationCubeManager()-&gt;saveRotations();
+  glfwTerminate();
+}
+</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">return</span> application-&gt;<a class="code" href="classGLApplication.html#a94cd13d2291ad4aa7875181cbc6b8349">GLMain</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classGLFWManager.html#ab25fb3360faae786eada907fdcb12357">   42</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classGLFWManager.html#ab25fb3360faae786eada907fdcb12357">GLFWManager::Initialize</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, std::string strTitle,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                            <span class="keywordtype">bool</span> bFullScreen) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">if</span> (!glfwInit()) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Failed to initialize GLFW\n&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// Se le dice a openGL que se quiere utilizar un multi-muestro de 4 para el anti-aliasing.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  glfwWindowHint(GLFW_SAMPLES, 4);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// Contexto de OpenGL versión 4.2 usando el core profile.</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// Se crean las ventanas.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (bFullScreen)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a> = glfwCreateWindow(width, height, strTitle.c_str(),</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                              glfwGetPrimaryMonitor(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a> = glfwCreateWindow(width, height, strTitle.c_str(), <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                              <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// Se aegura que sea una ventana valida, que no exista error.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">if</span> (Window == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    fprintf(</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        stderr,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="stringliteral">&quot;Failed to create a GLFW window, you might need to download the latest drivers or change the OpenGL version to 3\n&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classGLFWManager.html#a9c655ddd50d28a62028aa6a387fbdef1">Destroy</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// Se crea el contexto de OpenGL.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  glfwMakeContextCurrent(Window);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  glfwSetInputMode(Window, GLFW_STICKY_KEYS, GL_TRUE);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="comment">// Apaga vertical sync para que el monitor no espere a renderizar.</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  glfwSwapInterval(0);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  glewExperimental = GL_TRUE;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  glfwSetWindowSizeCallback(Window, GLFWwindowsizefun(<a class="code" href="classGLFWManager.html#a0bd7d7dde9582b4623cf4a1ac7399159">GLFWManager::ReshapeGL</a>));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// Incialización de la libreria GLEW para agrega funciones y extensiones de OpenGL.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  GLenum err = glewInit();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">if</span> (GLEW_OK != err) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;Failed to initialize glew\n&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classGLFWManager.html#ae9746badca674cac1116bbbc0e2e9e8e">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classGLFWManager.html#ae9746badca674cac1116bbbc0e2e9e8e">GLFWManager::SwapTheBuffers</a>() {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  glfwSwapBuffers(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classGLFWManager.html#a94ed402e22066eb4ee073ef911f1c19a">  111</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classGLFWManager.html#a94ed402e22066eb4ee073ef911f1c19a">GLFWManager::ProcessInput</a>(<span class="keywordtype">bool</span> continueApplication = <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">// Revisa si fue presionado el botton Esc.</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">if</span> (glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_ESCAPE) == GLFW_PRESS</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      || glfwWindowShouldClose(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>) != 0)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="comment">// Posición en coordenadas de la ventan del cursor</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">double</span> xpos;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">double</span> ypos;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  glfwGetCursorPos(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, &amp;xpos, &amp;ypos);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">if</span> (glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_UP) || glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_W))</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="classWindowManager.html#a5d3852618820895a242485386bed5e1d">inputManager</a>.<a class="code" href="classInputManager.html#a8e2bc8541a4f69c0e4a32deed414e1e5">KeyPressed</a>(<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a57a7edcbc04d6175683383cad5c3e0a2">InputCodes::Up</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">if</span> (glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_DOWN) || glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_S))</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classWindowManager.html#a5d3852618820895a242485386bed5e1d">inputManager</a>.<a class="code" href="classInputManager.html#a8e2bc8541a4f69c0e4a32deed414e1e5">KeyPressed</a>(<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628abcf8c79e9a5f5f9d606fb35645a0fb27">InputCodes::Down</a>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">if</span> (glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_W))</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="classWindowManager.html#a5d3852618820895a242485386bed5e1d">inputManager</a>.<a class="code" href="classInputManager.html#a8e2bc8541a4f69c0e4a32deed414e1e5">KeyPressed</a>(<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a57a7edcbc04d6175683383cad5c3e0a2">InputCodes::Up</a>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">if</span> (glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_S))</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="classWindowManager.html#a5d3852618820895a242485386bed5e1d">inputManager</a>.<a class="code" href="classInputManager.html#a8e2bc8541a4f69c0e4a32deed414e1e5">KeyPressed</a>(<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628abcf8c79e9a5f5f9d606fb35645a0fb27">InputCodes::Down</a>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">if</span> (glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_T))</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#ae67b03ed1330abefa5d8122f2b88f311">SetArmar</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">int</span> state1 = glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_D);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">int</span> state2 = glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_F);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordtype">int</span> state3 = glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_R);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordtype">int</span> state4 = glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_B);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordtype">int</span> state5 = glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_L);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">int</span> state6 = glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_U);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordtype">int</span> stateShift = glfwGetKey(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_KEY_LEFT_SHIFT);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[0] &amp;&amp; state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[0] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(0, 0);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[0] &amp;&amp; state1 == GLFW_RELEASE)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[0] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[0] &amp;&amp; (state1 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[0] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(0, 1);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a> &amp;&amp; state1 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[0] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[1] &amp;&amp; state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[1] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(1, 0);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[1] &amp;&amp; state2 == GLFW_RELEASE)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[1] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[1] &amp;&amp; (state2 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[1] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(1, 1);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[1] &amp;&amp; state2 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[1] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[2] &amp;&amp; state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[2] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(2, 1);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[2] &amp;&amp; state3 == GLFW_RELEASE)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[2] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[2] &amp;&amp; (state3 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[2] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(2, 0);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[2] &amp;&amp; state3 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[2] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[3] &amp;&amp; state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[3] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(3, 0);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[3] &amp;&amp; state4 == GLFW_RELEASE)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[3] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[3] &amp;&amp; (state4 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[3] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(3, 1);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[3] &amp;&amp; state4 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[3] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[4] &amp;&amp; state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[4] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(4, 0);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[4] &amp;&amp; state5 == GLFW_RELEASE)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[4] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[4] &amp;&amp; (state5 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[4] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(4, 1);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[4] &amp;&amp; state5 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[4] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[5] &amp;&amp; state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_RELEASE) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[5] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(5, 1);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[5] &amp;&amp; state6 == GLFW_RELEASE)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[5] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[5] &amp;&amp; (state6 == GLFW_PRESS &amp;&amp; stateShift == GLFW_PRESS)) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[5] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">addRotation</a>(5, 0);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[5] &amp;&amp; state6 == GLFW_RELEASE &amp;&amp; stateShift == GLFW_RELEASE)</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a>[5] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordtype">int</span> left, right, top, bottom;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  glm::ivec2 * mousePos = <span class="keyword">new</span> glm::ivec2();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  mousePos-&gt;x = xpos;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  mousePos-&gt;y = ypos;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordtype">int</span> stateLeft = glfwGetMouseButton(<a class="code" href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">Window</a>, GLFW_MOUSE_BUTTON_LEFT);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="comment">// Boton izquierdo liberado.</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordflow">if</span> (stateLeft == GLFW_RELEASE) {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">// Coloca coordenadas del cursos del mouse en coordenadas de ventana.</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="classWindowManager.html#a5d3852618820895a242485386bed5e1d">inputManager</a>.<a class="code" href="classInputManager.html#add65b528fe3942d7a48f5873cc30313a">SetGMousePos</a>(mousePos);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">// Click izquierdo se obtiene la matriz de rotación.     glm::ivec2 * gMousePos = inputManager.getGMousePos();
+    glm::vec2 delta = glm::vec2(
+        glm::ivec2(mousePos-&gt;x, mousePos-&gt;y)
+            - glm::ivec2(gMousePos-&gt;x, gMousePos-&gt;y));
+    inputManager.SetGMousePos(mousePos);
+
+    glm::quat rotX = glm::angleAxis&lt;float&gt;(glm::radians(delta.y) * 0.1f,
+                                           glm::vec3(1, 0, 0));
+    glm::quat rotY = glm::angleAxis&lt;float&gt;(glm::radians(delta.x) * 0.1f,
+                                           glm::vec3(0, 1, 0));
+
+    application-&gt;SetGRotation((rotX * rotY) * application-&gt;GetGRotation());
+    application-&gt;GetRotationCubeManager()-&gt;updateOrientation();
+  }
+
+  glfwPollEvents();
+
+  return continueApplication;
+}
+
+/**
+ * Método que maneja el redimensionamiento de la ventana.
+ * @param Window Ventana que se va a redimencionar.
+ * @param widthRes Ancho objetivo.
+ * @param heightRes Altura objetivo.
+ */
+void GLFWManager::ReshapeGL(GLFWwindow* Window, int widthRes, int heightRes) {
+  application-&gt;ScreenWidth = widthRes;
+  application-&gt;ScreenHeight = heightRes;
+  glViewport(0, 0, application-&gt;ScreenWidth, application-&gt;ScreenHeight);
+
+  pCamera-&gt;SetPerspective(
+      glm::radians(60.0f),
+      application-&gt;ScreenWidth / (float) application-&gt;ScreenHeight, 0.5f,
+      150.0f);
+}
+
+/**
+ * Destruye la ventana y el contexto de OpenGL.
+ */
+void GLFWManager::Destroy() {
+  application-&gt;GetRotationCubeManager()-&gt;saveRotations();
+  glfwTerminate();
+}
+</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    glm::ivec2 * gMousePos = <a class="code" href="classWindowManager.html#a5d3852618820895a242485386bed5e1d">inputManager</a>.<a class="code" href="classInputManager.html#a87a2c3e73b3758bca90493a62c96cca0">getGMousePos</a>();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    glm::vec2 delta = glm::vec2(</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        glm::ivec2(mousePos-&gt;x, mousePos-&gt;y)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            - glm::ivec2(gMousePos-&gt;x, gMousePos-&gt;y));</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="classWindowManager.html#a5d3852618820895a242485386bed5e1d">inputManager</a>.<a class="code" href="classInputManager.html#add65b528fe3942d7a48f5873cc30313a">SetGMousePos</a>(mousePos);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    glm::quat rotX = glm::angleAxis&lt;float&gt;(glm::radians(delta.y) * 0.1f,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                                           glm::vec3(1, 0, 0));</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    glm::quat rotY = glm::angleAxis&lt;float&gt;(glm::radians(delta.x) * 0.1f,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                           glm::vec3(0, 1, 0));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#a9a74a4980c998c08ce70fb7c2e1874b3">SetGRotation</a>((rotX * rotY) * application-&gt;<a class="code" href="classGLApplication.html#a9ded7b5e8b093b15660869f5e9631b06">GetGRotation</a>());</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a7bd0aa0464ca153b2423957ec5ae761d">updateOrientation</a>();</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  glfwPollEvents();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordflow">return</span> continueApplication;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classGLFWManager.html#a0bd7d7dde9582b4623cf4a1ac7399159">  244</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classGLFWManager.html#a0bd7d7dde9582b4623cf4a1ac7399159">GLFWManager::ReshapeGL</a>(GLFWwindow* Window, <span class="keywordtype">int</span> widthRes, <span class="keywordtype">int</span> heightRes) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  application-&gt;<a class="code" href="classGLApplication.html#a32c183a4197a4b2e997cc0b0916c1841">ScreenWidth</a> = widthRes;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  application-&gt;<a class="code" href="classGLApplication.html#a7c09bf7ce52eadd70f3bd8f36c95c79c">ScreenHeight</a> = heightRes;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  glViewport(0, 0, application-&gt;<a class="code" href="classGLApplication.html#a32c183a4197a4b2e997cc0b0916c1841">ScreenWidth</a>, application-&gt;<a class="code" href="classGLApplication.html#a7c09bf7ce52eadd70f3bd8f36c95c79c">ScreenHeight</a>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  pCamera-&gt;<a class="code" href="classCamera.html#a621b0ca0ddcab43fb95ee754c443dfa4">SetPerspective</a>(</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      glm::radians(60.0<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7ce756344023b99e5ab27b804feb765c">f</a>),</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      application-&gt;<a class="code" href="classGLApplication.html#a32c183a4197a4b2e997cc0b0916c1841">ScreenWidth</a> / (<span class="keywordtype">float</span>) application-&gt;<a class="code" href="classGLApplication.html#a7c09bf7ce52eadd70f3bd8f36c95c79c">ScreenHeight</a>, 0.5f,</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      150.0f);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classGLFWManager.html#a9c655ddd50d28a62028aa6a387fbdef1">  258</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classGLFWManager.html#a9c655ddd50d28a62028aa6a387fbdef1">GLFWManager::Destroy</a>() {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  application-&gt;<a class="code" href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GetRotationCubeManager</a>()-&gt;<a class="code" href="classRotationCubeManager_1_1RotationCubeManager.html#a31863985fa4f39c7fcad8e407c3d96e3">saveRotations</a>();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  glfwTerminate();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+<div class="ttc" id="classGLApplication_html_ad17d4449dda1cb4a54e37c5470f1ad9a"><div class="ttname"><a href="classGLApplication.html#ad17d4449dda1cb4a54e37c5470f1ad9a">GLApplication::SetCamera</a></div><div class="ttdeci">void SetCamera(Camera *pCamera)</div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00080">Main.h:80</a></div></div>
+<div class="ttc" id="classGLApplication_html_a9a74a4980c998c08ce70fb7c2e1874b3"><div class="ttname"><a href="classGLApplication.html#a9a74a4980c998c08ce70fb7c2e1874b3">GLApplication::SetGRotation</a></div><div class="ttdeci">void SetGRotation(glm::quat gRotation)</div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00088">Main.h:88</a></div></div>
+<div class="ttc" id="classGLApplication_html_a94cd13d2291ad4aa7875181cbc6b8349"><div class="ttname"><a href="classGLApplication.html#a94cd13d2291ad4aa7875181cbc6b8349">GLApplication::GLMain</a></div><div class="ttdeci">int GLMain()</div><div class="ttdef"><b>Definition:</b> <a href="Main_8cpp_source.html#l00080">Main.cpp:80</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_a7bd0aa0464ca153b2423957ec5ae761d"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#a7bd0aa0464ca153b2423957ec5ae761d">RotationCubeManager::RotationCubeManager::updateOrientation</a></div><div class="ttdeci">void updateOrientation()</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8cpp_source.html#l00055">RotationCubeManager.cpp:55</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628abcf8c79e9a5f5f9d606fb35645a0fb27"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628abcf8c79e9a5f5f9d606fb35645a0fb27">Down</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00018">InputManager.h:18</a></div></div>
+<div class="ttc" id="GLFWManager_8h_html"><div class="ttname"><a href="GLFWManager_8h.html">GLFWManager.h</a></div></div>
+<div class="ttc" id="classCamera_html_a621b0ca0ddcab43fb95ee754c443dfa4"><div class="ttname"><a href="classCamera.html#a621b0ca0ddcab43fb95ee754c443dfa4">Camera::SetPerspective</a></div><div class="ttdeci">glm::mat4 SetPerspective(float fov, float aspectRatio, float nearPlane, float farPlane)</div><div class="ttdef"><b>Definition:</b> <a href="Camera_8cpp_source.html#l00016">Camera.cpp:16</a></div></div>
+<div class="ttc" id="classGLApplication_html_ae67b03ed1330abefa5d8122f2b88f311"><div class="ttname"><a href="classGLApplication.html#ae67b03ed1330abefa5d8122f2b88f311">GLApplication::SetArmar</a></div><div class="ttdeci">void SetArmar(bool armar)</div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00104">Main.h:104</a></div></div>
+<div class="ttc" id="GLFWManager_8cpp_html_ad65c766d7ea3192e2729a0fea0f01668"><div class="ttname"><a href="GLFWManager_8cpp.html#ad65c766d7ea3192e2729a0fea0f01668">press</a></div><div class="ttdeci">bool press[6]</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00005">GLFWManager.cpp:5</a></div></div>
+<div class="ttc" id="classWindowManager_html_a5d3852618820895a242485386bed5e1d"><div class="ttname"><a href="classWindowManager.html#a5d3852618820895a242485386bed5e1d">WindowManager::inputManager</a></div><div class="ttdeci">InputManager inputManager</div><div class="ttdef"><b>Definition:</b> <a href="WindowManager_8h_source.html#l00062">WindowManager.h:62</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a0bd7d7dde9582b4623cf4a1ac7399159"><div class="ttname"><a href="classGLFWManager.html#a0bd7d7dde9582b4623cf4a1ac7399159">GLFWManager::ReshapeGL</a></div><div class="ttdeci">static void ReshapeGL(GLFWwindow *Window, int widthRes, int heightRes)</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00244">GLFWManager.cpp:244</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a7ce756344023b99e5ab27b804feb765c"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7ce756344023b99e5ab27b804feb765c">f</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00029">InputManager.h:29</a></div></div>
+<div class="ttc" id="classInputManager_html_add65b528fe3942d7a48f5873cc30313a"><div class="ttname"><a href="classInputManager.html#add65b528fe3942d7a48f5873cc30313a">InputManager::SetGMousePos</a></div><div class="ttdeci">void SetGMousePos(glm::ivec2 *gMousePos)</div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00104">InputManager.h:104</a></div></div>
+<div class="ttc" id="GLFWManager_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="GLFWManager_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00014">GLFWManager.cpp:14</a></div></div>
+<div class="ttc" id="GLFWManager_8cpp_html_aec1f5518405938829bbfe4533aabd907"><div class="ttname"><a href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">pCamera</a></div><div class="ttdeci">Camera * pCamera</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00007">GLFWManager.cpp:7</a></div></div>
+<div class="ttc" id="Main_8h_html"><div class="ttname"><a href="Main_8h.html">Main.h</a></div></div>
+<div class="ttc" id="classWindowManager_html_aa76f8df60f629cc88d98ab60e69278ed"><div class="ttname"><a href="classWindowManager.html#aa76f8df60f629cc88d98ab60e69278ed">WindowManager::GetInputManager</a></div><div class="ttdeci">virtual InputManager * GetInputManager()</div><div class="ttdef"><b>Definition:</b> <a href="WindowManager_8h_source.html#l00055">WindowManager.h:55</a></div></div>
+<div class="ttc" id="classInputManager_html_a87a2c3e73b3758bca90493a62c96cca0"><div class="ttname"><a href="classInputManager.html#a87a2c3e73b3758bca90493a62c96cca0">InputManager::getGMousePos</a></div><div class="ttdeci">glm::ivec2 * getGMousePos()</div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00112">InputManager.h:112</a></div></div>
+<div class="ttc" id="classGLFWManager_html_ae9746badca674cac1116bbbc0e2e9e8e"><div class="ttname"><a href="classGLFWManager.html#ae9746badca674cac1116bbbc0e2e9e8e">GLFWManager::SwapTheBuffers</a></div><div class="ttdeci">virtual void SwapTheBuffers()</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00102">GLFWManager.cpp:102</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a9c655ddd50d28a62028aa6a387fbdef1"><div class="ttname"><a href="classGLFWManager.html#a9c655ddd50d28a62028aa6a387fbdef1">GLFWManager::Destroy</a></div><div class="ttdeci">virtual void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00258">GLFWManager.cpp:258</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a57a7edcbc04d6175683383cad5c3e0a2"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a57a7edcbc04d6175683383cad5c3e0a2">Up</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00016">InputManager.h:16</a></div></div>
+<div class="ttc" id="classGLApplication_html_a9ded7b5e8b093b15660869f5e9631b06"><div class="ttname"><a href="classGLApplication.html#a9ded7b5e8b093b15660869f5e9631b06">GLApplication::GetGRotation</a></div><div class="ttdeci">glm::quat GetGRotation()</div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00096">Main.h:96</a></div></div>
+<div class="ttc" id="classGLFWManager_html_ab25fb3360faae786eada907fdcb12357"><div class="ttname"><a href="classGLFWManager.html#ab25fb3360faae786eada907fdcb12357">GLFWManager::Initialize</a></div><div class="ttdeci">virtual int Initialize(int width, int height, std::string strTitle, bool bFullScreen=false)</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00042">GLFWManager.cpp:42</a></div></div>
+<div class="ttc" id="classInputManager_html_a9e1c1e56bf27ca6a6abb4f6ed03d09e2"><div class="ttname"><a href="classInputManager.html#a9e1c1e56bf27ca6a6abb4f6ed03d09e2">InputManager::SetCamera</a></div><div class="ttdeci">void SetCamera(Camera *pCamera)</div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00089">InputManager.h:89</a></div></div>
+<div class="ttc" id="classGLFWManager_html"><div class="ttname"><a href="classGLFWManager.html">GLFWManager</a></div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8h_source.html#l00014">GLFWManager.h:14</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_a8b5f169120988225b5f2e8aaeab8bb01"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01">RotationCubeManager::RotationCubeManager::addRotation</a></div><div class="ttdeci">void addRotation(int face, int direction)</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8cpp_source.html#l00032">RotationCubeManager.cpp:32</a></div></div>
+<div class="ttc" id="classGLApplication_html_a32c183a4197a4b2e997cc0b0916c1841"><div class="ttname"><a href="classGLApplication.html#a32c183a4197a4b2e997cc0b0916c1841">GLApplication::ScreenWidth</a></div><div class="ttdeci">int ScreenWidth</div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00022">Main.h:22</a></div></div>
+<div class="ttc" id="classGLApplication_html_a80d091a51f25bb9e01a74e8990461120"><div class="ttname"><a href="classGLApplication.html#a80d091a51f25bb9e01a74e8990461120">GLApplication::SetWindowManager</a></div><div class="ttdeci">void SetWindowManager(WindowManager *pWindowManager)</div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00065">Main.h:65</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a3486900a73271e0dd7b530528c3c6f8c"><div class="ttname"><a href="classGLFWManager.html#a3486900a73271e0dd7b530528c3c6f8c">GLFWManager::Window</a></div><div class="ttdeci">GLFWwindow * Window</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8h_source.html#l00068">GLFWManager.h:68</a></div></div>
+<div class="ttc" id="classInputManager_html_a8e2bc8541a4f69c0e4a32deed414e1e5"><div class="ttname"><a href="classInputManager.html#a8e2bc8541a4f69c0e4a32deed414e1e5">InputManager::KeyPressed</a></div><div class="ttdeci">void KeyPressed(InputCodes code)</div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8cpp_source.html#l00008">InputManager.cpp:8</a></div></div>
+<div class="ttc" id="GLFWManager_8cpp_html_a9e5f1e5e8a3ddb987ba24d9693999d2a"><div class="ttname"><a href="GLFWManager_8cpp.html#a9e5f1e5e8a3ddb987ba24d9693999d2a">application</a></div><div class="ttdeci">GLApplication * application</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00006">GLFWManager.cpp:6</a></div></div>
+<div class="ttc" id="classCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="Camera_8h_source.html#l00014">Camera.h:14</a></div></div>
+<div class="ttc" id="classGLApplication_html"><div class="ttname"><a href="classGLApplication.html">GLApplication</a></div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00016">Main.h:16</a></div></div>
+<div class="ttc" id="classGLApplication_html_a7c09bf7ce52eadd70f3bd8f36c95c79c"><div class="ttname"><a href="classGLApplication.html#a7c09bf7ce52eadd70f3bd8f36c95c79c">GLApplication::ScreenHeight</a></div><div class="ttdeci">int ScreenHeight</div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00023">Main.h:23</a></div></div>
+<div class="ttc" id="classGLApplication_html_aaf59b499c40603d57cdf2a828dd77b0c"><div class="ttname"><a href="classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c">GLApplication::GetRotationCubeManager</a></div><div class="ttdeci">RotationCubeManager::RotationCubeManager * GetRotationCubeManager()</div><div class="ttdef"><b>Definition:</b> <a href="Main_8h_source.html#l00120">Main.h:120</a></div></div>
+<div class="ttc" id="classGLFWManager_html_a94ed402e22066eb4ee073ef911f1c19a"><div class="ttname"><a href="classGLFWManager.html#a94ed402e22066eb4ee073ef911f1c19a">GLFWManager::ProcessInput</a></div><div class="ttdeci">virtual bool ProcessInput(bool continueGame)</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00111">GLFWManager.cpp:111</a></div></div>
+<div class="ttc" id="classRotationCubeManager_1_1RotationCubeManager_html_a31863985fa4f39c7fcad8e407c3d96e3"><div class="ttname"><a href="classRotationCubeManager_1_1RotationCubeManager.html#a31863985fa4f39c7fcad8e407c3d96e3">RotationCubeManager::RotationCubeManager::saveRotations</a></div><div class="ttdeci">void saveRotations()</div><div class="ttdef"><b>Definition:</b> <a href="RotationCubeManager_8cpp_source.html#l00369">RotationCubeManager.cpp:369</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="GLFWManager_8cpp.html">GLFWManager.cpp</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:22 para CubeRubick por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

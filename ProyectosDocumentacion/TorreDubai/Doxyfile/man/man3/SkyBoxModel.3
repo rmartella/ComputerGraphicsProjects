@@ -1,0 +1,319 @@
+.TH "SkyBoxModel" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SkyBoxModel \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SkyBoxModel\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBSkyBoxModel\fP ()"
+.br
+.ti -1c
+.RI "\fB~SkyBoxModel\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (const std::string &Directory, const std::string &PosXFilename, const std::string &NegXFilename, const std::string &PosYFilename, const std::string &NegYFilename, const std::string &PosZFilename, const std::string &NegZFilename, std::string strVertex, std::string strFragment)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBRender\fP (glm::mat4 rootMatrix)"
+.br
+.ti -1c
+.RI "vec3 \fBGetPosition\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetPosition\fP (vec3 position)"
+.br
+.ti -1c
+.RI "vec3 \fBGetRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetRotation\fP (vec3 rotation)"
+.br
+.ti -1c
+.RI "vec3 \fBGetScale\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetScale\fP (vec3 scale)"
+.br
+.ti -1c
+.RI "\fBCubemapTexture\fP * \fBGetCubeTextureMap\fP ()"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "GLuint \fBVertexArrayObjectId\fP"
+.br
+.ti -1c
+.RI "vec3 \fBPosition\fP"
+.br
+.ti -1c
+.RI "vec3 \fBRotation\fP"
+.br
+.ti -1c
+.RI "vec3 \fBScale\fP"
+.br
+.ti -1c
+.RI "\fBMesh::Mesh\fP * \fBm_pMesh\fP"
+.br
+.ti -1c
+.RI "\fBShader\fP \fBshader\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "\fBCubemapTexture\fP * \fBcubemapTexture\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase encarga da crear el modelo del skybox, inicializar, renderizar y liberar memoria del skybox de la escena\&. 
+.PP
+Definición en la línea 23 del archivo SkyBoxModel\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "SkyBoxModel::SkyBoxModel ()\fC [inline]\fP"
+Constructor, inicializa el modelo con un tipo de primitiva y el archivo de textura\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImode\fP Primitva de renderizaci�n\&. 
+.br
+\fIFileName\fP Nombre de textura\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 30 del archivo SkyBoxModel\&.h\&.
+.SS "SkyBoxModel::~SkyBoxModel ()\fC [inline]\fP"
+Libera la memoria que utiliza el modelo\&. 
+.PP
+Definición en la línea 35 del archivo SkyBoxModel\&.h\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void SkyBoxModel::Destroy ()"
+Libera lo VBOs y VAOs que utiliza el modelo\&. 
+.PP
+Definición en la línea 119 del archivo SkyBoxModel\&.cpp\&.
+.PP
+Hace referencia a camera, cubemapTexture, Shader::Destroy(), shader y VertexArrayObjectId\&.
+.PP
+Referenciado por GLApplication::Destroy()\&.
+.SS "\fBCamera\fP* SkyBoxModel::GetCamera ()\fC [inline]\fP"
+Obtiene la c�mara y tener acceso a las matrices de vista y proyecci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 63 del archivo SkyBoxModel\&.h\&.
+.SS "\fBCubemapTexture\fP* SkyBoxModel::GetCubeTextureMap ()\fC [inline]\fP"
+Obtiene la textura con la que se creo el skybox\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 130 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "vec3 SkyBoxModel::GetPosition ()\fC [inline]\fP"
+Obtiene la posici�n del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 85 del archivo SkyBoxModel\&.h\&.
+.SS "vec3 SkyBoxModel::GetRotation ()\fC [inline]\fP"
+Obtiene la rotaci�n del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Rotaci�n del modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 100 del archivo SkyBoxModel\&.h\&.
+.SS "vec3 SkyBoxModel::GetScale ()\fC [inline]\fP"
+Obtiene la escala del objeto\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Escala de objeto\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 115 del archivo SkyBoxModel\&.h\&.
+.SS "void SkyBoxModel::Initialize (const std::string &Directory, const std::string &PosXFilename, const std::string &NegXFilename, const std::string &PosYFilename, const std::string &NegYFilename, const std::string &PosZFilename, const std::string &NegZFilename, std::stringstrVertex, std::stringstrFragment)"
+Inicializaci�n del modelo, si antes de la inicializaci�n se le pasa un Objeto \fBMesh::Mesh\fP, la inicializaci�n la delegara a Assimp\&. Del mismo modo si se le settea antes de la llamada a este metodo luces, valida que los shaders este configurados para la iluminaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIvertices\fP Vertices del modelo\&. 
+.br
+\fIIndexData\fP Indices del modelo\&. 
+.br
+\fIlength\fP Tama�o de Vertices\&. 
+.br
+\fIindexLength\fP Tama�o de indices\&. 
+.br
+\fIstrVertex\fP Nombre del archivo del vertex \fBShader\fP que se asocia al modelo\&. 
+.br
+\fIstrFragment\fP Nombre del archivo Fragment \fBShader\fP que se asocia al modelo\&.
+.RE
+.PP
+Clase encarga da crear el modelo del skybox, inicializar, renderizar y liberar memoria del skybox de la escena\&. 
+.PP
+Definición en la línea 14 del archivo SkyBoxModel\&.cpp\&.
+.PP
+Hace referencia a cubemapTexture, Shader::GetVariable(), Shader::Initialize(), CubemapTexture::Load(), Mesh::Mesh::LoadMesh(), m_pMesh, shader, Shader::TurnOff(), Shader::TurnOn() y VertexArrayObjectId\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void SkyBoxModel::Render (glm::mat4rootMatrix)"
+Renderiza el modelo del skybox\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIparentModelMatrix\fP Matrix de herencia, si no se requiere herenc�a Se debe enviar una matriz unitaria\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 62 del archivo SkyBoxModel\&.cpp\&.
+.PP
+Hace referencia a CubemapTexture::Bind(), camera, cubemapTexture, Camera::GetProjectionMatrix(), Shader::GetVariable(), Camera::GetViewMatrix(), m_pMesh, Position, Mesh::Mesh::Render(), Rotation, Scale, Shader::SetMatrix4(), shader, Shader::TurnOff(), Shader::TurnOn() y VertexArrayObjectId\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void SkyBoxModel::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Settea una c�mara al modelo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpCamera\fP c�mara del modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 70 del archivo SkyBoxModel\&.h\&.
+.PP
+Hace referencia a pCamera\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void SkyBoxModel::SetPosition (vec3position)\fC [inline]\fP"
+Setter de la posici�n del modelo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIposition\fP Posici�n del modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 92 del archivo SkyBoxModel\&.h\&.
+.SS "void SkyBoxModel::SetRotation (vec3rotation)\fC [inline]\fP"
+Setter para la rotaci�n del modelo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrotation\fP Rotaci�n del modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 107 del archivo SkyBoxModel\&.h\&.
+.SS "void SkyBoxModel::SetScale (vec3scale)\fC [inline]\fP"
+Setter de la escala del objeto\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIEscala\fP de objeto\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 122 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* SkyBoxModel::camera\fC [private]\fP"
+
+.PP
+Definición en la línea 147 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por Destroy() y Render()\&.
+.SS "\fBCubemapTexture\fP* SkyBoxModel::cubemapTexture\fC [private]\fP"
+
+.PP
+Definición en la línea 148 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por Destroy(), Initialize() y Render()\&.
+.SS "\fBMesh::Mesh\fP* SkyBoxModel::m_pMesh\fC [private]\fP"
+
+.PP
+Definición en la línea 145 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "vec3 SkyBoxModel::Position\fC [private]\fP"
+
+.PP
+Definición en la línea 142 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "vec3 SkyBoxModel::Rotation\fC [private]\fP"
+
+.PP
+Definición en la línea 143 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "vec3 SkyBoxModel::Scale\fC [private]\fP"
+
+.PP
+Definición en la línea 144 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "\fBShader\fP SkyBoxModel::shader\fC [private]\fP"
+
+.PP
+Definición en la línea 146 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por Destroy(), Initialize() y Render()\&.
+.SS "GLuint SkyBoxModel::VertexArrayObjectId\fC [private]\fP"
+
+.PP
+Definición en la línea 140 del archivo SkyBoxModel\&.h\&.
+.PP
+Referenciado por Destroy(), Initialize() y Render()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

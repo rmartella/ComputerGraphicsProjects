@@ -1,0 +1,126 @@
+.TH "CubemapTexture" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CubemapTexture \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CubemapTexture\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBCubemapTexture\fP (const string &Directory, const string &PosXFilename, const string &NegXFilename, const string &PosYFilename, const string &NegYFilename, const string &PosZFilename, const string &NegZFilename)"
+.br
+.ti -1c
+.RI "virtual \fB~CubemapTexture\fP ()"
+.br
+.ti -1c
+.RI "bool \fBLoad\fP ()"
+.br
+.ti -1c
+.RI "void \fBBind\fP (GLenum TextureUnit)"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "string \fBfileNames\fP [6]"
+.br
+.ti -1c
+.RI "GLuint \fBtextureObj\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase encargada de crear el skydome, genera el buffer GL_TEXTURE_CUBE_MAP\&. 
+.PP
+Definición en la línea 21 del archivo CubemapTexture\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "CubemapTexture::CubemapTexture (const string &Directory, const string &PosXFilename, const string &NegXFilename, const string &PosYFilename, const string &NegYFilename, const string &PosZFilename, const string &NegZFilename)"
+Constructor del skydome, solo inicializa las texturas de las caras del domo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIDirectory\fP Directorio de las imagenes\&. 
+.br
+\fIPosXFilename\fP Cara izquierda\&. 
+.br
+\fINegXFilename\fP Cara derecha\&. 
+.br
+\fIPosYFilename\fP Cara superior\&. 
+.br
+\fINegYFilename\fP Cara inferior\&. 
+.br
+\fIPosZFilename\fP Cara frontal\&. 
+.br
+\fINegZFilename\fP Cara fondo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 32 del archivo CubemapTexture\&.cpp\&.
+.PP
+Hace referencia a fileNames y textureObj\&.
+.SS "CubemapTexture::~CubemapTexture ()\fC [virtual]\fP"
+Destructor de la clase textura 
+.PP
+Definición en la línea 56 del archivo CubemapTexture\&.cpp\&.
+.PP
+Hace referencia a textureObj\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void CubemapTexture::Bind (GLenumTextureUnit)"
+Este m�todo hace el enalce del objeto de textura con su unidad de textura\&. De acuerdo al dise�o de la arquitectura puede haber diferentes objetos de textura para un m�delo, si se desea enlazar una unidad de textura a un objeto de textura digamos A lo pirmero que se hace es activar la unidad de textura 0\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fITextureUnit\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 171 del archivo CubemapTexture\&.cpp\&.
+.PP
+Hace referencia a textureObj\&.
+.PP
+Referenciado por ModelEnvironment::Render() y SkyBoxModel::Render()\&.
+.SS "bool CubemapTexture::Load ()"
+Constructor de parametros de la textura\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fITextureTarget\fP Tipo de textura que ser� objetivo para este objeto 
+.br
+\fIFileName\fP Ruta del archivo donde se encuentran las texturas 
+.RE
+.PP
+
+.PP
+Definición en la línea 67 del archivo CubemapTexture\&.cpp\&.
+.PP
+Hace referencia a ARRAY_SIZE_IN_ELEMENTS, fileNames, i, textureObj y types\&.
+.PP
+Referenciado por SkyBoxModel::Initialize()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "string CubemapTexture::fileNames[6]\fC [private]\fP"
+
+.PP
+Definición en la línea 60 del archivo CubemapTexture\&.h\&.
+.PP
+Referenciado por CubemapTexture() y Load()\&.
+.SS "GLuint CubemapTexture::textureObj\fC [private]\fP"
+
+.PP
+Definición en la línea 61 del archivo CubemapTexture\&.h\&.
+.PP
+Referenciado por Bind(), CubemapTexture(), Load() y ~CubemapTexture()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Origami: Referencia de la Clase GLApplication</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Origami
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="inherits.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classGLApplication.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pub-attribs">Atributos públicos</a> &#124;
+<a href="#pro-attribs">Atributos protegidos</a> &#124;
+<a href="classGLApplication-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase GLApplication</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Main_8h_source.html">Main.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración para GLApplication:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication__coll__graph.png" border="0" usemap="#GLApplication_coll__map" alt="Collaboration graph"/></div>
+<map name="GLApplication_coll__map" id="GLApplication_coll__map">
+<area shape="rect" id="node2" href="classWindowManager.html" title="WindowManager" alt="" coords="59,187,177,213"/><area shape="rect" id="node3" href="classInputManager.html" title="InputManager" alt="" coords="61,96,163,123"/><area shape="rect" id="node4" href="classCamera.html" title="Camera" alt="" coords="21,5,88,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:ac340de2f27471d196c1c5a4ff59e8430"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ac340de2f27471d196c1c5a4ff59e8430">GLApplication</a> ()</td></tr>
+<tr class="separator:ac340de2f27471d196c1c5a4ff59e8430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a540f0f31b5eaa346e0f7d319d8ff6136"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a540f0f31b5eaa346e0f7d319d8ff6136">~GLApplication</a> ()</td></tr>
+<tr class="separator:a540f0f31b5eaa346e0f7d319d8ff6136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94cd13d2291ad4aa7875181cbc6b8349"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a94cd13d2291ad4aa7875181cbc6b8349">GLMain</a> ()</td></tr>
+<tr class="separator:a94cd13d2291ad4aa7875181cbc6b8349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ec9e85d94f5b10aeb22bdb1649b7a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindowManager.html">WindowManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ad5ec9e85d94f5b10aeb22bdb1649b7a7">GetWindowManager</a> ()</td></tr>
+<tr class="separator:ad5ec9e85d94f5b10aeb22bdb1649b7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d091a51f25bb9e01a74e8990461120"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a80d091a51f25bb9e01a74e8990461120">SetWindowManager</a> (<a class="el" href="classWindowManager.html">WindowManager</a> *pWindowManager)</td></tr>
+<tr class="separator:a80d091a51f25bb9e01a74e8990461120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60cb42e8b3380ede991e70f00af57386"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a60cb42e8b3380ede991e70f00af57386">GetCamera</a> ()</td></tr>
+<tr class="separator:a60cb42e8b3380ede991e70f00af57386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17d4449dda1cb4a54e37c5470f1ad9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ad17d4449dda1cb4a54e37c5470f1ad9a">SetCamera</a> (<a class="el" href="classCamera.html">Camera</a> *<a class="el" href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">pCamera</a>)</td></tr>
+<tr class="separator:ad17d4449dda1cb4a54e37c5470f1ad9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a74a4980c998c08ce70fb7c2e1874b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a9a74a4980c998c08ce70fb7c2e1874b3">SetGRotation</a> (glm::quat <a class="el" href="classGLApplication.html#af926410218d16f1f3aefda8379488007">gRotation</a>)</td></tr>
+<tr class="separator:a9a74a4980c998c08ce70fb7c2e1874b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ded7b5e8b093b15660869f5e9631b06"><td class="memItemLeft" align="right" valign="top">glm::quat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a9ded7b5e8b093b15660869f5e9631b06">GetGRotation</a> ()</td></tr>
+<tr class="separator:a9ded7b5e8b093b15660869f5e9631b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca11206b15ed9783944f6f4b3faf498b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#aca11206b15ed9783944f6f4b3faf498b">Initialize</a> ()</td></tr>
+<tr class="separator:aca11206b15ed9783944f6f4b3faf498b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7e3670f7cdbd3009510f072ddca792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a4a7e3670f7cdbd3009510f072ddca792">ApplicationLoop</a> ()</td></tr>
+<tr class="separator:a4a7e3670f7cdbd3009510f072ddca792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add441d14147f5a9a86abf7d1cbd636ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#add441d14147f5a9a86abf7d1cbd636ac">Destroy</a> ()</td></tr>
+<tr class="separator:add441d14147f5a9a86abf7d1cbd636ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a32c183a4197a4b2e997cc0b0916c1841"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a32c183a4197a4b2e997cc0b0916c1841">ScreenWidth</a> = 1024</td></tr>
+<tr class="separator:a32c183a4197a4b2e997cc0b0916c1841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c09bf7ce52eadd70f3bd8f36c95c79c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#a7c09bf7ce52eadd70f3bd8f36c95c79c">ScreenHeight</a> = 700</td></tr>
+<tr class="separator:a7c09bf7ce52eadd70f3bd8f36c95c79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atributos protegidos</h2></td></tr>
+<tr class="memitem:ad19926dd66b908fb1975093b824c78ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindowManager.html">WindowManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#ad19926dd66b908fb1975093b824c78ed">windowManager</a></td></tr>
+<tr class="separator:ad19926dd66b908fb1975093b824c78ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abceeb7b1e04466c92608a4c9f42bb71d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#abceeb7b1e04466c92608a4c9f42bb71d">camera</a></td></tr>
+<tr class="separator:abceeb7b1e04466c92608a4c9f42bb71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af926410218d16f1f3aefda8379488007"><td class="memItemLeft" align="right" valign="top">glm::quat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGLApplication.html#af926410218d16f1f3aefda8379488007">gRotation</a></td></tr>
+<tr class="separator:af926410218d16f1f3aefda8379488007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Clase principal de la aplicacion, maneja la inicializaci�n de la aplicaci�n, loop de la aplicaci�n y limpia los recursos utilizados. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00017">17</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="ac340de2f27471d196c1c5a4ff59e8430"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLApplication::GLApplication </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor default. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00029">29</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a540f0f31b5eaa346e0f7d319d8ff6136"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLApplication::~GLApplication </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructor. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00034">34</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8cpp_source.html#l00227">Destroy()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_a540f0f31b5eaa346e0f7d319d8ff6136_cgraph.png" border="0" usemap="#classGLApplication_a540f0f31b5eaa346e0f7d319d8ff6136_cgraph" alt=""/></div>
+<map name="classGLApplication_a540f0f31b5eaa346e0f7d319d8ff6136_cgraph" id="classGLApplication_a540f0f31b5eaa346e0f7d319d8ff6136_cgraph">
+<area shape="rect" id="node2" href="classGLApplication.html#add441d14147f5a9a86abf7d1cbd636ac" title="GLApplication::Destroy" alt="" coords="253,31,411,57"/><area shape="rect" id="node3" href="classModel.html#ad60ed0ed7eaa7dcdd58398e6efacc7c4" title="Model::Destroy" alt="" coords="490,5,601,32"/><area shape="rect" id="node5" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79" title="WindowManager::Destroy" alt="" coords="459,56,632,83"/><area shape="rect" id="node4" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="680,5,797,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="a4a7e3670f7cdbd3009510f072ddca792"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::ApplicationLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loop de la aplicaci�n, solo se sale de esta funci�n si el usuario pulsa Esc o cierra la ventana.</p>
+<p>Loop de la aplicación, solo se sale de esta función si el usuario pulsa Esc o cierra la ventana. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8cpp_source.html#l00120">120</a> del archivo <a class="el" href="Main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="TimeManager_8cpp_source.html#l00010">TimeManager::CalculateFrameRate()</a>, <a class="el" href="TimeManager_8h_source.html#l00047">TimeManager::DeltaTime</a>, <a class="el" href="InputManager_8h_source.html#l00029">f</a>, <a class="el" href="Model_8h_source.html#l00093">Model::GetPosition()</a>, <a class="el" href="Model_8h_source.html#l00108">Model::GetRotation()</a>, <a class="el" href="Model_8h_source.html#l00123">Model::GetScale()</a>, <a class="el" href="Main_8h_source.html#l00117">gRotation</a>, <a class="el" href="TimeManager_8h_source.html#l00019">TimeManager::Instance()</a>, <a class="el" href="classWindowManager.html#a9213369f25fab9b9938a2171c12be3f5">WindowManager::ProcessInput()</a>, <a class="el" href="Model_8cpp_source.html#l00068">Model::Render()</a>, <a class="el" href="Model_8h_source.html#l00100">Model::SetPosition()</a>, <a class="el" href="Model_8h_source.html#l00115">Model::SetRotation()</a>, <a class="el" href="Model_8h_source.html#l00130">Model::SetScale()</a>, <a class="el" href="classWindowManager.html#abc3dfc535171f18eda134734e6d546ef">WindowManager::SwapTheBuffers()</a> y <a class="el" href="Main_8h_source.html#l00114">windowManager</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00017">GLMain()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_a4a7e3670f7cdbd3009510f072ddca792_cgraph.png" border="0" usemap="#classGLApplication_a4a7e3670f7cdbd3009510f072ddca792_cgraph" alt=""/></div>
+<map name="classGLApplication_a4a7e3670f7cdbd3009510f072ddca792_cgraph" id="classGLApplication_a4a7e3670f7cdbd3009510f072ddca792_cgraph">
+<area shape="rect" id="node2" href="classTimeManager.html#a95782501e884a42904e2e726246701d5" title="TimeManager::CalculateFrameRate" alt="" coords="256,5,485,32"/><area shape="rect" id="node3" href="classModel.html#a28b7b8f403649681caa91bc96eb778ab" title="Model::GetPosition" alt="" coords="304,56,437,83"/><area shape="rect" id="node4" href="classModel.html#a133759be2a6c9e97c1b2bfcb5805dfbf" title="Model::GetRotation" alt="" coords="303,107,438,133"/><area shape="rect" id="node5" href="classModel.html#a2574a76ef8852748e29152f5abcb4942" title="Model::GetScale" alt="" coords="311,157,430,184"/><area shape="rect" id="node6" href="classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="291,208,450,235"/><area shape="rect" id="node7" href="classWindowManager.html#a9213369f25fab9b9938a2171c12be3f5" title="WindowManager::ProcessInput" alt="" coords="269,259,473,285"/><area shape="rect" id="node8" href="classModel.html#a0b611e79aa671b55616289e12322d4d4" title="Model::Render" alt="" coords="317,309,424,336"/><area shape="rect" id="node21" href="classModel.html#ad4d748f79834d8b061e782085e69d268" title="Model::SetPosition" alt="" coords="305,360,437,387"/><area shape="rect" id="node22" href="classModel.html#ab42f4e353e7d6364bf65088b044b46b8" title="Model::SetRotation" alt="" coords="303,411,438,437"/><area shape="rect" id="node23" href="classModel.html#a15c20279d5a700de23850331d34f5f31" title="Model::SetScale" alt="" coords="311,461,430,488"/><area shape="rect" id="node24" href="classWindowManager.html#abc3dfc535171f18eda134734e6d546ef" title="WindowManager::SwapTheBuffers" alt="" coords="259,512,483,539"/><area shape="rect" id="node9" href="classShader.html#a01e9b0696a56a5c567ea4b369872c982" title="Shader::TurnOn" alt="" coords="572,77,687,104"/><area shape="rect" id="node10" href="classCamera.html#ab0a4bf5a65d45f25529e3cffda1c361b" title="Camera::GetProjectionMatrix" alt="" coords="534,128,725,155"/><area shape="rect" id="node11" href="classCamera.html#affa333055635aed96518c4c66be9a70c" title="Camera::GetViewMatrix" alt="" coords="548,179,711,205"/><area shape="rect" id="node13" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b" title="Shader::GetVariable" alt="" coords="560,229,699,256"/><area shape="rect" id="node14" href="classShader.html#a61b49dc75fb1842ec58845e9912f824d" title="Shader::SetMatrix4" alt="" coords="562,280,697,307"/><area shape="rect" id="node15" href="classLightingTechnique.html#af0c8dadfb5b41d56f3f117a42fadd2b6" title="LightingTechnique::\lSetAttrLight" alt="" coords="562,331,697,373"/><area shape="rect" id="node17" href="classLightingTechnique.html#a15d5725cdb38c3263446342910eb56e6" title="LightingTechnique::\lSetEyeWorldPos" alt="" coords="562,397,697,438"/><area shape="rect" id="node18" href="classCamera.html#a7166b8466c94d0b5c127fc74c7881beb" title="Camera::GetPosition" alt="" coords="557,463,701,489"/><area shape="rect" id="node19" href="classTexture_1_1Texture.html#a540ba0664bc3f57858e4f5da468c1fe9" title="Texture::Texture::Bind" alt="" coords="553,513,705,540"/><area shape="rect" id="node20" href="classShader.html#ad94b005141a4ed31a3f4f801455e5590" title="Shader::TurnOff" alt="" coords="572,564,687,591"/><area shape="rect" id="node12" href="classCamera.html#a3518233b244af839db6eefe59e7002de" title="Camera::GetRotationMatrix" alt="" coords="774,179,957,205"/><area shape="rect" id="node16" href="Main_8cpp.html#adb9f41772f416fee48669435829e58f6" title="ambient" alt="" coords="831,339,899,365"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="add441d14147f5a9a86abf7d1cbd636ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::Destroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>M�todo que hace limpieza de los recursos utilizados por la aplicaci�n.</p>
+<p>Método que hace limpieza de los recursos utilizados por la aplicación. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8cpp_source.html#l00227">227</a> del archivo <a class="el" href="Main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00115">camera</a>, <a class="el" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79">WindowManager::Destroy()</a>, <a class="el" href="Model_8cpp_source.html#l00147">Model::Destroy()</a> y <a class="el" href="Main_8h_source.html#l00114">windowManager</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00017">GLMain()</a> y <a class="el" href="Main_8h_source.html#l00034">~GLApplication()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_add441d14147f5a9a86abf7d1cbd636ac_cgraph.png" border="0" usemap="#classGLApplication_add441d14147f5a9a86abf7d1cbd636ac_cgraph" alt=""/></div>
+<map name="classGLApplication_add441d14147f5a9a86abf7d1cbd636ac_cgraph" id="classGLApplication_add441d14147f5a9a86abf7d1cbd636ac_cgraph">
+<area shape="rect" id="node2" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79" title="WindowManager::Destroy" alt="" coords="211,5,384,32"/><area shape="rect" id="node3" href="classModel.html#ad60ed0ed7eaa7dcdd58398e6efacc7c4" title="Model::Destroy" alt="" coords="242,56,353,83"/><area shape="rect" id="node4" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="432,56,549,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a60cb42e8b3380ede991e70f00af57386"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html">Camera</a>* GLApplication::GetCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Obtiene la c�mara de la aplicaci�n. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Camar. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00065">65</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00115">camera</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ded7b5e8b093b15660869f5e9631b06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::quat GLApplication::GetGRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Obtiene el Cuaternion actual de la escena. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Cuaternion de la aplicaci�n. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00088">88</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00117">gRotation</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00105">GLFWManager::ProcessInput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5ec9e85d94f5b10aeb22bdb1649b7a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWindowManager.html">WindowManager</a>* GLApplication::GetWindowManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>M�todo que obtiene el manejador de ventanas de la aplicaci�n. Este debe ser creada antes de crear la aplicaci�n. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Manejador de ventanas. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00049">49</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00114">windowManager</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94cd13d2291ad4aa7875181cbc6b8349"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GLApplication::GLMain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funcion principal de la aplicaci�n, debe de ser llamada en la funci�n <a class="el" href="classWindowManager.html">WindowManager</a>. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Termino del programa.</dd></dl>
+<p>Funcion principal de la aplicación, debe de ser llamada en la función <a class="el" href="classWindowManager.html">WindowManager</a>. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Terimno del programa. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="Main_8cpp_source.html#l00017">17</a> del archivo <a class="el" href="Main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8cpp_source.html#l00120">ApplicationLoop()</a>, <a class="el" href="Main_8cpp_source.html#l00227">Destroy()</a> y <a class="el" href="Main_8cpp_source.html#l00034">Initialize()</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00008">main()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_a94cd13d2291ad4aa7875181cbc6b8349_cgraph.png" border="0" usemap="#classGLApplication_a94cd13d2291ad4aa7875181cbc6b8349_cgraph" alt=""/></div>
+<map name="classGLApplication_a94cd13d2291ad4aa7875181cbc6b8349_cgraph" id="classGLApplication_a94cd13d2291ad4aa7875181cbc6b8349_cgraph">
+<area shape="rect" id="node2" href="classGLApplication.html#a4a7e3670f7cdbd3009510f072ddca792" title="GLApplication::ApplicationLoop" alt="" coords="211,284,413,311"/><area shape="rect" id="node26" href="classGLApplication.html#add441d14147f5a9a86abf7d1cbd636ac" title="GLApplication::Destroy" alt="" coords="233,756,391,783"/><area shape="rect" id="node30" href="classGLApplication.html#aca11206b15ed9783944f6f4b3faf498b" title="GLApplication::Initialize" alt="" coords="233,1035,391,1061"/><area shape="rect" id="node3" href="classTimeManager.html#a95782501e884a42904e2e726246701d5" title="TimeManager::CalculateFrameRate" alt="" coords="461,157,691,184"/><area shape="rect" id="node4" href="classModel.html#a28b7b8f403649681caa91bc96eb778ab" title="Model::GetPosition" alt="" coords="509,208,643,235"/><area shape="rect" id="node5" href="classModel.html#a133759be2a6c9e97c1b2bfcb5805dfbf" title="Model::GetRotation" alt="" coords="509,259,643,285"/><area shape="rect" id="node6" href="classModel.html#a2574a76ef8852748e29152f5abcb4942" title="Model::GetScale" alt="" coords="517,309,635,336"/><area shape="rect" id="node7" href="classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="497,360,655,387"/><area shape="rect" id="node8" href="classWindowManager.html#a9213369f25fab9b9938a2171c12be3f5" title="WindowManager::ProcessInput" alt="" coords="474,411,678,437"/><area shape="rect" id="node9" href="classModel.html#a0b611e79aa671b55616289e12322d4d4" title="Model::Render" alt="" coords="523,461,629,488"/><area shape="rect" id="node22" href="classModel.html#ad4d748f79834d8b061e782085e69d268" title="Model::SetPosition" alt="" coords="510,512,642,539"/><area shape="rect" id="node23" href="classModel.html#ab42f4e353e7d6364bf65088b044b46b8" title="Model::SetRotation" alt="" coords="509,5,643,32"/><area shape="rect" id="node24" href="classModel.html#a15c20279d5a700de23850331d34f5f31" title="Model::SetScale" alt="" coords="517,56,635,83"/><area shape="rect" id="node25" href="classWindowManager.html#abc3dfc535171f18eda134734e6d546ef" title="WindowManager::SwapTheBuffers" alt="" coords="464,107,688,133"/><area shape="rect" id="node10" href="classShader.html#a01e9b0696a56a5c567ea4b369872c982" title="Shader::TurnOn" alt="" coords="777,563,892,589"/><area shape="rect" id="node11" href="classCamera.html#ab0a4bf5a65d45f25529e3cffda1c361b" title="Camera::GetProjectionMatrix" alt="" coords="739,613,930,640"/><area shape="rect" id="node12" href="classCamera.html#affa333055635aed96518c4c66be9a70c" title="Camera::GetViewMatrix" alt="" coords="753,192,916,219"/><area shape="rect" id="node14" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b" title="Shader::GetVariable" alt="" coords="1001,487,1140,513"/><area shape="rect" id="node15" href="classShader.html#a61b49dc75fb1842ec58845e9912f824d" title="Shader::SetMatrix4" alt="" coords="767,293,902,320"/><area shape="rect" id="node16" href="classLightingTechnique.html#af0c8dadfb5b41d56f3f117a42fadd2b6" title="LightingTechnique::\lSetAttrLight" alt="" coords="767,665,902,706"/><area shape="rect" id="node18" href="classLightingTechnique.html#a15d5725cdb38c3263446342910eb56e6" title="LightingTechnique::\lSetEyeWorldPos" alt="" coords="767,345,902,386"/><area shape="rect" id="node19" href="classCamera.html#a7166b8466c94d0b5c127fc74c7881beb" title="Camera::GetPosition" alt="" coords="763,411,907,437"/><area shape="rect" id="node20" href="classTexture_1_1Texture.html#a540ba0664bc3f57858e4f5da468c1fe9" title="Texture::Texture::Bind" alt="" coords="759,461,911,488"/><area shape="rect" id="node21" href="classShader.html#ad94b005141a4ed31a3f4f801455e5590" title="Shader::TurnOff" alt="" coords="777,512,892,539"/><area shape="rect" id="node13" href="classCamera.html#a3518233b244af839db6eefe59e7002de" title="Camera::GetRotationMatrix" alt="" coords="979,192,1162,219"/><area shape="rect" id="node17" href="Main_8cpp.html#adb9f41772f416fee48669435829e58f6" title="ambient" alt="" coords="1037,752,1105,779"/><area shape="rect" id="node27" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79" title="WindowManager::Destroy" alt="" coords="489,731,663,757"/><area shape="rect" id="node28" href="classModel.html#ad60ed0ed7eaa7dcdd58398e6efacc7c4" title="Model::Destroy" alt="" coords="779,781,890,808"/><area shape="rect" id="node29" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="1012,916,1129,943"/><area shape="rect" id="node31" href="classWindowManager.html#ab389ab7ab5fab8add272fb6e6d139a2a" title="WindowManager::Initialize" alt="" coords="489,933,663,960"/><area shape="rect" id="node32" href="Main_8cpp.html#a71342fe6c1b2d6ec6acc64899304c58b" title="white" alt="" coords="549,984,603,1011"/><area shape="rect" id="node33" href="Main_8cpp.html#a7913f993a9bb5e9230f685259e9d1f22" title="black" alt="" coords="549,1035,603,1061"/><area shape="rect" id="node34" href="classModel.html#a3cee48eb25b4211a10c0a1cfc199afa9" title="Model::SetLightAtrr" alt="" coords="509,1085,643,1112"/><area shape="rect" id="node35" href="classModel.html#a0c635f97a6543dbf6f549475053e7ca5" title="Model::setNumLights" alt="" coords="503,1136,649,1163"/><area shape="rect" id="node36" href="classCamera.html#a621b0ca0ddcab43fb95ee754c443dfa4" title="Camera::SetPerspective" alt="" coords="493,1187,659,1213"/><area shape="rect" id="node37" href="classCamera.html#ae32a72f519739a0b4dce07433cfbe9ef" title="Camera::PositionCamera" alt="" coords="491,1237,661,1264"/><area shape="rect" id="node38" href="classModel.html#a25e8d7772730703ade5494b22c07b5f4" title="Model::SetCamera" alt="" coords="511,1288,641,1315"/><area shape="rect" id="node39" href="classModel.html#a303e8b86779deefa81d3faa23e6dd549" title="Model::Initialize" alt="" coords="519,883,633,909"/><area shape="rect" id="node40" href="classShader.html#a05e7cdbaa95b0f0d1712f0485d70ea6e" title="Shader::Initialize" alt="" coords="775,1000,894,1027"/><area shape="rect" id="node42" href="classTexture_1_1Texture.html#a01fc0da06ed469130506d1f3ef78f6c4" title="Texture::Texture::Load" alt="" coords="757,883,912,909"/><area shape="rect" id="node43" href="classLightingTechnique.html#a97c91e408505f172f9a8f216b7ce4579" title="LightingTechnique::\lSetShader" alt="" coords="767,934,902,975"/><area shape="rect" id="node44" href="classLightingTechnique.html#a16e623c328aa8aee3e524b080dbf0ec2" title="LightingTechnique::Init" alt="" coords="758,731,911,757"/><area shape="rect" id="node41" href="classShader.html#aca250566950341233b96112aca7acde5" title="Shader::LoadShaderFile" alt="" coords="990,1000,1151,1027"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aca11206b15ed9783944f6f4b3faf498b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inicializaci�n de la aplicaci�n.</p>
+<p>Inicialización de la aplicación. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8cpp_source.html#l00034">34</a> del archivo <a class="el" href="Main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8cpp.html#adb9f41772f416fee48669435829e58f6">ambient()</a>, <a class="el" href="Light_8h_source.html#l00019">Light::LightAtrr::ambient</a>, <a class="el" href="Util_8h_source.html#l00014">ARRAY_SIZE_IN_ELEMENTS</a>, <a class="el" href="Main_8cpp.html#a7913f993a9bb5e9230f685259e9d1f22">black()</a>, <a class="el" href="Main_8h_source.html#l00115">camera</a>, <a class="el" href="InputManager_8h_source.html#l00029">f</a>, <a class="el" href="InputManager_8h_source.html#l00035">i</a>, <a class="el" href="classWindowManager.html#ab389ab7ab5fab8add272fb6e6d139a2a">WindowManager::Initialize()</a>, <a class="el" href="Model_8cpp_source.html#l00010">Model::Initialize()</a>, <a class="el" href="Light_8h_source.html#l00019">Light::LightAtrr::lightColor</a>, <a class="el" href="Light_8h_source.html#l00019">Light::LightAtrr::lightPosW</a>, <a class="el" href="Light_8h_source.html#l00019">Light::LightAtrr::materialDiffuse</a>, <a class="el" href="Light_8h_source.html#l00019">Light::LightAtrr::materialEmissive</a>, <a class="el" href="Light_8h_source.html#l00021">Light::LightAtrr::materialShininess</a>, <a class="el" href="Light_8h_source.html#l00019">Light::LightAtrr::materialSpecular</a>, <a class="el" href="Model_8h_source.html#l00032">Vertex3::normal</a>, <a class="el" href="Camera_8cpp_source.html#l00031">Camera::PositionCamera()</a>, <a class="el" href="Main_8h_source.html#l00024">ScreenHeight</a>, <a class="el" href="Main_8h_source.html#l00023">ScreenWidth</a>, <a class="el" href="Model_8h_source.html#l00145">Model::SetCamera()</a>, <a class="el" href="Model_8h_source.html#l00153">Model::SetLightAtrr()</a>, <a class="el" href="Model_8h_source.html#l00168">Model::setNumLights()</a>, <a class="el" href="Camera_8cpp_source.html#l00016">Camera::SetPerspective()</a>, <a class="el" href="Main_8cpp.html#a71342fe6c1b2d6ec6acc64899304c58b">white()</a>, <a class="el" href="Main_8h_source.html#l00114">windowManager</a> y <a class="el" href="Model_8h_source.html#l00024">Vertex3::xyz</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00017">GLMain()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGLApplication_aca11206b15ed9783944f6f4b3faf498b_cgraph.png" border="0" usemap="#classGLApplication_aca11206b15ed9783944f6f4b3faf498b_cgraph" alt=""/></div>
+<map name="classGLApplication_aca11206b15ed9783944f6f4b3faf498b_cgraph" id="classGLApplication_aca11206b15ed9783944f6f4b3faf498b_cgraph">
+<area shape="rect" id="node2" href="Main_8cpp.html#adb9f41772f416fee48669435829e58f6" title="ambient" alt="" coords="267,5,335,32"/><area shape="rect" id="node3" href="Main_8cpp.html#a7913f993a9bb5e9230f685259e9d1f22" title="black" alt="" coords="275,56,328,83"/><area shape="rect" id="node4" href="classWindowManager.html#ab389ab7ab5fab8add272fb6e6d139a2a" title="WindowManager::Initialize" alt="" coords="214,107,389,133"/><area shape="rect" id="node5" href="classModel.html#a303e8b86779deefa81d3faa23e6dd549" title="Model::Initialize" alt="" coords="245,157,358,184"/><area shape="rect" id="node13" href="classCamera.html#ae32a72f519739a0b4dce07433cfbe9ef" title="Camera::PositionCamera" alt="" coords="217,208,386,235"/><area shape="rect" id="node14" href="classModel.html#a25e8d7772730703ade5494b22c07b5f4" title="Model::SetCamera" alt="" coords="236,259,367,285"/><area shape="rect" id="node15" href="classModel.html#a3cee48eb25b4211a10c0a1cfc199afa9" title="Model::SetLightAtrr" alt="" coords="234,309,369,336"/><area shape="rect" id="node16" href="classModel.html#a0c635f97a6543dbf6f549475053e7ca5" title="Model::setNumLights" alt="" coords="228,360,375,387"/><area shape="rect" id="node17" href="classCamera.html#a621b0ca0ddcab43fb95ee754c443dfa4" title="Camera::SetPerspective" alt="" coords="219,411,384,437"/><area shape="rect" id="node18" href="Main_8cpp.html#a71342fe6c1b2d6ec6acc64899304c58b" title="white" alt="" coords="275,461,328,488"/><area shape="rect" id="node6" href="classShader.html#a05e7cdbaa95b0f0d1712f0485d70ea6e" title="Shader::Initialize" alt="" coords="455,77,574,104"/><area shape="rect" id="node9" href="classTexture_1_1Texture.html#a01fc0da06ed469130506d1f3ef78f6c4" title="Texture::Texture::Load" alt="" coords="437,128,592,155"/><area shape="rect" id="node10" href="classLightingTechnique.html#a97c91e408505f172f9a8f216b7ce4579" title="LightingTechnique::\lSetShader" alt="" coords="447,179,582,221"/><area shape="rect" id="node11" href="classLightingTechnique.html#a16e623c328aa8aee3e524b080dbf0ec2" title="LightingTechnique::Init" alt="" coords="438,245,591,272"/><area shape="rect" id="node7" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="663,52,780,79"/><area shape="rect" id="node8" href="classShader.html#aca250566950341233b96112aca7acde5" title="Shader::LoadShaderFile" alt="" coords="641,103,802,129"/><area shape="rect" id="node12" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b" title="Shader::GetVariable" alt="" coords="652,245,791,272"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad17d4449dda1cb4a54e37c5470f1ad9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCamera.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>pCamera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter para la c�mara de la aplicaci�n. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCamera</td><td>c�mara que usar� aplicaci�n. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00072">72</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00115">camera</a> y <a class="el" href="GLFWManager_8cpp_source.html#l00006">pCamera</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00008">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a74a4980c998c08ce70fb7c2e1874b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetGRotation </td>
+          <td>(</td>
+          <td class="paramtype">glm::quat&#160;</td>
+          <td class="paramname"><em>gRotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter para la rotaci�n de la escena. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gRotation</td><td>Cuaternion de rotaci�n de la escena </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00080">80</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00117">gRotation</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00105">GLFWManager::ProcessInput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80d091a51f25bb9e01a74e8990461120"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GLApplication::SetWindowManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classWindowManager.html">WindowManager</a> *&#160;</td>
+          <td class="paramname"><em>pWindowManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>M�todo que setter del manejador de ventanas de la aplicaci�n. Este debe ser setteada antes de inicializar el loop. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pWindowManager</td><td>Manejador de ventanas que usar� la aplicaci�n. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00057">57</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Hace referencia a <a class="el" href="Main_8h_source.html#l00114">windowManager</a>.</p>
+
+<p>Referenciado por <a class="el" href="GLFWManager_8cpp_source.html#l00008">main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="abceeb7b1e04466c92608a4c9f42bb71d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html">Camera</a>* GLApplication::camera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00115">115</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00227">Destroy()</a>, <a class="el" href="Main_8h_source.html#l00065">GetCamera()</a>, <a class="el" href="Main_8cpp_source.html#l00034">Initialize()</a> y <a class="el" href="Main_8h_source.html#l00072">SetCamera()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af926410218d16f1f3aefda8379488007"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::quat GLApplication::gRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00117">117</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00120">ApplicationLoop()</a>, <a class="el" href="Main_8h_source.html#l00088">GetGRotation()</a> y <a class="el" href="Main_8h_source.html#l00080">SetGRotation()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c09bf7ce52eadd70f3bd8f36c95c79c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GLApplication::ScreenHeight = 700</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00024">24</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00034">Initialize()</a> y <a class="el" href="GLFWManager_8cpp_source.html#l00177">GLFWManager::ReshapeGL()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a32c183a4197a4b2e997cc0b0916c1841"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GLApplication::ScreenWidth = 1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>El ancho y alto de la ventana. </p>
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00023">23</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00034">Initialize()</a> y <a class="el" href="GLFWManager_8cpp_source.html#l00177">GLFWManager::ReshapeGL()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad19926dd66b908fb1975093b824c78ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classWindowManager.html">WindowManager</a>* GLApplication::windowManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="Main_8h_source.html#l00114">114</a> del archivo <a class="el" href="Main_8h_source.html">Main.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8cpp_source.html#l00120">ApplicationLoop()</a>, <a class="el" href="Main_8cpp_source.html#l00227">Destroy()</a>, <a class="el" href="Main_8h_source.html#l00049">GetWindowManager()</a>, <a class="el" href="Main_8cpp_source.html#l00034">Initialize()</a> y <a class="el" href="Main_8h_source.html#l00057">SetWindowManager()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li>src/Headers/<a class="el" href="Main_8h_source.html">Main.h</a></li>
+<li>src/<a class="el" href="Main_8cpp_source.html">Main.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classGLApplication.html">GLApplication</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:17 para Origami por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

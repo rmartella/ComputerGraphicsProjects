@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Origami: Referencia del Archivo src/GLFWManager.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Origami
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('GLFWManager_8cpp.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo GLFWManager.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;GL/glew.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="GLFWManager_8h_source.html">Headers/GLFWManager.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="Main_8h_source.html">Headers/Main.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para GLFWManager.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="GLFWManager_8cpp__incl.png" border="0" usemap="#src_2GLFWManager_8cpp" alt=""/></div>
+<map name="src_2GLFWManager_8cpp" id="src_2GLFWManager_8cpp">
+<area shape="rect" id="node3" href="GLFWManager_8h.html" title="Headers/GLFWManager.h" alt="" coords="1443,80,1617,107"/><area shape="rect" id="node15" href="Main_8h.html" title="Headers/Main.h" alt="" coords="665,80,780,107"/><area shape="rect" id="node7" href="WindowManager_8h.html" title="WindowManager.h" alt="" coords="1337,155,1467,181"/><area shape="rect" id="node8" href="InputManager_8h.html" title="InputManager.h" alt="" coords="635,229,745,256"/><area shape="rect" id="node13" href="Camera_8h.html" title="Camera.h" alt="" coords="525,304,603,331"/><area shape="rect" id="node16" href="Model_8h.html" title="Model.h" alt="" coords="469,155,536,181"/><area shape="rect" id="node19" href="LightingTechnique_8h.html" title="LightingTechnique.h" alt="" coords="1033,229,1172,256"/><area shape="rect" id="node26" href="TimeManager_8h.html" title="TimeManager.h" alt="" coords="63,155,173,181"/><area shape="rect" id="node29" href="Util_8h.html" title="Util.h" alt="" coords="728,155,781,181"/><area shape="rect" id="node24" href="Texture_8h.html" title="Texture.h" alt="" coords="1044,304,1120,331"/><area shape="rect" id="node20" href="Shader_8h.html" title="Shader.h" alt="" coords="1247,304,1320,331"/><area shape="rect" id="node22" href="Light_8h.html" title="Light.h" alt="" coords="908,304,969,331"/></map>
+</div>
+</div>
+<p><a href="GLFWManager_8cpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GLFWManager_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab9ee7c5a04515c069144fcb65f157a07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGLApplication.html">GLApplication</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GLFWManager_8cpp.html#ab9ee7c5a04515c069144fcb65f157a07">application</a></td></tr>
+<tr class="separator:ab9ee7c5a04515c069144fcb65f157a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec1f5518405938829bbfe4533aabd907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">pCamera</a></td></tr>
+<tr class="separator:aec1f5518405938829bbfe4533aabd907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="GLFWManager_8cpp_source.html#l00008">8</a> del archivo <a class="el" href="GLFWManager_8cpp_source.html">GLFWManager.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="WindowManager_8h_source.html#l00055">WindowManager::GetInputManager()</a>, <a class="el" href="Main_8cpp_source.html#l00017">GLApplication::GLMain()</a>, <a class="el" href="Main_8h_source.html#l00072">GLApplication::SetCamera()</a>, <a class="el" href="InputManager_8h_source.html#l00089">InputManager::SetCamera()</a> y <a class="el" href="Main_8h_source.html#l00057">GLApplication::SetWindowManager()</a>.</p>
+
+<p><div class="dynheader">
+Gráfico de llamadas para esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="GLFWManager_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#GLFWManager_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="GLFWManager_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="GLFWManager_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="classWindowManager.html#aa76f8df60f629cc88d98ab60e69278ed" title="WindowManager::GetInputManager" alt="" coords="104,639,331,665"/><area shape="rect" id="node3" href="classGLApplication.html#a94cd13d2291ad4aa7875181cbc6b8349" title="GLApplication::GLMain" alt="" coords="139,689,295,716"/><area shape="rect" id="node47" href="classGLApplication.html#ad17d4449dda1cb4a54e37c5470f1ad9a" title="GLApplication::SetCamera" alt="" coords="129,740,306,767"/><area shape="rect" id="node48" href="classInputManager.html#a9e1c1e56bf27ca6a6abb4f6ed03d09e2" title="InputManager::SetCamera" alt="" coords="130,791,305,817"/><area shape="rect" id="node49" href="classGLApplication.html#a80d091a51f25bb9e01a74e8990461120" title="GLApplication::SetWindow\lManager" alt="" coords="128,842,307,883"/><area shape="rect" id="node4" href="classGLApplication.html#aca11206b15ed9783944f6f4b3faf498b" title="GLApplication::Initialize" alt="" coords="401,968,559,995"/><area shape="rect" id="node22" href="classGLApplication.html#a4a7e3670f7cdbd3009510f072ddca792" title="GLApplication::ApplicationLoop" alt="" coords="379,284,581,311"/><area shape="rect" id="node44" href="classGLApplication.html#add441d14147f5a9a86abf7d1cbd636ac" title="GLApplication::Destroy" alt="" coords="401,689,559,716"/><area shape="rect" id="node5" href="classWindowManager.html#ab389ab7ab5fab8add272fb6e6d139a2a" title="WindowManager::Initialize" alt="" coords="657,1120,831,1147"/><area shape="rect" id="node6" href="Main_8cpp.html#adb9f41772f416fee48669435829e58f6" title="ambient" alt="" coords="1205,551,1273,577"/><area shape="rect" id="node7" href="Main_8cpp.html#a71342fe6c1b2d6ec6acc64899304c58b" title="white" alt="" coords="717,968,771,995"/><area shape="rect" id="node8" href="Main_8cpp.html#a7913f993a9bb5e9230f685259e9d1f22" title="black" alt="" coords="717,1019,771,1045"/><area shape="rect" id="node9" href="classModel.html#a3cee48eb25b4211a10c0a1cfc199afa9" title="Model::SetLightAtrr" alt="" coords="677,1171,811,1197"/><area shape="rect" id="node10" href="classModel.html#a0c635f97a6543dbf6f549475053e7ca5" title="Model::setNumLights" alt="" coords="671,1221,817,1248"/><area shape="rect" id="node11" href="classCamera.html#a621b0ca0ddcab43fb95ee754c443dfa4" title="Camera::SetPerspective" alt="" coords="661,816,827,843"/><area shape="rect" id="node12" href="classCamera.html#ae32a72f519739a0b4dce07433cfbe9ef" title="Camera::PositionCamera" alt="" coords="659,867,829,893"/><area shape="rect" id="node13" href="classModel.html#a25e8d7772730703ade5494b22c07b5f4" title="Model::SetCamera" alt="" coords="679,917,809,944"/><area shape="rect" id="node14" href="classModel.html#a303e8b86779deefa81d3faa23e6dd549" title="Model::Initialize" alt="" coords="687,1069,801,1096"/><area shape="rect" id="node15" href="classShader.html#a05e7cdbaa95b0f0d1712f0485d70ea6e" title="Shader::Initialize" alt="" coords="943,1116,1062,1143"/><area shape="rect" id="node18" href="classTexture_1_1Texture.html#a01fc0da06ed469130506d1f3ef78f6c4" title="Texture::Texture::Load" alt="" coords="925,999,1080,1025"/><area shape="rect" id="node19" href="classLightingTechnique.html#a97c91e408505f172f9a8f216b7ce4579" title="LightingTechnique::\lSetShader" alt="" coords="935,1050,1070,1091"/><area shape="rect" id="node20" href="classLightingTechnique.html#a16e623c328aa8aee3e524b080dbf0ec2" title="LightingTechnique::Init" alt="" coords="926,925,1079,952"/><area shape="rect" id="node16" href="classShader.html#ab6fc1a824cb122fcb0c902397e20f72f" title="Shader::Destroy" alt="" coords="1180,924,1297,951"/><area shape="rect" id="node17" href="classShader.html#aca250566950341233b96112aca7acde5" title="Shader::LoadShaderFile" alt="" coords="1158,1116,1319,1143"/><area shape="rect" id="node21" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b" title="Shader::GetVariable" alt="" coords="1169,829,1308,856"/><area shape="rect" id="node23" href="classWindowManager.html#a9213369f25fab9b9938a2171c12be3f5" title="WindowManager::ProcessInput" alt="" coords="642,157,846,184"/><area shape="rect" id="node24" href="classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="665,208,823,235"/><area shape="rect" id="node25" href="classTimeManager.html#a95782501e884a42904e2e726246701d5" title="TimeManager::CalculateFrameRate" alt="" coords="629,259,859,285"/><area shape="rect" id="node26" href="classModel.html#a15c20279d5a700de23850331d34f5f31" title="Model::SetScale" alt="" coords="685,309,803,336"/><area shape="rect" id="node27" href="classModel.html#ad4d748f79834d8b061e782085e69d268" title="Model::SetPosition" alt="" coords="678,360,810,387"/><area shape="rect" id="node28" href="classModel.html#ab42f4e353e7d6364bf65088b044b46b8" title="Model::SetRotation" alt="" coords="677,411,811,437"/><area shape="rect" id="node29" href="classModel.html#a0b611e79aa671b55616289e12322d4d4" title="Model::Render" alt="" coords="691,512,797,539"/><area shape="rect" id="node40" href="classModel.html#a28b7b8f403649681caa91bc96eb778ab" title="Model::GetPosition" alt="" coords="677,461,811,488"/><area shape="rect" id="node41" href="classModel.html#a2574a76ef8852748e29152f5abcb4942" title="Model::GetScale" alt="" coords="685,5,803,32"/><area shape="rect" id="node42" href="classModel.html#a133759be2a6c9e97c1b2bfcb5805dfbf" title="Model::GetRotation" alt="" coords="677,56,811,83"/><area shape="rect" id="node43" href="classWindowManager.html#abc3dfc535171f18eda134734e6d546ef" title="WindowManager::SwapTheBuffers" alt="" coords="632,107,856,133"/><area shape="rect" id="node30" href="classShader.html#a01e9b0696a56a5c567ea4b369872c982" title="Shader::TurnOn" alt="" coords="945,664,1060,691"/><area shape="rect" id="node31" href="classCamera.html#ab0a4bf5a65d45f25529e3cffda1c361b" title="Camera::GetProjectionMatrix" alt="" coords="907,227,1098,253"/><area shape="rect" id="node32" href="classCamera.html#affa333055635aed96518c4c66be9a70c" title="Camera::GetViewMatrix" alt="" coords="921,277,1084,304"/><area shape="rect" id="node34" href="classShader.html#a61b49dc75fb1842ec58845e9912f824d" title="Shader::SetMatrix4" alt="" coords="935,395,1070,421"/><area shape="rect" id="node35" href="classLightingTechnique.html#af0c8dadfb5b41d56f3f117a42fadd2b6" title="LightingTechnique::\lSetAttrLight" alt="" coords="935,329,1070,370"/><area shape="rect" id="node36" href="classLightingTechnique.html#a15d5725cdb38c3263446342910eb56e6" title="LightingTechnique::\lSetEyeWorldPos" alt="" coords="935,446,1070,487"/><area shape="rect" id="node37" href="classCamera.html#a7166b8466c94d0b5c127fc74c7881beb" title="Camera::GetPosition" alt="" coords="931,512,1075,539"/><area shape="rect" id="node38" href="classTexture_1_1Texture.html#a540ba0664bc3f57858e4f5da468c1fe9" title="Texture::Texture::Bind" alt="" coords="927,563,1079,589"/><area shape="rect" id="node39" href="classShader.html#ad94b005141a4ed31a3f4f801455e5590" title="Shader::TurnOff" alt="" coords="945,613,1060,640"/><area shape="rect" id="node33" href="classCamera.html#a3518233b244af839db6eefe59e7002de" title="Camera::GetRotationMatrix" alt="" coords="1147,277,1330,304"/><area shape="rect" id="node45" href="classModel.html#ad60ed0ed7eaa7dcdd58398e6efacc7c4" title="Model::Destroy" alt="" coords="947,828,1058,855"/><area shape="rect" id="node46" href="classWindowManager.html#afdb17ba07b6589824282386dc8707b79" title="WindowManager::Destroy" alt="" coords="657,664,831,691"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a class="anchor" id="ab9ee7c5a04515c069144fcb65f157a07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGLApplication.html">GLApplication</a> application</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="GLFWManager_8cpp_source.html#l00005">5</a> del archivo <a class="el" href="GLFWManager_8cpp_source.html">GLFWManager.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec1f5518405938829bbfe4533aabd907"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html">Camera</a>* pCamera</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="GLFWManager_8cpp_source.html#l00006">6</a> del archivo <a class="el" href="GLFWManager_8cpp_source.html">GLFWManager.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="Main_8h_source.html#l00072">GLApplication::SetCamera()</a>, <a class="el" href="InputManager_8h_source.html#l00089">InputManager::SetCamera()</a> y <a class="el" href="Model_8h_source.html#l00145">Model::SetCamera()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="GLFWManager_8cpp.html">GLFWManager.cpp</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:17 para Origami por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

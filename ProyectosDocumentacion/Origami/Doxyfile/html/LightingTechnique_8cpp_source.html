@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Origami: Fichero Fuente src/LightingTechnique.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Origami
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('LightingTechnique_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">LightingTechnique.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="LightingTechnique_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="LightingTechnique_8h.html">Headers/LightingTechnique.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a1f3fc4936e4e601219c7c56b1cb64bea">    7</a></span>&#160;<a class="code" href="classLightingTechnique.html#a1f3fc4936e4e601219c7c56b1cb64bea">LightingTechnique::LightingTechnique</a>(<span class="keywordtype">int</span> numLights) {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  this-&gt;numLights = <a class="code" href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">numLights</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a> = <span class="keyword">new</span> <a class="code" href="structLightingTechnique_1_1m__light.html">Light</a>[<a class="code" href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">numLights</a>];</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a16e623c328aa8aee3e524b080dbf0ec2">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classLightingTechnique.html#a16e623c328aa8aee3e524b080dbf0ec2">LightingTechnique::Init</a>() {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classLightingTechnique.html#a5fce44f90b317daeacef2c05bf778363">m_gSampler</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(<span class="stringliteral">&quot;gSampler&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classLightingTechnique.html#a003fcd5e9eca3c302be3a88308601243">eyePosW</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(<span class="stringliteral">&quot;EyePosW&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classLightingTechnique.html#a720ecf4a09d57b044aa802c06f89cead">gNumLights</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(<span class="stringliteral">&quot;gNumLights&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classLightingTechnique.html#a5fce44f90b317daeacef2c05bf778363">m_gSampler</a> == 0xFFFFFFFF || <a class="code" href="classLightingTechnique.html#a720ecf4a09d57b044aa802c06f89cead">gNumLights</a> == 0xFFFFFFFF) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;No se puede inicializar la luz&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    exit(-1);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a> = 0; <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a> &lt; <a class="code" href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">numLights</a>; <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>++) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">char</span> Name[128];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    memset(Name, 0, <span class="keyword">sizeof</span>(Name));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    snprintf(Name, <span class="keyword">sizeof</span>(Name), <span class="stringliteral">&quot;gLight[%d].LightPosW&quot;</span>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].<a class="code" href="structLightingTechnique_1_1m__light.html#acdab94b021b03983ae19982f695b6ae0">LightPosW</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(Name);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    snprintf(Name, <span class="keyword">sizeof</span>(Name), <span class="stringliteral">&quot;gLight[%d].LightColor&quot;</span>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].<a class="code" href="structLightingTechnique_1_1m__light.html#a6e7d3e31ba000e4c8ab7f3c940408a99">LightColor</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(Name);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    snprintf(Name, <span class="keyword">sizeof</span>(Name), <span class="stringliteral">&quot;gLight[%d].MaterialEmissive&quot;</span>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].<a class="code" href="structLightingTechnique_1_1m__light.html#aa5f1fb5cb22aeb63fed303c068577aeb">MaterialEmissive</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(Name);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    snprintf(Name, <span class="keyword">sizeof</span>(Name), <span class="stringliteral">&quot;gLight[%d].MaterialDiffuse&quot;</span>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].<a class="code" href="structLightingTechnique_1_1m__light.html#a9cb37be8b8823e2ce19c6443cff28860">MaterialDiffuse</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(Name);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    snprintf(Name, <span class="keyword">sizeof</span>(Name), <span class="stringliteral">&quot;gLight[%d].MaterialSpecular&quot;</span>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].<a class="code" href="structLightingTechnique_1_1m__light.html#a6abcfb1fd95fd6dc19fcd48009675199">MaterialSpecular</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(Name);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    snprintf(Name, <span class="keyword">sizeof</span>(Name), <span class="stringliteral">&quot;gLight[%d].MaterialShininess&quot;</span>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].<a class="code" href="structLightingTechnique_1_1m__light.html#ab2cd16468d6ba7e983ba3d5ba2ef8083">MaterialShininess</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(Name);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    snprintf(Name, <span class="keyword">sizeof</span>(Name), <span class="stringliteral">&quot;gLight[%d].Ambient&quot;</span>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].<a class="code" href="structLightingTechnique_1_1m__light.html#af4d9d96a9a8e74b07398663b532f9865">Ambient</a> = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>-&gt;<a class="code" href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">GetVariable</a>(Name);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].LightPosW == 0xFFFFFFFF</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        || <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].LightColor == 0xFFFFFFFF</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        || <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].MaterialEmissive == 0xFFFFFFFF</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        || <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].MaterialDiffuse == 0xFFFFFFFF</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        || <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].MaterialSpecular == 0xFFFFFFFF</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        || <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].MaterialShininess == 0xFFFFFFFF</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        || <a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].Ambient == 0xFFFFFFFF) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      std::cout &lt;&lt; <span class="stringliteral">&quot;No se puede inicializar la luz&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      exit(-1);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a4d8e1b4ae9015f5eef18b808061af22f">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classLightingTechnique.html#a4d8e1b4ae9015f5eef18b808061af22f">LightingTechnique::SetTextureUnit</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TextureUnit) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  glUniform1i(<a class="code" href="classLightingTechnique.html#a5fce44f90b317daeacef2c05bf778363">m_gSampler</a>, TextureUnit);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#af0c8dadfb5b41d56f3f117a42fadd2b6">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classLightingTechnique.html#af0c8dadfb5b41d56f3f117a42fadd2b6">LightingTechnique::SetAttrLight</a>(<a class="code" href="structLight_1_1LightAtrr.html">LightAtrr</a> * <a class="code" href="structLightingTechnique_1_1m__light.html">Light</a>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  glUniform1i(<a class="code" href="classLightingTechnique.html#a720ecf4a09d57b044aa802c06f89cead">gNumLights</a>, <a class="code" href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">numLights</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a> = 0; <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a> &lt; <a class="code" href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">numLights</a>; <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>++) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    glUniform4fv(<a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].LightPosW, 1, glm::value_ptr(Light[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].lightPosW));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    glUniform4fv(<a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].LightColor, 1,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                 glm::value_ptr(Light[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].lightColor));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    glUniform4fv(<a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].MaterialEmissive, 1,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                 glm::value_ptr(Light[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].materialEmissive));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    glUniform4fv(<a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].MaterialDiffuse, 1,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                 glm::value_ptr(Light[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].materialDiffuse));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    glUniform4fv(<a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].MaterialSpecular, 1,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                 glm::value_ptr(Light[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].materialSpecular));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    glUniform1f(<a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].MaterialShininess, Light[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].materialShininess);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    glUniform4fv(<a class="code" href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">lightsPtr</a>[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].Ambient, 1, glm::value_ptr(Light[<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>].<a class="code" href="Main_8cpp.html#adb9f41772f416fee48669435829e58f6">ambient</a>));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a97c91e408505f172f9a8f216b7ce4579">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classLightingTechnique.html#a97c91e408505f172f9a8f216b7ce4579">LightingTechnique::SetShader</a>(<a class="code" href="classShader.html">Shader</a> * shader) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  this-&gt;shader = <a class="code" href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">shader</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classLightingTechnique.html#a15d5725cdb38c3263446342910eb56e6">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classLightingTechnique.html#a15d5725cdb38c3263446342910eb56e6">LightingTechnique::SetEyeWorldPos</a>(<span class="keyword">const</span> glm::vec3&amp; EyeWorldPos) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  glUniform4fv(<a class="code" href="classLightingTechnique.html#a003fcd5e9eca3c302be3a88308601243">eyePosW</a>, 1, glm::value_ptr(glm::vec4(EyeWorldPos, 1)));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="ttc" id="structLight_1_1LightAtrr_html"><div class="ttname"><a href="structLight_1_1LightAtrr.html">Light::LightAtrr</a></div><div class="ttdef"><b>Definition:</b> <a href="Light_8h_source.html#l00018">Light.h:18</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a1f3fc4936e4e601219c7c56b1cb64bea"><div class="ttname"><a href="classLightingTechnique.html#a1f3fc4936e4e601219c7c56b1cb64bea">LightingTechnique::LightingTechnique</a></div><div class="ttdeci">LightingTechnique(int numLights)</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8cpp_source.html#l00007">LightingTechnique.cpp:7</a></div></div>
+<div class="ttc" id="Main_8cpp_html_adb9f41772f416fee48669435829e58f6"><div class="ttname"><a href="Main_8cpp.html#adb9f41772f416fee48669435829e58f6">ambient</a></div><div class="ttdeci">const glm::vec4 ambient(0.7f, 0.7f, 0.7f, 1.0f)</div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00035">InputManager.h:35</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a2421a2958d00474ac6745ad488bd97bb"><div class="ttname"><a href="classLightingTechnique.html#a2421a2958d00474ac6745ad488bd97bb">LightingTechnique::lightsPtr</a></div><div class="ttdeci">Light * lightsPtr</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00080">LightingTechnique.h:80</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a97c91e408505f172f9a8f216b7ce4579"><div class="ttname"><a href="classLightingTechnique.html#a97c91e408505f172f9a8f216b7ce4579">LightingTechnique::SetShader</a></div><div class="ttdeci">void SetShader(Shader *shader)</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8cpp_source.html#l00088">LightingTechnique.cpp:88</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a5fce44f90b317daeacef2c05bf778363"><div class="ttname"><a href="classLightingTechnique.html#a5fce44f90b317daeacef2c05bf778363">LightingTechnique::m_gSampler</a></div><div class="ttdeci">GLuint m_gSampler</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00056">LightingTechnique.h:56</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_aae8bd44b24b37c6fbd6e111622784e13"><div class="ttname"><a href="classLightingTechnique.html#aae8bd44b24b37c6fbd6e111622784e13">LightingTechnique::shader</a></div><div class="ttdeci">Shader * shader</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00054">LightingTechnique.h:54</a></div></div>
+<div class="ttc" id="classShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdef"><b>Definition:</b> <a href="Shader_8h_source.html#l00012">Shader.h:12</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a4d8e1b4ae9015f5eef18b808061af22f"><div class="ttname"><a href="classLightingTechnique.html#a4d8e1b4ae9015f5eef18b808061af22f">LightingTechnique::SetTextureUnit</a></div><div class="ttdeci">void SetTextureUnit(unsigned int TextureUnit)</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8cpp_source.html#l00059">LightingTechnique.cpp:59</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a15d5725cdb38c3263446342910eb56e6"><div class="ttname"><a href="classLightingTechnique.html#a15d5725cdb38c3263446342910eb56e6">LightingTechnique::SetEyeWorldPos</a></div><div class="ttdeci">void SetEyeWorldPos(const glm::vec3 &amp;EyeWorldPos)</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8cpp_source.html#l00096">LightingTechnique.cpp:96</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a16e623c328aa8aee3e524b080dbf0ec2"><div class="ttname"><a href="classLightingTechnique.html#a16e623c328aa8aee3e524b080dbf0ec2">LightingTechnique::Init</a></div><div class="ttdeci">virtual void Init()</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8cpp_source.html#l00015">LightingTechnique.cpp:15</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_acdab94b021b03983ae19982f695b6ae0"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#acdab94b021b03983ae19982f695b6ae0">LightingTechnique::m_light::LightPosW</a></div><div class="ttdeci">GLuint LightPosW</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00064">LightingTechnique.h:64</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_a6abcfb1fd95fd6dc19fcd48009675199"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#a6abcfb1fd95fd6dc19fcd48009675199">LightingTechnique::m_light::MaterialSpecular</a></div><div class="ttdeci">GLuint MaterialSpecular</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00068">LightingTechnique.h:68</a></div></div>
+<div class="ttc" id="LightingTechnique_8h_html"><div class="ttname"><a href="LightingTechnique_8h.html">LightingTechnique.h</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_ab2cd16468d6ba7e983ba3d5ba2ef8083"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#ab2cd16468d6ba7e983ba3d5ba2ef8083">LightingTechnique::m_light::MaterialShininess</a></div><div class="ttdeci">GLuint MaterialShininess</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00069">LightingTechnique.h:69</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a003fcd5e9eca3c302be3a88308601243"><div class="ttname"><a href="classLightingTechnique.html#a003fcd5e9eca3c302be3a88308601243">LightingTechnique::eyePosW</a></div><div class="ttdeci">GLuint eyePosW</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00057">LightingTechnique.h:57</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7"><div class="ttname"><a href="classLightingTechnique.html#a4ff4d4bcbc4ec8021ed5f0a0fc9c43d7">LightingTechnique::numLights</a></div><div class="ttdeci">int numLights</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00076">LightingTechnique.h:76</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_a9cb37be8b8823e2ce19c6443cff28860"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#a9cb37be8b8823e2ce19c6443cff28860">LightingTechnique::m_light::MaterialDiffuse</a></div><div class="ttdeci">GLuint MaterialDiffuse</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00067">LightingTechnique.h:67</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_af0c8dadfb5b41d56f3f117a42fadd2b6"><div class="ttname"><a href="classLightingTechnique.html#af0c8dadfb5b41d56f3f117a42fadd2b6">LightingTechnique::SetAttrLight</a></div><div class="ttdeci">void SetAttrLight(LightAtrr *Light)</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8cpp_source.html#l00067">LightingTechnique.cpp:67</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_aa5f1fb5cb22aeb63fed303c068577aeb"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#aa5f1fb5cb22aeb63fed303c068577aeb">LightingTechnique::m_light::MaterialEmissive</a></div><div class="ttdeci">GLuint MaterialEmissive</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00066">LightingTechnique.h:66</a></div></div>
+<div class="ttc" id="classShader_html_aacbf160b5c19d27a7388bf9e4e9a261b"><div class="ttname"><a href="classShader.html#aacbf160b5c19d27a7388bf9e4e9a261b">Shader::GetVariable</a></div><div class="ttdeci">GLint GetVariable(std::string strVariable)</div><div class="ttdef"><b>Definition:</b> <a href="Shader_8cpp_source.html#l00124">Shader.cpp:124</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_a6e7d3e31ba000e4c8ab7f3c940408a99"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#a6e7d3e31ba000e4c8ab7f3c940408a99">LightingTechnique::m_light::LightColor</a></div><div class="ttdeci">GLuint LightColor</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00065">LightingTechnique.h:65</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html_af4d9d96a9a8e74b07398663b532f9865"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html#af4d9d96a9a8e74b07398663b532f9865">LightingTechnique::m_light::Ambient</a></div><div class="ttdeci">GLuint Ambient</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00070">LightingTechnique.h:70</a></div></div>
+<div class="ttc" id="classLightingTechnique_html_a720ecf4a09d57b044aa802c06f89cead"><div class="ttname"><a href="classLightingTechnique.html#a720ecf4a09d57b044aa802c06f89cead">LightingTechnique::gNumLights</a></div><div class="ttdeci">GLuint gNumLights</div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00058">LightingTechnique.h:58</a></div></div>
+<div class="ttc" id="structLightingTechnique_1_1m__light_html"><div class="ttname"><a href="structLightingTechnique_1_1m__light.html">LightingTechnique::m_light</a></div><div class="ttdef"><b>Definition:</b> <a href="LightingTechnique_8h_source.html#l00063">LightingTechnique.h:63</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="LightingTechnique_8cpp.html">LightingTechnique.cpp</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:17 para Origami por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="RubiksCube::addEdgesAndCorners" name="RubiksCube::addEdgesAndCorners">
+<area shape="rect" id="node2" href="$classRubiksCubeFace.html#a9894049a07ce4c75e4e7730b1f15e028" title="RubiksCubeFace::addAdjacent\lToFace" alt="" coords="283,5,485,46"/>
+<area shape="rect" id="node3" href="$classRubiksCubeFace.html#ae07f8e9ed8bd48463e2ac0efbae068aa" title="RubiksCubeFace::addCorner\lToFace" alt="" coords="289,70,479,111"/>
+<area shape="rect" id="node4" href="$classNode.html#a0eddfcbfa4ec9e188d9f1b79a5461a80" title="Node::getModel" alt="" coords="327,136,441,163"/>
+<area shape="rect" id="node5" href="$classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="297,187,471,213"/>
+</map>

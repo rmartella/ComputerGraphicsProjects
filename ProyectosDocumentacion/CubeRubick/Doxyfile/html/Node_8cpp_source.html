@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CubeRubick: Fichero Fuente src/Node.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CubeRubick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Node_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Node.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Node_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Node.cpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 04/04/2015</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: rey</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Node_8h.html">Headers/Node.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">   13</a></span>&#160;<a class="code" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node::Node</a>() {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  this-&gt;<a class="code" href="classNode.html#a0aa47d75b5940e339768b8f160f8e486">isRoot</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classNode.html#a44ec06d186b4fa95b7805737b2a60956">   22</a></span>&#160;<a class="code" href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node::Node</a>(<a class="code" href="classModel.html">Model</a> * model, <span class="keywordtype">bool</span> isRoot) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  this-&gt;isRoot = <a class="code" href="classNode.html#a0aa47d75b5940e339768b8f160f8e486">isRoot</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  this-&gt;model = <a class="code" href="classNode.html#a0954ba120d8518cededd07748c5e6a29">model</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classNode.html#aa0840c3cb5c7159be6d992adecd2097c">   30</a></span>&#160;<a class="code" href="classNode.html#aa0840c3cb5c7159be6d992adecd2097c">Node::~Node</a>() {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// TODO Auto-generated destructor stub</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classNode.html#a5a1f9c051dad96d7c8902ef96f928c84">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNode.html#a5a1f9c051dad96d7c8902ef96f928c84">Node::setTransformMatrix</a>(glm::mat4 * transform) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  this-&gt;<a class="code" href="classNode.html#a4807d4736c213dbf276232e9104100e1">transformMatrix</a> = transform;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239">   46</a></span>&#160;glm::mat4 * <a class="code" href="classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239">Node::getTransformMatrix</a>() {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">return</span> this-&gt;<a class="code" href="classNode.html#a4807d4736c213dbf276232e9104100e1">transformMatrix</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classNode.html#a0eddfcbfa4ec9e188d9f1b79a5461a80">   54</a></span>&#160;<a class="code" href="classModel.html">Model</a> * <a class="code" href="classNode.html#a0eddfcbfa4ec9e188d9f1b79a5461a80">Node::getModel</a>() {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> this-&gt;<a class="code" href="classNode.html#a0954ba120d8518cededd07748c5e6a29">model</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classNode.html#a132699398b350e83b548a5645e69beb0">   62</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNode.html#a132699398b350e83b548a5645e69beb0">Node::addChild</a>(<a class="code" href="classNode.html">Node</a> * child) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  this-&gt;<a class="code" href="classNode.html#ab7624ce162ed236fe0158a54905687ad">nodeList</a>-&gt;push_back(child);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classNode.html#acd8a6a51fc9dafb2b4159f1e1e18f651">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNode.html#acd8a6a51fc9dafb2b4159f1e1e18f651">Node::renderNode</a>() {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">// Iteraci�n sobre los nodos del cubo de rubick.</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a> = 0; <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a> &lt; this-&gt;<a class="code" href="classNode.html#ab7624ce162ed236fe0158a54905687ad">nodeList</a>-&gt;size(); <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>++) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    glm::mat4 parentMat = *this-&gt;<a class="code" href="classNode.html#a4807d4736c213dbf276232e9104100e1">transformMatrix</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    glm::mat4 childMat = *this-&gt;<a class="code" href="classNode.html#ab7624ce162ed236fe0158a54905687ad">nodeList</a>[0][<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>]-&gt;transformMatrix;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// Se emparentan las transformaciones.</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    glm::mat4 * finalTransform = <span class="keyword">new</span> glm::mat4(parentMat * childMat);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// Renderiza el modelo con el enparentamiento de las transformaciones.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    this-&gt;<a class="code" href="classNode.html#ab7624ce162ed236fe0158a54905687ad">nodeList</a>[0][<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a>]-&gt;model-&gt;Render(*finalTransform);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="ttc" id="classNode_html_ab7624ce162ed236fe0158a54905687ad"><div class="ttname"><a href="classNode.html#ab7624ce162ed236fe0158a54905687ad">Node::nodeList</a></div><div class="ttdeci">std::vector&lt; Node * &gt; * nodeList</div><div class="ttdef"><b>Definition:</b> <a href="Node_8h_source.html#l00054">Node.h:54</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a85ae20979fb729ef19da67855aecdfd5">i</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00035">InputManager.h:35</a></div></div>
+<div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="Node_8h_source.html#l00013">Node.h:13</a></div></div>
+<div class="ttc" id="classNode_html_ad7a34779cad45d997bfd6d3d8043c75f"><div class="ttname"><a href="classNode.html#ad7a34779cad45d997bfd6d3d8043c75f">Node::Node</a></div><div class="ttdeci">Node()</div><div class="ttdef"><b>Definition:</b> <a href="Node_8cpp_source.html#l00013">Node.cpp:13</a></div></div>
+<div class="ttc" id="classNode_html_a4807d4736c213dbf276232e9104100e1"><div class="ttname"><a href="classNode.html#a4807d4736c213dbf276232e9104100e1">Node::transformMatrix</a></div><div class="ttdeci">glm::mat4 * transformMatrix</div><div class="ttdef"><b>Definition:</b> <a href="Node_8h_source.html#l00055">Node.h:55</a></div></div>
+<div class="ttc" id="Node_8h_html"><div class="ttname"><a href="Node_8h.html">Node.h</a></div></div>
+<div class="ttc" id="classNode_html_ae690ed4a39355bb3d24d43c0f1cb3239"><div class="ttname"><a href="classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239">Node::getTransformMatrix</a></div><div class="ttdeci">glm::mat4 * getTransformMatrix()</div><div class="ttdef"><b>Definition:</b> <a href="Node_8cpp_source.html#l00046">Node.cpp:46</a></div></div>
+<div class="ttc" id="classModel_html"><div class="ttname"><a href="classModel.html">Model</a></div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00034">Model.h:34</a></div></div>
+<div class="ttc" id="classNode_html_a132699398b350e83b548a5645e69beb0"><div class="ttname"><a href="classNode.html#a132699398b350e83b548a5645e69beb0">Node::addChild</a></div><div class="ttdeci">void addChild(Node *child)</div><div class="ttdef"><b>Definition:</b> <a href="Node_8cpp_source.html#l00062">Node.cpp:62</a></div></div>
+<div class="ttc" id="classNode_html_acd8a6a51fc9dafb2b4159f1e1e18f651"><div class="ttname"><a href="classNode.html#acd8a6a51fc9dafb2b4159f1e1e18f651">Node::renderNode</a></div><div class="ttdeci">void renderNode()</div><div class="ttdef"><b>Definition:</b> <a href="Node_8cpp_source.html#l00068">Node.cpp:68</a></div></div>
+<div class="ttc" id="classNode_html_aa0840c3cb5c7159be6d992adecd2097c"><div class="ttname"><a href="classNode.html#aa0840c3cb5c7159be6d992adecd2097c">Node::~Node</a></div><div class="ttdeci">virtual ~Node()</div><div class="ttdef"><b>Definition:</b> <a href="Node_8cpp_source.html#l00030">Node.cpp:30</a></div></div>
+<div class="ttc" id="classNode_html_a0aa47d75b5940e339768b8f160f8e486"><div class="ttname"><a href="classNode.html#a0aa47d75b5940e339768b8f160f8e486">Node::isRoot</a></div><div class="ttdeci">bool isRoot</div><div class="ttdef"><b>Definition:</b> <a href="Node_8h_source.html#l00057">Node.h:57</a></div></div>
+<div class="ttc" id="classNode_html_a0eddfcbfa4ec9e188d9f1b79a5461a80"><div class="ttname"><a href="classNode.html#a0eddfcbfa4ec9e188d9f1b79a5461a80">Node::getModel</a></div><div class="ttdeci">Model * getModel()</div><div class="ttdef"><b>Definition:</b> <a href="Node_8cpp_source.html#l00054">Node.cpp:54</a></div></div>
+<div class="ttc" id="classNode_html_a5a1f9c051dad96d7c8902ef96f928c84"><div class="ttname"><a href="classNode.html#a5a1f9c051dad96d7c8902ef96f928c84">Node::setTransformMatrix</a></div><div class="ttdeci">void setTransformMatrix(glm::mat4 *transform)</div><div class="ttdef"><b>Definition:</b> <a href="Node_8cpp_source.html#l00038">Node.cpp:38</a></div></div>
+<div class="ttc" id="classNode_html_a0954ba120d8518cededd07748c5e6a29"><div class="ttname"><a href="classNode.html#a0954ba120d8518cededd07748c5e6a29">Node::model</a></div><div class="ttdeci">Model * model</div><div class="ttdef"><b>Definition:</b> <a href="Node_8h_source.html#l00056">Node.h:56</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="Node_8cpp.html">Node.cpp</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:22 para CubeRubick por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

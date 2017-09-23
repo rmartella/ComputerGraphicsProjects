@@ -1,0 +1,76 @@
+.TH "src/GLFWManager.cpp" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/GLFWManager.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <GL/glew\&.h>\fP
+.br
+\fC#include 'Headers/GLFWManager\&.h'\fP
+.br
+\fC#include 'Headers/Main\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "bool \fBpress\fP [6] = { false }"
+.br
+.ti -1c
+.RI "\fBGLApplication\fP * \fBapplication\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBpCamera\fP"
+.br
+.in -1c
+.SH "Documentaci贸n de las funciones"
+.PP 
+.SS "int main ()"
+M閠odo que maneja los eventos de entrada de la aplicaci髇\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIcontinueApplication\fP Bandera que indica la ejecuci髇 de la aplicacai髇\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+True siempre que no se apriete la tecal Esc, falso en caso contrario\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 14 del archivo GLFWManager\&.cpp\&.
+.PP
+Hace referencia a WindowManager::GetInputManager(), GLApplication::GLMain(), GLApplication::SetCamera(), InputManager::SetCamera() y GLApplication::SetWindowManager()\&.
+.SH "Documentaci贸n de las variables"
+.PP 
+.SS "\fBGLApplication\fP* application"
+
+.PP
+Definici贸n en la l铆nea 6 del archivo GLFWManager\&.cpp\&.
+.SS "\fBCamera\fP* pCamera"
+
+.PP
+Definici贸n en la l铆nea 7 del archivo GLFWManager\&.cpp\&.
+.PP
+Referenciado por GLApplication::SetCamera(), InputManager::SetCamera() y Model::SetCamera()\&.
+.SS "bool press[6] = { false }"
+
+.PP
+Definici贸n en la l铆nea 5 del archivo GLFWManager\&.cpp\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SH "Autor"
+.PP 
+Generado autom谩ticamente por Doxygen para CubeRubick del c贸digo fuente\&.

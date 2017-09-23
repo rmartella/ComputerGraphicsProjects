@@ -1,0 +1,12 @@
+<map id="GLFWManager::ProcessInput" name="GLFWManager::ProcessInput">
+<area shape="rect" id="node2" href="$classInputManager.html#a87a2c3e73b3758bca90493a62c96cca0" title="InputManager::getGMousePos" alt="" coords="250,5,449,32"/>
+<area shape="rect" id="node3" href="$classGLApplication.html#a9ded7b5e8b093b15660869f5e9631b06" title="GLApplication::GetGRotation" alt="" coords="254,56,445,83"/>
+<area shape="rect" id="node4" href="$classInputManager.html#a8e2bc8541a4f69c0e4a32deed414e1e5" title="InputManager::KeyPressed" alt="" coords="259,107,439,133"/>
+<area shape="rect" id="node8" href="$classInputManager.html#aabd4c40d3d50542d91544e5d9ffaae28" title="InputManager::MouseMoved" alt="" coords="256,157,443,184"/>
+<area shape="rect" id="node10" href="$classInputManager.html#add65b528fe3942d7a48f5873cc30313a" title="InputManager::SetGMousePos" alt="" coords="249,208,450,235"/>
+<area shape="rect" id="node11" href="$classGLApplication.html#a9a74a4980c998c08ce70fb7c2e1874b3" title="GLApplication::SetGRotation" alt="" coords="254,259,445,285"/>
+<area shape="rect" id="node5" href="$classCamera.html#a3794bc585d91837f1eb657ed5536a685" title="Camera::MoveCamera" alt="" coords="512,31,667,57"/>
+<area shape="rect" id="node6" href="$classCamera.html#a6d305ab5442a489253a321b2a45b11b6" title="Camera::GetSpeed" alt="" coords="522,81,657,108"/>
+<area shape="rect" id="node7" href="$classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="510,132,669,159"/>
+<area shape="rect" id="node9" href="$classCamera.html#a05c4a137b939bfdee2b7efea6d67d0e7" title="Camera::SetViewByMouse" alt="" coords="499,183,679,209"/>
+</map>

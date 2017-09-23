@@ -1,0 +1,370 @@
+.TH "GLApplication" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GLApplication \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Main\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBGLApplication\fP ()"
+.br
+.ti -1c
+.RI "\fB~GLApplication\fP ()"
+.br
+.ti -1c
+.RI "int \fBGLMain\fP ()"
+.br
+.ti -1c
+.RI "\fBWindowManager\fP * \fBGetWindowManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWindowManager\fP (\fBWindowManager\fP *pWindowManager)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBSetGRotation\fP (glm::quat \fBgRotation\fP)"
+.br
+.ti -1c
+.RI "glm::quat \fBGetGRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetArmar\fP (bool \fBarmar\fP)"
+.br
+.ti -1c
+.RI "void \fBSetRotationCubeManager\fP (\fBRotationCubeManager::RotationCubeManager\fP *\fBrotationCubeManager\fP)"
+.br
+.ti -1c
+.RI "\fBRotationCubeManager::RotationCubeManager\fP * \fBGetRotationCubeManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetSpeedRotattionFaces\fP (float \fBspeedRotattionFaces\fP)"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBApplicationLoop\fP ()"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "int \fBScreenWidth\fP = 1024"
+.br
+.ti -1c
+.RI "int \fBScreenHeight\fP = 700"
+.br
+.ti -1c
+.RI "glm::mat4 \fBeRotation\fP"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBWindowManager\fP * \fBwindowManager\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "glm::quat \fBgRotation\fP"
+.br
+.ti -1c
+.RI "\fBRotationCubeManager::RotationCubeManager\fP * \fBrotationCubeManager\fP"
+.br
+.ti -1c
+.RI "float \fBspeedRotattionFaces\fP"
+.br
+.ti -1c
+.RI "bool \fBarmar\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase principal de la aplicacion, maneja la inicializaci�n de la aplicaci�n, loop de la aplicaci�n y limpia los recursos utilizados\&. 
+.PP
+Definición en la línea 16 del archivo Main\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "GLApplication::GLApplication ()\fC [inline]\fP"
+Constructor default\&. 
+.PP
+Definición en la línea 28 del archivo Main\&.h\&.
+.PP
+Hace referencia a f, gRotation y rotationCubeManager\&.
+.SS "GLApplication::~GLApplication ()\fC [inline]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 42 del archivo Main\&.h\&.
+.PP
+Hace referencia a Destroy()\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void GLApplication::ApplicationLoop ()"
+Loop de la aplicaci�n, solo se sale de esta funci�n si el usuario pulsa Esc o cierra la ventana\&.
+.PP
+Loop de la aplicación, solo se sale de esta función si el usuario pulsa Esc o cierra la ventana\&. 
+.PP
+Definición en la línea 136 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a armar, TimeManager::CalculateFrameRate(), TimeManager::DeltaTime, f, RotationCubeManager::RotationCubeManager::getCurrentRotation(), RotationCubeManager::RotationCubeManager::GetMovimientosSave(), gRotation, TimeManager::Instance(), WindowManager::ProcessInput(), Node::renderNode(), RubiksCube::rotateFace(), RubiksCube::rotateFaceAuto(), rotationCubeManager, RubiksCube::SetRotationCubeManager(), Node::setTransformMatrix(), RotationCubeManager::RotationCubeManager::SetWorldMatrix(), speedRotattionFaces, WindowManager::SwapTheBuffers() y windowManager\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::Destroy ()"
+M�todo que hace limpieza de los recursos utilizados por la aplicaci�n\&.
+.PP
+Método que hace limpieza de los recursos utilizados por la aplicación\&. 
+.PP
+Definición en la línea 212 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a camera, WindowManager::Destroy(), Model::Destroy() y windowManager\&.
+.PP
+Referenciado por GLMain() y ~GLApplication()\&.
+.SS "\fBCamera\fP* GLApplication::GetCamera ()\fC [inline]\fP"
+Obtiene la c�mara de la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Camar\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 73 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera\&.
+.SS "glm::quat GLApplication::GetGRotation ()\fC [inline]\fP"
+Obtiene el Cuaternion actual de la escena\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Cuaternion de la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 96 del archivo Main\&.h\&.
+.PP
+Hace referencia a gRotation\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "\fBRotationCubeManager::RotationCubeManager\fP* GLApplication::GetRotationCubeManager ()\fC [inline]\fP"
+Obtiene el manejador de rotaciones\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Manejador de rotaciones de las caras del cubo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 120 del archivo Main\&.h\&.
+.PP
+Hace referencia a rotationCubeManager\&.
+.PP
+Referenciado por GLFWManager::Destroy() y GLFWManager::ProcessInput()\&.
+.SS "\fBWindowManager\fP* GLApplication::GetWindowManager ()\fC [inline]\fP"
+M�todo que obtiene el manejador de ventanas de la aplicaci�n\&. Este debe ser creada antes de crear la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Manejador de ventanas\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 57 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.SS "int GLApplication::GLMain ()"
+Funcion principal de la aplicaci�n, debe de ser llamada en la funci�n \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Termino del programa\&.
+.RE
+.PP
+Funcion principal de la aplicación, debe de ser llamada en la función \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Terimno del programa\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 80 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ApplicationLoop(), Destroy() y Initialize()\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::Initialize ()"
+Inicializaci�n de la aplicaci�n\&.
+.PP
+Inicialización de la aplicación\&. 
+.PP
+Definición en la línea 97 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a camera, f, index, WindowManager::Initialize(), Model::Initialize(), RotationCubeManager::RotationCubeManager::loadRotations(), Camera::PositionCamera(), rotationCubeManager, ScreenHeight, ScreenWidth, RotationCubeManager::RotationCubeManager::SetCamera(), Model::SetCamera(), RotationCubeManager::RotationCubeManager::SetIndexCube(), Camera::SetPerspective(), RotationCubeManager::RotationCubeManager::SetVerticesCube(), speedRotattionFaces y windowManager\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::SetArmar (boolarmar)\fC [inline]\fP"
+Setter para armar el cubo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIarmar\fP Bander para armar\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 104 del archivo Main\&.h\&.
+.PP
+Hace referencia a armar\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Setter para la c�mara de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpCamera\fP c�mara que usar� aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 80 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera y pCamera\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::SetGRotation (glm::quatgRotation)\fC [inline]\fP"
+Setter para la rotaci�n de la escena\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIgRotation\fP Cuaternion de rotaci�n de la escena 
+.RE
+.PP
+
+.PP
+Definición en la línea 88 del archivo Main\&.h\&.
+.PP
+Hace referencia a gRotation\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::SetRotationCubeManager (\fBRotationCubeManager::RotationCubeManager\fP *rotationCubeManager)\fC [inline]\fP"
+Setter para el manejador de rotaciones\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrotationCubeManager\fP Manejador de rotaciones de las caras del cubo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 112 del archivo Main\&.h\&.
+.PP
+Hace referencia a rotationCubeManager\&.
+.SS "void GLApplication::SetSpeedRotattionFaces (floatspeedRotattionFaces)\fC [inline]\fP"
+Setter para la velocidad del rotaci�n de la cara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIspeedRotattionFaces\fP Velocidad del rotaci�n de la cara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 128 del archivo Main\&.h\&.
+.PP
+Hace referencia a speedRotattionFaces\&.
+.SS "void GLApplication::SetWindowManager (\fBWindowManager\fP *pWindowManager)\fC [inline]\fP"
+M�todo que setter del manejador de ventanas de la aplicaci�n\&. Este debe ser setteada antes de inicializar el loop\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpWindowManager\fP Manejador de ventanas que usar� la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 65 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.PP
+Referenciado por main()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "bool GLApplication::armar\fC [protected]\fP"
+
+.PP
+Definición en la línea 164 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop() y SetArmar()\&.
+.SS "\fBCamera\fP* GLApplication::camera\fC [protected]\fP"
+
+.PP
+Definición en la línea 156 del archivo Main\&.h\&.
+.PP
+Referenciado por Destroy(), GetCamera(), Initialize() y SetCamera()\&.
+.SS "glm::mat4 GLApplication::eRotation"
+
+.PP
+Definición en la línea 148 del archivo Main\&.h\&.
+.SS "glm::quat GLApplication::gRotation\fC [protected]\fP"
+
+.PP
+Definición en la línea 158 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GetGRotation(), GLApplication() y SetGRotation()\&.
+.SS "\fBRotationCubeManager::RotationCubeManager\fP* GLApplication::rotationCubeManager\fC [protected]\fP"
+
+.PP
+Definición en la línea 160 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GetRotationCubeManager(), GLApplication(), Initialize() y SetRotationCubeManager()\&.
+.SS "int GLApplication::ScreenHeight = 700"
+
+.PP
+Definición en la línea 23 del archivo Main\&.h\&.
+.PP
+Referenciado por Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "int GLApplication::ScreenWidth = 1024"
+El ancho y alto de la ventana\&. 
+.PP
+Definición en la línea 22 del archivo Main\&.h\&.
+.PP
+Referenciado por Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "float GLApplication::speedRotattionFaces\fC [protected]\fP"
+
+.PP
+Definición en la línea 162 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Initialize() y SetSpeedRotattionFaces()\&.
+.SS "\fBWindowManager\fP* GLApplication::windowManager\fC [protected]\fP"
+
+.PP
+Definición en la línea 155 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy(), GetWindowManager(), Initialize() y SetWindowManager()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para CubeRubick del código fuente\&.

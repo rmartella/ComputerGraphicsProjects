@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CubeRubick: Fichero Fuente src/Headers/Model.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CubeRubick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Model_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Model.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Model_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _ModelManager_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _ModelManager_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="Model_8h.html#a816ab7d5c2ce1f0a01216042837beb93">    4</a></span>&#160;<span class="preprocessor">#define GLM_FORCE_RADIANS</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;glm/gtc/matrix_transform.hpp&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;glm/gtx/transform2.hpp&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Camera_8h.html">Camera.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>glm;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classVertex3.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVertex3.html">Vertex3</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classVertex3.html#a4d34e84089b4b47ccc2285bf017fe11b">   24</a></span>&#160;  <span class="keywordtype">float</span> xyz[3];</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classVertex3.html#a1cd5d801b3af4a9cb9fef4071377ade1">   28</a></span>&#160;  <span class="keywordtype">float</span> rgba[4];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classModel.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classModel.html">Model</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classModel.html#ac4b851ea0a5f2fb1d0810a3035f2a1e6">   40</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> GLuint kVertexIndex = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classModel.html#af1996c7bcf2e5576672f9e5d04addd24">   44</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> GLuint kColorIndex = 1;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classModel.html#a7c6d81b1a08dfdf09408846606608060">   48</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> GLuint kTextureIndex = 2;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classModel.html#ade43c775d533fdd925f31b8b89f69e59">   52</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> GLuint kNormalIndex = 3;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classModel.html#ae3b375de5f6df4faf74a95d64748e048">   57</a></span>&#160;  <a class="code" href="classModel.html#ae3b375de5f6df4faf74a95d64748e048">Model</a>() {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    Scale = vec3(1.0<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7ce756344023b99e5ab27b804feb765c">f</a>, 1.0<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7ce756344023b99e5ab27b804feb765c">f</a>, 1.0<a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7ce756344023b99e5ab27b804feb765c">f</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classModel.html#ad6ebd2062a0b823db841a0b88baac4c0">   63</a></span>&#160;  <a class="code" href="classModel.html#ad6ebd2062a0b823db841a0b88baac4c0">~Model</a>() {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    Destroy();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> Initialize(<a class="code" href="classVertex3.html">Vertex3</a> vertices[], GLubyte IndexData[], <span class="keywordtype">int</span> length,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                  <span class="keywordtype">int</span> indexLength, std::string strVertex,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                  std::string strFragment);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> Render(mat4 parentModelMatrix);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classModel.html#a28b7b8f403649681caa91bc96eb778ab">   94</a></span>&#160;  vec3 <a class="code" href="classModel.html#a28b7b8f403649681caa91bc96eb778ab">GetPosition</a>() {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> Position;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classModel.html#ad4d748f79834d8b061e782085e69d268">  101</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classModel.html#ad4d748f79834d8b061e782085e69d268">SetPosition</a>(vec3 position) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    Position = position;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classModel.html#a133759be2a6c9e97c1b2bfcb5805dfbf">  109</a></span>&#160;  vec3 <a class="code" href="classModel.html#a133759be2a6c9e97c1b2bfcb5805dfbf">GetRotation</a>() {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> Rotation;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classModel.html#ab42f4e353e7d6364bf65088b044b46b8">  116</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classModel.html#ab42f4e353e7d6364bf65088b044b46b8">SetRotation</a>(vec3 rotation) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Rotation = rotation;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classModel.html#a2574a76ef8852748e29152f5abcb4942">  124</a></span>&#160;  vec3 <a class="code" href="classModel.html#a2574a76ef8852748e29152f5abcb4942">GetScale</a>() {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> Scale;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classModel.html#a15c20279d5a700de23850331d34f5f31">  131</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classModel.html#a15c20279d5a700de23850331d34f5f31">SetScale</a>(vec3 scale) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    Scale = scale;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classModel.html#a8c6429a35a1376657357e6e770470f13">  139</a></span>&#160;  <a class="code" href="classCamera.html">Camera</a> *<a class="code" href="classModel.html#a8c6429a35a1376657357e6e770470f13">GetCamera</a>() {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> camera;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  }</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classModel.html#a25e8d7772730703ade5494b22c07b5f4">  146</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classModel.html#a25e8d7772730703ade5494b22c07b5f4">SetCamera</a>(<a class="code" href="classCamera.html">Camera</a> *<a class="code" href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">pCamera</a>) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    camera = <a class="code" href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">pCamera</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">void</span> Destroy();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classModel.html#a2409f2c869a747ea60c16ff27869aa55">  157</a></span>&#160;  <a class="code" href="classVertex3.html">Vertex3</a> *<a class="code" href="classModel.html#a2409f2c869a747ea60c16ff27869aa55">Vertices</a>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classModel.html#a5bf9c158801011b41afe39b058bff8f7">  158</a></span>&#160;  GLubyte *<a class="code" href="classModel.html#a5bf9c158801011b41afe39b058bff8f7">IndexData</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classModel.html#a8081c51254a13f86723373ce1acd51a8">  159</a></span>&#160;  GLint <a class="code" href="classModel.html#a8081c51254a13f86723373ce1acd51a8">VerticesLength</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classModel.html#aadf4b5c79c601c90005dcac322467d60">  160</a></span>&#160;  GLint <a class="code" href="classModel.html#aadf4b5c79c601c90005dcac322467d60">IndexLength</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classModel.html#a10cd9696dc2e3e305944ae15e8e0898e">  161</a></span>&#160;  GLuint <a class="code" href="classModel.html#a10cd9696dc2e3e305944ae15e8e0898e">VertexBufferId</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classModel.html#ae2446cf10cb8fd2e9f35e2e552cbc983">  162</a></span>&#160;  GLuint <a class="code" href="classModel.html#ae2446cf10cb8fd2e9f35e2e552cbc983">IndexDataId</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classModel.html#a9f3bce5f65223c059d02caa659024735">  163</a></span>&#160;  GLuint <a class="code" href="classModel.html#a9f3bce5f65223c059d02caa659024735">VertexArrayObjectId</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="comment">// Vectores de transformaci�n del objeto.</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classModel.html#ac2a36219a66f4c2f08b85104dab059ee">  166</a></span>&#160;  vec3 <a class="code" href="classModel.html#ac2a36219a66f4c2f08b85104dab059ee">Position</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classModel.html#a787759894d827fc75282e4426d480dcb">  167</a></span>&#160;  vec3 <a class="code" href="classModel.html#a787759894d827fc75282e4426d480dcb">Rotation</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classModel.html#a6719259f660f8ca548b602f9f17406e8">  168</a></span>&#160;  vec3 <a class="code" href="classModel.html#a6719259f660f8ca548b602f9f17406e8">Scale</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classModel.html#a634e0014fce54c8b994f110a1b98b57b">  170</a></span>&#160;  <a class="code" href="classShader.html">Shader</a> <a class="code" href="classModel.html#a634e0014fce54c8b994f110a1b98b57b">shader</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classModel.html#a92c3ecff556ec07b51d39e992432e866">  172</a></span>&#160;  <a class="code" href="classCamera.html">Camera</a> *<a class="code" href="classModel.html#a92c3ecff556ec07b51d39e992432e866">camera</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;};</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classModel_html_a10cd9696dc2e3e305944ae15e8e0898e"><div class="ttname"><a href="classModel.html#a10cd9696dc2e3e305944ae15e8e0898e">Model::VertexBufferId</a></div><div class="ttdeci">GLuint VertexBufferId</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00161">Model.h:161</a></div></div>
+<div class="ttc" id="Camera_8h_html"><div class="ttname"><a href="Camera_8h.html">Camera.h</a></div></div>
+<div class="ttc" id="classModel_html_ab42f4e353e7d6364bf65088b044b46b8"><div class="ttname"><a href="classModel.html#ab42f4e353e7d6364bf65088b044b46b8">Model::SetRotation</a></div><div class="ttdeci">void SetRotation(vec3 rotation)</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00116">Model.h:116</a></div></div>
+<div class="ttc" id="classModel_html_a2574a76ef8852748e29152f5abcb4942"><div class="ttname"><a href="classModel.html#a2574a76ef8852748e29152f5abcb4942">Model::GetScale</a></div><div class="ttdeci">vec3 GetScale()</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00124">Model.h:124</a></div></div>
+<div class="ttc" id="classModel_html_ad6ebd2062a0b823db841a0b88baac4c0"><div class="ttname"><a href="classModel.html#ad6ebd2062a0b823db841a0b88baac4c0">Model::~Model</a></div><div class="ttdeci">~Model()</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00063">Model.h:63</a></div></div>
+<div class="ttc" id="classModel_html_a6719259f660f8ca548b602f9f17406e8"><div class="ttname"><a href="classModel.html#a6719259f660f8ca548b602f9f17406e8">Model::Scale</a></div><div class="ttdeci">vec3 Scale</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00168">Model.h:168</a></div></div>
+<div class="ttc" id="classModel_html_ae2446cf10cb8fd2e9f35e2e552cbc983"><div class="ttname"><a href="classModel.html#ae2446cf10cb8fd2e9f35e2e552cbc983">Model::IndexDataId</a></div><div class="ttdeci">GLuint IndexDataId</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00162">Model.h:162</a></div></div>
+<div class="ttc" id="classModel_html_a634e0014fce54c8b994f110a1b98b57b"><div class="ttname"><a href="classModel.html#a634e0014fce54c8b994f110a1b98b57b">Model::shader</a></div><div class="ttdeci">Shader shader</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00170">Model.h:170</a></div></div>
+<div class="ttc" id="classShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdef"><b>Definition:</b> <a href="Shader_8h_source.html#l00012">Shader.h:12</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a7ce756344023b99e5ab27b804feb765c"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a7ce756344023b99e5ab27b804feb765c">f</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00029">InputManager.h:29</a></div></div>
+<div class="ttc" id="classModel_html_a25e8d7772730703ade5494b22c07b5f4"><div class="ttname"><a href="classModel.html#a25e8d7772730703ade5494b22c07b5f4">Model::SetCamera</a></div><div class="ttdeci">void SetCamera(Camera *pCamera)</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00146">Model.h:146</a></div></div>
+<div class="ttc" id="classModel_html_a133759be2a6c9e97c1b2bfcb5805dfbf"><div class="ttname"><a href="classModel.html#a133759be2a6c9e97c1b2bfcb5805dfbf">Model::GetRotation</a></div><div class="ttdeci">vec3 GetRotation()</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00109">Model.h:109</a></div></div>
+<div class="ttc" id="Shader_8h_html"><div class="ttname"><a href="Shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="classModel_html_a9f3bce5f65223c059d02caa659024735"><div class="ttname"><a href="classModel.html#a9f3bce5f65223c059d02caa659024735">Model::VertexArrayObjectId</a></div><div class="ttdeci">GLuint VertexArrayObjectId</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00163">Model.h:163</a></div></div>
+<div class="ttc" id="classModel_html_ad4d748f79834d8b061e782085e69d268"><div class="ttname"><a href="classModel.html#ad4d748f79834d8b061e782085e69d268">Model::SetPosition</a></div><div class="ttdeci">void SetPosition(vec3 position)</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00101">Model.h:101</a></div></div>
+<div class="ttc" id="classModel_html_a28b7b8f403649681caa91bc96eb778ab"><div class="ttname"><a href="classModel.html#a28b7b8f403649681caa91bc96eb778ab">Model::GetPosition</a></div><div class="ttdeci">vec3 GetPosition()</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00094">Model.h:94</a></div></div>
+<div class="ttc" id="GLFWManager_8cpp_html_aec1f5518405938829bbfe4533aabd907"><div class="ttname"><a href="GLFWManager_8cpp.html#aec1f5518405938829bbfe4533aabd907">pCamera</a></div><div class="ttdeci">Camera * pCamera</div><div class="ttdef"><b>Definition:</b> <a href="GLFWManager_8cpp_source.html#l00007">GLFWManager.cpp:7</a></div></div>
+<div class="ttc" id="classVertex3_html"><div class="ttname"><a href="classVertex3.html">Vertex3</a></div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00018">Model.h:18</a></div></div>
+<div class="ttc" id="classModel_html_a15c20279d5a700de23850331d34f5f31"><div class="ttname"><a href="classModel.html#a15c20279d5a700de23850331d34f5f31">Model::SetScale</a></div><div class="ttdeci">void SetScale(vec3 scale)</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00131">Model.h:131</a></div></div>
+<div class="ttc" id="classModel_html_ae3b375de5f6df4faf74a95d64748e048"><div class="ttname"><a href="classModel.html#ae3b375de5f6df4faf74a95d64748e048">Model::Model</a></div><div class="ttdeci">Model()</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00057">Model.h:57</a></div></div>
+<div class="ttc" id="classModel_html"><div class="ttname"><a href="classModel.html">Model</a></div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00034">Model.h:34</a></div></div>
+<div class="ttc" id="classModel_html_a92c3ecff556ec07b51d39e992432e866"><div class="ttname"><a href="classModel.html#a92c3ecff556ec07b51d39e992432e866">Model::camera</a></div><div class="ttdeci">Camera * camera</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00172">Model.h:172</a></div></div>
+<div class="ttc" id="classModel_html_a787759894d827fc75282e4426d480dcb"><div class="ttname"><a href="classModel.html#a787759894d827fc75282e4426d480dcb">Model::Rotation</a></div><div class="ttdeci">vec3 Rotation</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00167">Model.h:167</a></div></div>
+<div class="ttc" id="classModel_html_aadf4b5c79c601c90005dcac322467d60"><div class="ttname"><a href="classModel.html#aadf4b5c79c601c90005dcac322467d60">Model::IndexLength</a></div><div class="ttdeci">GLint IndexLength</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00160">Model.h:160</a></div></div>
+<div class="ttc" id="classModel_html_a2409f2c869a747ea60c16ff27869aa55"><div class="ttname"><a href="classModel.html#a2409f2c869a747ea60c16ff27869aa55">Model::Vertices</a></div><div class="ttdeci">Vertex3 * Vertices</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00157">Model.h:157</a></div></div>
+<div class="ttc" id="classModel_html_a8081c51254a13f86723373ce1acd51a8"><div class="ttname"><a href="classModel.html#a8081c51254a13f86723373ce1acd51a8">Model::VerticesLength</a></div><div class="ttdeci">GLint VerticesLength</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00159">Model.h:159</a></div></div>
+<div class="ttc" id="classCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="Camera_8h_source.html#l00014">Camera.h:14</a></div></div>
+<div class="ttc" id="classModel_html_a5bf9c158801011b41afe39b058bff8f7"><div class="ttname"><a href="classModel.html#a5bf9c158801011b41afe39b058bff8f7">Model::IndexData</a></div><div class="ttdeci">GLubyte * IndexData</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00158">Model.h:158</a></div></div>
+<div class="ttc" id="classModel_html_ac2a36219a66f4c2f08b85104dab059ee"><div class="ttname"><a href="classModel.html#ac2a36219a66f4c2f08b85104dab059ee">Model::Position</a></div><div class="ttdeci">vec3 Position</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00166">Model.h:166</a></div></div>
+<div class="ttc" id="classModel_html_a8c6429a35a1376657357e6e770470f13"><div class="ttname"><a href="classModel.html#a8c6429a35a1376657357e6e770470f13">Model::GetCamera</a></div><div class="ttdeci">Camera * GetCamera()</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00139">Model.h:139</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cab694c3d106f0550c8829c9bcd0a4b9.html">Headers</a></li><li class="navelem"><a class="el" href="Model_8h.html">Model.h</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:22 para CubeRubick por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

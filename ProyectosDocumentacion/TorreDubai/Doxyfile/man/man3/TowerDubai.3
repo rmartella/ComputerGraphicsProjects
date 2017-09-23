@@ -1,0 +1,250 @@
+.TH "TowerDubai" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TowerDubai \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TowerDubai\&.h>\fP
+.SS "M茅todos p煤blicos"
+
+.in +1c
+.ti -1c
+.RI "\fBTowerDubai\fP (int numeLevels, \fBModel\fP *\fBmodelStruct\fP, \fBModelEnvironment\fP *\fBmodelEnvironment\fP)"
+.br
+.ti -1c
+.RI "float \fBgetDistanceForTranslate\fP (std::vector< \fBMesh::Mesh::MeshEntry\fP > *meshEntryesPtr)"
+.br
+.ti -1c
+.RI "void \fBcreateLevelsTower\fP ()"
+.br
+.ti -1c
+.RI "void \fBrender\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTowerTransform\fP (glm::mat4 *\fBtowerTransform\fP)"
+.br
+.ti -1c
+.RI "void \fBrotateLevel\fP (float giro, int level)"
+.br
+.ti -1c
+.RI "void \fBcordinateRotation\fP (float rotInc)"
+.br
+.ti -1c
+.RI "virtual \fB~TowerDubai\fP ()"
+.br
+.ti -1c
+.RI "float \fBgetHeightLevel\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetHeightLevel\fP (float \fBheightLevel\fP)"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "int \fBnumLevels\fP"
+.br
+.ti -1c
+.RI "float \fBheightLevel\fP"
+.br
+.ti -1c
+.RI "\fBModel\fP * \fBmodelStruct\fP"
+.br
+.ti -1c
+.RI "\fBModelEnvironment\fP * \fBmodelEnvironment\fP"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBtowerTransform\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBTowerLevel\fP * > * \fBlistLevelsTower\fP"
+.br
+.in -1c
+.SH "Descripci贸n detallada"
+.PP 
+Clase que construye y proporciona las rotaciones de la torre\&. 
+.PP
+Definici贸n en la l铆nea 20 del archivo TowerDubai\&.h\&.
+.SH "Documentaci贸n del constructor y destructor"
+.PP 
+.SS "TowerDubai::TowerDubai (intnumeLevels, \fBModel\fP *modelStruct, \fBModelEnvironment\fP *modelEnvironment)"
+Constructor de torre\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fInumeLevels\fP N鷐ero de niveles\&. 
+.br
+\fImodelStruct\fP Modelo que no refleja\&. 
+.br
+\fImodelEnvironment\fP Modelo que refleja el ambiente\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 18 del archivo TowerDubai\&.cpp\&.
+.PP
+Hace referencia a listLevelsTower, modelEnvironment, modelStruct y numLevels\&.
+.SS "TowerDubai::~TowerDubai ()\fC [virtual]\fP"
+Destructor de clase\&. 
+.PP
+Definici贸n en la l铆nea 168 del archivo TowerDubai\&.cpp\&.
+.PP
+Hace referencia a ModelEnvironment::Destroy(), Model::Destroy(), listLevelsTower, modelEnvironment y modelStruct\&.
+.SH "Documentaci贸n de las funciones miembro"
+.PP 
+.SS "void TowerDubai::cordinateRotation (floatrotInc)"
+M閠odo que coordina las rotaciones de los niveles\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIrotInc\fP Incremento que debe hacer a la rotaci髇\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 141 del archivo TowerDubai\&.cpp\&.
+.PP
+Hace referencia a TowerLevel::getAngleRotMax(), TowerLevel::getDirection(), TowerLevel::getGiroAct(), i, listLevelsTower, numLevels, rotateLevel(), TowerLevel::setDirection() y TowerLevel::setGiroAct()\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void TowerDubai::createLevelsTower ()"
+M閠odo que crea e inicializa proceduralmente los niveles de la torre\&. 
+.PP
+Definici贸n en la l铆nea 61 del archivo TowerDubai\&.cpp\&.
+.PP
+Hace referencia a f, heightLevel, i, listLevelsTower, modelEnvironment, modelStruct, numLevels, offset, TowerLevel::setAngleRotMax(), TowerLevel::setGiroAct() y TowerLevel::setLevelTransform()\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "float TowerDubai::getDistanceForTranslate (std::vector< \fBMesh::Mesh::MeshEntry\fP > *meshEntryesPtr)"
+Obtiene la trnaslaci髇 que debe tener la torre en cada nivel\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fImeshEntryesPtr\fP 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 30 del archivo TowerDubai\&.cpp\&.
+.PP
+Hace referencia a aisgl_max, aisgl_min, i y j\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "float TowerDubai::getHeightLevel () const\fC [inline]\fP"
+Obtiene la altura del nivel\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Altura del nivel\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 75 del archivo TowerDubai\&.h\&.
+.PP
+Hace referencia a heightLevel\&.
+.SS "void TowerDubai::render ()"
+M閠odo que renderiza todos lo niveles de la torre\&. 
+.PP
+Definici贸n en la l铆nea 108 del archivo TowerDubai\&.cpp\&.
+.PP
+Hace referencia a i, listLevelsTower, numLevels y towerTransform\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void TowerDubai::rotateLevel (floatgiro, intlevel)"
+Rota un nivel un epsiolon\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIgiro\fP Incremento\&. 
+.br
+\fIlevel\fP Nivel\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 121 del archivo TowerDubai\&.cpp\&.
+.PP
+Hace referencia a f y listLevelsTower\&.
+.PP
+Referenciado por cordinateRotation()\&.
+.SS "void TowerDubai::setHeightLevel (floatheightLevel)\fC [inline]\fP"
+Setter para la altura del nivel\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIheightLevel\fP Altura del nivel\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 83 del archivo TowerDubai\&.h\&.
+.PP
+Hace referencia a heightLevel\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void TowerDubai::setTowerTransform (glm::mat4 *towerTransform)\fC [inline]\fP"
+Setter para la matriz de transformaci髇 de toda la torre\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fItowerTransform\fP Matriz de transformaci髇 de toda la torre\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 51 del archivo TowerDubai\&.h\&.
+.PP
+Hace referencia a towerTransform\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SH "Documentaci贸n de los datos miembro"
+.PP 
+.SS "float TowerDubai::heightLevel\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 90 del archivo TowerDubai\&.h\&.
+.PP
+Referenciado por createLevelsTower(), getHeightLevel() y setHeightLevel()\&.
+.SS "std::vector<\fBTowerLevel\fP*>* TowerDubai::listLevelsTower\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 94 del archivo TowerDubai\&.h\&.
+.PP
+Referenciado por cordinateRotation(), createLevelsTower(), render(), rotateLevel(), TowerDubai() y ~TowerDubai()\&.
+.SS "\fBModelEnvironment\fP* TowerDubai::modelEnvironment\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 92 del archivo TowerDubai\&.h\&.
+.PP
+Referenciado por createLevelsTower(), TowerDubai() y ~TowerDubai()\&.
+.SS "\fBModel\fP* TowerDubai::modelStruct\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 91 del archivo TowerDubai\&.h\&.
+.PP
+Referenciado por createLevelsTower(), TowerDubai() y ~TowerDubai()\&.
+.SS "int TowerDubai::numLevels\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 89 del archivo TowerDubai\&.h\&.
+.PP
+Referenciado por cordinateRotation(), createLevelsTower(), render() y TowerDubai()\&.
+.SS "glm::mat4* TowerDubai::towerTransform\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 93 del archivo TowerDubai\&.h\&.
+.PP
+Referenciado por render() y setTowerTransform()\&.
+
+.SH "Autor"
+.PP 
+Generado autom谩ticamente por Doxygen para Pistasdeprofunidad del c贸digo fuente\&.

@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Picking: Fichero Fuente src/FontTypeRendering.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Picking
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>PÃ¡gina&#160;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('FontTypeRendering_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>&apos;defines&apos;</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">FontTypeRendering.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="FontTypeRendering_8cpp.html">Ir a la documentaciÃ³n de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * FontTypeRendering.cpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 14/05/2015</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: rey</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="FontTypeRendering_8h.html">Headers/FontTypeRendering.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespaceFontTypeRendering.html">   10</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="classFontTypeRendering_1_1FontTypeRendering.html">FontTypeRendering</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// String del Vertex shader para fuentes.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Solo se posiciona los vertices en x, y</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// Obtiene las corrdenadas UV para la fuente a pintar.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *FontTypeRendering::VERTEX_SHADER = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="stringliteral">&quot;#version 410 core\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="stringliteral">&quot;in vec4 in_Position;\n&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="stringliteral">&quot;out vec2 texCoords;\n&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="stringliteral">&quot;void main(void) {\n&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="stringliteral">&quot;    gl_Position = vec4(in_Position.xy, 0, 1);\n&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="stringliteral">&quot;    texCoords = in_Position.zw;\n&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="stringliteral">&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// String del Fragment shader a renderizar.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *FontTypeRendering::FRAGMENT_SHADER = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="stringliteral">&quot;#version 410 core\n&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="stringliteral">&quot;precision highp float;\n&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="stringliteral">&quot;uniform sampler2D tex;\n&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="stringliteral">&quot;uniform vec4 color;\n&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="stringliteral">&quot;in vec2 texCoords;\n&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="stringliteral">&quot;out vec4 fragColor;\n&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="stringliteral">&quot;void main(void) {\n&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="stringliteral">&quot;    fragColor = vec4(1, 1, 1, texture(tex, texCoords).r) * color;\n&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="stringliteral">&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classFontTypeRendering_1_1FontTypeRendering.html#a3544732a9afbe8afea6e660f570ace41">   40</a></span>&#160;<a class="code" href="classFontTypeRendering_1_1FontTypeRendering.html">FontTypeRendering::FontTypeRendering</a>(<span class="keywordtype">double</span> ScreenWidth, <span class="keywordtype">double</span> ScreenHeight) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  FontTypeRendering::SCALEX = 2.0 / ScreenWidth;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  FontTypeRendering::SCALEY = 2.0 / ScreenHeight;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classFontTypeRendering_1_1FontTypeRendering.html#a12bb3ce1911db3c6660abb4e852c063a">   48</a></span>&#160;FontTypeRendering::~FontTypeRendering() {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classFontTypeRendering_1_1FontTypeRendering.html#a5fd42be37fdc6c8d6688999d6f13f374">   55</a></span>&#160;<span class="keywordtype">void</span> FontTypeRendering::Initialize() {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">// Se limpian las caras, buffers para textra y shaders.</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">auto</span> cleanup = [&amp;]() {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    FT_Done_Face(face);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    FT_Done_FreeType(ft_lib);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    glDeleteTextures(1, &amp;texture);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    glDeleteSamplers(1, &amp;sampler);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    glDeleteBuffers(1, &amp;vbo);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    glDeleteVertexArrays(1, &amp;vao);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    glDeleteShader(vs);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    glDeleteShader(fs);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    glDeleteProgram(program);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  };</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// Inicializa y carga la face de freetype</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">if</span> (FT_Init_FreeType(&amp;ft_lib) != 0) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;Couldn&#39;t initialize FreeType library\n&quot;</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    cleanup();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> exit(-1);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">// Se le indica a dicha cara el archivo ttf que se utilizará.   if (FT_New_Face(ft_lib, &quot;Fonts/arial.ttf&quot;, 0, &amp;face) != 0) {
+    std::cerr &lt;&lt; &quot;Unable to load arial.ttf\n&quot;;
+    cleanup();
+    return exit(-1);
+  }
+  // Inicialización de los VBOs para la textura.
+  glGenBuffers(1, &amp;vbo);
+  glGenVertexArrays(1, &amp;vao);
+  glGenTextures(1, &amp;texture);
+  glGenSamplers(1, &amp;sampler);
+  glSamplerParameteri(sampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+  glSamplerParameteri(sampler, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+  glSamplerParameteri(sampler, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+  glSamplerParameteri(sampler, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+  // Inicialización, compilación y enlace de los shaders.
+  vs = glCreateShader(GL_VERTEX_SHADER);
+  glShaderSource(vs, 1, &amp;FontTypeRendering::VERTEX_SHADER, 0);
+  glCompileShader(vs);
+  fs = glCreateShader(GL_FRAGMENT_SHADER);
+  glShaderSource(fs, 1, &amp;FontTypeRendering::FRAGMENT_SHADER, 0);
+  glCompileShader(fs);
+  program = glCreateProgram();
+  glAttachShader(program, vs);
+  glAttachShader(program, fs);
+  glLinkProgram(program);
+  // Se colocan para que sea translucido el color de la textura, solo pinte las letras.
+  glEnable(GL_BLEND);
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+  glUseProgram(program);
+  // Se enlace la posicion de los vertices de la textura.
+  glBindAttribLocation(program, 0, &quot;in_Position&quot;);
+  // Obtiene los Ids de los shaders para textura y color.
+  texUniform = glGetUniformLocation(program, &quot;tex&quot;);
+  colorUniform = glGetUniformLocation(program, &quot;color&quot;);
+}
+
+/**
+ * Método que renderiza un texto en el espacio de la pantalla.
+ * @param str Cadena a renderizar.
+ * @param x Coordenada en X.
+ * @param y Coordenada en Y.
+ */
+void FontTypeRendering::render(const std::string &amp;str, float x, float y) {
+  // Se activa la unidad de textura.
+  glActiveTexture(GL_TEXTURE0);
+  // Se enalza hacia el tipo de textura.
+  glBindTexture(GL_TEXTURE_2D, texture);
+  glBindSampler(0, sampler);
+  glBindVertexArray(vao);
+  glEnableVertexAttribArray(0);
+  glBindBuffer(GL_ARRAY_BUFFER, vbo);
+  glUseProgram(program);
+  // Se envia el color de la fuente.
+  glUniform4f(colorUniform, 0.5, 1.0, 1.0, 1.0);
+  // Se envia la textura a utilizar.
+  glUniform1i(texUniform, 0);
+  // Se coloca el tamaño en Pixeles de la fuente.
+  FT_Set_Pixel_Sizes(face, 0, 12);
+  // Renderiza la fuente.
+  render_text(str, face, x, y, SCALEX, SCALEY);
+  // Se desabilita el sample de textura.
+  glBindSampler(0, 0);
+}
+
+/**
+ * Método que se encarga de renderizar la textura.
+ * @param str Texto a dibujar.
+ * @param face Cara TTF
+ * @param x Coordenada x espacio de la pantalla.
+ * @param y Coordenada y espacio de la pantalla.
+ * @param sx Escala en X de la fuente
+ * @param sy Escala en y de la fuente
+ */
+void FontTypeRendering::render_text(const std::string &amp;str, FT_Face face,
+                                    float x, float y, float sx, float sy) {
+  glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+  const FT_GlyphSlot glyph = face-&gt;glyph;
+
+  bool IsCullEnabled = glIsEnabled(GL_CULL_FACE);
+
+  glDisable(GL_CULL_FACE);
+
+  for (auto c : str) {
+    if (FT_Load_Char(face, c, FT_LOAD_RENDER) != 0)
+      continue;
+
+    // Se envia los datos de la textura.
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, glyph-&gt;bitmap.width,
+                 glyph-&gt;bitmap.rows, 0, GL_RED, GL_UNSIGNED_BYTE,
+                 glyph-&gt;bitmap.buffer);
+
+    // Se generan las posiciones en el espació de la pantall.
+    const float vx = x + glyph-&gt;bitmap_left * sx;
+    const float vy = y + glyph-&gt;bitmap_top * sy;
+    // Se generan las escalas del mapeo.
+    const float w = glyph-&gt;bitmap.width * sx;
+    const float h = glyph-&gt;bitmap.rows * sy;
+
+    // Generan las posiciones y coordenadas de mapeo.
+    struct {
+      float x, y, s, t;
+    } data[6] = { { vx, vy, 0, 0 }, { vx, vy - h, 0, 1 }, { vx + w, vy, 1, 0 },
+        { vx + w, vy, 1, 0 }, { vx, vy - h, 0, 1 }, { vx + w, vy - h, 1, 1 } };
+
+    // Se genera el buffer de los vertices.
+    glBufferData(GL_ARRAY_BUFFER, 24 * sizeof(float), data,
+    GL_DYNAMIC_DRAW);
+    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
+
+    x += (glyph-&gt;advance.x &gt;&gt; 6) * sx;
+    y += (glyph-&gt;advance.y &gt;&gt; 6) * sy;
+  }
+
+  glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+
+  if (IsCullEnabled) {
+    glEnable(GL_CULL_FACE);
+  }
+}
+
+} /* namespace FontTypeRendering */
+</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">if</span> (FT_New_Face(ft_lib, <span class="stringliteral">&quot;Fonts/arial.ttf&quot;</span>, 0, &amp;face) != 0) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;Unable to load arial.ttf\n&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    cleanup();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> exit(-1);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">// Inicialización de los VBOs para la textura.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  glGenBuffers(1, &amp;vbo);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  glGenVertexArrays(1, &amp;vao);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  glGenTextures(1, &amp;texture);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  glGenSamplers(1, &amp;sampler);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  glSamplerParameteri(sampler, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  glSamplerParameteri(sampler, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  glSamplerParameteri(sampler, GL_TEXTURE_MIN_FILTER, GL_LINEAR);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  glSamplerParameteri(sampler, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// Inicialización, compilación y enlace de los shaders.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  vs = glCreateShader(GL_VERTEX_SHADER);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  glShaderSource(vs, 1, &amp;FontTypeRendering::VERTEX_SHADER, 0);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  glCompileShader(vs);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  fs = glCreateShader(GL_FRAGMENT_SHADER);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  glShaderSource(fs, 1, &amp;FontTypeRendering::FRAGMENT_SHADER, 0);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  glCompileShader(fs);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  program = glCreateProgram();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  glAttachShader(program, vs);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  glAttachShader(program, fs);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  glLinkProgram(program);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// Se colocan para que sea translucido el color de la textura, solo pinte las letras.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  glEnable(GL_BLEND);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  glUseProgram(program);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">// Se enlace la posicion de los vertices de la textura.</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  glBindAttribLocation(program, 0, <span class="stringliteral">&quot;in_Position&quot;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="comment">// Obtiene los Ids de los shaders para textura y color.</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  texUniform = glGetUniformLocation(program, <span class="stringliteral">&quot;tex&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  colorUniform = glGetUniformLocation(program, <span class="stringliteral">&quot;color&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classFontTypeRendering_1_1FontTypeRendering.html#a0e12606bcd7a88975e91f9e8e58959b7">  117</a></span>&#160;<span class="keywordtype">void</span> FontTypeRendering::render(<span class="keyword">const</span> std::string &amp;str, <span class="keywordtype">float</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628acab1e15e82c5976bfb476ddfe145263c">x</a>, <span class="keywordtype">float</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ae1f9fdb8b786c63efc4ce44eeacd17f2">y</a>) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">// Se activa la unidad de textura.</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  glActiveTexture(GL_TEXTURE0);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="comment">// Se enalza hacia el tipo de textura.</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  glBindTexture(GL_TEXTURE_2D, texture);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  glBindSampler(0, sampler);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  glBindVertexArray(vao);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  glEnableVertexAttribArray(0);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  glBindBuffer(GL_ARRAY_BUFFER, vbo);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  glUseProgram(program);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// Se envia el color de la fuente.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  glUniform4f(colorUniform, 0.5, 1.0, 1.0, 1.0);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="comment">// Se envia la textura a utilizar.</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  glUniform1i(texUniform, 0);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="comment">// Se coloca el tamaño en Pixeles de la fuente.</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  FT_Set_Pixel_Sizes(face, 0, 12);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="comment">// Renderiza la fuente.</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  render_text(str, face, x, y, SCALEX, SCALEY);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="comment">// Se desabilita el sample de textura.</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  glBindSampler(0, 0);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classFontTypeRendering_1_1FontTypeRendering.html#a8dc6656fd5cea8b40a91fdb3aef03e76">  148</a></span>&#160;<span class="keywordtype">void</span> FontTypeRendering::render_text(<span class="keyword">const</span> std::string &amp;str, FT_Face face,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                    <span class="keywordtype">float</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628acab1e15e82c5976bfb476ddfe145263c">x</a>, <span class="keywordtype">float</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ae1f9fdb8b786c63efc4ce44eeacd17f2">y</a>, <span class="keywordtype">float</span> sx, <span class="keywordtype">float</span> sy) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keyword">const</span> FT_GlyphSlot glyph = face-&gt;glyph;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">bool</span> IsCullEnabled = glIsEnabled(GL_CULL_FACE);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  glDisable(GL_CULL_FACE);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a776304400122408ea717dde9234fdd2a">c</a> : str) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (FT_Load_Char(face, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a776304400122408ea717dde9234fdd2a">c</a>, FT_LOAD_RENDER) != 0)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="comment">// Se envia los datos de la textura.</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    glTexImage2D(GL_TEXTURE_2D, 0, GL_R8, glyph-&gt;bitmap.width,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                 glyph-&gt;bitmap.rows, 0, GL_RED, GL_UNSIGNED_BYTE,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                 glyph-&gt;bitmap.buffer);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">// Se generan las posiciones en el espació de la pantall.</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> vx = x + glyph-&gt;bitmap_left * sx;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> vy = y + glyph-&gt;bitmap_top * sy;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="comment">// Se generan las escalas del mapeo.</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ac2ee9060499a346927bbe8470a68e274">w</a> = glyph-&gt;bitmap.width * sx;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a83684c9789c44b5b6edca6ae4ae1eeb5">h</a> = glyph-&gt;bitmap.rows * sy;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">// Generan las posiciones y coordenadas de mapeo.</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="keywordtype">float</span> <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628acab1e15e82c5976bfb476ddfe145263c">x</a>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ae1f9fdb8b786c63efc4ce44eeacd17f2">y</a>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628aa8e9307350b1e20521f37dfe5268df55">s</a>, <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a0247320c476fffeaa81ffa7836e08dee">t</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    } data[6] = { { vx, vy, 0, 0 }, { vx, vy - <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a83684c9789c44b5b6edca6ae4ae1eeb5">h</a>, 0, 1 }, { vx + <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ac2ee9060499a346927bbe8470a68e274">w</a>, vy, 1, 0 },</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        { vx + <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ac2ee9060499a346927bbe8470a68e274">w</a>, vy, 1, 0 }, { vx, vy - <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a83684c9789c44b5b6edca6ae4ae1eeb5">h</a>, 0, 1 }, { vx + <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ac2ee9060499a346927bbe8470a68e274">w</a>, vy - <a class="code" href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a83684c9789c44b5b6edca6ae4ae1eeb5">h</a>, 1, 1 } };</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">// Se genera el buffer de los vertices.</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    glBufferData(GL_ARRAY_BUFFER, 24 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>), data,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    GL_DYNAMIC_DRAW);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    glDrawArrays(GL_TRIANGLES, 0, 6);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    x += (glyph-&gt;advance.x &gt;&gt; 6) * sx;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    y += (glyph-&gt;advance.y &gt;&gt; 6) * sy;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  glPixelStorei(GL_UNPACK_ALIGNMENT, 4);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordflow">if</span> (IsCullEnabled) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    glEnable(GL_CULL_FACE);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;} <span class="comment">/* namespace FontTypeRendering */</span></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628ac2ee9060499a346927bbe8470a68e274"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ac2ee9060499a346927bbe8470a68e274">w</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00063">InputManager.h:63</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a0247320c476fffeaa81ffa7836e08dee"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a0247320c476fffeaa81ffa7836e08dee">t</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00057">InputManager.h:57</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a776304400122408ea717dde9234fdd2a"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a776304400122408ea717dde9234fdd2a">c</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00023">InputManager.h:23</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628aa8e9307350b1e20521f37dfe5268df55"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628aa8e9307350b1e20521f37dfe5268df55">s</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00055">InputManager.h:55</a></div></div>
+<div class="ttc" id="classFontTypeRendering_1_1FontTypeRendering_html"><div class="ttname"><a href="classFontTypeRendering_1_1FontTypeRendering.html">FontTypeRendering::FontTypeRendering</a></div><div class="ttdef"><b>Definition:</b> <a href="FontTypeRendering_8h_source.html#l00024">FontTypeRendering.h:24</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628ae1f9fdb8b786c63efc4ce44eeacd17f2"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628ae1f9fdb8b786c63efc4ce44eeacd17f2">y</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00067">InputManager.h:67</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628a83684c9789c44b5b6edca6ae4ae1eeb5"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628a83684c9789c44b5b6edca6ae4ae1eeb5">h</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00033">InputManager.h:33</a></div></div>
+<div class="ttc" id="FontTypeRendering_8h_html"><div class="ttname"><a href="FontTypeRendering_8h.html">FontTypeRendering.h</a></div></div>
+<div class="ttc" id="InputManager_8h_html_ac9097db8d46246207fd466b9ed9e1628acab1e15e82c5976bfb476ddfe145263c"><div class="ttname"><a href="InputManager_8h.html#ac9097db8d46246207fd466b9ed9e1628acab1e15e82c5976bfb476ddfe145263c">x</a></div><div class="ttdef"><b>Definition:</b> <a href="InputManager_8h_source.html#l00065">InputManager.h:65</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="FontTypeRendering_8cpp.html">FontTypeRendering.cpp</a></li>
+    <li class="footer">Generado el Martes, 26 de Mayo de 2015 07:25:11 para Picking por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

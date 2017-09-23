@@ -1,0 +1,12 @@
+<map id="src/Headers/Camera.h" name="src/Headers/Camera.h">
+<area shape="rect" id="node2" href="$Camera_8cpp.html" title="src/Camera.cpp" alt="" coords="109,80,224,107"/>
+<area shape="rect" id="node3" href="$InputManager_8h.html" title="src/Headers/InputManager.h" alt="" coords="248,80,435,107"/>
+<area shape="rect" id="node7" href="$Main_8h.html" title="src/Headers/Main.h" alt="" coords="231,229,365,256"/>
+<area shape="rect" id="node10" href="$Model_8h.html" title="src/Headers/Model.h" alt="" coords="510,80,652,107"/>
+<area shape="rect" id="node4" href="$WindowManager_8h.html" title="src/Headers/WindowManager.h" alt="" coords="5,155,211,181"/>
+<area shape="rect" id="node9" href="$InputManager_8cpp.html" title="src/InputManager.cpp" alt="" coords="286,155,433,181"/>
+<area shape="rect" id="node5" href="$GLFWManager_8h.html" title="src/Headers/GLFWManager.h" alt="" coords="10,229,205,256"/>
+<area shape="rect" id="node6" href="$GLFWManager_8cpp.html" title="src/GLFWManager.cpp" alt="" coords="49,304,207,331"/>
+<area shape="rect" id="node8" href="$Main_8cpp.html" title="src/Main.cpp" alt="" coords="250,304,347,331"/>
+<area shape="rect" id="node11" href="$Model_8cpp.html" title="src/Model.cpp" alt="" coords="560,155,664,181"/>
+</map>

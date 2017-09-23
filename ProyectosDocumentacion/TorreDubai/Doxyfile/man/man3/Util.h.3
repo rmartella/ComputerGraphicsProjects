@@ -1,0 +1,69 @@
+.TH "src/Headers/Util.h" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Headers/Util.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "'defines'"
+
+.in +1c
+.ti -1c
+.RI "#define \fBARRAY_SIZE_IN_ELEMENTS\fP(\fBa\fP)   (sizeof(\fBa\fP)/sizeof(\fBa\fP[0]))"
+.br
+.ti -1c
+.RI "#define \fBINVALID_OGL_VALUE\fP   0xffffffff"
+.br
+.ti -1c
+.RI "#define \fBSAFE_DELETE\fP(\fBp\fP)   if (\fBp\fP) { delete \fBp\fP; \fBp\fP = NULL; }"
+.br
+.ti -1c
+.RI "#define \fBARRAY_SIZE_IN_ELEMENTS\fP(\fBa\fP)   (sizeof(\fBa\fP)/sizeof(\fBa\fP[0]))"
+.br
+.ti -1c
+.RI "#define \fBaisgl_min\fP(\fBx\fP, \fBy\fP)   (\fBx\fP<\fBy\fP?x:y)"
+.br
+.ti -1c
+.RI "#define \fBaisgl_max\fP(\fBx\fP, \fBy\fP)   (\fBy\fP>\fBx\fP?y:x)"
+.br
+.in -1c
+.SH "Documentaci贸n de los 'defines'"
+.PP 
+.SS "#define aisgl_max(\fBx\fP, \fBy\fP)   (\fBy\fP>\fBx\fP?y:x)"
+
+.PP
+Definici贸n en la l铆nea 28 del archivo Util\&.h\&.
+.PP
+Referenciado por TowerDubai::getDistanceForTranslate()\&.
+.SS "#define aisgl_min(\fBx\fP, \fBy\fP)   (\fBx\fP<\fBy\fP?x:y)"
+
+.PP
+Definici贸n en la l铆nea 27 del archivo Util\&.h\&.
+.PP
+Referenciado por TowerDubai::getDistanceForTranslate()\&.
+.SS "#define ARRAY_SIZE_IN_ELEMENTS(\fBa\fP)   (sizeof(\fBa\fP)/sizeof(\fBa\fP[0]))"
+Macro que obtiene el tama駉 de un arreglo\&. 
+.PP
+Definici贸n en la l铆nea 25 del archivo Util\&.h\&.
+.PP
+Referenciado por CubemapTexture::Load()\&.
+.SS "#define ARRAY_SIZE_IN_ELEMENTS(\fBa\fP)   (sizeof(\fBa\fP)/sizeof(\fBa\fP[0]))"
+Macro que obtiene el tama駉 de un arreglo\&. 
+.PP
+Definici贸n en la l铆nea 25 del archivo Util\&.h\&.
+.SS "#define INVALID_OGL_VALUE   0xffffffff"
+Constane que indica valores invalidos para OpenGL\&. 
+.PP
+Definici贸n en la l铆nea 18 del archivo Util\&.h\&.
+.PP
+Referenciado por Mesh::Mesh::MeshEntry::MeshEntry() y Mesh::Mesh::MeshEntry::~MeshEntry()\&.
+.SS "#define SAFE_DELETE(\fBp\fP)   if (\fBp\fP) { delete \fBp\fP; \fBp\fP = NULL; }"
+Macro que libera la memoria eliminando la instancia p\&. 
+.PP
+Definici贸n en la l铆nea 23 del archivo Util\&.h\&.
+.PP
+Referenciado por Mesh::Mesh::Clear()\&.
+.SH "Autor"
+.PP 
+Generado autom谩ticamente por Doxygen para Pistasdeprofunidad del c贸digo fuente\&.

@@ -1,0 +1,157 @@
+.TH "InputManager" 3 "Martes, 26 de Mayo de 2015" "Origami" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InputManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <InputManager\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "void \fBKeyPressed\fP (\fBInputCodes\fP code)"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetGMousePos\fP (glm::ivec2 *\fBgMousePos\fP)"
+.br
+.ti -1c
+.RI "glm::ivec2 * \fBgetGMousePos\fP ()"
+.br
+.ti -1c
+.RI "void \fBMouseMoved\fP (float mouseX, float mouseY)"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "glm::ivec2 * \fBgMousePos\fP = NULL"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que maneja las entradas del usuario y se lo envia a la c�mara\&. 
+.PP
+Definición en la línea 76 del archivo InputManager\&.h\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "\fBCamera\fP* InputManager::GetCamera ()\fC [inline]\fP"
+Obtiene la c�mara que usa el manejador de entradas\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 96 del archivo InputManager\&.h\&.
+.PP
+Hace referencia a camera\&.
+.SS "glm::ivec2* InputManager::getGMousePos ()\fC [inline]\fP"
+Obtiene la posici�n actual del mouse que tiene el manejador\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Posici�n del mouse\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 112 del archivo InputManager\&.h\&.
+.PP
+Hace referencia a gMousePos\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void InputManager::KeyPressed (\fBInputCodes\fPcode)"
+Envia a la c�mara el tipo de entrada para que la c�mara se mueva\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIcode\fP Codigos de entrada\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 8 del archivo InputManager\&.cpp\&.
+.PP
+Hace referencia a a, A, camera, d, D, TimeManager::DeltaTime, Down, e, E, Camera::GetSpeed(), TimeManager::Instance(), Left, Camera::MoveCamera(), q, Q, Right, s, S, Up, w y W\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void InputManager::MouseMoved (floatmouseX, floatmouseY)"
+M�todo que maneja los moviemientos del mouse\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImouseX\fP Posici�n del mouse en X\&. 
+.br
+\fImouseY\fP Posici�n del mouse en Y 
+.RE
+.PP
+
+.PP
+Definición en la línea 63 del archivo InputManager\&.cpp\&.
+.PP
+Hace referencia a camera y Camera::SetViewByMouse()\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void InputManager::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Setter de la c�mara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpCamera\fP c�mara del manejador\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 89 del archivo InputManager\&.h\&.
+.PP
+Hace referencia a camera y pCamera\&.
+.PP
+Referenciado por main()\&.
+.SS "void InputManager::SetGMousePos (glm::ivec2 *gMousePos)\fC [inline]\fP"
+Setter de la posici�n de la c�mara\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIgMousePos\fP Posici�n del mouse\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 104 del archivo InputManager\&.h\&.
+.PP
+Hace referencia a gMousePos\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* InputManager::camera\fC [protected]\fP"
+
+.PP
+Definición en la línea 124 del archivo InputManager\&.h\&.
+.PP
+Referenciado por GetCamera(), KeyPressed(), MouseMoved() y SetCamera()\&.
+.SS "glm::ivec2* InputManager::gMousePos = NULL\fC [protected]\fP"
+
+.PP
+Definición en la línea 125 del archivo InputManager\&.h\&.
+.PP
+Referenciado por getGMousePos() y SetGMousePos()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Origami del código fuente\&.

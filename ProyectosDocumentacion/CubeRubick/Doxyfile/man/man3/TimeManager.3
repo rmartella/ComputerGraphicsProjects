@@ -1,0 +1,153 @@
+.TH "TimeManager" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TimeManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TimeManager\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "double \fBCalculateFrameRate\fP (bool writeToConsole)"
+.br
+.ti -1c
+.RI "double \fBGetTime\fP ()"
+.br
+.ti -1c
+.RI "void \fBSleep\fP (int milliseconds)"
+.br
+.in -1c
+.SS "Métodos públicos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static \fBTimeManager\fP & \fBInstance\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "double \fBDeltaTime\fP = 0"
+.br
+.ti -1c
+.RI "double \fBCurrentTime\fP = 0"
+.br
+.in -1c
+.SS "Métodos privados"
+
+.in +1c
+.ti -1c
+.RI "\fBTimeManager\fP ()"
+.br
+.ti -1c
+.RI "\fBTimeManager\fP (\fBTimeManager\fP const &)"
+.br
+.ti -1c
+.RI "\fBTimeManager\fP & \fBoperator=\fP (\fBTimeManager\fP const &)"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Se usa una clase dise�ada como singleton que calcula el frame rate, solo se crea una sola vez la instancia y se usa muchas veces 
+.PP
+Definición en la línea 11 del archivo TimeManager\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "TimeManager::TimeManager ()\fC [inline]\fP, \fC [private]\fP"
+
+.PP
+Definición en la línea 55 del archivo TimeManager\&.h\&.
+.SS "TimeManager::TimeManager (\fBTimeManager\fP const &)\fC [private]\fP"
+
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "double TimeManager::CalculateFrameRate (boolwriteToConsole = \fCfalse\fP)"
+Metodo que calcula el frame rate\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIwriteToConsole\fP bandera que indica si se requiere loggear a la consola el valor que se obtiene 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+FPS
+.RE
+.PP
+Metodo que calcula el frame rate\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIwriteToConsole\fP bandera que indica si se requiere logear a la consola el valor que se obtiene 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+FPS 
+.RE
+.PP
+
+.PP
+Definición en la línea 10 del archivo TimeManager\&.cpp\&.
+.PP
+Hace referencia a f\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "double TimeManager::GetTime ()"
+M�todo que obtien el tiempo actual en milisegundos 
+.PP
+\fBDevuelve:\fP
+.RS 4
+tiempo 
+.RE
+.PP
+
+.PP
+Definición en la línea 58 del archivo TimeManager\&.cpp\&.
+.SS "static \fBTimeManager\fP& TimeManager::Instance ()\fC [inline]\fP, \fC [static]\fP"
+Funcion que obtiene la instancia del manejador del tiempo, o en caso que sea la primera vez que se invoca crea la instancia\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Instancia del manejador de tiempos\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 19 del archivo TimeManager\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop() y InputManager::KeyPressed()\&.
+.SS "\fBTimeManager\fP& TimeManager::operator= (\fBTimeManager\fP const &)\fC [private]\fP"
+
+.SS "void TimeManager::Sleep (intms)"
+M�todo que pausa un cierto tiempo en milisegundo el hilo que se esta ejecutando 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImilliseconds\fP tiempo de pausa 
+.RE
+.PP
+
+.PP
+Definición en la línea 73 del archivo TimeManager\&.cpp\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "double TimeManager::CurrentTime = 0"
+Tiempo actual en milisegundos 
+.PP
+Definición en la línea 52 del archivo TimeManager\&.h\&.
+.SS "double TimeManager::DeltaTime = 0"
+Atributo que almacene el tiempo total que a pasdo desde el ultimo frame 
+.PP
+Definición en la línea 47 del archivo TimeManager\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop() y InputManager::KeyPressed()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para CubeRubick del código fuente\&.

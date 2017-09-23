@@ -1,0 +1,47 @@
+.TH "src/Headers/ObjectCreation.h" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Headers/ObjectCreation.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include 'Model\&.h'\fP
+.br
+
+.SS "Clases"
+
+.in +1c
+.ti -1c
+.RI "class \fBObjectCreation\fP"
+.br
+.in -1c
+.SS "'defines'"
+
+.in +1c
+.ti -1c
+.RI "#define \fBaisgl_min\fP(\fBx\fP, \fBy\fP)   (\fBx\fP<\fBy\fP?x:y)"
+.br
+.ti -1c
+.RI "#define \fBaisgl_max\fP(\fBx\fP, \fBy\fP)   (\fBy\fP>\fBx\fP?y:x)"
+.br
+.in -1c
+.SH "Documentación de los 'defines'"
+.PP 
+.SS "#define aisgl_max(\fBx\fP, \fBy\fP)   (\fBy\fP>\fBx\fP?y:x)"
+
+.PP
+Definición en la línea 18 del archivo ObjectCreation\&.h\&.
+.PP
+Referenciado por ObjectCreation::createModelTransform()\&.
+.SS "#define aisgl_min(\fBx\fP, \fBy\fP)   (\fBx\fP<\fBy\fP?x:y)"
+Macros para comprar dos numeros\&. 
+.PP
+Definición en la línea 17 del archivo ObjectCreation\&.h\&.
+.PP
+Referenciado por ObjectCreation::createModelTransform()\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

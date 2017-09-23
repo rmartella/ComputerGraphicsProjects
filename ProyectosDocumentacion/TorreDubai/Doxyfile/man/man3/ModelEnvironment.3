@@ -1,0 +1,534 @@
+.TH "ModelEnvironment" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelEnvironment \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ModelEnvironment\&.h>\fP
+.SS "M茅todos p煤blicos"
+
+.in +1c
+.ti -1c
+.RI "\fBModelEnvironment\fP ()"
+.br
+.ti -1c
+.RI "\fB~ModelEnvironment\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (\fBVertex3\fP vertices[], GLuint \fBIndexData\fP[], int length, int indexLength, std::string strVertex, std::string strFragment)"
+.br
+.ti -1c
+.RI "void \fBRender\fP (mat4 parentModelMatrix)"
+.br
+.ti -1c
+.RI "vec3 \fBGetPosition\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetPosition\fP (vec3 position)"
+.br
+.ti -1c
+.RI "vec3 \fBGetRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetRotation\fP (vec3 rotation)"
+.br
+.ti -1c
+.RI "vec3 \fBGetScale\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetScale\fP (vec3 scale)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBSetLightAtrr\fP (\fBLightAtrr\fP *\fBlightAtrr\fP)"
+.br
+.ti -1c
+.RI "GLint \fBGetVariable\fP (std::string strVariable)"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNumLights\fP (int \fBnumLights\fP)"
+.br
+.ti -1c
+.RI "void \fBSetCubemapTexture\fP (\fBCubemapTexture\fP *\fBcubemapTexture\fP)"
+.br
+.ti -1c
+.RI "void \fBSetMesh\fP (\fBMesh::Mesh\fP *\fBmesh\fP)"
+.br
+.ti -1c
+.RI "\fBMesh::Mesh\fP * \fBGetMesh\fP ()"
+.br
+.in -1c
+.SS "Atributos p煤blicos est谩ticos"
+
+.in +1c
+.ti -1c
+.RI "static const GLuint \fBkVertexIndex\fP = 0"
+.br
+.ti -1c
+.RI "static const GLuint \fBkColorIndex\fP = 1"
+.br
+.ti -1c
+.RI "static const GLuint \fBkTextureIndex\fP = 2"
+.br
+.ti -1c
+.RI "static const GLuint \fBkNormalIndex\fP = 3"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBVertex3\fP * \fBVertices\fP"
+.br
+.ti -1c
+.RI "GLuint * \fBIndexData\fP"
+.br
+.ti -1c
+.RI "GLint \fBVerticesLength\fP"
+.br
+.ti -1c
+.RI "GLint \fBIndexLength\fP"
+.br
+.ti -1c
+.RI "GLuint \fBVertexBufferId\fP"
+.br
+.ti -1c
+.RI "GLuint \fBIndexDataId\fP"
+.br
+.ti -1c
+.RI "GLuint \fBVertexArrayObjectId\fP"
+.br
+.ti -1c
+.RI "vec3 \fBPosition\fP"
+.br
+.ti -1c
+.RI "vec3 \fBRotation\fP"
+.br
+.ti -1c
+.RI "vec3 \fBScale\fP"
+.br
+.ti -1c
+.RI "\fBShader\fP \fBshader\fP"
+.br
+.ti -1c
+.RI "\fBLightAtrr\fP * \fBlightAtrr\fP = NULL"
+.br
+.ti -1c
+.RI "\fBLightingTechnique\fP * \fBlightingTechnique\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "\fBMesh::Mesh\fP * \fBmesh\fP = NULL"
+.br
+.ti -1c
+.RI "\fBCubemapTexture\fP * \fBcubemapTexture\fP"
+.br
+.ti -1c
+.RI "int \fBnumLights\fP"
+.br
+.in -1c
+.SH "Descripci贸n detallada"
+.PP 
+Clase que representa el environment\&. 
+.PP
+Definici贸n en la l铆nea 22 del archivo ModelEnvironment\&.h\&.
+.SH "Documentaci贸n del constructor y destructor"
+.PP 
+.SS "ModelEnvironment::ModelEnvironment ()\fC [inline]\fP"
+Constructor\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fImode\fP Primitva de renderizaci髇\&. 
+.br
+\fIFileName\fP Nombre de textura\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 47 del archivo ModelEnvironment\&.h\&.
+.PP
+Hace referencia a f\&.
+.SS "ModelEnvironment::~ModelEnvironment ()\fC [inline]\fP"
+Libera la memoria que utiliza el modelo\&. 
+.PP
+Definici贸n en la l铆nea 53 del archivo ModelEnvironment\&.h\&.
+.SH "Documentaci贸n de las funciones miembro"
+.PP 
+.SS "void ModelEnvironment::Destroy ()"
+Libera lo VBOs y VAOs que utiliza el modelo\&. 
+.PP
+Definici贸n en la l铆nea 173 del archivo ModelEnvironment\&.cpp\&.
+.PP
+Hace referencia a camera, Shader::Destroy(), IndexDataId, shader, VertexArrayObjectId y VertexBufferId\&.
+.PP
+Referenciado por GLApplication::Destroy() y TowerDubai::~TowerDubai()\&.
+.SS "\fBCamera\fP* ModelEnvironment::GetCamera ()\fC [inline]\fP"
+Obtiene la c醡ara y tener acceso a las matrices de vista y proyecci髇\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 129 del archivo ModelEnvironment\&.h\&.
+.SS "\fBMesh::Mesh\fP* ModelEnvironment::GetMesh ()\fC [inline]\fP"
+Obtiene la malla que esta asociada al modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Malla del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 188 del archivo ModelEnvironment\&.h\&.
+.SS "vec3 ModelEnvironment::GetPosition ()\fC [inline]\fP"
+Obtiene la posici髇 del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 84 del archivo ModelEnvironment\&.h\&.
+.SS "vec3 ModelEnvironment::GetRotation ()\fC [inline]\fP"
+Obtiene la rotaci髇 del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Rotaci髇 del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 99 del archivo ModelEnvironment\&.h\&.
+.SS "vec3 ModelEnvironment::GetScale ()\fC [inline]\fP"
+Obtiene la escala del objeto\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Escala de objeto\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 114 del archivo ModelEnvironment\&.h\&.
+.SS "GLint ModelEnvironment::GetVariable (std::stringstrVariable)"
+Obtiene una variable uniform del shader que esta asociado al modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIstrVariable\fP Nombre de variable\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Indice de la variable\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 166 del archivo ModelEnvironment\&.cpp\&.
+.PP
+Hace referencia a Shader::GetVariable() y shader\&.
+.SS "void ModelEnvironment::Initialize (\fBVertex3\fPvertices[], GLuintindexData[], intlength, intindexLength, std::stringstrVertex, std::stringstrFragment)"
+Inicializaci髇 del modelo, si antes de la inicializaci髇 se le pasa un Objeto \fBMesh::Mesh\fP, la inicializaci髇 la delegara a Assimp\&. Del mismo modo si se le settea antes de la llamada a este metodo luces, valida que los shaders este configurados para la iluminaci髇\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIvertices\fP Vertices del modelo\&. 
+.br
+\fIIndexData\fP Indices del modelo\&. 
+.br
+\fIlength\fP Tama駉 de Vertices\&. 
+.br
+\fIindexLength\fP Tama駉 de indices\&. 
+.br
+\fIstrVertex\fP Nombre del archivo del vertex \fBShader\fP que se asocia al modelo\&. 
+.br
+\fIstrFragment\fP Nombre del archivo Fragment \fBShader\fP que se asocia al modelo\&.
+.RE
+.PP
+Inicializaci髇 del modelo, si antes de la inicializaci髇 se le pasa un Objeto \fBMesh::Mesh\fP, la inicializaci髇 la delegara a Assimp\&. Del mismo modo si se le settea antes de la llamada a este metodo luces, valida que los shaders este configurados para la iluminaci髇\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIvertices\fP Vertices del modelo\&. 
+.br
+\fIIndexData\fP Indices del modelo\&. 
+.br
+\fIlength\fP Tama駉 de Vertices\&. 
+.br
+\fIindexLength\fP Tama駉 de indices\&. 
+.br
+\fIstrVertex\fP Vertex \fBShader\fP que se asocia al modelo\&. 
+.br
+\fIstrFragment\fP Fragment \fBShader\fP que se asocia al modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 15 del archivo ModelEnvironment\&.cpp\&.
+.PP
+Hace referencia a IndexData, IndexDataId, IndexLength, LightingTechnique::Init(), Shader::Initialize(), kNormalIndex, kTextureIndex, kVertexIndex, lightAtrr, lightingTechnique, Mesh::Mesh::LoadMesh(), mesh, numLights, LightingTechnique::SetShader(), shader, VertexArrayObjectId, VertexBufferId, Vertices y VerticesLength\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void ModelEnvironment::Render (mat4parentModelMatrix)"
+Renderiza un modelo 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIparentModelMatrix\fP Matrix de herencia, si no se requiere herenc韆 Se debe enviar una matriz unitaria\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 80 del archivo ModelEnvironment\&.cpp\&.
+.PP
+Hace referencia a CubemapTexture::Bind(), camera, cubemapTexture, Camera::GetPosition(), Camera::GetProjectionMatrix(), Shader::GetVariable(), Camera::GetViewMatrix(), IndexLength, kNormalIndex, kTextureIndex, kVertexIndex, lightAtrr, lightingTechnique, mesh, Position, Mesh::Mesh::Render(), Rotation, Scale, LightingTechnique::SetAttrLight(), LightingTechnique::SetEyeWorldPos(), Shader::SetMatrix4(), shader, Shader::TurnOff(), Shader::TurnOn() y VertexArrayObjectId\&.
+.PP
+Referenciado por TowerLevel::render()\&.
+.SS "void ModelEnvironment::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Settea una c醡ara al modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIpCamera\fP c醡ara del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 136 del archivo ModelEnvironment\&.h\&.
+.PP
+Hace referencia a pCamera\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void ModelEnvironment::SetCubemapTexture (\fBCubemapTexture\fP *cubemapTexture)\fC [inline]\fP"
+Setter Cube \fBTexture\fP\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIcubemapTexture\fP 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 172 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void ModelEnvironment::SetLightAtrr (\fBLightAtrr\fP *lightAtrr)\fC [inline]\fP"
+Setter de los parametros de iluminaci髇 para el objeto\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIlightAtrr\fP Atributos de iluminaci髇\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 144 del archivo ModelEnvironment\&.h\&.
+.SS "void ModelEnvironment::SetMesh (\fBMesh::Mesh\fP *mesh)\fC [inline]\fP"
+Setter para la malla de un modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fImesh\fP 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 180 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void ModelEnvironment::setNumLights (intnumLights)\fC [inline]\fP"
+Setter del numero de luces que estan asociados al modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fInumLights\fP N鷐ero de luces\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 164 del archivo ModelEnvironment\&.h\&.
+.SS "void ModelEnvironment::SetPosition (vec3position)\fC [inline]\fP"
+Setter de la posici髇 del modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIposition\fP Posici髇 del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 91 del archivo ModelEnvironment\&.h\&.
+.SS "void ModelEnvironment::SetRotation (vec3rotation)\fC [inline]\fP"
+Setter para la rotaci髇 del modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIrotation\fP Rotaci髇 del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 106 del archivo ModelEnvironment\&.h\&.
+.SS "void ModelEnvironment::SetScale (vec3scale)\fC [inline]\fP"
+Setter de la escala del objeto\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIEscala\fP de objeto\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 121 del archivo ModelEnvironment\&.h\&.
+.SH "Documentaci贸n de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* ModelEnvironment::camera\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 212 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Destroy() y Render()\&.
+.SS "\fBCubemapTexture\fP* ModelEnvironment::cubemapTexture\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 214 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "GLuint* ModelEnvironment::IndexData\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 195 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "GLuint ModelEnvironment::IndexDataId\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 199 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Destroy() y Initialize()\&.
+.SS "GLint ModelEnvironment::IndexLength\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 197 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "const GLuint ModelEnvironment::kColorIndex = 1\fC [static]\fP"
+Indices para los colores\&. 
+.PP
+Definici贸n en la l铆nea 32 del archivo ModelEnvironment\&.h\&.
+.SS "const GLuint ModelEnvironment::kNormalIndex = 3\fC [static]\fP"
+Indices para las normales\&. 
+.PP
+Definici贸n en la l铆nea 40 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "const GLuint ModelEnvironment::kTextureIndex = 2\fC [static]\fP"
+Indices para las texturas\&. 
+.PP
+Definici贸n en la l铆nea 36 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "const GLuint ModelEnvironment::kVertexIndex = 0\fC [static]\fP"
+Indice para vertices\&. 
+.PP
+Definici贸n en la l铆nea 28 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "\fBLightAtrr\fP* ModelEnvironment::lightAtrr = NULL\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 209 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "\fBLightingTechnique\fP* ModelEnvironment::lightingTechnique\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 210 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "\fBMesh::Mesh\fP* ModelEnvironment::mesh = NULL\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 213 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "int ModelEnvironment::numLights\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 215 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "vec3 ModelEnvironment::Position\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 203 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "vec3 ModelEnvironment::Rotation\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 204 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "vec3 ModelEnvironment::Scale\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 205 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "\fBShader\fP ModelEnvironment::shader\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 207 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Destroy(), GetVariable(), Initialize() y Render()\&.
+.SS "GLuint ModelEnvironment::VertexArrayObjectId\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 200 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Destroy(), Initialize() y Render()\&.
+.SS "GLuint ModelEnvironment::VertexBufferId\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 198 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Destroy() y Initialize()\&.
+.SS "\fBVertex3\fP* ModelEnvironment::Vertices\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 194 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "GLint ModelEnvironment::VerticesLength\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 196 del archivo ModelEnvironment\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+
+.SH "Autor"
+.PP 
+Generado autom谩ticamente por Doxygen para Pistasdeprofunidad del c贸digo fuente\&.

@@ -1,0 +1,613 @@
+.TH "Model" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Model \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Model\&.h>\fP
+.SS "M茅todos p煤blicos"
+
+.in +1c
+.ti -1c
+.RI "\fBModel\fP (GLenum \fBmode\fP, std::string \fBFileName\fP)"
+.br
+.ti -1c
+.RI "\fB~Model\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (\fBVertex3\fP vertices[], GLuint \fBIndexData\fP[], int length, int indexLength, std::string strVertex, std::string strFragment)"
+.br
+.ti -1c
+.RI "void \fBRender\fP (mat4 parentModelMatrix)"
+.br
+.ti -1c
+.RI "vec3 \fBGetPosition\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetPosition\fP (vec3 position)"
+.br
+.ti -1c
+.RI "vec3 \fBGetRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetRotation\fP (vec3 rotation)"
+.br
+.ti -1c
+.RI "vec3 \fBGetScale\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetScale\fP (vec3 scale)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBSetLightAtrr\fP (\fBLightAtrr\fP *\fBlightAtrr\fP)"
+.br
+.ti -1c
+.RI "GLint \fBGetVariable\fP (std::string strVariable)"
+.br
+.ti -1c
+.RI "void \fBSetMesh\fP (\fBMesh::Mesh\fP *\fBmesh\fP)"
+.br
+.ti -1c
+.RI "\fBMesh::Mesh\fP * \fBGetMesh\fP ()"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.ti -1c
+.RI "GLuint * \fBgetIndexData\fP () const "
+.br
+.ti -1c
+.RI "GLint \fBgetIndexLength\fP () const "
+.br
+.ti -1c
+.RI "const \fBVertex3\fP * \fBgetVertices\fP () const "
+.br
+.ti -1c
+.RI "GLint \fBgetVerticesLength\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetNumLights\fP (int \fBnumLights\fP)"
+.br
+.in -1c
+.SS "Atributos p煤blicos est谩ticos"
+
+.in +1c
+.ti -1c
+.RI "static const GLuint \fBkVertexIndex\fP = 0"
+.br
+.ti -1c
+.RI "static const GLuint \fBkColorIndex\fP = 1"
+.br
+.ti -1c
+.RI "static const GLuint \fBkTextureIndex\fP = 2"
+.br
+.ti -1c
+.RI "static const GLuint \fBkNormalIndex\fP = 3"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBVertex3\fP * \fBVertices\fP"
+.br
+.ti -1c
+.RI "GLuint * \fBIndexData\fP"
+.br
+.ti -1c
+.RI "GLint \fBVerticesLength\fP"
+.br
+.ti -1c
+.RI "GLint \fBIndexLength\fP"
+.br
+.ti -1c
+.RI "GLuint \fBVertexBufferId\fP"
+.br
+.ti -1c
+.RI "GLuint \fBIndexDataId\fP"
+.br
+.ti -1c
+.RI "GLuint \fBVertexArrayObjectId\fP"
+.br
+.ti -1c
+.RI "vec3 \fBPosition\fP"
+.br
+.ti -1c
+.RI "vec3 \fBRotation\fP"
+.br
+.ti -1c
+.RI "vec3 \fBScale\fP"
+.br
+.ti -1c
+.RI "\fBShader\fP \fBshader\fP"
+.br
+.ti -1c
+.RI "\fBLightAtrr\fP * \fBlightAtrr\fP = NULL"
+.br
+.ti -1c
+.RI "\fBLightingTechnique\fP * \fBlightingTechnique\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "\fBTexture::Texture\fP * \fBtextura\fP = NULL"
+.br
+.ti -1c
+.RI "GLuint \fBgSampler\fP"
+.br
+.ti -1c
+.RI "\fBMesh::Mesh\fP * \fBmesh\fP = NULL"
+.br
+.ti -1c
+.RI "GLenum \fBmode\fP"
+.br
+.ti -1c
+.RI "std::string \fBFileName\fP"
+.br
+.ti -1c
+.RI "int \fBnumLights\fP"
+.br
+.in -1c
+.SH "Descripci贸n detallada"
+.PP 
+La clase modelo maneja la inicializaci髇, renderizado y destrucci髇 del objetos 
+.PP
+Definici贸n en la l铆nea 40 del archivo Model\&.h\&.
+.SH "Documentaci贸n del constructor y destructor"
+.PP 
+.SS "Model::Model (GLenummode, std::stringFileName)\fC [inline]\fP"
+Constructor, inicializa el modelo con un tipo de primitiva y el archivo de textura\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fImode\fP Primitva de renderizaci髇\&. 
+.br
+\fIFileName\fP Nombre de textura\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 65 del archivo Model\&.h\&.
+.PP
+Hace referencia a f\&.
+.SS "Model::~Model ()\fC [inline]\fP"
+Libera la memoria que utiliza el modelo\&. 
+.PP
+Definici贸n en la l铆nea 73 del archivo Model\&.h\&.
+.SH "Documentaci贸n de las funciones miembro"
+.PP 
+.SS "void Model::Destroy ()"
+Libera lo VBOs y VAOs que utiliza el modelo\&. 
+.PP
+Definici贸n en la l铆nea 174 del archivo Model\&.cpp\&.
+.PP
+Hace referencia a camera, Shader::Destroy(), IndexDataId, shader, VertexArrayObjectId y VertexBufferId\&.
+.PP
+Referenciado por GLApplication::Destroy()\&.
+.SS "\fBCamera\fP* Model::GetCamera ()\fC [inline]\fP"
+Obtiene la c醡ara y tener acceso a las matrices de vista y proyecci髇\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 149 del archivo Model\&.h\&.
+.SS "GLuint* Model::getIndexData () const\fC [inline]\fP"
+Obtiene los indices asociados al modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Indices del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 200 del archivo Model\&.h\&.
+.SS "GLint Model::getIndexLength () const\fC [inline]\fP"
+Obtiene el tama駉 del arreglo de indices\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Tama駉 de arreglo de indices\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 208 del archivo Model\&.h\&.
+.SS "\fBMesh::Mesh\fP* Model::GetMesh ()\fC [inline]\fP"
+Obtiene la malla que esta asociada al modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Malla del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 187 del archivo Model\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "vec3 Model::GetPosition ()\fC [inline]\fP"
+Obtiene la posici髇 del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 104 del archivo Model\&.h\&.
+.SS "vec3 Model::GetRotation ()\fC [inline]\fP"
+Obtiene la rotaci髇 del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Rotaci髇 del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 119 del archivo Model\&.h\&.
+.SS "vec3 Model::GetScale ()\fC [inline]\fP"
+Obtiene la escala del objeto\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Escala de objeto\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 134 del archivo Model\&.h\&.
+.SS "GLint Model::GetVariable (std::stringstrVariable)"
+Obtiene una variable uniform del shader que esta asociado al modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIstrVariable\fP Nombre de variable\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Indice de la variable\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 167 del archivo Model\&.cpp\&.
+.PP
+Hace referencia a Shader::GetVariable() y shader\&.
+.PP
+Referenciado por Render()\&.
+.SS "const \fBVertex3\fP* Model::getVertices () const\fC [inline]\fP"
+Obtiene los vertices del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Vertices del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 216 del archivo Model\&.h\&.
+.SS "GLint Model::getVerticesLength () const\fC [inline]\fP"
+Obtiene el tama駉 del arreglo de vertices\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Tama駉 de arreglo de vertices\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 224 del archivo Model\&.h\&.
+.SS "void Model::Initialize (\fBVertex3\fPvertices[], GLuintindexData[], intlength, intindexLength, std::stringstrVertex, std::stringstrFragment)"
+Inicializaci髇 del modelo, si antes de la inicializaci髇 se le pasa un Objeto \fBMesh::Mesh\fP, la inicializaci髇 la delegara a Assimp\&. Del mismo modo si se le settea antes de la llamada a este metodo luces, valida que los shaders este configurados para la iluminaci髇\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIvertices\fP Vertices del modelo\&. 
+.br
+\fIIndexData\fP Indices del modelo\&. 
+.br
+\fIlength\fP Tama駉 de Vertices\&. 
+.br
+\fIindexLength\fP Tama駉 de indices\&. 
+.br
+\fIstrVertex\fP Nombre del archivo del vertex \fBShader\fP que se asocia al modelo\&. 
+.br
+\fIstrFragment\fP Nombre del archivo Fragment \fBShader\fP que se asocia al modelo\&.
+.RE
+.PP
+Inicializaci髇 del modelo, si antes de la inicializaci髇 se le pasa un Objeto \fBMesh::Mesh\fP, la inicializaci髇 la delegara a Assimp\&. Del mismo modo si se le settea antes de la llamada a este metodo luces, valida que los shaders este configurados para la iluminaci髇\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIvertices\fP Vertices del modelo\&. 
+.br
+\fIIndexData\fP Indices del modelo\&. 
+.br
+\fIlength\fP Tama駉 de Vertices\&. 
+.br
+\fIindexLength\fP Tama駉 de indices\&. 
+.br
+\fIstrVertex\fP Vertex \fBShader\fP que se asocia al modelo\&. 
+.br
+\fIstrFragment\fP Fragment \fBShader\fP que se asocia al modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 15 del archivo Model\&.cpp\&.
+.PP
+Hace referencia a FileName, IndexData, IndexDataId, IndexLength, LightingTechnique::Init(), Shader::Initialize(), kNormalIndex, kTextureIndex, kVertexIndex, lightAtrr, lightingTechnique, Texture::Texture::Load(), Mesh::Mesh::LoadMesh(), mesh, numLights, LightingTechnique::SetShader(), shader, textura, VertexArrayObjectId, VertexBufferId, Vertices y VerticesLength\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop() y GLApplication::Initialize()\&.
+.SS "void Model::Render (mat4parentModelMatrix)"
+Renderiza un modelo 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIparentModelMatrix\fP Matrix de herencia, si no se requiere herenc韆 Se debe enviar una matriz unitaria\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 86 del archivo Model\&.cpp\&.
+.PP
+Hace referencia a Texture::Texture::Bind(), camera, Camera::GetPosition(), Camera::GetProjectionMatrix(), Shader::GetVariable(), GetVariable(), Camera::GetViewMatrix(), gSampler, IndexLength, kNormalIndex, kTextureIndex, kVertexIndex, lightAtrr, lightingTechnique, mesh, mode, Position, Mesh::Mesh::Render(), Rotation, Scale, LightingTechnique::SetAttrLight(), LightingTechnique::SetEyeWorldPos(), Shader::SetMatrix4(), shader, textura, Shader::TurnOff(), Shader::TurnOn() y VertexArrayObjectId\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void Model::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Settea una c醡ara al modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIpCamera\fP c醡ara del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 156 del archivo Model\&.h\&.
+.PP
+Hace referencia a pCamera\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop() y GLApplication::Initialize()\&.
+.SS "void Model::SetLightAtrr (\fBLightAtrr\fP *lightAtrr)\fC [inline]\fP"
+Setter de los parametros de iluminaci髇 para el objeto\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIlightAtrr\fP Atributos de iluminaci髇\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 164 del archivo Model\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void Model::SetMesh (\fBMesh::Mesh\fP *mesh)\fC [inline]\fP"
+Setter para la malla de un modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fImesh\fP 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 179 del archivo Model\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void Model::setNumLights (intnumLights)\fC [inline]\fP"
+Setter del numero de luces que estan asociados al modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fInumLights\fP N鷐ero de luces\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 232 del archivo Model\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void Model::SetPosition (vec3position)\fC [inline]\fP"
+Setter de la posici髇 del modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIposition\fP Posici髇 del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 111 del archivo Model\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void Model::SetRotation (vec3rotation)\fC [inline]\fP"
+Setter para la rotaci髇 del modelo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIrotation\fP Rotaci髇 del modelo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 126 del archivo Model\&.h\&.
+.SS "void Model::SetScale (vec3scale)\fC [inline]\fP"
+Setter de la escala del objeto\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIEscala\fP de objeto\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 141 del archivo Model\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SH "Documentaci贸n de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* Model::camera\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 256 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy() y Render()\&.
+.SS "std::string Model::FileName\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 264 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "GLuint Model::gSampler\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 259 del archivo Model\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "GLuint* Model::IndexData\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 239 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "GLuint Model::IndexDataId\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 243 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy() y Initialize()\&.
+.SS "GLint Model::IndexLength\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 241 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "const GLuint Model::kColorIndex = 1\fC [static]\fP"
+Indices para los colores\&. 
+.PP
+Definici贸n en la l铆nea 50 del archivo Model\&.h\&.
+.SS "const GLuint Model::kNormalIndex = 3\fC [static]\fP"
+Indices para las normales\&. 
+.PP
+Definici贸n en la l铆nea 58 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "const GLuint Model::kTextureIndex = 2\fC [static]\fP"
+Indices para las texturas\&. 
+.PP
+Definici贸n en la l铆nea 54 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "const GLuint Model::kVertexIndex = 0\fC [static]\fP"
+Indice para vertices\&. 
+.PP
+Definici贸n en la l铆nea 46 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "\fBLightAtrr\fP* Model::lightAtrr = NULL\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 253 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "\fBLightingTechnique\fP* Model::lightingTechnique\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 254 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "\fBMesh::Mesh\fP* Model::mesh = NULL\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 261 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "GLenum Model::mode\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 263 del archivo Model\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "int Model::numLights\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 266 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "vec3 Model::Position\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 247 del archivo Model\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "vec3 Model::Rotation\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 248 del archivo Model\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "vec3 Model::Scale\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 249 del archivo Model\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "\fBShader\fP Model::shader\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 251 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy(), GetVariable(), Initialize() y Render()\&.
+.SS "\fBTexture::Texture\fP* Model::textura = NULL\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 258 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "GLuint Model::VertexArrayObjectId\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 244 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy(), Initialize() y Render()\&.
+.SS "GLuint Model::VertexBufferId\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 242 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy() y Initialize()\&.
+.SS "\fBVertex3\fP* Model::Vertices\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 238 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "GLint Model::VerticesLength\fC [protected]\fP"
+
+.PP
+Definici贸n en la l铆nea 240 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+
+.SH "Autor"
+.PP 
+Generado autom谩ticamente por Doxygen para Picking del c贸digo fuente\&.

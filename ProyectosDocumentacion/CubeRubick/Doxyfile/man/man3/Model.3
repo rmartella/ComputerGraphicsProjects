@@ -1,0 +1,381 @@
+.TH "Model" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Model \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Model\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBModel\fP ()"
+.br
+.ti -1c
+.RI "\fB~Model\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (\fBVertex3\fP vertices[], GLubyte \fBIndexData\fP[], int length, int indexLength, std::string strVertex, std::string strFragment)"
+.br
+.ti -1c
+.RI "void \fBRender\fP (mat4 parentModelMatrix)"
+.br
+.ti -1c
+.RI "vec3 \fBGetPosition\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetPosition\fP (vec3 position)"
+.br
+.ti -1c
+.RI "vec3 \fBGetRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetRotation\fP (vec3 rotation)"
+.br
+.ti -1c
+.RI "vec3 \fBGetScale\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetScale\fP (vec3 scale)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static const GLuint \fBkVertexIndex\fP = 0"
+.br
+.ti -1c
+.RI "static const GLuint \fBkColorIndex\fP = 1"
+.br
+.ti -1c
+.RI "static const GLuint \fBkTextureIndex\fP = 2"
+.br
+.ti -1c
+.RI "static const GLuint \fBkNormalIndex\fP = 3"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBVertex3\fP * \fBVertices\fP"
+.br
+.ti -1c
+.RI "GLubyte * \fBIndexData\fP"
+.br
+.ti -1c
+.RI "GLint \fBVerticesLength\fP"
+.br
+.ti -1c
+.RI "GLint \fBIndexLength\fP"
+.br
+.ti -1c
+.RI "GLuint \fBVertexBufferId\fP"
+.br
+.ti -1c
+.RI "GLuint \fBIndexDataId\fP"
+.br
+.ti -1c
+.RI "GLuint \fBVertexArrayObjectId\fP"
+.br
+.ti -1c
+.RI "vec3 \fBPosition\fP"
+.br
+.ti -1c
+.RI "vec3 \fBRotation\fP"
+.br
+.ti -1c
+.RI "vec3 \fBScale\fP"
+.br
+.ti -1c
+.RI "\fBShader\fP \fBshader\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+La clase modelo maneja la inicializaci�n, renderizado y destrucci�n del objetos 
+.PP
+Definición en la línea 34 del archivo Model\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "Model::Model ()\fC [inline]\fP"
+Constructor\&. 
+.PP
+Definición en la línea 57 del archivo Model\&.h\&.
+.PP
+Hace referencia a f\&.
+.SS "Model::~Model ()\fC [inline]\fP"
+Libera la memoria que utiliza el modelo\&. 
+.PP
+Definición en la línea 63 del archivo Model\&.h\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void Model::Destroy ()"
+Libera lo VBOs y VAOs que utiliza el modelo\&. 
+.PP
+Definición en la línea 114 del archivo Model\&.cpp\&.
+.PP
+Hace referencia a camera, Shader::Destroy(), IndexDataId, shader, VertexArrayObjectId y VertexBufferId\&.
+.PP
+Referenciado por GLApplication::Destroy()\&.
+.SS "\fBCamera\fP* Model::GetCamera ()\fC [inline]\fP"
+Obtiene la c�mara y tener acceso a las matrices de vista y proyecci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 139 del archivo Model\&.h\&.
+.SS "vec3 Model::GetPosition ()\fC [inline]\fP"
+Obtiene la posici�n del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 94 del archivo Model\&.h\&.
+.SS "vec3 Model::GetRotation ()\fC [inline]\fP"
+Obtiene la rotaci�n del modelo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Rotaci�n del modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 109 del archivo Model\&.h\&.
+.SS "vec3 Model::GetScale ()\fC [inline]\fP"
+Obtiene la escala del objeto\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Escala de objeto\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 124 del archivo Model\&.h\&.
+.SS "void Model::Initialize (\fBVertex3\fPvertices[], GLubyteindexData[], intlength, intindexLength, std::stringstrVertex, std::stringstrFragment)"
+Inicializaci�n del modelo, si antes de la inicializaci�n se le pasa un Objeto Mesh::Mesh, la inicializaci�n la delegara a Assimp\&. Del mismo modo si se le settea antes de la llamada a este metodo luces, valida que los shaders este configurados para la iluminaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIvertices\fP Vertices del modelo\&. 
+.br
+\fIIndexData\fP Indices del modelo\&. 
+.br
+\fIlength\fP Tama�o de Vertices\&. 
+.br
+\fIindexLength\fP Tama�o de indices\&. 
+.br
+\fIstrVertex\fP Nombre del archivo del vertex \fBShader\fP que se asocia al modelo\&. 
+.br
+\fIstrFragment\fP Nombre del archivo Fragment \fBShader\fP que se asocia al modelo\&.
+.RE
+.PP
+Inicializaci�n del modelo 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIvertices\fP Vertices del modelo\&. 
+.br
+\fIIndexData\fP Indices del modelo\&. 
+.br
+\fIlength\fP Tama�o de Vertices\&. 
+.br
+\fIindexLength\fP Tama�o de indices\&. 
+.br
+\fIstrVertex\fP Vertex \fBShader\fP que se asocia al modelo\&. 
+.br
+\fIstrFragment\fP Fragment \fBShader\fP que se asocia al modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 12 del archivo Model\&.cpp\&.
+.PP
+Hace referencia a IndexData, IndexDataId, IndexLength, Shader::Initialize(), kColorIndex, kVertexIndex, shader, VertexArrayObjectId, VertexBufferId, Vertices y VerticesLength\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void Model::Render (mat4parentModelMatrix)"
+Renderiza un modelo 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIparentModelMatrix\fP Matrix de herencia, si no se requiere herenc�a Se debe enviar una matriz unitaria\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 60 del archivo Model\&.cpp\&.
+.PP
+Hace referencia a camera, Camera::GetProjectionMatrix(), Shader::GetVariable(), Camera::GetViewMatrix(), IndexLength, kColorIndex, kVertexIndex, Position, Rotation, Scale, Shader::SetMatrix4(), shader, Shader::TurnOff(), Shader::TurnOn() y VertexArrayObjectId\&.
+.SS "void Model::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Settea una c�mara al modelo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpCamera\fP c�mara del modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 146 del archivo Model\&.h\&.
+.PP
+Hace referencia a pCamera\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void Model::SetPosition (vec3position)\fC [inline]\fP"
+Setter de la posici�n del modelo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIposition\fP Posici�n del modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 101 del archivo Model\&.h\&.
+.SS "void Model::SetRotation (vec3rotation)\fC [inline]\fP"
+Setter para la rotaci�n del modelo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIrotation\fP Rotaci�n del modelo\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 116 del archivo Model\&.h\&.
+.SS "void Model::SetScale (vec3scale)\fC [inline]\fP"
+Setter de la escala del objeto\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIEscala\fP de objeto\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 131 del archivo Model\&.h\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* Model::camera\fC [protected]\fP"
+
+.PP
+Definición en la línea 172 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy() y Render()\&.
+.SS "GLubyte* Model::IndexData\fC [protected]\fP"
+
+.PP
+Definición en la línea 158 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "GLuint Model::IndexDataId\fC [protected]\fP"
+
+.PP
+Definición en la línea 162 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy() y Initialize()\&.
+.SS "GLint Model::IndexLength\fC [protected]\fP"
+
+.PP
+Definición en la línea 160 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "const GLuint Model::kColorIndex = 1\fC [static]\fP"
+Indices para los colores\&. 
+.PP
+Definición en la línea 44 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "const GLuint Model::kNormalIndex = 3\fC [static]\fP"
+Indices para las normales\&. 
+.PP
+Definición en la línea 52 del archivo Model\&.h\&.
+.SS "const GLuint Model::kTextureIndex = 2\fC [static]\fP"
+Indices para las texturas\&. 
+.PP
+Definición en la línea 48 del archivo Model\&.h\&.
+.SS "const GLuint Model::kVertexIndex = 0\fC [static]\fP"
+Indice para vertices\&. 
+.PP
+Definición en la línea 40 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize() y Render()\&.
+.SS "vec3 Model::Position\fC [protected]\fP"
+
+.PP
+Definición en la línea 166 del archivo Model\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "vec3 Model::Rotation\fC [protected]\fP"
+
+.PP
+Definición en la línea 167 del archivo Model\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "vec3 Model::Scale\fC [protected]\fP"
+
+.PP
+Definición en la línea 168 del archivo Model\&.h\&.
+.PP
+Referenciado por Render()\&.
+.SS "\fBShader\fP Model::shader\fC [protected]\fP"
+
+.PP
+Definición en la línea 170 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy(), Initialize() y Render()\&.
+.SS "GLuint Model::VertexArrayObjectId\fC [protected]\fP"
+
+.PP
+Definición en la línea 163 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy(), Initialize() y Render()\&.
+.SS "GLuint Model::VertexBufferId\fC [protected]\fP"
+
+.PP
+Definición en la línea 161 del archivo Model\&.h\&.
+.PP
+Referenciado por Destroy() y Initialize()\&.
+.SS "\fBVertex3\fP* Model::Vertices\fC [protected]\fP"
+
+.PP
+Definición en la línea 157 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+.SS "GLint Model::VerticesLength\fC [protected]\fP"
+
+.PP
+Definición en la línea 159 del archivo Model\&.h\&.
+.PP
+Referenciado por Initialize()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para CubeRubick del código fuente\&.

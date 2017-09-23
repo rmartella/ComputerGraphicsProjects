@@ -1,0 +1,266 @@
+.TH "GLApplication" 3 "Martes, 26 de Mayo de 2015" "Origami" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GLApplication \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Main\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBGLApplication\fP ()"
+.br
+.ti -1c
+.RI "\fB~GLApplication\fP ()"
+.br
+.ti -1c
+.RI "int \fBGLMain\fP ()"
+.br
+.ti -1c
+.RI "\fBWindowManager\fP * \fBGetWindowManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWindowManager\fP (\fBWindowManager\fP *pWindowManager)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBSetGRotation\fP (glm::quat \fBgRotation\fP)"
+.br
+.ti -1c
+.RI "glm::quat \fBGetGRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBApplicationLoop\fP ()"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "int \fBScreenWidth\fP = 1024"
+.br
+.ti -1c
+.RI "int \fBScreenHeight\fP = 700"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBWindowManager\fP * \fBwindowManager\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "glm::quat \fBgRotation\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase principal de la aplicacion, maneja la inicializaci�n de la aplicaci�n, loop de la aplicaci�n y limpia los recursos utilizados\&. 
+.PP
+Definición en la línea 17 del archivo Main\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "GLApplication::GLApplication ()\fC [inline]\fP"
+Constructor default\&. 
+.PP
+Definición en la línea 29 del archivo Main\&.h\&.
+.SS "GLApplication::~GLApplication ()\fC [inline]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 34 del archivo Main\&.h\&.
+.PP
+Hace referencia a Destroy()\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void GLApplication::ApplicationLoop ()"
+Loop de la aplicaci�n, solo se sale de esta funci�n si el usuario pulsa Esc o cierra la ventana\&.
+.PP
+Loop de la aplicación, solo se sale de esta función si el usuario pulsa Esc o cierra la ventana\&. 
+.PP
+Definición en la línea 120 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a TimeManager::CalculateFrameRate(), TimeManager::DeltaTime, f, Model::GetPosition(), Model::GetRotation(), Model::GetScale(), gRotation, TimeManager::Instance(), WindowManager::ProcessInput(), Model::Render(), Model::SetPosition(), Model::SetRotation(), Model::SetScale(), WindowManager::SwapTheBuffers() y windowManager\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::Destroy ()"
+M�todo que hace limpieza de los recursos utilizados por la aplicaci�n\&.
+.PP
+Método que hace limpieza de los recursos utilizados por la aplicación\&. 
+.PP
+Definición en la línea 227 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a camera, WindowManager::Destroy(), Model::Destroy() y windowManager\&.
+.PP
+Referenciado por GLMain() y ~GLApplication()\&.
+.SS "\fBCamera\fP* GLApplication::GetCamera ()\fC [inline]\fP"
+Obtiene la c�mara de la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Camar\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 65 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera\&.
+.SS "glm::quat GLApplication::GetGRotation ()\fC [inline]\fP"
+Obtiene el Cuaternion actual de la escena\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Cuaternion de la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 88 del archivo Main\&.h\&.
+.PP
+Hace referencia a gRotation\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "\fBWindowManager\fP* GLApplication::GetWindowManager ()\fC [inline]\fP"
+M�todo que obtiene el manejador de ventanas de la aplicaci�n\&. Este debe ser creada antes de crear la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Manejador de ventanas\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 49 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.SS "int GLApplication::GLMain ()"
+Funcion principal de la aplicaci�n, debe de ser llamada en la funci�n \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Termino del programa\&.
+.RE
+.PP
+Funcion principal de la aplicación, debe de ser llamada en la función \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Terimno del programa\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 17 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ApplicationLoop(), Destroy() y Initialize()\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::Initialize ()"
+Inicializaci�n de la aplicaci�n\&.
+.PP
+Inicialización de la aplicación\&. 
+.PP
+Definición en la línea 34 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ambient(), Light::LightAtrr::ambient, ARRAY_SIZE_IN_ELEMENTS, black(), camera, f, i, WindowManager::Initialize(), Model::Initialize(), Light::LightAtrr::lightColor, Light::LightAtrr::lightPosW, Light::LightAtrr::materialDiffuse, Light::LightAtrr::materialEmissive, Light::LightAtrr::materialShininess, Light::LightAtrr::materialSpecular, Vertex3::normal, Camera::PositionCamera(), ScreenHeight, ScreenWidth, Model::SetCamera(), Model::SetLightAtrr(), Model::setNumLights(), Camera::SetPerspective(), white(), windowManager y Vertex3::xyz\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Setter para la c�mara de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpCamera\fP c�mara que usar� aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 72 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera y pCamera\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::SetGRotation (glm::quatgRotation)\fC [inline]\fP"
+Setter para la rotaci�n de la escena\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIgRotation\fP Cuaternion de rotaci�n de la escena 
+.RE
+.PP
+
+.PP
+Definición en la línea 80 del archivo Main\&.h\&.
+.PP
+Hace referencia a gRotation\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::SetWindowManager (\fBWindowManager\fP *pWindowManager)\fC [inline]\fP"
+M�todo que setter del manejador de ventanas de la aplicaci�n\&. Este debe ser setteada antes de inicializar el loop\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpWindowManager\fP Manejador de ventanas que usar� la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 57 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.PP
+Referenciado por main()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* GLApplication::camera\fC [protected]\fP"
+
+.PP
+Definición en la línea 115 del archivo Main\&.h\&.
+.PP
+Referenciado por Destroy(), GetCamera(), Initialize() y SetCamera()\&.
+.SS "glm::quat GLApplication::gRotation\fC [protected]\fP"
+
+.PP
+Definición en la línea 117 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GetGRotation() y SetGRotation()\&.
+.SS "int GLApplication::ScreenHeight = 700"
+
+.PP
+Definición en la línea 24 del archivo Main\&.h\&.
+.PP
+Referenciado por Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "int GLApplication::ScreenWidth = 1024"
+El ancho y alto de la ventana\&. 
+.PP
+Definición en la línea 23 del archivo Main\&.h\&.
+.PP
+Referenciado por Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "\fBWindowManager\fP* GLApplication::windowManager\fC [protected]\fP"
+
+.PP
+Definición en la línea 114 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy(), GetWindowManager(), Initialize() y SetWindowManager()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Origami del código fuente\&.

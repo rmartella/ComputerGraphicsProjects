@@ -1,0 +1,250 @@
+.TH "Picking::Picking" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Picking::Picking \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Picking\&.h>\fP
+.SS "M√©todos p√∫blicos"
+
+.in +1c
+.ti -1c
+.RI "\fBPicking\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBcamera\fP)"
+.br
+.ti -1c
+.RI "std::vector< \fBClick\fP * > * \fBGetClicks\fP ()"
+.br
+.ti -1c
+.RI "void \fBGet3DRayUnderMouse\fP (glm::mat4 modelMatrix, float \fBx\fP, float \fBy\fP, int ScreenWidth, int ScreenHeight, glm::vec3 *v1, glm::vec3 *v2)"
+.br
+.ti -1c
+.RI "bool \fBRayTriangleIntersect\fP (glm::vec3 orig, glm::vec3 dir, glm::vec3 vert0, glm::vec3 vert1, glm::vec3 vert2, double *\fBt\fP, double *\fBu\fP, double *\fBv\fP)"
+.br
+.ti -1c
+.RI "bool \fBRaySphereIntersect\fP (glm::vec3 *orig, glm::vec3 *dest, glm::vec3 *dir, glm::vec3 *vSphereCenter, float sphereRadius, float *\fBt\fP)"
+.br
+.ti -1c
+.RI "bool \fBValidateMark\fP (std::vector< \fBMark\fP * > marks, float sphereRadius, \fBMark\fP *mark, \fBMark\fP *markHit, int *idLandMark)"
+.br
+.ti -1c
+.RI "virtual \fB~Picking\fP ()"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBClick\fP * > * \fBclicks\fP = new std::vector<\fBClick\fP*>()"
+.br
+.in -1c
+.SH "Descripci√≥n detallada"
+.PP 
+Clase que manaje los eventos de picking\&. 
+.PP
+Definici√≥n en la l√≠nea 73 del archivo Picking\&.h\&.
+.SH "Documentaci√≥n del constructor y destructor"
+.PP 
+.SS "Picking::Picking::Picking ()"
+Constructor default\&. 
+.PP
+Definici√≥n en la l√≠nea 17 del archivo Picking\&.cpp\&.
+.SS "Picking::Picking::~Picking ()\fC [virtual]\fP"
+Destructor de clase\&. 
+.PP
+Definici√≥n en la l√≠nea 171 del archivo Picking\&.cpp\&.
+.SH "Documentaci√≥n de las funciones miembro"
+.PP 
+.SS "void Picking::Picking::Get3DRayUnderMouse (glm::mat4modelMatrix, floatx, floaty, intScreenWidth, intScreenHeight, glm::vec3 *v1, glm::vec3 *v2)"
+MÈtodo que obtiene las corrdenadas del origen y destino del rayo, cooresponden a las coordenadas del rayo en el plano de recorte, plano cercano y plano lejano, las coordenadas ya estan en espaciÛ del modelo, al realizar las transformaciÛnes inversas de proyeciÛn al modelo\&. 
+.PP
+\fBPar√°metros:\fP
+.RS 4
+\fImodelMatrix\fP Matrix del modelo\&. 
+.br
+\fIx\fP Coordenada en x, en el espacio de la pantalla\&. 
+.br
+\fIy\fP Coordenada en y, en el espacio de la pantalla\&. 
+.br
+\fIScreenWidth\fP Ancho de ventana\&. 
+.br
+\fIScreenHeight\fP Altura de ventana\&. 
+.br
+\fIv1\fP Apuntador a la coordenada del origen del rayo (Near Plane)\&. 
+.br
+\fIv2\fP Apuntador a la coordenada del destino del rayo (Far Plane)\&. 
+.RE
+.PP
+
+.PP
+Definici√≥n en la l√≠nea 33 del archivo Picking\&.cpp\&.
+.PP
+Hace referencia a f\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "std::vector<\fBClick\fP*>* Picking::Picking::GetClicks ()\fC [inline]\fP"
+Getter para el arreglo de clicks 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definici√≥n en la l√≠nea 91 del archivo Picking\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop() y GLFWManager::ProcessInput()\&.
+.SS "bool Picking::Picking::RaySphereIntersect (glm::vec3 *orig, glm::vec3 *dest, glm::vec3 *dir, glm::vec3 *vSphereCenter, floatsphereRadius, float *t)"
+MÈtodo que prueba si una linea interseca con una esfera\&. 
+.PP
+\fBPar√°metros:\fP
+.RS 4
+\fIorig\fP Origen del rayo\&. 
+.br
+\fIdest\fP Punto final del rayo\&. 
+.br
+\fIdir\fP DirecciÛn del rayo\&. 
+.br
+\fIvSphereCenter\fP Centro de la esfera\&. 
+.br
+\fIsphereRadius\fP Radio de la esfera\&. 
+.br
+\fIt\fP Indica la distancia que existe entre el orign de la esfera y el punto de intersecciÛn\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si existe intersecciÛn de rayo con la esfera, true existe la intersecciÛn false no existe la intersecciÛn\&. 
+.RE
+.PP
+
+.PP
+Definici√≥n en la l√≠nea 109 del archivo Picking\&.cpp\&.
+.PP
+Hace referencia a f\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "bool Picking::Picking::RayTriangleIntersect (glm::vec3orig, glm::vec3dir, glm::vec3vert0, glm::vec3vert1, glm::vec3vert2, double *t, double *u, double *v)"
+MÈtodo que obtiene la intersecciÛn del rayo con un tri·ngulo, Se utiliza el algortimo de Tomas Moller\&. RepresentaciÛn del rayo en coordenadas parametricas\&. R ( t ) = O + tD ------- (1) Un punto de un tri·ngulo esta dado por las coordenadas varicentricas, del triangulo\&. T ( u v ) = (1 ; u ; v ) V 0 + uV 1 + vV 2 ------- (2) 
+.PP
+\fBPar√°metros:\fP
+.RS 4
+\fIorig\fP Origen del rayo\&. 
+.br
+\fIdir\fP DirecciÛn del rayo\&. 
+.br
+\fIvert0\fP Vertice 1 del triangulo a probar\&. 
+.br
+\fIvert1\fP Vertice 2 del triangulo a probar\&. 
+.br
+\fIvert2\fP Vertice 3 del triangulo a probar\&. 
+.br
+\fIt\fP Valor de ecuaciÛn de (1) 
+.br
+\fIu\fP Coordenada u varicentrica del tri·ngulo (2)\&. 
+.br
+\fIv\fP Coordenada v varicentrica del tri·ngulo (2)\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si hay intersecciÛn o no, true existe la intersecciÛn false no existe la intersecciÛn\&.
+.RE
+.PP
+MÈtodo que obtiene la intersecciÛn del rayo con un tri·ngulo, Se utiliza el algortimo de Tomas Moller\&. RepresentaciÛn del rayo en coordenadas parametricas\&. R ( t ) = O + tD ------- (1) Un punto de un tri·ngulo esta dado por las coordenadas varicentricas, del triangulo, u >= 0, v >= 0 y u + v <= 1\&. T ( u v ) = (1 ; u ; v ) V 0 + uV 1 + vV 2 ------- (2) 
+.PP
+\fBPar√°metros:\fP
+.RS 4
+\fIorig\fP Origen del rayo\&. 
+.br
+\fIdir\fP DirecciÛn del rayo\&. 
+.br
+\fIvert0\fP Vertice 1 del triangulo a probar\&. 
+.br
+\fIvert1\fP Vertice 2 del triangulo a probar\&. 
+.br
+\fIvert2\fP Vertice 3 del triangulo a probar\&. 
+.br
+\fIt\fP Valor de ecuaciÛn de (1) 
+.br
+\fIu\fP Coordenada u varicentrica del tri·ngulo (2)\&. 
+.br
+\fIv\fP Coordenada v varicentrica del tri·ngulo (2)\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si hay intersecciÛn o no, true existe la intersecciÛn false no existe la intersecciÛn\&. 
+.RE
+.PP
+
+.PP
+Definici√≥n en la l√≠nea 64 del archivo Picking\&.cpp\&.
+.PP
+Hace referencia a EPSILON\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void Picking::Picking::SetCamera (\fBCamera\fP *camera)\fC [inline]\fP"
+Setter para la c·mara, se utiliza al momento de obtener el rayo, y que este este en coordenadas del modelo\&. 
+.PP
+\fBPar√°metros:\fP
+.RS 4
+\fIcamera\fP 
+.RE
+.PP
+
+.PP
+Definici√≥n en la l√≠nea 84 del archivo Picking\&.h\&.
+.PP
+Referenciado por main()\&.
+.SS "bool Picking::Picking::ValidateMark (std::vector< \fBMark\fP * >marks, floatsphereRadius, \fBMark\fP *mark, \fBMark\fP *markHit, int *idLandMark)"
+MÈtodo que valida la superposiciÛn de marcas y evitar tener muchas marcas, en un miso sitio, la condiciÛn de una marca es que el radio de tolerancia de la marca no sobrepase dos veces el radio\&. 
+.PP
+\fBPar√°metros:\fP
+.RS 4
+\fImarks\fP Lista actual de marcas agregadas\&. 
+.br
+\fIsphereRadius\fP Radio de la esfera\&. 
+.br
+\fImark\fP Marca que se desea validar\&. 
+.br
+\fImarkHit\fP Bandera que indica que es una marca ya existente\&. 
+.br
+\fIidLandMark\fP Identificador de la marca con la que pego\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si es valida o no la marca\&. 
+.RE
+.PP
+
+.PP
+Definici√≥n en la l√≠nea 150 del archivo Picking\&.cpp\&.
+.PP
+Hace referencia a f, Picking::Mark::getPickPoints3D() y i\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SH "Documentaci√≥n de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* Picking::Picking::camera\fC [private]\fP"
+
+.PP
+Definici√≥n en la l√≠nea 166 del archivo Picking\&.h\&.
+.SS "std::vector<\fBClick\fP*>* Picking::Picking::clicks = new std::vector<\fBClick\fP*>()\fC [private]\fP"
+
+.PP
+Definici√≥n en la l√≠nea 167 del archivo Picking\&.h\&.
+
+.SH "Autor"
+.PP 
+Generado autom√°ticamente por Doxygen para Picking del c√≥digo fuente\&.

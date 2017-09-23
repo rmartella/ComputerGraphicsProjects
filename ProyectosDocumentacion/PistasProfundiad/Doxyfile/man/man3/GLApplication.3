@@ -1,0 +1,364 @@
+.TH "GLApplication" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GLApplication \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Main\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBGLApplication\fP ()"
+.br
+.ti -1c
+.RI "\fB~GLApplication\fP ()"
+.br
+.ti -1c
+.RI "int \fBGLMain\fP ()"
+.br
+.ti -1c
+.RI "\fBWindowManager\fP * \fBGetWindowManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWindowManager\fP (\fBWindowManager\fP *pWindowManager)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBSetGRotation\fP (glm::quat \fBgRotation\fP)"
+.br
+.ti -1c
+.RI "glm::quat \fBGetGRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetRayCasting\fP (\fBRayCasting::RayCasting\fP *\fBrayCasting\fP)"
+.br
+.ti -1c
+.RI "void \fBSetMousePos\fP (int \fBx\fP, int \fBy\fP)"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBApplicationLoop\fP ()"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "int \fBScreenWidth\fP = 600"
+.br
+.ti -1c
+.RI "int \fBScreenHeight\fP = 400"
+.br
+.in -1c
+.SS "Atributos públicos estáticos"
+
+.in +1c
+.ti -1c
+.RI "static const float \fBnearPlane\fP = 0\&.0001f"
+.br
+.ti -1c
+.RI "static const float \fBfarPlane\fP = 12\&.0f"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBWindowManager\fP * \fBwindowManager\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "glm::quat \fBgRotation\fP"
+.br
+.ti -1c
+.RI "\fBRayCasting::RayCasting\fP * \fBrayCasting\fP"
+.br
+.ti -1c
+.RI "\fBFontTypeRendering::FontTypeRendering\fP * \fBmodelText\fP"
+.br
+.ti -1c
+.RI "glm::ivec2 * \fBmousePos\fP"
+.br
+.ti -1c
+.RI "\fBObjectCreation\fP \fBobjectCreation\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase principal de la aplicacion, maneja la inicializaci�n de la aplicaci�n, loop de la aplicaci�n y limpia los recursos utilizados\&. 
+.PP
+Definición en la línea 22 del archivo Main\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "GLApplication::GLApplication ()\fC [inline]\fP"
+Constructor default\&. 
+.PP
+Definición en la línea 37 del archivo Main\&.h\&.
+.PP
+Hace referencia a f, gRotation, modelText, mousePos, ScreenHeight y ScreenWidth\&.
+.SS "GLApplication::~GLApplication ()\fC [inline]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 54 del archivo Main\&.h\&.
+.PP
+Hace referencia a Destroy()\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void GLApplication::ApplicationLoop ()"
+Loop de la aplicaci�n, solo se sale de esta funci�n si el usuario pulsa Esc o cierra la ventana\&.
+.PP
+Loop de la aplicación, solo se sale de esta función si el usuario pulsa Esc o cierra la ventana\&. 
+.PP
+Definición en la línea 84 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ambient(), Light::LightAtrr::ambient, black(), Box, TimeManager::CalculateFrameRate(), camera, ObjectCreation::createCullFacesPointer(), ObjectCreation::createModelTransform(), RayCasting::RayCasting::createTestObjectHit(), ObjectCreation::Cube(), cube1, cube2, ObjectCreation::CubeEnviornment(), d, environment, f, ObjectCreation::formatMesh(), RayCasting::RayCasting::Get3DRayUnderScrean(), RayCasting::RayCasting::getDistanceScaleValue(), Mesh::Mesh::GetMeshEntry(), Camera::GetPosition(), Camera::GetProjectionMatrix(), ObjectCreation::getSizeMesh(), Camera::GetViewMatrix(), gRotation, RayCasting::RayCasting::hitObjectTest(), i, Model::Initialize(), TimeManager::Instance(), RayCasting::RayCasting::iterateObjectTriangle(), j, Light::LightAtrr::lightColor, Light::LightAtrr::lightPosW, Light::LightAtrr::materialDiffuse, Light::LightAtrr::materialEmissive, Light::LightAtrr::materialShininess, Light::LightAtrr::materialSpecular, modelText, mon, mousePos, objectCreation, WindowManager::ProcessInput(), rayCasting, FontTypeRendering::FontTypeRendering::render(), Model::Render(), ScreenHeight, ScreenWidth, Model::SetCamera(), ObjectCreation::SolidSphere(), sphere, Sphere, WindowManager::SwapTheBuffers(), Model::UpdateBuffer(), white(), windowManager, RayCasting::RayCasting::xBottom y RayCasting::RayCasting::yBottom\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::Destroy ()"
+M�todo que hace limpieza de los recursos utilizados por la aplicaci�n\&.
+.PP
+Método que hace limpieza de los recursos utilizados por la aplicación\&. 
+.PP
+Definición en la línea 495 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a camera, cube1, cube2, WindowManager::Destroy(), Model::Destroy(), environment, mon, sphere y windowManager\&.
+.PP
+Referenciado por GLMain() y ~GLApplication()\&.
+.SS "\fBCamera\fP* GLApplication::GetCamera ()\fC [inline]\fP"
+Obtiene la c�mara de la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Camar\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 85 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera\&.
+.SS "glm::quat GLApplication::GetGRotation ()\fC [inline]\fP"
+Obtiene el Cuaternion actual de la escena\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Cuaternion de la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 108 del archivo Main\&.h\&.
+.PP
+Hace referencia a gRotation\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "\fBWindowManager\fP* GLApplication::GetWindowManager ()\fC [inline]\fP"
+M�todo que obtiene el manejador de ventanas de la aplicaci�n\&. Este debe ser creada antes de crear la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Manejador de ventanas\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 69 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.SS "int GLApplication::GLMain ()"
+Funcion principal de la aplicaci�n, debe de ser llamada en la funci�n \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Termino del programa\&.
+.RE
+.PP
+Funcion principal de la aplicación, debe de ser llamada en la función \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Terimno del programa\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 26 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ApplicationLoop(), Destroy() y Initialize()\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::Initialize ()"
+Inicializaci�n de la aplicaci�n\&.
+.PP
+Inicialización de la aplicación\&. 
+.PP
+Definición en la línea 43 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a camera, f, farPlane, WindowManager::Initialize(), FontTypeRendering::FontTypeRendering::Initialize(), Mesh::Mesh::LoadMesh(), modelText, nearPlane, Camera::PositionCamera(), rayCasting, ScreenHeight, ScreenWidth, RayCasting::RayCasting::setContrast(), RayCasting::RayCasting::setOffset(), Camera::SetPerspective(), RayCasting::RayCasting::setScale() y windowManager\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Setter para la c�mara de la apliciaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpCamera\fP c�mara que usar� aplicaici�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 92 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera y pCamera\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::SetGRotation (glm::quatgRotation)\fC [inline]\fP"
+Setter para la rotaci�n de la escena\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIgRotation\fP Cuaternion de rotaci�n de la escena 
+.RE
+.PP
+
+.PP
+Definición en la línea 100 del archivo Main\&.h\&.
+.PP
+Hace referencia a gRotation\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::SetMousePos (intx, inty)\fC [inline]\fP"
+Setter de la posici�n del mouse en coordenadas de la ventana\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIx\fP Coordenada en x de la venatana\&. 
+.br
+\fIy\fP Coordenada en x de la venatana\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 125 del archivo Main\&.h\&.
+.PP
+Hace referencia a mousePos, x y y\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::SetRayCasting (\fBRayCasting::RayCasting\fP *rayCasting)\fC [inline]\fP"
+Setter que maneja el trazado de rayos de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpicking\fP Picking de la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 116 del archivo Main\&.h\&.
+.PP
+Hace referencia a rayCasting\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::SetWindowManager (\fBWindowManager\fP *pWindowManager)\fC [inline]\fP"
+M�todo que setter del manejador de ventanas de la aplicaci�n\&. Este debe ser setteada antes de inicializar el loop\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpWindowManager\fP Manejador de ventanas que usar� la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 77 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.PP
+Referenciado por main()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* GLApplication::camera\fC [protected]\fP"
+
+.PP
+Definición en la línea 153 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy(), GetCamera(), Initialize() y SetCamera()\&.
+.SS "const float GLApplication::farPlane = 12\&.0f\fC [static]\fP"
+
+.PP
+Definición en la línea 32 del archivo Main\&.h\&.
+.PP
+Referenciado por RayCasting::RayCasting::assignGrayScaleValue(), Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "glm::quat GLApplication::gRotation\fC [protected]\fP"
+
+.PP
+Definición en la línea 155 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GetGRotation(), GLApplication() y SetGRotation()\&.
+.SS "\fBFontTypeRendering::FontTypeRendering\fP* GLApplication::modelText\fC [protected]\fP"
+
+.PP
+Definición en la línea 157 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GLApplication() y Initialize()\&.
+.SS "glm::ivec2* GLApplication::mousePos\fC [protected]\fP"
+
+.PP
+Definición en la línea 158 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GLApplication() y SetMousePos()\&.
+.SS "const float GLApplication::nearPlane = 0\&.0001f\fC [static]\fP"
+
+.PP
+Definición en la línea 31 del archivo Main\&.h\&.
+.PP
+Referenciado por RayCasting::RayCasting::assignGrayScaleValue(), Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "\fBObjectCreation\fP GLApplication::objectCreation\fC [protected]\fP"
+
+.PP
+Definición en la línea 159 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop()\&.
+.SS "\fBRayCasting::RayCasting\fP* GLApplication::rayCasting\fC [protected]\fP"
+
+.PP
+Definición en la línea 156 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Initialize() y SetRayCasting()\&.
+.SS "int GLApplication::ScreenHeight = 400"
+
+.PP
+Definición en la línea 29 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GLApplication(), Initialize(), GLFWManager::ProcessInput() y GLFWManager::ReshapeGL()\&.
+.SS "int GLApplication::ScreenWidth = 600"
+El ancho y alto de la ventana\&. 
+.PP
+Definición en la línea 28 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GLApplication(), Initialize(), GLFWManager::ProcessInput() y GLFWManager::ReshapeGL()\&.
+.SS "\fBWindowManager\fP* GLApplication::windowManager\fC [protected]\fP"
+
+.PP
+Definición en la línea 152 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy(), GetWindowManager(), Initialize() y SetWindowManager()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

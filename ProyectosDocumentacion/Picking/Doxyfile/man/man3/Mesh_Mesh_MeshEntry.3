@@ -1,0 +1,109 @@
+.TH "Mesh::Mesh::MeshEntry" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Mesh::Mesh::MeshEntry \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Mesh\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBMeshEntry\fP ()"
+.br
+.ti -1c
+.RI "\fB~MeshEntry\fP ()"
+.br
+.ti -1c
+.RI "void \fBInit\fP (const std::vector< \fBVertex\fP > &\fBVertices\fP, const std::vector< unsigned int > &\fBIndices\fP)"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "GLuint \fBVB\fP"
+.br
+.ti -1c
+.RI "GLuint \fBIB\fP"
+.br
+.ti -1c
+.RI "\fBVertex\fP * \fBVertices\fP"
+.br
+.ti -1c
+.RI "unsigned int * \fBIndices\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBNumIndices\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBMaterialIndex\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Estructura que representa una entidad de la malla, varias \fBMeshEntry\fP forman el objeto a renderizar\&. 
+.PP
+Definición en la línea 61 del archivo Mesh\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "Mesh::Mesh::MeshEntry::MeshEntry ()"
+Constructor por defualt\&. 
+.PP
+Definición en la línea 18 del archivo Mesh\&.cpp\&.
+.PP
+Hace referencia a INVALID_MATERIAL y INVALID_OGL_VALUE\&.
+.SS "Mesh::Mesh::MeshEntry::~MeshEntry ()"
+Destructor por defualt\&. 
+.PP
+Definición en la línea 29 del archivo Mesh\&.cpp\&.
+.PP
+Hace referencia a INVALID_OGL_VALUE\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void Mesh::Mesh::MeshEntry::Init (const std::vector< \fBVertex\fP > &Vertices, const std::vector< unsigned int > &Indices)"
+M�todo que inicializa una \fBMeshEntry\fP\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIVertices\fP Apuntador a los vertices\&. 
+.br
+\fIIndices\fP Apuntador a los indices\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 44 del archivo Mesh\&.cpp\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "GLuint Mesh::Mesh::MeshEntry::IB"
+Identificador del buffer de indices\&. 
+.PP
+Definición en la línea 86 del archivo Mesh\&.h\&.
+.SS "unsigned int* Mesh::Mesh::MeshEntry::Indices"
+Apuntador a los indices del objeto que conforma el Modelo\&. 
+.PP
+Definición en la línea 94 del archivo Mesh\&.h\&.
+.SS "unsigned int Mesh::Mesh::MeshEntry::MaterialIndex"
+Indice de materiales\&. 
+.PP
+Definición en la línea 102 del archivo Mesh\&.h\&.
+.SS "unsigned int Mesh::Mesh::MeshEntry::NumIndices"
+Numero de indices\&. 
+.PP
+Definición en la línea 98 del archivo Mesh\&.h\&.
+.SS "GLuint Mesh::Mesh::MeshEntry::VB"
+Identificador del buffer de vertices\&. 
+.PP
+Definición en la línea 82 del archivo Mesh\&.h\&.
+.SS "\fBVertex\fP* Mesh::Mesh::MeshEntry::Vertices"
+Apuntador a los vertices del objeto que conforma el Modelo\&. 
+.PP
+Definición en la línea 90 del archivo Mesh\&.h\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Picking del código fuente\&.

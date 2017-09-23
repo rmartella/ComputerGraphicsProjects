@@ -1,0 +1,652 @@
+.TH "GLApplication" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GLApplication \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Main\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBGLApplication\fP ()"
+.br
+.ti -1c
+.RI "\fB~GLApplication\fP ()"
+.br
+.ti -1c
+.RI "int \fBGLMain\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBApplicationLoop\fP ()"
+.br
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.ti -1c
+.RI "\fBWindowManager\fP * \fBGetWindowManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetWindowManager\fP (\fBWindowManager\fP *pWindowManager)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBGetCamera\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBpCamera\fP)"
+.br
+.ti -1c
+.RI "void \fBSetGRotation\fP (glm::quat \fBgRotation\fP)"
+.br
+.ti -1c
+.RI "glm::quat \fBGetGRotation\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetPicking\fP (\fBPicking::Picking\fP *\fBpicking\fP)"
+.br
+.ti -1c
+.RI "void \fBsetEnableRayCastingGL\fP (bool \fBenableRayCastingGL\fP)"
+.br
+.ti -1c
+.RI "bool \fBgetEnableRayCastingGL\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMarks\fP (const std::vector< \fBPicking::Mark\fP * > &\fBmarks\fP)"
+.br
+.ti -1c
+.RI "void \fBSetMousePos\fP (int \fBx\fP, int \fBy\fP)"
+.br
+.ti -1c
+.RI "float \fBgetSizeLandMark\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetSizeLandMark\fP (float sizeLendMark)"
+.br
+.ti -1c
+.RI "bool \fBisDistanceEnable\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetDistanceEnable\fP (bool \fBdistanceEnable\fP)"
+.br
+.ti -1c
+.RI "int \fBgetNumMarks\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetNumMarks\fP (int \fBnumMarks\fP)"
+.br
+.ti -1c
+.RI "std::vector< \fBPicking::Mark\fP * > * \fBgetMarksToDistance\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDeleteEnable\fP (bool \fBdeleteEnable\fP)"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "int \fBScreenWidth\fP = 1024"
+.br
+.ti -1c
+.RI "int \fBScreenHeight\fP = 700"
+.br
+.ti -1c
+.RI "const float \fBratioSphere\fP = 1\&.0"
+.br
+.in -1c
+.SS "Métodos protegidos"
+
+.in +1c
+.ti -1c
+.RI "void \fBSolidSphere\fP (float radius, int slices, int stacks, \fBVertex3\fP *vertices, GLuint *indices)"
+.br
+.in -1c
+.SS "Atributos protegidos"
+
+.in +1c
+.ti -1c
+.RI "\fBWindowManager\fP * \fBwindowManager\fP"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "glm::quat \fBgRotation\fP"
+.br
+.ti -1c
+.RI "\fBPicking::Picking\fP * \fBpicking\fP"
+.br
+.ti -1c
+.RI "bool \fBenableRayCastingGL\fP = false"
+.br
+.ti -1c
+.RI "std::vector< \fBPicking::Mark\fP * > \fBmarks\fP"
+.br
+.ti -1c
+.RI "glm::ivec2 * \fBmousePos\fP"
+.br
+.ti -1c
+.RI "\fBFontTypeRendering::FontTypeRendering\fP * \fBmodelText\fP"
+.br
+.ti -1c
+.RI "\fBModel\fP * \fBsphere\fP"
+.br
+.ti -1c
+.RI "\fBModel\fP * \fBhumanHead\fP"
+.br
+.ti -1c
+.RI "float \fBsizeLandMark\fP"
+.br
+.ti -1c
+.RI "bool \fBdistanceEnable\fP"
+.br
+.ti -1c
+.RI "bool \fBdeleteEnable\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBPicking::Mark\fP * > * \fBmarksToDistance\fP"
+.br
+.ti -1c
+.RI "int \fBnumMarks\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBModel\fP * > * \fBrays\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase principal de la aplicacion, maneja la inicializaci�n de la aplicaci�n, loop de la aplicaci�n y limpia los recursos utilizados\&. 
+.PP
+Definición en la línea 20 del archivo Main\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "GLApplication::GLApplication ()\fC [inline]\fP"
+Constructor default\&. Inicializaci�n de atributos\&.
+.PP
+Definición en la línea 37 del archivo Main\&.h\&.
+.PP
+Hace referencia a marksToDistance, modelText, mousePos, numMarks, rays, ScreenHeight, ScreenWidth y sizeLandMark\&.
+.SS "GLApplication::~GLApplication ()\fC [inline]\fP"
+Destructor\&. 
+.PP
+Definición en la línea 52 del archivo Main\&.h\&.
+.PP
+Hace referencia a Destroy()\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void GLApplication::ApplicationLoop ()"
+Loop de la aplicaci�n, solo se sale de esta funci�n si el usuario pulsa Esc o cierra la ventana\&.
+.PP
+Loop de la aplicación, solo se sale de esta función si el usuario pulsa Esc o cierra la ventana\&. 
+.PP
+Definición en la línea 115 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a TimeManager::CalculateFrameRate(), camera, deleteEnable, distanceEnable, enableRayCastingGL, f, Picking::Picking::Get3DRayUnderMouse(), Picking::Picking::GetClicks(), Picking::Mark::getMarkStr(), Model::GetMesh(), Mesh::Mesh::GetMeshEntry(), Camera::GetProjectionMatrix(), Camera::GetViewMatrix(), gRotation, humanHead, i, Model::Initialize(), TimeManager::Instance(), j, k, marks, marksToDistance, modelText, mousePos, numMarks, picking, WindowManager::ProcessInput(), ratioSphere, rays, Picking::Picking::RaySphereIntersect(), Picking::Picking::RayTriangleIntersect(), FontTypeRendering::FontTypeRendering::render(), Model::Render(), ScreenHeight, ScreenWidth, Model::SetCamera(), Model::SetPosition(), Model::SetScale(), sizeLandMark, sphere, WindowManager::SwapTheBuffers(), t, u, v, Picking::Picking::ValidateMark(), windowManager, Picking::Click::x, x, Picking::Click::y y y\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "void GLApplication::Destroy ()"
+M�todo que hace limpieza de los recursos utilizados por la aplicaci�n\&.
+.PP
+Método que hace limpieza de los recursos utilizados por la aplicación\&. 
+.PP
+Definición en la línea 379 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a camera, WindowManager::Destroy(), Model::Destroy(), humanHead, i, rays, sphere y windowManager\&.
+.PP
+Referenciado por GLMain() y ~GLApplication()\&.
+.SS "\fBCamera\fP* GLApplication::GetCamera ()\fC [inline]\fP"
+Obtiene la c�mara de la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Camar\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 99 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera\&.
+.SS "bool GLApplication::getEnableRayCastingGL ()\fC [inline]\fP"
+Obtiene del estado de la bandera de encendido o apagado del trasado de rayos gr�fico-\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Definición en la línea 147 del archivo Main\&.h\&.
+.PP
+Hace referencia a enableRayCastingGL\&.
+.SS "glm::quat GLApplication::GetGRotation ()\fC [inline]\fP"
+Obtiene el Cuaternion actual de la escena\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Cuaternion de la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 122 del archivo Main\&.h\&.
+.PP
+Hace referencia a gRotation\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "std::vector<\fBPicking::Mark\fP*>* GLApplication::getMarksToDistance ()\fC [inline]\fP"
+Obtiene las marcas que han sido seleccionadas para obtener su distancia\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Vector de marcas\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 221 del archivo Main\&.h\&.
+.PP
+Hace referencia a marksToDistance\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "int GLApplication::getNumMarks () const\fC [inline]\fP"
+Obtiene el n�mero de landmarks seleccionadas\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+N�mero de landmarks que ha selecci�nado el usuario\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 205 del archivo Main\&.h\&.
+.PP
+Hace referencia a numMarks\&.
+.SS "float GLApplication::getSizeLandMark () const\fC [inline]\fP"
+Obtiene el tama�o de los landmarks\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Tama�o del landmark\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 173 del archivo Main\&.h\&.
+.PP
+Hace referencia a sizeLandMark\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "\fBWindowManager\fP* GLApplication::GetWindowManager ()\fC [inline]\fP"
+M�todo que obtiene el manejador de ventanas de la aplicaci�n\&. Este debe ser creada antes de crear la aplicaci�n\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Manejador de ventanas\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 83 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.SS "int GLApplication::GLMain ()"
+Funcion principal de la aplicaci�n, debe de ser llamada en la funci�n \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Termino del programa\&.
+.RE
+.PP
+Funcion principal de la aplicación, debe de ser llamada en la función \fBWindowManager\fP\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Terimno del programa\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 15 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ApplicationLoop(), Destroy() y Initialize()\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::Initialize ()"
+Inicializaci�n de la aplicaci�n\&.
+.PP
+Inicialización de la aplicación\&. 
+.PP
+Definición en la línea 32 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a ambient(), Light::LightAtrr::ambient, black(), camera, f, humanHead, WindowManager::Initialize(), FontTypeRendering::FontTypeRendering::Initialize(), Model::Initialize(), Light::LightAtrr::lightColor, Light::LightAtrr::lightPosW, Light::LightAtrr::materialDiffuse, Light::LightAtrr::materialEmissive, Light::LightAtrr::materialShininess, Light::LightAtrr::materialSpecular, modelText, Camera::PositionCamera(), ratioSphere, ScreenHeight, ScreenWidth, Model::SetCamera(), Model::SetLightAtrr(), Model::SetMesh(), Model::setNumLights(), Camera::SetPerspective(), SolidSphere(), sphere, white() y windowManager\&.
+.PP
+Referenciado por GLMain()\&.
+.SS "bool GLApplication::isDistanceEnable () const\fC [inline]\fP"
+Obtiene si esta habilitada la distancia entre landmarks\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera de encendido o apagado\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 189 del archivo Main\&.h\&.
+.PP
+Hace referencia a distanceEnable\&.
+.SS "void GLApplication::SetCamera (\fBCamera\fP *pCamera)\fC [inline]\fP"
+Setter para la c�mara de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpCamera\fP c�mara que usar� aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 106 del archivo Main\&.h\&.
+.PP
+Hace referencia a camera y pCamera\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::setDeleteEnable (booldeleteEnable)\fC [inline]\fP"
+Setter para la bandera de eliminaci�n de landmark\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIdeleteEnable\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 229 del archivo Main\&.h\&.
+.PP
+Hace referencia a deleteEnable\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::setDistanceEnable (booldistanceEnable)\fC [inline]\fP"
+Setter de la bandera que indica si esta encendido o apagado el landmark\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIdistanceEnable\fP Enecendido o apagado\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 197 del archivo Main\&.h\&.
+.PP
+Hace referencia a distanceEnable\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::setEnableRayCastingGL (boolenableRayCastingGL)\fC [inline]\fP"
+Setter que habilita el trazado de rayos gr�fico que ha realizado el \fBPicking\fP\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIenableRayCastingGL\fP Bandera de encendido o apagado\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 138 del archivo Main\&.h\&.
+.PP
+Hace referencia a enableRayCastingGL\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::SetGRotation (glm::quatgRotation)\fC [inline]\fP"
+Setter para la rotaci�n de la escena\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIgRotation\fP Cuaternion de rotaci�n de la escena 
+.RE
+.PP
+
+.PP
+Definición en la línea 114 del archivo Main\&.h\&.
+.PP
+Hace referencia a gRotation\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::setMarks (const std::vector< \fBPicking::Mark\fP * > &marks)\fC [inline]\fP"
+Setter del vector de marcas para el picking\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImarks\fP Vector de marcas\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 155 del archivo Main\&.h\&.
+.PP
+Hace referencia a marks\&.
+.SS "void GLApplication::SetMousePos (intx, inty)\fC [inline]\fP"
+Setter de la posici�n del mouse en coordenadas de la ventana\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIx\fP Coordenada en x de la venatana\&. 
+.br
+\fIy\fP Coordenada en x de la venatana\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 164 del archivo Main\&.h\&.
+.PP
+Hace referencia a mousePos, x y y\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::setNumMarks (intnumMarks)\fC [inline]\fP"
+Setter del N�mero de landmarks marcadas para obtener su distancia\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fInumMarks\fP N�mero de landmarks marcadas para obtener su distancia\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 213 del archivo Main\&.h\&.
+.PP
+Hace referencia a numMarks\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::SetPicking (\fBPicking::Picking\fP *picking)\fC [inline]\fP"
+Setter que maneja el \fBPicking\fP de la aplicaci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpicking\fP \fBPicking\fP de la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 130 del archivo Main\&.h\&.
+.PP
+Hace referencia a picking\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::setSizeLandMark (floatsizeLendMark)\fC [inline]\fP"
+Setter para el tama�o del landmark\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIsizeLendMark\fP Radio de landmark\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 181 del archivo Main\&.h\&.
+.PP
+Hace referencia a sizeLandMark\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "void GLApplication::SetWindowManager (\fBWindowManager\fP *pWindowManager)\fC [inline]\fP"
+M�todo que setter del manejador de ventanas de la aplicaci�n\&. Este debe ser setteada antes de inicializar el loop\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpWindowManager\fP Manejador de ventanas que usar� la aplicaci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 91 del archivo Main\&.h\&.
+.PP
+Hace referencia a windowManager\&.
+.PP
+Referenciado por main()\&.
+.SS "void GLApplication::SolidSphere (floatradius, intslices, intstacks, \fBVertex3\fP *vertices, GLuint *indices)\fC [protected]\fP"
+Genera los vetices de una esfera\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIradius\fP Radio de la esfera\&. 
+.br
+\fIslices\fP Revanadas horizontales\&. 
+.br
+\fIstacks\fP Revanadas Verticales\&. 
+.br
+\fIvertices\fP Apuntador donde se almacenan por referencia los vertices\&. 
+.br
+\fIindices\fP Apuntador donde se almacenan por referencia los indices\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 334 del archivo Main\&.cpp\&.
+.PP
+Hace referencia a i, j, U, V, X, Y y Z\&.
+.PP
+Referenciado por Initialize()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* GLApplication::camera\fC [protected]\fP"
+
+.PP
+Definición en la línea 243 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy(), GetCamera(), Initialize() y SetCamera()\&.
+.SS "bool GLApplication::deleteEnable\fC [protected]\fP"
+
+.PP
+Definición en la línea 255 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop() y setDeleteEnable()\&.
+.SS "bool GLApplication::distanceEnable\fC [protected]\fP"
+
+.PP
+Definición en la línea 254 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), isDistanceEnable() y setDistanceEnable()\&.
+.SS "bool GLApplication::enableRayCastingGL = false\fC [protected]\fP"
+
+.PP
+Definición en la línea 247 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), getEnableRayCastingGL() y setEnableRayCastingGL()\&.
+.SS "glm::quat GLApplication::gRotation\fC [protected]\fP"
+
+.PP
+Definición en la línea 245 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GetGRotation() y SetGRotation()\&.
+.SS "\fBModel\fP* GLApplication::humanHead\fC [protected]\fP"
+
+.PP
+Definición en la línea 252 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy() y Initialize()\&.
+.SS "std::vector<\fBPicking::Mark\fP*> GLApplication::marks\fC [protected]\fP"
+
+.PP
+Definición en la línea 248 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop() y setMarks()\&.
+.SS "std::vector<\fBPicking::Mark\fP*>* GLApplication::marksToDistance\fC [protected]\fP"
+
+.PP
+Definición en la línea 256 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), getMarksToDistance() y GLApplication()\&.
+.SS "\fBFontTypeRendering::FontTypeRendering\fP* GLApplication::modelText\fC [protected]\fP"
+
+.PP
+Definición en la línea 250 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GLApplication() y Initialize()\&.
+.SS "glm::ivec2* GLApplication::mousePos\fC [protected]\fP"
+
+.PP
+Definición en la línea 249 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GLApplication() y SetMousePos()\&.
+.SS "int GLApplication::numMarks\fC [protected]\fP"
+
+.PP
+Definición en la línea 257 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), getNumMarks(), GLApplication() y setNumMarks()\&.
+.SS "\fBPicking::Picking\fP* GLApplication::picking\fC [protected]\fP"
+
+.PP
+Definición en la línea 246 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop() y SetPicking()\&.
+.SS "const float GLApplication::ratioSphere = 1\&.0"
+Radio de precisi�n para los Landmarks\&. 
+.PP
+Definición en la línea 32 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop() y Initialize()\&.
+.SS "std::vector<\fBModel\fP*>* GLApplication::rays\fC [protected]\fP"
+
+.PP
+Definición en la línea 258 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy() y GLApplication()\&.
+.SS "int GLApplication::ScreenHeight = 700"
+
+.PP
+Definición en la línea 27 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GLApplication(), Initialize(), GLFWManager::ProcessInput() y GLFWManager::ReshapeGL()\&.
+.SS "int GLApplication::ScreenWidth = 1024"
+El ancho y alto de la ventana\&. 
+.PP
+Definición en la línea 26 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), GLApplication(), Initialize(), GLFWManager::ProcessInput() y GLFWManager::ReshapeGL()\&.
+.SS "float GLApplication::sizeLandMark\fC [protected]\fP"
+
+.PP
+Definición en la línea 253 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), getSizeLandMark(), GLApplication() y setSizeLandMark()\&.
+.SS "\fBModel\fP* GLApplication::sphere\fC [protected]\fP"
+
+.PP
+Definición en la línea 251 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy() y Initialize()\&.
+.SS "\fBWindowManager\fP* GLApplication::windowManager\fC [protected]\fP"
+
+.PP
+Definición en la línea 242 del archivo Main\&.h\&.
+.PP
+Referenciado por ApplicationLoop(), Destroy(), GetWindowManager(), Initialize() y SetWindowManager()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Picking del código fuente\&.

@@ -1,0 +1,91 @@
+.TH "src/Main.cpp" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Main.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <GL/glew\&.h>\fP
+.br
+\fC#include 'Headers/Main\&.h'\fP
+.br
+
+.SS "Funciones"
+
+.in +1c
+.ti -1c
+.RI "const glm::vec4 \fBwhite\fP (1)"
+.br
+.ti -1c
+.RI "const glm::vec4 \fBblack\fP (0)"
+.br
+.ti -1c
+.RI "const glm::vec4 \fBambient\fP (0\&.9f, 0\&.9f, 0\&.9f, 1\&.0f)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBMesh::Mesh\fP * \fBmesh\fP = new \fBMesh::Mesh\fP('Models/suzanne\&.obj')"
+.br
+.ti -1c
+.RI "\fBModel\fP \fBmon\fP (GL_TRIANGLES)"
+.br
+.ti -1c
+.RI "\fBModel\fP \fBenvironment\fP (GL_TRIANGLES)"
+.br
+.ti -1c
+.RI "\fBModel\fP \fBcube1\fP (GL_TRIANGLES)"
+.br
+.ti -1c
+.RI "\fBModel\fP \fBcube2\fP (GL_TRIANGLES)"
+.br
+.ti -1c
+.RI "\fBModel\fP \fBsphere\fP (GL_TRIANGLES)"
+.br
+.in -1c
+.SH "Documentación de las funciones"
+.PP 
+.SS "const glm::vec4 ambient (0\&.9f, 0\&.9f, 0\&.9f, 1\&.0f)"
+
+.PP
+Referenciado por GLApplication::ApplicationLoop() y LightingTechnique::SetAttrLight()\&.
+.SS "const glm::vec4 black (0)"
+
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "const glm::vec4 white (1)"
+Constantes para la iluminación\&. 
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SH "Documentación de las variables"
+.PP 
+.SS "\fBModel\fP cube1(GL_TRIANGLES)"
+
+.PP
+Referenciado por GLApplication::ApplicationLoop() y GLApplication::Destroy()\&.
+.SS "\fBModel\fP cube2(GL_TRIANGLES)"
+
+.PP
+Referenciado por GLApplication::ApplicationLoop() y GLApplication::Destroy()\&.
+.SS "\fBModel\fP environment(GL_TRIANGLES)"
+
+.PP
+Referenciado por GLApplication::ApplicationLoop() y GLApplication::Destroy()\&.
+.SS "\fBMesh::Mesh\fP* mesh = new \fBMesh::Mesh\fP('Models/suzanne\&.obj')"
+
+.PP
+Definición en la línea 14 del archivo Main\&.cpp\&.
+.SS "\fBModel\fP mon(GL_TRIANGLES)"
+
+.PP
+Referenciado por GLApplication::ApplicationLoop() y GLApplication::Destroy()\&.
+.SS "\fBModel\fP sphere(GL_TRIANGLES)"
+
+.PP
+Referenciado por GLApplication::ApplicationLoop() y GLApplication::Destroy()\&.
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

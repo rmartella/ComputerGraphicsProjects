@@ -1,0 +1,5 @@
+<map id="TowerDubai::createLevelsTower" name="TowerDubai::createLevelsTower">
+<area shape="rect" id="node2" href="$classTowerLevel.html#aee224e15f066b6c2c60d6864aeca43ab" title="TowerLevel::setAngleRotMax" alt="" coords="235,5,429,32"/>
+<area shape="rect" id="node3" href="$classTowerLevel.html#a00e201e3458ba9b1cd83d6ac8188869b" title="TowerLevel::setGiroAct" alt="" coords="253,56,411,83"/>
+<area shape="rect" id="node4" href="$classTowerLevel.html#a2ccb6d590379a6f407bacf5ab6c89736" title="TowerLevel::setLevelTransform" alt="" coords="229,107,435,133"/>
+</map>

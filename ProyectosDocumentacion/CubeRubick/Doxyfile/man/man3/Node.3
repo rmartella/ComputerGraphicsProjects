@@ -1,0 +1,184 @@
+.TH "Node" 3 "Martes, 26 de Mayo de 2015" "CubeRubick" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Node \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Node\&.h>\fP
+.SS "M茅todos p煤blicos"
+
+.in +1c
+.ti -1c
+.RI "\fBNode\fP ()"
+.br
+.ti -1c
+.RI "\fBNode\fP (\fBModel\fP *\fBmodel\fP, bool \fBisRoot\fP)"
+.br
+.ti -1c
+.RI "void \fBsetTransformMatrix\fP (glm::mat4 *transform)"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBgetTransformMatrix\fP ()"
+.br
+.ti -1c
+.RI "void \fBrenderNode\fP ()"
+.br
+.ti -1c
+.RI "\fBModel\fP * \fBgetModel\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddChild\fP (\fBNode\fP *child)"
+.br
+.ti -1c
+.RI "virtual \fB~Node\fP ()"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBNode\fP * > * \fBnodeList\fP = new std::vector<\fBNode\fP*>()"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBtransformMatrix\fP"
+.br
+.ti -1c
+.RI "\fBModel\fP * \fBmodel\fP"
+.br
+.ti -1c
+.RI "bool \fBisRoot\fP"
+.br
+.in -1c
+.SH "Descripci贸n detallada"
+.PP 
+Definici贸n en la l铆nea 13 del archivo Node\&.h\&.
+.SH "Documentaci贸n del constructor y destructor"
+.PP 
+.SS "Node::Node ()"
+Constructor defualt\&. 
+.PP
+Definici贸n en la l铆nea 13 del archivo Node\&.cpp\&.
+.PP
+Hace referencia a isRoot\&.
+.SS "Node::Node (\fBModel\fP *model, boolisRoot)"
+Constructor de un cubo de rubick con un modelo e indica si es el cubo ra韟 es invisible o no\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fImodel\fP Modelo del Rubick\&. 
+.br
+\fIisRoot\fP Bandera si es el nodo padre para no pintarlo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 22 del archivo Node\&.cpp\&.
+.PP
+Hace referencia a isRoot y model\&.
+.SS "Node::~Node ()\fC [virtual]\fP"
+Destructor\&. 
+.PP
+Definici贸n en la l铆nea 30 del archivo Node\&.cpp\&.
+.SH "Documentaci贸n de las funciones miembro"
+.PP 
+.SS "void Node::addChild (\fBNode\fP *child)"
+Agrega un hijo al nodo para emparentar las dependencias\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fIchild\fP Nodo hijo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 62 del archivo Node\&.cpp\&.
+.PP
+Hace referencia a nodeList\&.
+.PP
+Referenciado por RubiksCube::RubiksCube()\&.
+.SS "\fBModel\fP * Node::getModel ()"
+Se obtiene el modelo asociado al nodo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Modelo del nodo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 54 del archivo Node\&.cpp\&.
+.PP
+Hace referencia a model\&.
+.PP
+Referenciado por RubiksCube::addCenters() y RubiksCube::addEdgesAndCorners()\&.
+.SS "glm::mat4 * Node::getTransformMatrix ()"
+Obtiene la matriz de transformaci髇 de un nodo del cubo\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Matriz de transformaci髇 de un nodo del cubo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 46 del archivo Node\&.cpp\&.
+.PP
+Hace referencia a transformMatrix\&.
+.PP
+Referenciado por RubiksCubeFace::flipFacesMatrix() y RubiksCubeFace::rotateFace()\&.
+.SS "void Node::renderNode ()"
+Dibuja la estructura del cubo de rubick\&. 
+.PP
+Definici贸n en la l铆nea 68 del archivo Node\&.cpp\&.
+.PP
+Hace referencia a i, nodeList y transformMatrix\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void Node::setTransformMatrix (glm::mat4 *transform)"
+Setter de la matriz de transformaci髇 del nodo prinicipal del cubo\&. 
+.PP
+\fBPar谩metros:\fP
+.RS 4
+\fItransform\fP Matriz de transformaci髇 de un nodo del cubo\&. 
+.RE
+.PP
+
+.PP
+Definici贸n en la l铆nea 38 del archivo Node\&.cpp\&.
+.PP
+Hace referencia a transformMatrix\&.
+.PP
+Referenciado por RubiksCube::addCenters(), RubiksCube::addEdgesAndCorners(), GLApplication::ApplicationLoop(), RubiksCubeFace::flipFacesMatrix() y RubiksCubeFace::rotateFace()\&.
+.SH "Documentaci贸n de los datos miembro"
+.PP 
+.SS "bool Node::isRoot\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 57 del archivo Node\&.h\&.
+.PP
+Referenciado por Node()\&.
+.SS "\fBModel\fP* Node::model\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 56 del archivo Node\&.h\&.
+.PP
+Referenciado por getModel() y Node()\&.
+.SS "std::vector<\fBNode\fP*>* Node::nodeList = new std::vector<\fBNode\fP*>()\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 54 del archivo Node\&.h\&.
+.PP
+Referenciado por addChild() y renderNode()\&.
+.SS "glm::mat4* Node::transformMatrix\fC [private]\fP"
+
+.PP
+Definici贸n en la l铆nea 55 del archivo Node\&.h\&.
+.PP
+Referenciado por getTransformMatrix(), renderNode() y setTransformMatrix()\&.
+
+.SH "Autor"
+.PP 
+Generado autom谩ticamente por Doxygen para CubeRubick del c贸digo fuente\&.

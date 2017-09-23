@@ -1,0 +1,498 @@
+.TH "RayCasting::RayCasting" 3 "Martes, 26 de Mayo de 2015" "Pistasdeprofunidad" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RayCasting::RayCasting \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RayCasting\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBRayCasting\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCamera\fP (\fBCamera\fP *\fBcamera\fP)"
+.br
+.ti -1c
+.RI "void \fBGet3DRayUnderScrean\fP (float \fBx\fP, float \fBy\fP, int ScreenWidth, int ScreenHeight, glm::vec3 *v1, glm::vec3 *v2)"
+.br
+.ti -1c
+.RI "bool \fBRayTriangleIntersect\fP (glm::vec3 *orig, glm::vec3 *dir, glm::vec3 *vert0, glm::vec3 *vert1, glm::vec3 *vert2, double *\fBt\fP, double *\fBu\fP, double *\fBv\fP)"
+.br
+.ti -1c
+.RI "bool \fBRaySphereIntersect\fP (glm::vec3 *orig, glm::vec3 *dest, glm::vec3 *dir, glm::vec3 *vSphereCenter, float sphereRadius)"
+.br
+.ti -1c
+.RI "void \fBassignGrayScaleValue\fP (double \fBt\fP, \fBVertex3\fP *vertice, int index)"
+.br
+.ti -1c
+.RI "void \fBiterateObjectTriangle\fP (glm::vec3 *origRay, glm::vec3 *direction, glm::mat4 *VP, \fBVertex3\fP *vertices, \fBVertex3\fP *verticesTransform, GLuint *index, int sizeIndex, bool *cullFacesPointer)"
+.br
+.ti -1c
+.RI "bool \fBhitObjectTest\fP (glm::vec3 *origRay, glm::vec3 *destRay, glm::vec3 *direction, \fBTestObjectHit\fP *testObjectHit)"
+.br
+.ti -1c
+.RI "\fBTestObjectHit\fP * \fBcreateTestObjectHit\fP (\fBVertex3\fP *vertexBB, GLuint *indexBB, int sizeIndexBB, \fBTypeObjectBox\fP typeObjectBox, glm::vec3 *vSphereCenter, float sphereRadius)"
+.br
+.ti -1c
+.RI "float \fBgetDistanceScaleValue\fP (glm::ivec2 *mousePosition, \fBVertex3\fP *vertices, GLuint *index, int sizeIndex, int ScreenWidth, int ScreenHeight, glm::mat4 *VP, \fBTestObjectHit\fP *testHit, bool *cullFacesPointer)"
+.br
+.ti -1c
+.RI "virtual \fB~RayCasting\fP ()"
+.br
+.ti -1c
+.RI "float \fBgetOffset\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetOffset\fP (float \fBoffset\fP)"
+.br
+.ti -1c
+.RI "float \fBgetScale\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetScale\fP (float \fBscale\fP)"
+.br
+.ti -1c
+.RI "bool \fBisContrast\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetContrast\fP (bool \fBcontrast\fP)"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "int \fBxBottom\fP"
+.br
+.ti -1c
+.RI "int \fByBottom\fP"
+.br
+.ti -1c
+.RI "int \fBxTop\fP"
+.br
+.ti -1c
+.RI "int \fByTop\fP"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "\fBCamera\fP * \fBcamera\fP"
+.br
+.ti -1c
+.RI "bool \fBcontrast\fP"
+.br
+.ti -1c
+.RI "float \fBoffset\fP"
+.br
+.ti -1c
+.RI "float \fBscale\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase para manejar el trazado de rayos, tiene funciones como obtener rayos, intersecci�n con esferas, triangulos Ademas asigna la escala de gris dependiendo de la profundidad\&. 
+.PP
+Definición en la línea 42 del archivo RayCasting\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "RayCasting::RayCasting::RayCasting ()"
+Constructor default\&. 
+.PP
+Definición en la línea 13 del archivo RayCasting\&.cpp\&.
+.SS "RayCasting::RayCasting::~RayCasting ()\fC [virtual]\fP"
+Destructor de clase\&. 
+.PP
+Definición en la línea 344 del archivo RayCasting\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void RayCasting::RayCasting::assignGrayScaleValue (doublet, \fBVertex3\fP *vertice, intindex)"
+M�todo que asigna la escala de grises de los vertices de un triangulo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIt\fP distancia a la que se encuentra el objeto\&. 
+.br
+\fIvertice\fP Apuntador a vertice de la cara\&. 
+.br
+\fIindex\fP Apuntador a indice de la cara\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 83 del archivo RayCasting\&.cpp\&.
+.PP
+Hace referencia a GLApplication::farPlane, GLApplication::nearPlane y Vertex3::xyz\&.
+.SS "\fBTestObjectHit\fP * RayCasting::RayCasting::createTestObjectHit (\fBVertex3\fP *vertexBB, GLuint *indexBB, intsizeIndexBB, \fBTypeObjectBox\fPtypeObjectBox, glm::vec3 *vSphereCenter, floatsphereRadius)"
+Encapsula el objeto a probar con el rayo en una estructura, para no pasarle cada cosa por separado al m�todo de intersecci�n\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIvertexBB\fP Vertices el Bounding Box\&. 
+.br
+\fIindexBB\fP Indices del Boundig Box\&. 
+.br
+\fIsizeIndexBB\fP Tama�o de Indices del Boundig Box\&. 
+.br
+\fItypeObjectBox\fP Tupo de Boundig Box\&. 
+.br
+\fIvSphereCenter\fP Centro de la esfera si es una Sphere Box 
+.br
+\fIsphereRadius\fP Radio de la esfera si es una Sphere Box 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Objeto para porbar intersecci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 213 del archivo RayCasting\&.cpp\&.
+.PP
+Hace referencia a TestObjectHit::indexBB, TestObjectHit::sizeIndexBB, TestObjectHit::sphereRadius, TestObjectHit::typeObjectBox, TestObjectHit::vertexBB y TestObjectHit::vSphereCenter\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void RayCasting::RayCasting::Get3DRayUnderScrean (floatx, floaty, intScreenWidth, intScreenHeight, glm::vec3 *v1, glm::vec3 *v2)"
+M�todo que obtiene las corrdenadas del origen y destino del rayo, cooresponden a las coordenadas del rayo en el plano de recorte, plano cercano y plano lejano, las coordenadas en el WorldSpace es decir lo que esta viendo el observador\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIx\fP Coordenada en x, en el espacio de la pantalla\&. 
+.br
+\fIy\fP Coordenada en y, en el espacio de la pantalla\&. 
+.br
+\fIScreenWidth\fP Ancho de ventana\&. 
+.br
+\fIScreenHeight\fP Altura de ventana\&. 
+.br
+\fIv1\fP Apuntador a la coordenada del origen del rayo (Near Plane)\&. 
+.br
+\fIv2\fP Apuntador a la coordenada del destino del rayo (Far Plane)\&.
+.RE
+.PP
+M�todo que obtiene las corrdenadas del origen y destino del rayo, cooresponden a las coordenadas del rayo en el plano de recorte, plano cercano y plano lejano, los vetores esta en el espacio del mundo, es decir lo que esta viendo el observador\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIx\fP Coordenada en x, en el espacio de la pantalla\&. 
+.br
+\fIy\fP Coordenada en y, en el espacio de la pantalla\&. 
+.br
+\fIScreenWidth\fP Ancho de ventana\&. 
+.br
+\fIScreenHeight\fP Altura de ventana\&. 
+.br
+\fIv1\fP Apuntador a la coordenada del origen del rayo (Near Plane)\&. 
+.br
+\fIv2\fP Apuntador a la coordenada del destino del rayo (Far Plane)\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 28 del archivo RayCasting\&.cpp\&.
+.PP
+Hace referencia a f\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "float RayCasting::RayCasting::getDistanceScaleValue (glm::ivec2 *mousePosition, \fBVertex3\fP *vertices, GLuint *index, intsizeIndex, intScreenWidth, intScreenHeight, glm::mat4 *VP, \fBTestObjectHit\fP *testHit, bool *cullFacesPointer)"
+M�todo que encuentra la profundida que se encuentra un objeto\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fImousePosition\fP Posici�n del mouse espacio de la ventana\&. 
+.br
+\fIvertices\fP Arreglo de vertices transformados al modelo de la escena\&. 
+.br
+\fIindex\fP Indices de los vertices\&. 
+.br
+\fIsizeIndex\fP Tama�o de indices\&. 
+.br
+\fIScreenWidth\fP Ancho de ventana\&. 
+.br
+\fIScreenHeight\fP Alto de ventana\&. 
+.br
+\fIVP\fP ViewMatriz * ProyectionMatriz\&. 
+.br
+\fItestHit\fP Encamsulamiento de objeto para hacer la prueba con el Bounding Box\&. 
+.br
+\fIcullFacesPointer\fP Apuntador a caras visibles y no visibles\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Profunidad minima a la que se encuentra el objeto, regresa -1 si no encuentra intersecci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 281 del archivo RayCasting\&.cpp\&.
+.PP
+Hace referencia a f, i, t, u, v y Vertex3::xyz\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "float RayCasting::RayCasting::getOffset () const\fC [inline]\fP"
+Obtiene el offset de color\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Offset\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 182 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "float RayCasting::RayCasting::getScale () const\fC [inline]\fP"
+Obiene la escala de intensidad\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Escala de intensidad\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 198 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLFWManager::ProcessInput()\&.
+.SS "bool RayCasting::RayCasting::hitObjectTest (glm::vec3 *origRay, glm::vec3 *destRay, glm::vec3 *direction, \fBTestObjectHit\fP *testObjectHit)"
+M�todo que prueba si el objeto puede ser alcanzado por el rayo\&. utiliza el bounding box\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIorigRay\fP Origen del rayo\&. 
+.br
+\fIdestRay\fP Punto final de rayo\&. 
+.br
+\fIdirection\fP Direcci�n de rayo\&. 
+.br
+\fItestObjectHit\fP Objeto para probar 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si el rayo alcanza al objeto\&.
+.RE
+.PP
+M�todo que prueba si el objeto puede ser alcanzado por el rayo utilizando el bounding box\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIorigRay\fP Origen del rayo\&. 
+.br
+\fIdestRay\fP Punto final de rayo\&. 
+.br
+\fIdirection\fP Direcci�n de rayo\&. 
+.br
+\fItestObjectHit\fP Objeto para probar 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si el rayo alcanza al objeto\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 176 del archivo RayCasting\&.cpp\&.
+.PP
+Hace referencia a Box, i, TestObjectHit::indexBB, TestObjectHit::sizeIndexBB, Sphere, TestObjectHit::sphereRadius, t, TestObjectHit::typeObjectBox, u, v, TestObjectHit::vertexBB, TestObjectHit::vSphereCenter y Vertex3::xyz\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "bool RayCasting::RayCasting::isContrast () const\fC [inline]\fP"
+
+.PP
+Definición en la línea 210 del archivo RayCasting\&.h\&.
+.SS "void RayCasting::RayCasting::iterateObjectTriangle (glm::vec3 *origRay, glm::vec3 *direction, glm::mat4 *VP, \fBVertex3\fP *vertices, \fBVertex3\fP *verticesTransform, GLuint *index, intsizeIndex, bool *cullFacesPointer)"
+M�todo que obtiene al intersecci�n de un rayo con el triangulo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIorigRay\fP Origen\&. 
+.br
+\fIdirection\fP Direcci�n\&. 
+.br
+\fIVP\fP ViewMatriz * ProyectionMatriz\&. 
+.br
+\fIvertices\fP Vertices\&. 
+.br
+\fIverticesTransform\fP Vertices transformados\&. 
+.br
+\fIindex\fP Indices\&. 
+.br
+\fIsizeIndex\fP Tama�o de indices\&. 
+.br
+\fIcullFacesPointer\fP Apuntador a las caras\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 118 del archivo RayCasting\&.cpp\&.
+.PP
+Hace referencia a f, i, Vertex3::rgba, t, u, v y Vertex3::xyz\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "bool RayCasting::RayCasting::RaySphereIntersect (glm::vec3 *orig, glm::vec3 *dest, glm::vec3 *dir, glm::vec3 *vSphereCenter, floatsphereRadius)"
+M�todo que prueba si una linea interseca con una esfera\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIorig\fP Origen del rayo\&. 
+.br
+\fIdest\fP Punto final del rayo\&. 
+.br
+\fIdir\fP Direcci�n del rayo\&. 
+.br
+\fIvSphereCenter\fP Centro de la esfera\&. 
+.br
+\fIsphereRadius\fP Radio de la esfera\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si existe intersecci�n de rayo con la esfera, true existe la intersecci�n false no existe la intersecci�n\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 239 del archivo RayCasting\&.cpp\&.
+.PP
+Hace referencia a f y t\&.
+.SS "bool RayCasting::RayCasting::RayTriangleIntersect (glm::vec3 *orig, glm::vec3 *dir, glm::vec3 *vert0, glm::vec3 *vert1, glm::vec3 *vert2, double *t, double *u, double *v)"
+M�todo que obtiene la intersecci�n del rayo con un tri�ngulo, Se utiliza el algortimo de Tomas Moller\&. Representaci�n del rayo en coordenadas parametricas\&. R ( t ) = O + tD ------- (1) Un punto de un tri�ngulo esta dado por las coordenadas varicentricas, del triangulo\&. T ( u v ) = (1 ; u ; v ) V 0 + uV 1 + vV 2 ------- (2) 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIorig\fP Origen del rayo\&. 
+.br
+\fIdir\fP Direcci�n del rayo\&. 
+.br
+\fIvert0\fP Vertice 1 del triangulo a probar\&. 
+.br
+\fIvert1\fP Vertice 2 del triangulo a probar\&. 
+.br
+\fIvert2\fP Vertice 3 del triangulo a probar\&. 
+.br
+\fIt\fP Valor de ecuaci�n de (1) 
+.br
+\fIu\fP Coordenada u varicentrica del tri�ngulo (2)\&. 
+.br
+\fIv\fP Coordenada v varicentrica del tri�ngulo (2)\&. 
+.RE
+.PP
+\fBDevuelve:\fP
+.RS 4
+Bandera que indica si hay intersecci�n o no, true existe la intersecci�n false no existe la intersecci�n\&.
+.RE
+.PP
+Setter para la c�mara, se utiliza al momento de obtener el rayo, y que este este en coordenadas del modelo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIcamera\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 44 del archivo RayCasting\&.cpp\&.
+.PP
+Hace referencia a EPSILON\&.
+.SS "void RayCasting::RayCasting::SetCamera (\fBCamera\fP *camera)\fC [inline]\fP"
+Setter para la c�mara, se utiliza al momento de obtener el rayo, y que este este en coordenadas del modelo\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIcamera\fP 
+.RE
+.PP
+
+.PP
+Definición en la línea 53 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por main()\&.
+.SS "void RayCasting::RayCasting::setContrast (boolcontrast)\fC [inline]\fP"
+
+.PP
+Definición en la línea 214 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize() y GLFWManager::ProcessInput()\&.
+.SS "void RayCasting::RayCasting::setOffset (floatoffset)\fC [inline]\fP"
+Setter del desplazamiento\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIoffset\fP Desplazamiento\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 190 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize() y GLFWManager::ProcessInput()\&.
+.SS "void RayCasting::RayCasting::setScale (floatscale)\fC [inline]\fP"
+Setter para la escala de intensidad\&. 
+.PP
+\fBDevuelve:\fP
+.RS 4
+Escala de intensidad\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 206 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLApplication::Initialize() y GLFWManager::ProcessInput()\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "\fBCamera\fP* RayCasting::RayCasting::camera\fC [private]\fP"
+
+.PP
+Definición en la línea 219 del archivo RayCasting\&.h\&.
+.SS "bool RayCasting::RayCasting::contrast\fC [private]\fP"
+
+.PP
+Definición en la línea 220 del archivo RayCasting\&.h\&.
+.SS "float RayCasting::RayCasting::offset\fC [private]\fP"
+
+.PP
+Definición en la línea 221 del archivo RayCasting\&.h\&.
+.SS "float RayCasting::RayCasting::scale\fC [private]\fP"
+
+.PP
+Definición en la línea 222 del archivo RayCasting\&.h\&.
+.SS "int RayCasting::RayCasting::xBottom"
+
+.PP
+Definición en la línea 172 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop(), GLFWManager::Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "int RayCasting::RayCasting::xTop"
+
+.PP
+Definición en la línea 172 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLFWManager::Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "int RayCasting::RayCasting::yBottom"
+
+.PP
+Definición en la línea 172 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop(), GLFWManager::Initialize() y GLFWManager::ReshapeGL()\&.
+.SS "int RayCasting::RayCasting::yTop"
+
+.PP
+Definición en la línea 172 del archivo RayCasting\&.h\&.
+.PP
+Referenciado por GLFWManager::Initialize() y GLFWManager::ReshapeGL()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Pistasdeprofunidad del código fuente\&.

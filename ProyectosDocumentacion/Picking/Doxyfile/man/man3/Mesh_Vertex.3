@@ -1,0 +1,85 @@
+.TH "Mesh::Vertex" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Mesh::Vertex \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Mesh\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBVertex\fP ()"
+.br
+.ti -1c
+.RI "\fBVertex\fP (const glm::vec3 &pos, const glm::vec2 &tex, const glm::vec3 &normal)"
+.br
+.in -1c
+.SS "Atributos públicos"
+
+.in +1c
+.ti -1c
+.RI "glm::vec3 \fBm_pos\fP"
+.br
+.ti -1c
+.RI "glm::vec2 \fBm_tex\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBm_normal\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Estructura que va almacenar el parseo de vertices a un formato intermedio\&. 
+.PP
+Definición en la línea 26 del archivo Mesh\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "Mesh::Vertex::Vertex ()\fC [inline]\fP"
+Constructor por default\&. 
+.PP
+Definición en la línea 34 del archivo Mesh\&.h\&.
+.SS "Mesh::Vertex::Vertex (const glm::vec3 &pos, const glm::vec2 &tex, const glm::vec3 &normal)\fC [inline]\fP"
+Constructor de un vertice\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIpos\fP Posici�n del vertice\&. 
+.br
+\fItex\fP Co�rdenadas de textura del vertice\&. 
+.br
+\fInormal\fP Normal del vertice\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 43 del archivo Mesh\&.h\&.
+.PP
+Hace referencia a m_normal, m_pos y m_tex\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "glm::vec3 Mesh::Vertex::m_normal"
+
+.PP
+Definición en la línea 29 del archivo Mesh\&.h\&.
+.PP
+Referenciado por Vertex()\&.
+.SS "glm::vec3 Mesh::Vertex::m_pos"
+
+.PP
+Definición en la línea 27 del archivo Mesh\&.h\&.
+.PP
+Referenciado por Vertex()\&.
+.SS "glm::vec2 Mesh::Vertex::m_tex"
+
+.PP
+Definición en la línea 28 del archivo Mesh\&.h\&.
+.PP
+Referenciado por Vertex()\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Picking del código fuente\&.

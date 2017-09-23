@@ -1,0 +1,14 @@
+<map id="GLFWManager::ProcessInput" name="GLFWManager::ProcessInput">
+<area shape="rect" id="node2" href="$classRotationCubeManager_1_1RotationCubeManager.html#a8b5f169120988225b5f2e8aaeab8bb01" title="RotationCubeManager\l::RotationCubeManager\l::addRotation" alt="" coords="269,5,429,61"/>
+<area shape="rect" id="node3" href="$classInputManager.html#a87a2c3e73b3758bca90493a62c96cca0" title="InputManager::getGMousePos" alt="" coords="250,85,449,112"/>
+<area shape="rect" id="node4" href="$classGLApplication.html#a9ded7b5e8b093b15660869f5e9631b06" title="GLApplication::GetGRotation" alt="" coords="254,136,445,163"/>
+<area shape="rect" id="node5" href="$classGLApplication.html#aaf59b499c40603d57cdf2a828dd77b0c" title="GLApplication::GetRotation\lCubeManager" alt="" coords="259,187,440,229"/>
+<area shape="rect" id="node6" href="$classInputManager.html#a8e2bc8541a4f69c0e4a32deed414e1e5" title="InputManager::KeyPressed" alt="" coords="259,253,439,280"/>
+<area shape="rect" id="node10" href="$classGLApplication.html#ae67b03ed1330abefa5d8122f2b88f311" title="GLApplication::SetArmar" alt="" coords="266,304,433,331"/>
+<area shape="rect" id="node11" href="$classInputManager.html#add65b528fe3942d7a48f5873cc30313a" title="InputManager::SetGMousePos" alt="" coords="249,355,450,381"/>
+<area shape="rect" id="node12" href="$classGLApplication.html#a9a74a4980c998c08ce70fb7c2e1874b3" title="GLApplication::SetGRotation" alt="" coords="254,405,445,432"/>
+<area shape="rect" id="node13" href="$classRotationCubeManager_1_1RotationCubeManager.html#a7bd0aa0464ca153b2423957ec5ae761d" title="RotationCubeManager\l::RotationCubeManager\l::updateOrientation" alt="" coords="269,456,429,512"/>
+<area shape="rect" id="node7" href="$classCamera.html#a3794bc585d91837f1eb657ed5536a685" title="Camera::MoveCamera" alt="" coords="501,203,656,229"/>
+<area shape="rect" id="node8" href="$classCamera.html#a6d305ab5442a489253a321b2a45b11b6" title="Camera::GetSpeed" alt="" coords="511,253,646,280"/>
+<area shape="rect" id="node9" href="$classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="499,304,658,331"/>
+</map>

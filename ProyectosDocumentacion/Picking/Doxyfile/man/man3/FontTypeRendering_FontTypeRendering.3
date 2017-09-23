@@ -1,0 +1,250 @@
+.TH "FontTypeRendering::FontTypeRendering" 3 "Martes, 26 de Mayo de 2015" "Picking" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FontTypeRendering::FontTypeRendering \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FontTypeRendering\&.h>\fP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBFontTypeRendering\fP (double ScreenWidth, double ScreenHeight)"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBrender\fP (const std::string &str, float \fBx\fP, float \fBy\fP)"
+.br
+.ti -1c
+.RI "virtual \fB~FontTypeRendering\fP ()"
+.br
+.in -1c
+.SS "Métodos privados"
+
+.in +1c
+.ti -1c
+.RI "void \fBrender_text\fP (const std::string &str, FT_Face \fBface\fP, float \fBx\fP, float \fBy\fP, float sx, float sy)"
+.br
+.in -1c
+.SS "Atributos privados"
+
+.in +1c
+.ti -1c
+.RI "double \fBSCALEX\fP"
+.br
+.ti -1c
+.RI "double \fBSCALEY\fP"
+.br
+.ti -1c
+.RI "GLuint \fBtexture\fP"
+.br
+.ti -1c
+.RI "GLuint \fBsampler\fP"
+.br
+.ti -1c
+.RI "GLuint \fBvbo\fP"
+.br
+.ti -1c
+.RI "GLuint \fBvao\fP"
+.br
+.ti -1c
+.RI "GLuint \fBvs\fP"
+.br
+.ti -1c
+.RI "GLuint \fBfs\fP"
+.br
+.ti -1c
+.RI "GLuint \fBprogram\fP"
+.br
+.ti -1c
+.RI "GLuint \fBtexUniform\fP"
+.br
+.ti -1c
+.RI "GLuint \fBcolorUniform\fP"
+.br
+.ti -1c
+.RI "FT_Library \fBft_lib\fP { nullptr }"
+.br
+.ti -1c
+.RI "FT_Face \fBface\fP { nullptr }"
+.br
+.in -1c
+.SS "Atributos privados estáticos"
+
+.in +1c
+.ti -1c
+.RI "static const char * \fBVERTEX_SHADER\fP"
+.br
+.ti -1c
+.RI "static const char * \fBFRAGMENT_SHADER\fP"
+.br
+.in -1c
+.SH "Descripción detallada"
+.PP 
+Clase que se encarga de renderizar los texeles, esta clase utiliza la librer�a FreeType para cargar los TFF 
+.PP
+Definición en la línea 24 del archivo FontTypeRendering\&.h\&.
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "FontTypeRendering::FontTypeRendering::FontTypeRendering (doubleScreenWidth, doubleScreenHeight)"
+Constructor para el renderizado de texto en openGL\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIScreenWidth\fP Ancho de ventana\&. 
+.br
+\fIScreenHeight\fP Largo de ventana\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 40 del archivo FontTypeRendering\&.cpp\&.
+.SS "FontTypeRendering::FontTypeRendering::~FontTypeRendering ()\fC [virtual]\fP"
+Destructor de clase\&. 
+.PP
+Definición en la línea 48 del archivo FontTypeRendering\&.cpp\&.
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void FontTypeRendering::FontTypeRendering::Initialize ()"
+Inicializaci�n del renderizado, este m�todo carga el shader, los compila, los enlaza al programa para los shaders, crea los buffers, carga las TTF Y genera la textura para el renderizado\&. 
+.PP
+Definición en la línea 55 del archivo FontTypeRendering\&.cpp\&.
+.PP
+Referenciado por GLApplication::Initialize()\&.
+.SS "void FontTypeRendering::FontTypeRendering::render (const std::string &str, floatx, floaty)"
+M�todo que renderiza un texto en el espacio de la pantalla\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIstr\fP Cadena a renderizar\&. 
+.br
+\fIx\fP Coordenada en X\&. 
+.br
+\fIy\fP Coordenada en Y\&. 
+.RE
+.PP
+
+.PP
+Definición en la línea 117 del archivo FontTypeRendering\&.cpp\&.
+.PP
+Referenciado por GLApplication::ApplicationLoop()\&.
+.SS "void FontTypeRendering::FontTypeRendering::render_text (const std::string &str, FT_Faceface, floatx, floaty, floatsx, floatsy)\fC [private]\fP"
+M�todo que se encarga de renderizar la textura\&. 
+.PP
+\fBParámetros:\fP
+.RS 4
+\fIstr\fP Texto a dibujar\&. 
+.br
+\fIface\fP Cara TTF 
+.br
+\fIx\fP Coordenada x espacio de la pantalla\&. 
+.br
+\fIy\fP Coordenada y espacio de la pantalla\&. 
+.br
+\fIsx\fP Escala en X de la fuente 
+.br
+\fIsy\fP Escala en y de la fuente 
+.RE
+.PP
+
+.PP
+Definición en la línea 148 del archivo FontTypeRendering\&.cpp\&.
+.PP
+Hace referencia a c, h, s, t, w, x y y\&.
+.SH "Documentación de los datos miembro"
+.PP 
+.SS "GLuint FontTypeRendering::FontTypeRendering::colorUniform\fC [private]\fP"
+
+.PP
+Definición en la línea 75 del archivo FontTypeRendering\&.h\&.
+.SS "FT_Face FontTypeRendering::FontTypeRendering::face { nullptr }\fC [private]\fP"
+
+.PP
+Definición en la línea 77 del archivo FontTypeRendering\&.h\&.
+.SS "const char * FontTypeRendering::FontTypeRendering::FRAGMENT_SHADER\fC [static]\fP, \fC [private]\fP"
+\fBValor inicial:\fP
+.PP
+.nf
+= ""
+    "#version 410 core\n"
+    "precision highp float;\n"
+    "uniform sampler2D tex;\n"
+    "uniform vec4 color;\n"
+    "in vec2 texCoords;\n"
+    "out vec4 fragColor;\n"
+    "void main(void) {\n"
+    "    fragColor = vec4(1, 1, 1, texture(tex, texCoords)\&.r) * color;\n"
+    "}\n"
+.fi
+Fragment \fBShader\fP para el renderizado de las fuentes en openGL\&. 
+.PP
+Definición en la línea 33 del archivo FontTypeRendering\&.h\&.
+.SS "GLuint FontTypeRendering::FontTypeRendering::fs\fC [private]\fP"
+
+.PP
+Definición en la línea 74 del archivo FontTypeRendering\&.h\&.
+.SS "FT_Library FontTypeRendering::FontTypeRendering::ft_lib { nullptr }\fC [private]\fP"
+
+.PP
+Definición en la línea 76 del archivo FontTypeRendering\&.h\&.
+.SS "GLuint FontTypeRendering::FontTypeRendering::program\fC [private]\fP"
+
+.PP
+Definición en la línea 74 del archivo FontTypeRendering\&.h\&.
+.SS "GLuint FontTypeRendering::FontTypeRendering::sampler\fC [private]\fP"
+
+.PP
+Definición en la línea 72 del archivo FontTypeRendering\&.h\&.
+.SS "double FontTypeRendering::FontTypeRendering::SCALEX\fC [private]\fP"
+Escala en x de la fuente 
+.PP
+Definición en la línea 38 del archivo FontTypeRendering\&.h\&.
+.SS "double FontTypeRendering::FontTypeRendering::SCALEY\fC [private]\fP"
+Escala en y de la fuente 
+.PP
+Definición en la línea 42 del archivo FontTypeRendering\&.h\&.
+.SS "GLuint FontTypeRendering::FontTypeRendering::texture\fC [private]\fP"
+
+.PP
+Definición en la línea 72 del archivo FontTypeRendering\&.h\&.
+.SS "GLuint FontTypeRendering::FontTypeRendering::texUniform\fC [private]\fP"
+
+.PP
+Definición en la línea 75 del archivo FontTypeRendering\&.h\&.
+.SS "GLuint FontTypeRendering::FontTypeRendering::vao\fC [private]\fP"
+
+.PP
+Definición en la línea 73 del archivo FontTypeRendering\&.h\&.
+.SS "GLuint FontTypeRendering::FontTypeRendering::vbo\fC [private]\fP"
+
+.PP
+Definición en la línea 73 del archivo FontTypeRendering\&.h\&.
+.SS "const char * FontTypeRendering::FontTypeRendering::VERTEX_SHADER\fC [static]\fP, \fC [private]\fP"
+\fBValor inicial:\fP
+.PP
+.nf
+= ""
+    "#version 410 core\n"
+    "in vec4 in_Position;\n"
+    "out vec2 texCoords;\n"
+    "void main(void) {\n"
+    "    gl_Position = vec4(in_Position\&.xy, 0, 1);\n"
+    "    texCoords = in_Position\&.zw;\n"
+    "}\n"
+.fi
+Vertex \fBShader\fP para el renderizado de las fuentes en openGL\&. 
+.PP
+Definición en la línea 29 del archivo FontTypeRendering\&.h\&.
+.SS "GLuint FontTypeRendering::FontTypeRendering::vs\fC [private]\fP"
+
+.PP
+Definición en la línea 74 del archivo FontTypeRendering\&.h\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para Picking del código fuente\&.

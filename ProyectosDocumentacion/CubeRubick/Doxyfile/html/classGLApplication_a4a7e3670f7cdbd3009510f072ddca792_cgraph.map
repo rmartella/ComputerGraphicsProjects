@@ -1,0 +1,19 @@
+<map id="GLApplication::ApplicationLoop" name="GLApplication::ApplicationLoop">
+<area shape="rect" id="node2" href="$classTimeManager.html#a95782501e884a42904e2e726246701d5" title="TimeManager::CalculateFrameRate" alt="" coords="256,115,485,141"/>
+<area shape="rect" id="node3" href="$classRotationCubeManager_1_1RotationCubeManager.html#a4187a2175fb6bd24913c8302aeb15f31" title="RotationCubeManager\l::RotationCubeManager\l::getCurrentRotation" alt="" coords="560,5,720,61"/>
+<area shape="rect" id="node4" href="$classRotationCubeManager_1_1RotationCubeManager.html#af3e65204404e17d5c77ee6e74158323b" title="RotationCubeManager\l::RotationCubeManager\l::GetMovimientosSave" alt="" coords="560,267,720,323"/>
+<area shape="rect" id="node5" href="$classTimeManager.html#a9bb9e5390526b32783b94adb728604fa" title="TimeManager::Instance" alt="" coords="291,433,450,460"/>
+<area shape="rect" id="node6" href="$classWindowManager.html#a9213369f25fab9b9938a2171c12be3f5" title="WindowManager::ProcessInput" alt="" coords="269,484,473,511"/>
+<area shape="rect" id="node7" href="$classNode.html#acd8a6a51fc9dafb2b4159f1e1e18f651" title="Node::renderNode" alt="" coords="307,535,435,561"/>
+<area shape="rect" id="node8" href="$classRubiksCube.html#a985c0bc13cb73cee6a64c5f57200ad5e" title="RubiksCube::rotateFace" alt="" coords="289,216,453,243"/>
+<area shape="rect" id="node12" href="$classNode.html#a5a1f9c051dad96d7c8902ef96f928c84" title="Node::setTransformMatrix" alt="" coords="1038,285,1213,312"/>
+<area shape="rect" id="node15" href="$classRubiksCube.html#af69e1d5504cf465b63ab35e583335ff9" title="RubiksCube::rotateFaceAuto" alt="" coords="275,332,466,359"/>
+<area shape="rect" id="node16" href="$classRubiksCube.html#ad7fe02e006b345ec0ee86438324975cb" title="RubiksCube::SetRotationCube\lManager" alt="" coords="269,586,472,627"/>
+<area shape="rect" id="node17" href="$classRotationCubeManager_1_1RotationCubeManager.html#af8ce33c1e34659b72a388ab242da4ffd" title="RotationCubeManager\l::RotationCubeManager\l::SetWorldMatrix" alt="" coords="291,651,451,707"/>
+<area shape="rect" id="node18" href="$classWindowManager.html#abc3dfc535171f18eda134734e6d546ef" title="WindowManager::SwapTheBuffers" alt="" coords="259,731,483,757"/>
+<area shape="rect" id="node9" href="$classRubiksCubeFace.html#ab9117173447c562e3c510eaf48ee4329" title="RubiksCubeFace::rotate" alt="" coords="558,216,722,243"/>
+<area shape="rect" id="node13" href="$classRubiksCubeFace.html#ae867890f33017a63d80223e160f979ee" title="RubiksCubeFace::flipFaces\lMatrix" alt="" coords="800,219,984,261"/>
+<area shape="rect" id="node14" href="$classRotationCubeManager_1_1RotationCubeManager.html#a9306f7705b5d75436325f3e3b1077137" title="RotationCubeManager\l::RotationCubeManager\l::deleteCurrentCompleteRotation" alt="" coords="533,85,747,141"/>
+<area shape="rect" id="node10" href="$classRubiksCubeFace.html#a3809a70fe2ba6c11b2dda81161edd7bc" title="RubiksCubeFace::rotateFace" alt="" coords="795,285,989,312"/>
+<area shape="rect" id="node11" href="$classNode.html#ae690ed4a39355bb3d24d43c0f1cb3239" title="Node::getTransformMatrix" alt="" coords="1038,231,1213,257"/>
+</map>
